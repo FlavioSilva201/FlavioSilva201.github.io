@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>MSG Box - Nome</h2>
+
+<button onclick="myFunction()">Tenta</button>
+
+<p id="Teste"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  var person = prompt("Diz o teu nome:", "Rocky Balboa");
+  if (person == null || person == "") {
+    txt = "Cancelas-te o programa.";
+  } else {
+    txt = "Olá " + person + "! Como tu estas hoje?";
+  }
+  document.getElementById("Teste").innerHTML = txt;
+}
+</script>
+
+</body>
+</html>

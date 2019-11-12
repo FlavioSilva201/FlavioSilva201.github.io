@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulários</title>
+</head>
+
+<body>
+
+    <h1>HTML Forms</h1>
+
+    <form action="fim.html">
+        <!--- target="_blank"*/ -->
+        Primeiro Nome:<br>
+        <input type="text" name="firstname" value="Rocky">
+        <br> Último Nome:<br>
+        <input type="text" name="lastname" value="Balboa">
+        <br>
+        <h3>Sexo:</h3>
+        <input type="radio" name="gender" value="Masculino" checked> Masculino<br>
+        <input type="radio" name="gender" value="Feminino"> Feminino<br>
+        <input type="radio" name="gender" value="outro"> Outro
+        <br>
+        <h3>Qual carro conduzes:</h3>
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab" selected>Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br>
+        <h3>Descrição:</h3>
+        <textarea name="message" rows="5" cols="30" style="width:200px; height:50px;">
+                Exemplo de uma TextArea, utilizada para escrver descrições por exemplo, texto de grande número de carcteres.
+        </textarea>
+        <br>
+        <h3>Qual browser estás a usar?</h3>
+        <input list="browsers">
+        <datalist id="browsers">
+            <option value="Internet Explorer">
+            <option value="Firefox">
+            <option value="Chrome">
+            <option value="Opera">
+            <option value="Safari">
+        </datalist>
+        <h3>Quanto gostas-te do formulário?</h3>
+        0 <input type="range" id="a" name="a" value="50"> 100
+        <br><br>
+        <button type="button" onclick="alert('Clicas-te')">Clica -> MensageBox</button>
+        <br>
+        <input type="submit" value="Submeter">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<style>
+#myProgress {
+  width: 100%;
+  background-color: #ee00ff;
+}
+
+#myBar {
+  width: 0%;
+  height: 100px;
+  background-color: #d4ff00;
+}
+
+#myProgress2 {
+  width: 100%;
+  background-color: #ee00ff;
+}
+
+#myBar2 {
+  width: 0%;
+  height: 100px;
+  background-color: #d4ff00;
+}
+
+#myProgress3 {
+  width: 100%;
+  background-color: #ee00ff;
+}
+
+#myBar3 {
+  width: 0%;
+  height: 100px;
+  background-color: #d4ff00;
+}
+
+
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #4286f4;
+  background-color: #2aff00;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 20px #7a2c2d;
+}
+
+.button:hover {background-color: #ffaa00}
+
+.button:active {
+  background-color: #ffaa00;
+  box-shadow: 0 10px #d1aa5c;
+  transform: translateY(10px);
+}
+</style>
+<body>
+
+<h1>Progress Bar</h1>
+
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
+<br>
+
+<div id="myProgress2">
+  <div id="myBar2"></div>
+</div>
+
+<br>
+
+<div id="myProgress3">
+  <div id="myBar3"></div>
+</div>
+
+<br>
+<button  class="button" onclick="move()">Clica em mim 1</button> 
+<button  class="button" onclick="move2()">Clica em mim 2</button> 
+<button  class="button" onclick="move3()">Clica em mim 3</button> 
+
+<script>
+function move() {
+ var x = Math.floor((Math.random() * 1000) + 1);
+     alert(x);
+ 
+  var elem = document.getElementById("myBar");   
+  var width = 1;
+  var id = setInterval(frame, x);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+
+<script>
+function move2() {
+ var x = Math.floor((Math.random() * 1000) + 1);
+ alert(x);
+ 
+  var elem = document.getElementById("myBar2");   
+  var width = 1;
+  var id = setInterval(frame, x);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+  }
+}
+</script>
+
+<script>
+function move3() {
+    var x = Math.floor((Math.random() * 1000) + 1);
+	alert(x);
+
+
+  var elem = document.getElementById("myBar3");   
+  var width = 1;
+  var id = setInterval(frame, x);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++; 
+      elem.style.width = width + '%'; 
+    }
+	}
+  }
+
+</script>
+
+
+</body>
+</html>

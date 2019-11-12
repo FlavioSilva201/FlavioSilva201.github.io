@@ -1,0 +1,132 @@
+body {
+    background-color: white;
+    text-align: center;
+    font-family: Consolas, monaco, monospace;
+}
+
+img {
+    position: fixed;
+    right: 5%;
+    top: 8%;
+    cursor: pointer;
+    width: 125px;
+    height: 77px;
+}
+
+marquee {
+    color: rgb(253, 210, 9);
+    border: 1px dashed rgb(253, 210, 9);
+    font-size: 20px;
+    cursor: progress;
+    padding: 1%;
+    margin-right: 7%;
+    margin-left: 5%;
+}
+
+.P_MinderaSchool {
+    text-align: center;
+    color: rgb(253, 210, 9);
+    font-size: 450%;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.P_MinderaSchool:hover {
+    font-size: 1000%;
+}
+
+hr {
+    background-color: rgb(253, 210, 9);
+    height: 10px;
+}
+
+
+/* Tabelas */
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+table {
+    width: 95%;
+    margin-left: 2%;
+}
+
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table th {
+    background-color: black;
+    color: white;
+}
+
+td {
+    text-align: left;
+}
+
+td:hover {
+    background-color: rgb(253, 210, 9);
+}
+
+.td_butao {
+    text-align: center;
+    cursor: pointer;
+}
+
+.thTitulo {
+    text-align: center;
+    background-color: rgb(253, 210, 9);
+    font-size: 50px;
+}
+
+.thTituloHTML {
+    background-color: rgb(255, 0, 0);
+    font-size: 25px;
+}
+
+.thTituloCSS {
+    background-color: rgb(38, 0, 255);
+    font-size: 25px;
+}
+
+.thTituloJava {
+    background-color: rgb(206, 37, 7);
+    font-size: 25px;
+}
+
+
+/* /Tabelas */
+
+
+/*
+.td_butao {
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+
+.td_butao:hover {
+    background-color: #3e8e41
+}
+
+.td_butao:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+*/

@@ -1,0 +1,57 @@
+/*
+margin-top
+margin-right
+margin-bottom
+margin-left
+
+auto - the browser calculates the margin
+length - specifies a margin in px, pt, cm, etc.
+% - specifies a margin in % of the width of the containing element
+inherit - specifies that the margin should be inherited from the parent element
+
+*/
+
+.Individual {
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-right: 150px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    background-color: lightblue;
+}
+
+.Shorthand {
+    border: 1px solid black;
+    margin: 25px 50px 75px 100px;
+    /* top, right, bottom, left*/
+    /*
+    margin: 25px 50px 75px; //  top, right and left, bottom;
+    margin: 25px 50px; // top and bottom, right and left;
+    margin: 25px; // top and right and bottom and left
+    */
+    background-color: lightblue;
+}
+
+.Auto {
+    width: 300px;
+    margin: auto;
+    border: 1px solid red;
+}
+
+div {
+    border: 1px solid red;
+    margin-left: 100px;
+}
+
+p.ex1 {
+    margin-left: inherit;
+}
+
+p.botton {
+    margin: 0 0 1px 0;
+    /* margens ignorada porque é a mais pequena*/
+}
+
+p.top {
+    margin: 200px 0 0 0;
+}
