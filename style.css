@@ -4,6 +4,8 @@ body {
     font-family: Consolas, monaco, monospace;
 }
 
+
+/*
 img {
     position: fixed;
     right: 5%;
@@ -12,6 +14,7 @@ img {
     width: 125px;
     height: 77px;
 }
+*/
 
 marquee {
     color: rgb(253, 210, 9);
@@ -97,9 +100,24 @@ td:hover {
     font-size: 25px;
 }
 
+.thTituloJS {
+    background-color: rgb(247, 223, 29);
+    font-size: 25px;
+}
+
 .thTituloJava {
     background-color: rgb(206, 37, 7);
     font-size: 25px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
 }
 
 
