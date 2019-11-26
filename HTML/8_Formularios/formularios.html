@@ -14,7 +14,7 @@
         Primeiro Nome:<br>
         <input type="text" name="firstname" value="Rocky">
         <br> Último Nome:<br>
-        <input type="text" name="lastname" value="Balboa">
+        <input type="text" name="lastname" value="Balboa" required maxlength="8" minlength="4">
         <br>
         <h3>Sexo:</h3>
         <input type="radio" name="gender" value="Masculino" checked> Masculino<br>
@@ -43,10 +43,24 @@
             <option value="Opera">
             <option value="Safari">
         </datalist>
+        <h3>Linguagem estás agora a usar?</h3>
+        <select name="linguagem">
+            <option value="HTML">HTML</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
         <h3>Quanto gostas-te do formulário?</h3>
         0 <input type="range" id="a" name="a" value="50"> 100
-        <br><br>
-        <button type="button" onclick="alert('Clicas-te')">Clica -> MensageBox</button>
+        <label>
+            <span>File:</span>
+            <input type="file">
+        </label>
+        <label>
+            <span>Password:</span>
+            <input type="password" id="password">
+        </label>
+        <samp id="Error"></samp>
+        <br>
         <br>
         <input type="submit" value="Submeter">
     </form>
