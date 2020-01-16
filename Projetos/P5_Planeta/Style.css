@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../Imagens/Projetos/Mr_Piracy/imagens/Piratas_das_Cariabas.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    flex-grow: 1;
+}
+
+main {
+    flex-grow: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo-img {
+    width: 200px;
+    height: 200px;
+}
+
+#titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100px;
+    text-shadow: 1px 2px 0px black;
+}
+
+#button-zone {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn-link {
+    height: 100px;
+    width: 100px;
+    border: 1px solid red;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 100%;
+    color: black;
+}

@@ -1,7 +1,7 @@
 body {
     background-color: white;
     text-align: center;
-    font-family: Consolas, monaco, monospace;
+    font-family: consolas, monaco, monospace;
 }
 
 
@@ -19,11 +19,11 @@ img {
 marquee {
     color: rgb(253, 210, 9);
     border: 1px dashed rgb(253, 210, 9);
-    font-size: 20px;
+    font-size: 150%;
     cursor: progress;
     padding: 1%;
-    margin-right: 7%;
-    margin-left: 5%;
+    margin-right: 8%;
+    margin-left: 6%;
 }
 
 .P_MinderaSchool {
@@ -31,16 +31,22 @@ marquee {
     color: rgb(253, 210, 9);
     font-size: 450%;
     cursor: pointer;
-    transition: all 1s;
 }
 
 .P_MinderaSchool:hover {
     font-size: 1000%;
+    transition: all 1s;
 }
 
-hr {
+.barra {
     background-color: rgb(253, 210, 9);
-    height: 10px;
+    height: 1%;
+    border-radius: 10px;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -80,14 +86,40 @@ td:hover {
 }
 
 .td_butao {
+    background-color: #000;
+    border: solid 1px yellow;
+    margin-left: 10%;
+    border-radius: 25%;
+    color: white;
+    width: 50%;
+    padding: 7px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
     cursor: pointer;
+}
+
+.td_butao:hover {
+    margin-left: 0%;
+    background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    transition: all 1s;
 }
 
 .thTitulo {
     text-align: center;
     background-color: rgb(253, 210, 9);
     font-size: 50px;
+}
+
+.thTituloProjetos {
+    background-color: rgb(0, 255, 255);
+    font-size: 25px;
 }
 
 .thTituloHTML {
@@ -110,6 +142,12 @@ td:hover {
     font-size: 25px;
 }
 
+.thTitulosIntermedios {
+    text-align: center;
+    background-color: rgb(255, 0, 255);
+    font-size: 25px;
+}
+
 .footer {
     position: fixed;
     left: 0;
@@ -119,32 +157,3 @@ td:hover {
     color: white;
     text-align: center;
 }
-
-
-/* /Tabelas */
-
-
-/*
-.td_butao {
-    padding: 15px 25px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-}
-
-.td_butao:hover {
-    background-color: #3e8e41
-}
-
-.td_butao:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-*/

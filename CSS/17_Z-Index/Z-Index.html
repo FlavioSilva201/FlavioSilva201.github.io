@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Z-Index</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        div {
+            position: absolute;
+            height: 200px;
+            width: 200px;
+        }
+        
+        #ZIndex0 {
+            Z-Index: 0;
+            background-color: red;
+            left: 10px;
+            top: 0px;
+        }
+        
+        #ZIndex1 {
+            Z-Index: 1;
+            background-color: yellow;
+            left: 60px;
+            top: 50px;
+        }
+        
+        #ZIndex2 {
+            Z-Index: 2;
+            background-color: rgb(229, 255, 0);
+            left: 110px;
+            top: 100px;
+        }
+        
+        #ZIndex3 {
+            Z-Index: 3;
+            background-color: orange;
+            left: 160px;
+            top: 150px;
+        }
+        
+        #grupo2 {
+            top: 500px;
+        }
+        
+        #grupo2 #ZIndex1 {
+            Z-Index: 4;
+        }
+    </style>
+    <h1>Z-Index</h1>
+    <p>O Z-Index Usa-se para subrepor uns elementos uns dos outros</p>
+    <p>Nota: Z-index só resulta nos elementos de -> Position: absolute, relative, fixed, sticky</p>
+
+    <div id="grupo1">
+        <div id="ZIndex0">
+            <p>Red -> Z-Index: 0;</p>
+        </div>
+        <div id="ZIndex1">
+            <p>Yellow -> Z-Index: 1;</p>
+        </div>
+        <div id="ZIndex2">
+            <p>Green ->Z-Index: 2;</p>
+        </div>
+        <div id="ZIndex3">
+            <p>Orange ->Z-Index: 3;</p>
+        </div>
+    </div>
+
+    <div id="grupo2">
+        <div id="ZIndex0">
+            <p>Red -> Z-Index: 0;</p>
+        </div>
+        <div id="ZIndex1">
+            <p>Yellow -> Z-Index: 4;</p>
+        </div>
+        <div id="ZIndex2">
+            <p>Green ->Z-Index: 2;</p>
+        </div>
+        <div id="ZIndex3">
+            <p>Orange ->Z-Index: 3;</p>
+        </div>
+    </div>
+</body>
+
+</html>

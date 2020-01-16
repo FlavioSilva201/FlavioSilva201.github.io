@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clear</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            text-align: center;
+            text-shadow: 2px 2px 4px rgb(99, 0, 197);
+        }
+        
+        ul {
+            border: 1px dashed grey;
+        }
+        
+        #FloatLeft {
+            Float: Left;
+            border: 1px dashed red;
+        }
+        
+        #ClearLeft {
+            Clear: Left;
+            border: 1px dashed red;
+            width: 100px;
+        }
+        
+        #FloatRight {
+            Float: Right;
+            border: 1px dashed green;
+        }
+        
+        #ClearRight {
+            Clear: Right;
+            border: 1px dashed green;
+            width: 100px;
+        }
+        
+        #ClearBoth {
+            Clear: ClearBoth;
+            border: 1px dashed rgb(28, 0, 128);
+            width: 100px;
+        }
+        
+        #ClearNone {
+            Clear: ClearNone;
+            border: 1px dashed rgb(255, 0, 234);
+            width: 100px;
+        }
+    </style>
+
+    <h1>Clear</h1>
+    <br>
+    <hr><br>
+    <ul>
+        <li>Left : O elemento é movido abaixo dos elementos que estão com float aesquerda.</li>
+        <li>Right : O elemento é movido abaixo dos elementos que estão com float adireita.</li>
+        <li>Both : O elemento é abaixado para o espaço livre após elementos flutuando àesquerda e à direita. Both signifca ambos.</li>
+        <li>None : O elementonão é abaixado para o espaço livre após elementos flutuantes.</li>
+    </ul>
+    <br>
+    <hr><br>
+
+    <p>Texto para apenas encher
+        <p id="FloatLeft">Float: Left;</p>espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher
+        espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra
+        que o float e o clear funciona. Texto para
+        <p id="ClearLeft">Clear: Left;</p> apenas encher espaço para mostra que o float e o clear funciona. </p>
+    <hr>
+    <p>Texto para apenas encher
+        <p id="FloatRight">Float: Right;</p>espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher
+        espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra
+        que o float e o clear funciona. Texto para apenas encher
+        <p id="ClearRight">Clear: Right;</p> espaço para mostra que o float e o clear funciona. </p>
+    <hr>
+    <p>Texto para apenas encher
+        <p id="FloatRight">Float: Right;</p>espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher
+        espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra
+        que o float e o clear funciona. Texto para apenas encher espaço
+        <p id="ClearBoth"> Clear: Both;</p> para mostra que o float e o clear funciona. </p>
+    <hr>
+    <p>Texto para apenas encher
+        <p id="FloatLeft">Float: Letf;</p>espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher
+        espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra que o float e o clear funciona. Texto para apenas encher espaço para mostra
+        que o float e o clear funciona. Texto para apenas encher espaço
+        <p id="ClearNone"> Clear: None;</p> para mostra que o float e o clear funciona. </p>
+
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        
+        table,
+        th,
+        td,
+        tr {
+            text-align: center;
+            border: 1px solid black;
+        }
+        
+        a {
+            background-color: black;
+            text-align: center;
+            color: green;
+            border: 2px dashed rebeccapurple;
+            padding: 2px;
+            text-decoration: none;
+        }
+        
+        .Incompleto {
+            background-color: red;
+        }
+        
+        .Exprimental {
+            background-color: orange;
+        }
+    </style>
+    <h1>Position</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Atributo</th>
+                <th>Descrição</th>
+                <th>Exemplo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Absolute</td>
+                <td>O elemento é removido do fluxo do documento e outros elementos se comportam como se não estivessem lá, enquanto todas as outras propriedades posicionais trabalhariam nele.</td>
+                <td><a href="./Absolute.html">Absolute</a></td>
+            </tr>
+            <tr>
+                <td>Fixed</td>
+                <td>O elemento é removido do fluxo do documento como elementos absolutamente posicionados. Na verdade, eles se comportam quase da mesma forma, apenas os elementos de posição fixa são sempre relativos ao documento, não a um pai em particular,
+                    e não são afetados pela rolagem.</td>
+                <td><a href="./Fixed.html">Fixed</a></td>
+            </tr>
+            <tr>
+                <td>Relative</td>
+                <td>A posição original de um elemento permanece no fluxo do documento, assim como o staticvalor. Mas agora right / left / top / bottom / z-index funcionará. As propriedades posicionais "cutucam" o elemento da posição original nessa direção.</td>
+                <td><a href="./Relative.html">Relative</a></td>
+            </tr>
+            <tr>
+                <td>Static</td>
+                <td>Todo elemento tem uma posição estática por <b>padrão</b>, portanto, ele permanecerá no fluxo normal da página. Portanto, se houver um conjunto right / left / top / bottom / z-index , não haverá efeito nesse elemento.</td>
+                <td><a href="./static.html">Static</a></td>
+            </tr>
+            <tr class="Exprimental">
+                <td>Sticky (experimental)</td>
+                <td>O elemento é tratado como um relativevalor até que o local de rolagem da viewport atinja um limite especificado; nesse momento, o elemento assume uma fixedposição em que é solicitado que ele permaneça.</td>
+                <td><a href="./Sticky.html">Sticky</a></td>
+            </tr>
+            <tr>
+                <td>Absolute vs Relative</td>
+                <td> </td>
+                <td>Absolute vs Relative</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
