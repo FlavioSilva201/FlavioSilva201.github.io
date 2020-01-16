@@ -39,7 +39,7 @@ nav a {
 }
 
 nav a:hover {
-    border-bottom: solid #1D9A6C 1px;
+    border-bottom: solid #1D9A6C 2px;
 }
 
 main {
@@ -71,6 +71,7 @@ form {
     font-size: 35px;
     margin: 25px;
     padding: 4px 10px;
+    outline: none;
 }
 
 #BtnDecide {
@@ -80,12 +81,13 @@ form {
     border-radius: 8px;
     color: white;
     background-color: #1D9A6C;
+    outline: none;
 }
 
 #ImagemGif {
     padding: 6px;
-    border: 1px solid red;
-    border-radius: 10px;
+    border: 1px solid yellow;
+    border-radius: 20px;
 }
 
 footer {
@@ -98,6 +100,7 @@ footer {
 
 footer p {
     color: #BFE1B0;
+    padding: 10px;
 }
 
 

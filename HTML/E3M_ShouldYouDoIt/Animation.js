@@ -1,7 +1,8 @@
-const BtnDecide = document.getElementById("BtnDecide");
+let BtnDecide = document.getElementById("BtnDecide");
 const PDecision = document.getElementById("PDecision");
 const form = document.getElementById("form");
 const imagemGif = document.getElementById("ImagemGif");
+
 const gifsTalvez = ["https://media1.giphy.com/media/Tg6Gp5NSP45bsat4sf/giphy.webp",
     "https://media1.giphy.com/media/jqNn2Dn078gzsCem8g/giphy.gif?cid=ecf05e47ffbbf500e915ca70646736b651919c050f412147&rid=giphy.gif",
     "https://media3.giphy.com/media/xUNemVaUZFSgHxvQXK/giphy.gif?cid=ecf05e47ffbbf500e915ca70646736b651919c050f412147&rid=giphy.gif",
@@ -180,8 +181,10 @@ form.addEventListener(
         event.preventDefault();
         const num1 = Math.floor((Math.random() * 3) + 1);
 
+        BtnDecide.disabled = true;
         PDecision.textContent = "A Ler A Pergunta";
         imagemGif.src = "../../Imagens/Outros/Ball_2D_Animation.gif";
+
 
         setTimeout(function() {
 
@@ -195,7 +198,9 @@ form.addEventListener(
                 PDecision.textContent = "Não Achei Que Mereces Resposta";
                 imagemGif.src = gifsTalvez[Math.floor((Math.random() * gifsTalvez.length))];
             }
-        }, 1500)
+        }, 1500);
+
+        BtnDecide.disabled = false;
     },
     false,
 );
