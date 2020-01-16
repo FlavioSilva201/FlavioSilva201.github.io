@@ -180,6 +180,7 @@ form.addEventListener(
         event.preventDefault();
         const num1 = Math.floor((Math.random() * 3) + 1);
 
+        PDecision.textContent = "A Ler A Pergunta";
         imagemGif.src = "../../Imagens/Outros/Ball_2D_Animation.gif";
 
         setTimeout(function() {
