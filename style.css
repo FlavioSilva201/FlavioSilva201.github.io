@@ -1,3 +1,7 @@
+* {
+    text-align: center;
+}
+
 body {
     background-color: white;
     text-align: center;
@@ -134,6 +138,11 @@ td:hover {
 
 .thTituloJS {
     background-color: rgb(247, 223, 29);
+    font-size: 25px;
+}
+
+.thTituloNodeJS {
+    background-color: green;
     font-size: 25px;
 }
 

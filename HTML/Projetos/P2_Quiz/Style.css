@@ -1,0 +1,43 @@
+* {
+    text-align: center;
+}
+
+body {
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container * {
+    width: 50%;
+}
+
+#QuizText {
+    font-size: 50px;
+    color: aqua;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn {
+    cursor: pointer;
+    background-color: rgb(62, 196, 196);
+    color: black;
+    font-size: 25px;
+    margin: 5px;
+    padding: 10px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.btn:active {
+    background-color: green;
+}

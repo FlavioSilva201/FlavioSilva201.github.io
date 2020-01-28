@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Get Elements From HTML</h1>
+
+    <p id="demo1">Isto vai Mudar</p>
+    <p id="demo2">Isto vai Mudar</p>
+
+    <script>
+        //document.getElementById("demo1") // vai procurar no documento, o elemento que tenho id <nomeDoElementoComId> independentemente que tipo de elemnto é. ("A maneira mais comum de acessar um elemento HTML é usar ido elemento.");
+        const demo2 = document.getElementById("demo1"); // o elemnto tambem pode ser guardado e uma variavel
+
+        //.innerHTML = "Muda o texto"; // muda o texto do elemento selecionado ("A innerHTMLpropriedade é útil para obter ou substituir o conteúdo de elementos HTML.")
+        document.getElementById("demo1").innerHTML = "Mudou"; // Desta forma vai procurar e muda ao instantaneamente o texto do elento
+        demo2.innerHTML = "Texto Diferente"; // neste caso ele foi procurar a variavel, ver que elemento do docomento estava associado a ela e depois mudou o texto dela;
+
+        const p = document.getElementsByTagName("p"); // getElementsByTagName -> procura todos os elemetnos se tenham a tag p, neste exemplo
+        const className = document.getElementsByClassName("className"); // getElementsByClassName -> procura todos os elemetnos se tenham a class com o nome entre as " "
+        const selectorsCSSclass = document.querySelectorAll("p.class"); // tal como o CSS, neste caso procura em todas as tag p a que tenha aquela class
+        const selectorsCSSid = document.querySelectorAll("p#id"); // tal como o CSS, neste caso procura em todas as tag p o que tem aquele id
+    </script>
+
+</body>
+
+</html>

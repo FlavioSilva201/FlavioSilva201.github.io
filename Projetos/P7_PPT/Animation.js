@@ -356,7 +356,7 @@ function draw(userChoice, computerChoice) {
 
     document.getElementById(userChoice).classList.add("orange-glow");
     setTimeout(function() {
-        document.getElementById(userChoice).classList.remove("orange-glow")
+        document.getElementById(userChoice).classList.remove("orange-glow");
     }, 500);
 }
 

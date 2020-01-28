@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text</title>
+</head>
+
+<body>
+    <style>
+        h1,
+        h2 {
+            text-align: center;
+            color: blue;
+            border: 1px solid rebeccapurple;
+            border-radius: 5%;
+        }
+        
+        #ColorGreen {
+            color: green;
+        }
+        
+        h3 {
+            text-align: left;
+        }
+        
+        h4 {
+            text-align: right;
+        }
+        
+        #AlighJustify {
+            width: 300px;
+            border: 1px red solid;
+            text-align: justify;
+        }
+        
+        #Ancora {
+            text-decoration: none;
+        }
+        
+        #DecOverline {
+            text-decoration: overline;
+        }
+        
+        #DecLineThrough {
+            text-decoration: line-through;
+        }
+        
+        #DecUnderLine {
+            text-decoration: underline;
+        }
+        
+        #uppercase {
+            text-transform: uppercase;
+        }
+        
+        #lowercase {
+            text-transform: lowercase;
+        }
+        
+        #capitalize {
+            text-transform: capitalize;
+        }
+        
+        #PIndent {
+            text-indent: 50px;
+            border: 1px solid brown;
+        }
+        
+        #WordSpacing10 {
+            word-spacing: 10px;
+        }
+        
+        #WordSpacing-5 {
+            word-spacing: -5px;
+        }
+        
+        #LetterSpacing-3 {
+            letter-spacing: -3px;
+        }
+        
+        #LetterSpacing5 {
+            letter-spacing: 5px;
+        }
+        
+        #LineHeight08 {
+            line-height: 0.8;
+        }
+        
+        #LineHeight2 {
+            line-height: 2;
+        }
+        
+        #Direction {
+            direction: rtl;
+        }
+        
+        #UnicodeNormal {
+            direction: rtl;
+            unicode-bidi: normal;
+        }
+        
+        #UnicodeOverride {
+            direction: rtl;
+            unicode-bidi: bidi-override;
+        }
+        
+        #UnicodeEmbed {
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+        
+        #UnicodeInitial {
+            direction: rtl;
+            unicode-bidi: initial;
+        }
+        
+        #Shadow1 {
+            text-shadow: 2px 2px red;
+        }
+        
+        #Shadow2 {
+            text-shadow: -5px -5px greenyellow;
+        }
+        
+        #Shadow3 {
+            text-shadow: 1px 1px 1px orange;
+        }
+        
+        #Shadow4 {
+            text-shadow: 1px 1px 3px rebeccapurple;
+        }
+        
+        #Shadow5 {
+            text-shadow: 3px 4px 3px royalblue;
+        }
+        
+        #BreakNormal {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: normal;
+        }
+        
+        #BreakKeepAll {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: keep-all;
+        }
+        
+        #BreakBreakAll {
+            width: 140px;
+            border: 1px solid #000000;
+            word-break: break-all;
+        }
+    </style>
+    <h1>Text</h1>
+    <main>
+
+        <h2>Color</h2>
+        <p id="ColorGreen">Color:green;</p>
+
+        <h2>Text Text-Aligh</h2>
+        <h3>text-align: left;</h3>
+        <h4>text-align: right;</h4>
+        <p id="AlighJustify"> Muito texto para encher este paragrafo para se comprovar que o <b>Text-Aligh: Justify;</b> realmebte funciona como deveria de ser como por exemplo ajustar todas as linhas com a mesma dimeção; When the text-align property is set to "justify", each
+            line is stretched so that every line has equal width, and the left and right margins are straight (like in magazines and newspapers);</p>
+
+        <h2>Text Decoration</h2>
+        <a href="#" id="Ancora">Isto é uma ancora sem linha; Text-Decoration:none;</a>
+        <p id="DecOverline">text-decoration: overline;</p>
+        <p id="DecLineThrough">text-decoration: line-through;</p>
+        <p id="DecUnderLine">text-decoration: underline;</p>
+
+        <h2>Text Transformation</h2>
+        <p id="uppercase">text-transform: uppercase;</p>
+        <p id="lowercase">text-transform: lowercase;</p>
+        <p id="capitalize">text-transform: capitalize;</p>
+
+        <h2>Text Indentation</h2>
+        <p id="PIndent">text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px;
+            text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; text-indent: 50px; </p>
+
+        <h2>Word Spacing</h2>
+        <p id="WordSpacing10">word - spacing: 10px; com mais palavra é mais facil de perceber</p>
+        <p id="WordSpacing-5">word-spacing: -5px; com mais palavra é mais facil de perceber</p>
+
+        <h2>Letter Spacing</h2>
+        <p id="LetterSpacing-3">letter-spacing: -3px;</p>
+        <p id="LetterSpacing5">letter-spacing: 5px;</p>
+
+        <h2>Line Height</h2>
+        <p id="LineHeight08">
+            This is a paragraph with a smaller line-height.<br> This is a paragraph with a smaller line-height.<br>
+        </p>
+        <p id="LineHeight2">
+            This is a paragraph with a bigger line-height.<br> This is a paragraph with a bigger line-height.<br>
+        </p>
+
+        <h2>Text Direction</h2>
+        <p id="Direction">direction: rtl;</p>
+
+        <h2>Unicode Bidi</h2>
+        <p>Para usar esta propriedade é nessecario usar a Text Derection</p>
+        <p id="UnicodeNormal">Unicode-Bidi: Normal; Para usar esta propriedade é nessecario usar a Text Derection</p>
+        <p id="UnicodeOverride">Unicode-Bidi: Bidi-Override; Para usar esta propriedade é nessecario usar a Text Derection</p>
+        <p id="UnicodeEmbed">Unicode-Bidi: Embed; Para usar esta propriedade é nessecario usar a Text Derection</p>
+        <p id="UnicodeInitial">Unicode-Bidi: Initial; Para usar esta propriedade é nessecario usar a Text Derection</p>
+
+        <h2>Text Shadow</h2>
+        <p id="Shadow1">text-shadow: 2px 2px red;</p>
+        <p id="Shadow2">text-shadow: -5px -5px greenyellow;</p>
+        <p id="Shadow3"> text-shadow: 1px 1px 1px orange;</p>
+        <p id="Shadow4">text-shadow: 1px 1px 3px rebeccapurple;</p>
+        <p id="Shadow5">text-shadow: 3px 4px 3px royalblue;</p>
+
+        <h2>Word Break</h2>
+        <p id="BreakNormal">Thisissomeveryveryverylong word. Words will break according to usual rules.</p>
+        <p id="BreakKeepAll">Thisissomeveryveryverylong word. Words will break according to usual rules.</p>
+        <p id="BreakBreakAll">Thisissomeveryveryverylong word. Words will break according to usual rules.</p>
+    </main>
+
+</body>
+
+</html>
