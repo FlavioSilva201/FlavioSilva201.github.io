@@ -28,6 +28,11 @@ marquee {
     padding: 1%;
     margin-right: 8%;
     margin-left: 6%;
+    border-radius: 50px;
+}
+
+img {
+    border-radius: 10px;
 }
 
 .P_MinderaSchool {
@@ -126,6 +131,11 @@ td:hover {
     font-size: 25px;
 }
 
+.thTituloTec {
+    background-color: rgb(65, 105, 225);
+    font-size: 25px;
+}
+
 .thTituloHTML {
     background-color: rgb(255, 0, 0);
     font-size: 25px;
@@ -142,7 +152,22 @@ td:hover {
 }
 
 .thTituloNodeJS {
-    background-color: green;
+    background-color: rgb(0, 128, 0);
+    font-size: 25px;
+}
+
+.thTituloElectron {
+    background-color: rgb(7, 150, 206);
+    font-size: 25px;
+}
+
+.thTituloMongoDB {
+    background-color: rgb(0, 156, 8);
+    font-size: 25px;
+}
+
+.thTituloMySQL {
+    background-color: rgb(221, 144, 0);
     font-size: 25px;
 }
 
@@ -162,7 +187,39 @@ td:hover {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
-    color: white;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Barra de fundo */
+
+::-webkit-scrollbar-track {
+    background: #0004ff;
+    border-radius: 10px;
+}
+
+
+/* Barra localização */
+
+::-webkit-scrollbar-thumb {
+    background: rgb(7, 160, 66);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+
+/*Com o rato em cima da barra localização*/
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(255, 251, 0);
+    border: 1px dashed black;
 }

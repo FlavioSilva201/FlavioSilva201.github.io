@@ -6,7 +6,8 @@ let num1;
 console.log("Tenta adivinhar o número escondido de 0 a 10!");
 
 do {
-    num1 = readline.question("Qual é a tua tentativa?"); // espera que o utilizador clique no enter
+    console.log("Qual é a tua tentativa?");
+    num1 = readline.question("Num: "); // espera que o utilizador clique no enter
 
     count++;
     if (num1 < random) {
@@ -16,5 +17,4 @@ do {
     } else {
         console.log("Acertaste! Em: " + count + " tentativas;");
     }
-
 } while (num1 != random);

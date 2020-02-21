@@ -1,0 +1,83 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+.Televisao {
+    position: absolute;
+    top: 10px;
+    left: 40%;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 20px;
+}
+
+.Televisao div {
+    border-radius: 25px;
+    padding: 20px;
+    background-color: royalblue;
+    font-size: 20px;
+    text-align: center;
+}
+
+.Televisao div p {
+    padding: 5px;
+}
+
+.FazerPedido {
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+}
+
+.FazerPedido button {
+    font-size: 30px;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+    border-radius: 50px;
+    padding: 50px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+}
+
+.FazerPedido button:active {
+    text-shadow: 2px 2px whitesmoke;
+    background-color: rgb(39, 9, 70);
+    color: white;
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.SenhaUser {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.SenhaUser div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: royalblue;
+    border-radius: 5px;
+    height: 70px;
+    padding: 5px;
+}
+
+main img {
+    position: absolute;
+    bottom: 15px;
+    right: 10px;
+    transform: rotate(25deg);
+}

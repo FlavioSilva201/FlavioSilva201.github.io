@@ -1,0 +1,514 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+div {
+    width: 97%;
+    height: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed rebeccapurple;
+    border-radius: 50%;
+    -webkit-animation: div 10s infinite linear;
+}
+
+@-webkit-keyframes div {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(359deg);
+    }
+}
+
+div div {
+    border-color: aqua;
+}
+
+div div div {
+    border-color: red;
+}
+
+div div div div {
+    border-color: wheat;
+}
+
+div div div div div {
+    border-color: white;
+}
+
+div div div div div div {
+    border-color: rosybrown;
+}
+
+div div div div div div div {
+    border-color: royalblue;
+}
+
+div div div div div div div div {
+    border-color: tan;
+}
+
+div div div div div div div div div {
+    border-color: teal;
+}
+
+div div div div div div div div div div {
+    border-color: thistle;
+}
+
+div div div div div div div div div div div {
+    border-color: tomato;
+}
+
+div div div div div div div div div div div div {
+    border-color: turquoise;
+}
+
+div div div div div div div div div div div div div {
+    border-color: yellow;
+}
+
+div div div div div div div div div div div div div div {
+    border-color: yellowgreen;
+}
+
+div div div div div div div div div div div div div div div {
+    border-color: indianred;
+}
+
+div div div div div div div div div div div div div div div div {
+    border-color: indigo;
+}
+
+div div div div div div div div div div div div div div div div div {
+    border-color: ivory;
+}
+
+div div div div div div div div div div div div div div div div div div {
+    border-color: olive;
+}
+
+div div div div div div div div div div div div div div div div div div div {
+    border-color: oldlace;
+}
+
+div div div div div div div div div div div div div div div div div div div div {
+    border-color: olivedrab;
+}
+
+div div div div div div div div div div div div div div div div div div div div div {
+    border-color: orange;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: orangered;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: orchid;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: palegoldenrod;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: palegreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: paleturquoise;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: palevioletred;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: papayawhip;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: peru;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: peachpuff;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: pink;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: powderblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: plum;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: purple;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: aliceblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: antiquewhite;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: aqua;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: aquamarine;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: azure;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: saddlebrown;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: salmon;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: sandybrown;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: seagreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: seashell;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: sienna;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: silver;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: slateblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: skyblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: slategray;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: azure;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: snow;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkcyan;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkgoldenrod;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkgray;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkgreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkgrey;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkkhaki;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkmagenta;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkolivegreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkorange;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkorchid;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: darkred;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: floralwhite;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: firebrick;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: forestgreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: fuchsia;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: gainsboro;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: gold;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: ghostwhite;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: goldenrod;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: gray;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: green;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: greenyellow;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: grey;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: honeydew;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: hotpink;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: khaki;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lavender;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lavenderblush;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lawngreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lemonchiffon;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightcoral;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightcyan;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightgreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightgoldenrodyellow;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightgray;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightgrey;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: lightpink;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: cadetblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: chartreuse;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: chocolate;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: coral;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: cornflowerblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: cornsilk;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: crimson;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: cyan;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: violet;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: beige;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: bisque;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: blanchedalmond;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: blue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: blueviolet;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: brown;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: burlywood;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: navajowhite;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: navy;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: magenta;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: maroon;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumaquamarine;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumorchid;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumpurple;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumseagreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumslateblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumspringgreen;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumturquoise;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mediumvioletred;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: midnightblue;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mintcream;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: mistyrose;
+}
+
+div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div div {
+    border-color: moccasin;
+}

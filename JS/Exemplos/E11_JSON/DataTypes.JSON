@@ -1,0 +1,28 @@
+// JSON não suporta comentários
+// Data Types em JSON
+
+// String
+{ "Nome": "João" }
+
+// Número
+{ "Idade": 30 }
+
+// Objeto
+{
+    "Empregado": {
+        "Nome": "António",
+        "Idade": 99,
+        "Cidade": "São Tomé do Principe"
+    }
+}
+
+// Arrays
+{
+    "Carros": ["Volvo", "Tesla", "Java"]
+}
+
+// Boolean
+{ "Ligado": true }
+
+// Null
+{ "NomeDoMeio": null }

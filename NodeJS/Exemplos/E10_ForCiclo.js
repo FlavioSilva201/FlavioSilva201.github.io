@@ -6,7 +6,7 @@ for (statement 1; statement 2; statement 3) {
 
 console.log("Ciclo For");
 
-for (i = 1; i < 10; i++) { // i = 1 -> let i = 1;
+for (i = 1; i < 10; i++) { // i = 1 -> var i = 1;
     //Este bloco de código irá ser repetido até o i ser igaul ou maior que 10, pois o ciclo é repetido enquanto a condição for true
     console.log("Repetição: " + i);
 }

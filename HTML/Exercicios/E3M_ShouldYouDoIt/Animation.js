@@ -183,7 +183,7 @@ form.addEventListener(
 
         BtnDecide.disabled = true;
         PDecision.textContent = "A Ler A Pergunta";
-        imagemGif.src = "../../Imagens/Outros/Ball_2D_Animation.gif";
+        imagemGif.src = "../../../Imagens/Outros/Ball_2D_Animation.gif";
 
 
         setTimeout(function() {
