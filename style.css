@@ -146,6 +146,11 @@ td:hover {
     font-size: 25px;
 }
 
+.thTituloLess {
+    background-color: rgb(29, 54, 93);
+    font-size: 25px;
+}
+
 .thTituloJS {
     background-color: rgb(247, 223, 29);
     font-size: 25px;
@@ -158,6 +163,11 @@ td:hover {
 
 .thTituloElectron {
     background-color: rgb(7, 150, 206);
+    font-size: 25px;
+}
+
+.thTituloReact {
+    background-color: rgb(49, 181, 233);
     font-size: 25px;
 }
 

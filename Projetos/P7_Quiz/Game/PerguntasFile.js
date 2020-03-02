@@ -1,4 +1,4 @@
-export let perguntasFacil = [{
+export let perguntas = [{
         pergunta: "Quantos dentes tem um humano saudável?",
         resposta1: "5",
         resposta2: "32",
@@ -71,7 +71,3 @@ export let perguntasFacil = [{
         categoria: "cultura"
     }
 ];
-
-export let perguntasMedio = [{
-
-}];

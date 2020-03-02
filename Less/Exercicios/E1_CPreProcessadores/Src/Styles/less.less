@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body,main,.xps{
+    width: 100%;
+    height: 100%;
+}
+.xps{
+    background-color: orangered;
+    display: flex;
+    flex-direction: column;
+}
+.xps::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 400px;
+    align-self: center;
+    background-color: black;
+}
+
+.balloon{
+    background-color: green;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 45%;
+}
+
+.balloon:nth-child(odd){
+    
+}
+
+.balloon:nth-child(even){
+    background-color: blue;
+    align-self: flex-end;
+}

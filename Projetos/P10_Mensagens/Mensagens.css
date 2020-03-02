@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header,
+footer,
+main,
+.xps {
+    width: 100%;
+}
+
+header {
+    height: 100px;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 10px 50px;
+    background-color: indigo;
+}
+
+main {
+    height: 90%;
+    background-color: orangered;
+    display: flex;
+    flex-direction: column;
+}
+
+.balloon {
+    background-color: green;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50%;
+}
+
+.balloon:nth-child(even) {
+    background-color: blue;
+    align-self: flex-end;
+    color: whitesmoke;
+}
+
+footer {
+    background-color: royalblue;
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#CorJogador {
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+footer input {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 90%;
+    height: 90%;
+    font-size: 20px;
+    padding: 0 10px;
+}
+
+.CorJogador {
+    background-color: green;
+}

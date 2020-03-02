@@ -1,5 +1,4 @@
 import { perguntas } from './PerguntasFile.js';
-import * as DataBd from "../DataB.js";
 
 const NumeroPerguntasP = document.getElementById("NumeroPerguntasP");
 const certosP = document.getElementById("certosP");
@@ -16,7 +15,6 @@ const Opcao2 = document.getElementById("Opcao2");
 const Opcao3 = document.getElementById("Opcao3");
 const Opcao4 = document.getElementById("Opcao4");
 
-Perguntas
 
 
 let errorScore = 0;
@@ -26,12 +24,6 @@ let questionCounter = 0;
 let ComboVar = 1;
 let AjudasVar = 3;
 let PontosVar = 0;
-
-// Data (LocalStorage)
-let nomeUser = "";
-let dataAtual = "" + new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear() + " " + new Date().getHours() + ":" + new Date().getMinutes() + ":" + new Date().getSeconds();
-console.log(dataAtual);
-DataBd.add("nomeUser", 30, dataAtual);
 
 startGame();
 
@@ -53,13 +45,13 @@ function startGame() {
 };
 
 function getNewQuestions() {
-    questionIndex = Math.floor(Math.random() * perguntasFacil.length);
+    questionIndex = Math.floor(Math.random() * perguntas.length);
     console.log(questionIndex);
-    Pergunta.innerHTML = perguntasFacil[questionIndex].pergunta;
-    Opcao1.innerHTML = perguntasFacil[questionIndex].resposta1;
-    Opcao2.innerHTML = perguntasFacil[questionIndex].resposta2;
-    Opcao3.innerHTML = perguntasFacil[questionIndex].resposta3;
-    Opcao4.innerHTML = perguntasFacil[questionIndex].resposta4;
+    Pergunta.innerHTML = perguntas[questionIndex].pergunta;
+    Opcao1.innerHTML = perguntas[questionIndex].resposta1;
+    Opcao2.innerHTML = perguntas[questionIndex].resposta2;
+    Opcao3.innerHTML = perguntas[questionIndex].resposta3;
+    Opcao4.innerHTML = perguntas[questionIndex].resposta4;
 };
 
 function checkRight(userEscolha) {
@@ -71,7 +63,7 @@ function checkRight(userEscolha) {
 
             for (let i = 0; i < button.length; i++) {
                 button[i].disabled = false;
-                if (userEscolha == perguntasFacil[questionIndex].solucao) {
+                if (userEscolha == perguntas[questionIndex].solucao) {
                     button[i].classList.remove("ColorBgGreen");
                     button[i].classList.add("ColorBgGreen");
                 } else {
@@ -80,7 +72,7 @@ function checkRight(userEscolha) {
                 }
             }
 
-            if (userEscolha == perguntasFacil[questionIndex].solucao) {
+            if (userEscolha == perguntas[questionIndex].solucao) {
                 console.log("Certo");
                 CertosScore++;
                 ComboVar++;
@@ -98,7 +90,7 @@ function checkRight(userEscolha) {
             NumeroPerguntasP.innerHTML = "Pergunta Atual: " + questionCounter;
             ComboP.innerHTML = "Combo: " + ComboVar;
 
-            if (questionCounter > 3) {
+            if (questionCounter > 30) {
 
                 for (let j = 0; j < button.length; j++) {
                     button[j].disabled = true;
@@ -106,36 +98,14 @@ function checkRight(userEscolha) {
 
                 swal("Parabéns", "Acabaste o Quiz!!", "success").then((nada) => {
                     swal({
-                        text: 'Diz o teu nome:',
-                        content: {
-                            element: "input",
-                            attributes: {
-                                placeholder: "Escreve o teu nome. Ex: 'User'",
-                            }
-                        },
-                        icon: "info",
-                    }).then(function(value) {
-                        if (value == "") {
-                            nomeUser = "User";
-                        } else {
-                            nomeUser = value;
-                        }
-                    }).then((nada) => {
-                        swal({
-                            title: "Confirmação",
-                            text: "Nome: " + nomeUser + ", Pontos: " + PontosVar + ", Data: " + dataAtual,
-                            icon: "info"
-                        })
+                        title: "Confirmação",
+                        text: "Conseguiste pontos: " + PontosVar,
+                        icon: "info"
                     })
                 });
 
                 console.log("Nome:" + nomeUser);
                 console.log("Pontos:" + PontosVar);
-                console.log("Data:" + dataAtual);
-
-
-                //local storage
-                DataBd.add(nomeUser, PontosVar, dataAtual);
 
             } else {
                 getNewQuestions();
@@ -177,7 +147,7 @@ button[4].addEventListener(
     "click",
     () => {
         if (AjudasVar > 0) {
-            swal("Resposta: " + perguntasFacil[questionIndex].solucao);
+            swal("Resposta: " + perguntas[questionIndex].solucao);
             AjudasVar--;
             AjudasP.innerHTML = "Ajudas: " + AjudasVar;
         } else {

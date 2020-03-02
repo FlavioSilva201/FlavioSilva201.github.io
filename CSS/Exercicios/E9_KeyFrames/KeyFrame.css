@@ -1,0 +1,138 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.DancaDoQuadrado {
+    width: 100px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    background: royalblue;
+    position: relative;
+    animation: cenas 8s alternate infinite;
+}
+
+@keyframes cenas {
+    0% {
+        top: 0px;
+        left: 0px;
+    }
+    25% {
+        left: 100px;
+        top: 0px;
+    }
+    50% {
+        left: 100px;
+        top: 100px;
+    }
+    75% {
+        left: 0px;
+        top: 100px;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+    }
+}
+
+#ConjuntoBolas {
+    display: flex;
+    position: fixed;
+    bottom: 50%;
+    left: 50%;
+}
+
+.ConjuntoBolas {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: wheat;
+    animation: bolas 4s infinite;
+    transform: scale(0);
+    margin-right: 50px;
+}
+
+.bola1 {
+    animation-delay: 0s;
+}
+
+.bola2 {
+    animation-delay: 0.4s;
+}
+
+.bola3 {
+    animation-delay: 0.8s;
+}
+
+.bola4 {
+    animation-delay: 1.2s;
+}
+
+.bola5 {
+    animation-delay: 1.6s;
+}
+
+@keyframes bolas {
+    0% {
+        background-color: white;
+    }
+    20% {
+        background-color: orange;
+        transform: scale(1.5);
+    }
+    40% {
+        background-color: white;
+        transform: scale(0);
+    }
+}
+
+#ConjuntoBolas2 {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+}
+
+.globaldiv {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: orange;
+    margin: 10px;
+    animation: loading 4s alternate infinite;
+}
+
+#div1 {
+    animation-delay: 0s;
+}
+
+#div2 {
+    animation-delay: 0.4s;
+}
+
+#div3 {
+    animation-delay: 0.8s;
+}
+
+#div4 {
+    animation-delay: 1.2s;
+}
+
+#div5 {
+    animation-delay: 1.6s;
+}
+
+@keyframes loading {
+    33% {
+        scale: 0;
+        background-color: white;
+    }
+    66% {
+        scale: 1.5;
+        background-color: orange;
+    }
+    100% {
+        scale: 0;
+        background-color: white;
+    }
+}
