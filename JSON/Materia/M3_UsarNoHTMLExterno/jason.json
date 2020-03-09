@@ -1,0 +1,10 @@
+{
+    "nome": "Zé",
+    "idade": 30,
+    "morada": {
+        "rua": "Pedra do Ouro",
+        "concelho": "Ansião",
+        "destrito": "Leiria"
+    },
+    "ListaShopping": ["Leite", "Açucar", "Ovos", "Arroz"]
+}
