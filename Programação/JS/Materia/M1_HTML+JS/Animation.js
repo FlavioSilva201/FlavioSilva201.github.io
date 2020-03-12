@@ -1,1 +1,0 @@
-document.write("Java Script externo");
