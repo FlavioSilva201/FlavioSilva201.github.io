@@ -1,0 +1,46 @@
+body {
+    background-color: #EBF1D2;
+}
+
+header {
+    margin-top: 3%;
+    margin-bottom: 10%;
+    text-align: center;
+    font-family: voltaire;
+    font-size: 50px;
+}
+
+.Log-In {
+    text-align: center;
+    background-color: #FCA311;
+    padding: 100px;
+    border-radius: 1%;
+}
+
+.Log-In {
+    margin-left: 35%;
+    width: 10%;
+    color: #C5CAC6;
+}
+
+.Log-In-Btn {
+    color: #000000;
+    cursor: pointer;
+}
+
+.Register {
+    margin: 1%;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+footer {
+    position: fixed;
+    left: 0%;
+    bottom: 2%;
+    width: 100%;
+    background-color: none;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}

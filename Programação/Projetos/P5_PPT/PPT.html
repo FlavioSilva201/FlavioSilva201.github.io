@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./Style.css">
+    <title>Pedra Papel Tesoura</title>
+</head>
+
+<body>
+    <!-- https://www.youtube.com/watch?v=jaVNP3nIAv0 -->
+    <header>
+        <h1>Pedra Papel Tesoura</h1>
+        <select id="IndiomaSlect">
+            <option value="Alemao">Deutsch</option>
+            <option value="Arabe">العربية</option>
+            <option value="Chines">中国人</option>
+            <option value="Espanhol">Espanol</option>
+            <option value="Frances">Françes</option>
+            <option value="Grego">Ελληνικά</option>
+            <option value="Ingles">English</option>
+            <option value="Japones">日本語</option>
+            <option value="Latim">Latine</option>
+            <option value="Luxemburgues">Lëtzebuergesch</option>
+            <option value="Mongol">Монгол</option>
+            <option value="Polaco">Polski</option>
+            <option value="Portugues" selected>Português</option>
+            <option value="Russo">русский</option>
+            <option value="Ucraniano">Українська</option>
+            <option value="Vietenamita">Tiếng việt</option>
+          </select>
+    </header>
+
+    <main>
+        <div class="score-board">
+            <div id="user-label" class="badge">Jogador</div>
+            <div id="computer-label" class="badge">CPU</div>
+            <span id="user-score">0</span>:<span id="computer-score">0</span>
+        </div>
+
+        <div class="result">
+            <p>Faz a Tua Escolha</p>
+        </div>
+
+        <div class="choices">
+            <div class="choice" id="r">
+                <img src="./Img/Pedra_Azul.png" alt="Pedra User">
+            </div>
+            <div class="choice" id="p">
+                <img src="./Img/Papel_Azul.png" alt="Papel User">
+            </div>
+            <div class="choice" id="s">
+                <img src="./Img/Tesoura_Azul.png" alt="Tesoura User">
+            </div>
+        </div>
+
+    </main>
+
+    <div id="DivBtnReset">
+        <button type="button" title="Reset" id="BtnReset">Recomeçar</button>
+    </div>
+
+    <script src="./Animation.js"></script>
+</body>
+
+</html>

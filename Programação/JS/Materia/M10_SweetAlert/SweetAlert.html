@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../Reset.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- https://sweetalert.js.org/ -->
+    <title>Sweet Alert</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cenas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        
+        .cenas:nth-child(1) {
+            background-color: red;
+            justify-content: center;
+        }
+        
+        .cenas:nth-child(2) {
+            background-color: green;
+            overflow-y: scroll;
+        }
+        
+        button {
+            margin: 10px;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 50px;
+            font-size: 25px;
+            background-color: royalblue;
+            outline: none;
+        }
+        
+        button:hover {
+            background-color: aqua;
+        }
+        
+        button:active {
+            background-color: aquamarine;
+        }
+    </style>
+
+    <h1>Sweet Alert</h1>
+    <main>
+        <div class="cenas">
+            <h2>Nativo</h2>
+            <button id="AlertNativo">Alert</button>
+            <button id="PromptNativo">Prompt</button>
+            <button id="ConfirmNative">Confirm</button>
+        </div>
+        <div class="cenas">
+            <h2>Swets</h2>
+            <button id="exemplo1">Simples</button>
+            <button id="exemplo2">Simples Titulo</button>
+            <button id="exemplo3Sucesso">Sucesso</button>
+            <button id="exemplo3Warning">Warning</button>
+            <button id="exemplo3Error">Error</button>
+            <button id="exemplo3Info">Info</button>
+            <button id="exemplo4">Detalhado</button>
+        </div>
+    </main>
+    <a href="https://sweetalert.js.org/ ">Ver Mais</a>
+    <script src="./animation.js"></script>
+</body>
+
+</html>

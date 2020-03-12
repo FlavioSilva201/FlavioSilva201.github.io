@@ -1,0 +1,109 @@
+/* CSS É FIXE */
+
+* {
+    /* Seleciona tudo do doc HTML */
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 1s;
+}
+
+body {
+    /* Seleciona tudo no body */
+    background-color: rgb(36, 175, 221);
+    padding: 10px;
+    margin: 10px;
+    transition: all 2s;
+}
+
+body:hover {
+    background-color: rgb(0, 255, 55);
+}
+
+p {
+    /* Seleciona tudo dentro dos p de todos os p */
+    color: red;
+    background-color: black;
+    border: 5px dashed purple;
+    transition: all 1s;
+}
+
+span {
+    /* Seleciona tudo dentro dos span de todos os span */
+    color: rgba(199, 233, 10, 0.849);
+    font-size: 40px;
+    transition: all 1s;
+    border: 5px double purple;
+}
+
+#coisas {
+    /* Procura o id e mudifica tudo dentro das tags */
+    color: rgba(233, 62, 10, 0.849);
+    font-size: 10px;
+    transition: all 1s;
+}
+
+#coisas:hover {
+    color: rgb(255, 230, 0);
+    font-size: 100px;
+    border: 5px purple;
+    border-style: dotted dashed solid double;
+}
+
+.special {
+    /* Seleciona todas as class em que foi chamada a class special */
+    background-color: rgb(221, 36, 190);
+    color: rgb(16, 250, 55);
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: all 1s;
+}
+
+.special:hover {
+    /* Evento quando o rato estiver em cima */
+    background-color: rgb(6, 240, 248);
+    color: rgba(232, 0, 253, 0.5);
+    font-size: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1.special {
+    /* Seleciona todos os h1 que tenham a class special*/
+    background-color: rgb(36, 221, 36);
+    color: rgba(250, 16, 16, 0.603);
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 1s;
+}
+
+p .special {
+    /* Seleciona dentro das tags p as tags que tenham a class special nele */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 1s;
+}
+
+.animated {
+    color: black;
+    background-color: white;
+    transition: all 1s;
+}
+
+.animated:hover {
+    color: white;
+    background-color: black;
+}
+
+.box {
+    /* margin: 10px 30px 40px 60px;
+    sima, direita, baixo, esquerda */
+    margin: 100px auto 20px;
+    background-color: olive;
+    height: 50px;
+    width: 200px;
+    padding: 20px;
+    border: 5px dotted purple;
+}
+
+.box:hover {
+    background-color: rgb(255, 77, 6);
+    border: 10px solid rgb(255, 0, 255);
+    height: 100px;
+}

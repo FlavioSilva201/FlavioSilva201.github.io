@@ -1,0 +1,131 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: whitesmoke;
+}
+
+header {
+    flex-grow: 1;
+}
+
+header,
+footer {
+    text-align: center;
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+}
+
+.Camada1,
+.Camada2,
+.Camada3,
+.Camada4,
+.Camada5,
+.Camada6,
+.Camada7,
+.Camada8,
+.Camada9,
+.Camada10,
+.Camada11 {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Camada1 {
+    background-color: gold;
+}
+
+.Camada2 {
+    background-color: rgb(230, 104, 182);
+}
+
+.Camada3 {
+    background-color: blue;
+}
+
+.Camada4 {
+    background-color: rgb(255, 0, 221);
+}
+
+.Camada5 {
+    background-color: rgb(0, 116, 48);
+}
+
+.Camada6 {
+    background-color: rgb(255, 94, 0);
+}
+
+.Camada7 {
+    background-color: rgb(255, 0, 106);
+}
+
+.Camada8 {
+    background-color: rgb(0, 255, 115);
+}
+
+.Camada9 {
+    background-color: rgb(255, 255, 0);
+}
+
+.Camada10 {
+    background-color: rgb(0, 255, 255);
+}
+
+.Camada11 {
+    background-color: rgb(100, 18, 93);
+}
+
+header p,
+footer p {
+    background-color: blueviolet;
+    border-radius: 10px;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+}
+
+main {
+    flex-grow: 2;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: auto auto auto;
+    margin: 10px;
+}
+
+main img {
+    border-radius: 50%;
+}
+
+main p {
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 4px
+}
+
+.OpcaoSenha {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 30px;
+    background-color: rgb(0, 255, 0);
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.OpcaoSenha:hover {
+    background-color: rgb(0, 200, 0);
+}
+
+.OpcaoSenha:active {
+    background-color: rgb(0, 100, 0);
+}
+
+footer {
+    flex-grow: 1;
+}

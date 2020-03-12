@@ -1,0 +1,15 @@
+{
+    "name": "Carco",
+    "version": "1.0.0",
+    "description": "",
+    "main": "Cenas.js",
+    "scripts": {
+        "start": "nodemon cenas.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "nodemon": "^2.0.2"
+    }
+}

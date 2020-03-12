@@ -1,0 +1,99 @@
+body * {
+    margin: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+div {
+    background-color: blue;
+    color: white;
+}
+
+#animationDurationS:hover {
+    background-color: red;
+}
+
+#animationDurationC {
+    transition: 4s;
+}
+
+#animationDurationC:hover {
+    background-color: red;
+}
+
+#animationEspecificationS {
+    width: 150px;
+    height: 150px;
+}
+
+#animationEspecificationS:hover {
+    width: 600px;
+    height: 600px;
+}
+
+#animationEspecificationC {
+    width: 150px;
+    height: 150px;
+    transition: width 2s, height 4s;
+}
+
+#animationEspecificationC:hover {
+    width: 600px;
+    height: 600px;
+}
+
+.transitionTiming {
+    width: 100px;
+    height: 100px;
+    transition: width 2s;
+}
+
+#div1 {
+    transition-timing-function: linear;
+}
+
+#div2 {
+    transition-timing-function: ease;
+}
+
+#div3 {
+    transition-timing-function: ease-in;
+}
+
+#div4 {
+    transition-timing-function: ease-out;
+}
+
+#div5 {
+    transition-timing-function: ease-in-out;
+}
+
+.transitionTiming:hover {
+    width: 300px;
+}
+
+#transictionDelay {
+    width: 300px;
+    transition: 3px;
+    transition-delay: 1s;
+}
+
+#transictionDelay:hover {
+    width: 900px;
+}
+
+#transictionB {
+    width: 200px;
+    height: 100px;
+    transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 1s;
+}
+
+#transictionB:hover {
+    width: 800px;
+    height: 300px;
+}

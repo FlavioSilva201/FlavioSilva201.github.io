@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overflow</title>
+</head>
+
+<body>
+    <style>
+        p {
+            width: 12em;
+            height: 50px;
+            border: dotted;
+        }
+        
+        #over1 {
+            overflow: visible;
+            /* Exibe o conteúdo de forma vazada, fora da caixa de conteúdo */
+        }
+        
+        #over2 {
+            overflow: hidden;
+            /* Esconde o conteúdo excedente */
+        }
+        
+        #over3 {
+            overflow: scroll;
+            /* Sempre exibe barras de rolagem */
+        }
+        
+        #over4 {
+            overflow: auto;
+            /* Exibe barras de rolagem apenas se necessário */
+        }
+        
+        #over5 {
+            height: 12em;
+            overflow: auto;
+            /* Exibe barras de rolagem apenas se necessário */
+        }
+        
+        #over6 {
+            Overflow: Initial;
+            /* Usa o valor padrão (Visible) */
+        }
+        
+        #Conteudo {
+            height: 12em;
+            overflow: auto;
+        }
+    </style>
+    <h1> Overflow </h1>
+    <p id="over2">Overflow: Hidden; <br> O conteúdo é cortado e nenhuma barra de rolagem é exibida.</p>
+    <p id="over3">Overflow: Scroll; <br> O conteúdo é acessível através de barras de rolagem que são exibidas mesmo que o conteúdo não precise. Isso evita o problema de barras de rolagem aparecendo e desaparecendo quando o conteúdo é dinâmico. Impressoras podem imprimir
+        o conteúdo vazado.</p>
+    <p id="over4">Overflow: Auto; <br> Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas quando necessário.</p>
+    <p id="over5">Overflow: Auto; <br> Depende do navegador utilizado. Navegadores desktop como o Firefox geralmente exibem barras de rolagem apenas quando necessário.</p>
+    <p id="over1">Overflow: Visible; <br> Valor padrão. O conteúdo não é cortado e pode ser renderizado para fora da caixa de conteúdo.</p>
+    <p id="over6">Overflow: Initial; <br> Usa o valor padrão (Visible)</p>
+
+    <p id="Conteudo"> <b>"Overflow-x"</b> e <b>"Overflow-y"</b> Têm as mesmas propriedades e são usados da mesma forma que o <b>"Overflow"</b></p>
+</body>
+
+</html>

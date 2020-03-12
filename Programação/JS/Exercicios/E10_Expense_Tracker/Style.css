@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+body {
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lato";
+}
+
+header,
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #00AEFF;
+    letter-spacing: 5px;
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#YourBalamce {
+    width: 100%;
+    text-align: left;
+}
+
+#divContas {
+    position: sticky;
+    top: 60px;
+    margin-top: 10px;
+    border: 1px solid #00000020;
+    width: 100%;
+    padding: 30px 0;
+}
+
+.divSubContas {
+    flex-direction: column;
+    width: 50%;
+}
+
+#divContas,
+.divSubContas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+
+#divContas div:nth-child(2) {
+    border-left: 1px solid #00000020;
+}
+
+#divContas div:nth-child(1) p {
+    color: green;
+}
+
+#divContas div:nth-child(2) p {
+    color: red;
+}
+
+#SectionHistory {
+    width: 100%;
+}
+
+#SectionHistory h3,
+#AddNewTransiction h3 {
+    border-bottom: 1px solid black;
+    margin: 25px 0;
+    padding-bottom: 5px;
+}
+
+#AddNewTransiction input {
+    width: 95%;
+    border: 1px solid #00000050;
+    border-radius: 2px;
+    margin: 5px 0;
+    padding: 5px 7px;
+    font-size: 16px;
+}
+
+#AddNewTransiction button {
+    width: 100%;
+    background-color: #9C88FF;
+    border: 1px solid #00000050;
+    color: whitesmoke;
+    border-radius: 2px;
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 20px;
+    outline: none;
+}
+
+#AddNewTransiction button:active {
+    background-color: #856EFA;
+}
+
+footer {
+    background-color: #3D3D3D;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+footer h3 {
+    color: whitesmoke;
+}
+
+footer img {
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+}

@@ -1,0 +1,25 @@
+section{
+    display: grid;
+    grid-template-rows: "art1 art2 art3"
+                        "art4 art4 art4";
+    grid-template-columns: repeat(3,1fr);
+    }
+article{
+    background-color: palevioletred;
+    border: 1px solid grey;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+article:nth-child(1){
+    grid-area: art1;
+}
+article:nth-child(2){
+    grid-area: art2;
+}
+article:nth-child(3){
+    grid-area: art3;
+}
+article:nth-child(4){
+    grid-area: art4;
+}
