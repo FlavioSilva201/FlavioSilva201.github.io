@@ -1,9 +1,9 @@
-:root {}
-
+// Vaibles
+$borderRadios: 8px;
 * {
     margin: 0;
     padding: 0;
-    color: black;
+    color: whitesmoke;
     font-family: "Consolas", "monaco", "monospace", "Comic Sans MS", "cursive", "sans-serif";
 }
 
@@ -11,89 +11,84 @@ html {
     height: 100%;
     width: 100%;
     body {
+        background-color: black;
         width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         ul {
             li {
                 list-style: none;
             }
         }
-        header {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: red;
-            img#ProfileImg {
-                margin: 10px 20px;
-                width: 100px;
-                height: 100px;
-                border-radius: 8px;
-            }
+        a {
+            text-decoration: none;
         }
-        nav {
-            position: sticky;
-            top: 0;
-            width: 100%;
-            background-color: firebrick;
-            ul {
-                height: 100%;
+        div#Container {
+            width: 75%;
+            height: 75%;
+            header {
+                height: 20px;
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
                 align-items: center;
-                li {
-                    margin: 10px 0;
-                    a {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 10px;
-                        text-decoration: none;
-                        img {
-                            margin-right: 10px;
+                justify-content: space-between;
+                border-top-left-radius: $borderRadios;
+                border-top-right-radius: $borderRadios;
+                background-color: #2E3537;
+                div {
+                    height: 100%;
+                    width: 40px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 8px;
+                    span {
+                        height: 10px;
+                        width: 10px;
+                        border-radius: 50%;
+                        &#red {
+                            background-color: red;
+                        }
+                        &#yellow {
+                            background-color: yellow;
+                        }
+                        &#green {
+                            background-color: green;
                         }
                     }
                 }
-            }
-        }
-        main {
-            height: 100%;
-            width: 100%;
-            background-color: blue;
-            #Home {}
-            #Projects {}
-            #Fonts {}
-            #Settings {
-                select {
-                    height: 20px;
-                    border-radius: 2px;
-                    border: 2px solid black;
-                    outline: none;
+                h1 {
+                    font-size: 14px;
+                    // span#path {
+                    // }
+                }
+                p {
+                    color: gray;
+                    font-size: 14px;
+                    margin-right: 8px;
                 }
             }
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            height: 50px;
-            width: 100%;
-            background-color: green;
-            ul {
+            main {
                 height: 100%;
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                li {
+                border-bottom-left-radius: $borderRadios;
+                border-bottom-right-radius: $borderRadios;
+                background-color: #273646;
+                p {
+                    margin: 2px 4px 4px;
+                    span.Arrow {
+                        color: yellowgreen;
+                    }
+                    span.path {
+                        color: royalblue;
+                    }
+                    span.commandRight {
+                        color: green;
+                    }
                     a {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 10px;
-                        text-decoration: none;
-                        img {
-                            margin-right: 10px;
-                        }
+                        text-decoration: underline;
                     }
                 }
             }
