@@ -34,7 +34,7 @@ html body div#Container {
 }
 
 html body div#Container header {
-  height: 20px;
+  height: 30px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -46,7 +46,7 @@ html body div#Container header {
 
 html body div#Container header div {
   height: 100%;
-  width: 40px;
+  width: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,9 +54,18 @@ html body div#Container header div {
 }
 
 html body div#Container header div span {
-  height: 10px;
-  width: 10px;
+  height: 15px;
+  width: 15px;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html body div#Container header div span img {
+  height: 90%;
+  width: 90%;
+  visibility: hidden;
 }
 
 html body div#Container header div span#red {
@@ -69,6 +78,10 @@ html body div#Container header div span#yellow {
 
 html body div#Container header div span#green {
   background-color: green;
+}
+
+html body div#Container header div span:hover img {
+  visibility: visible;
 }
 
 html body div#Container header h1 {
@@ -89,7 +102,21 @@ html body div#Container main {
 }
 
 html body div#Container main p {
-  margin: 2px 4px 4px;
+  margin: 0 4px 4px;
+  display: flex;
+}
+
+html body div#Container main p span {
+  visibility: hidden;
+  margin-left: 8px;
+}
+
+html body div#Container main p:nth-child(1) {
+  padding-top: 8px;
+}
+
+html body div#Container main p span#DataLogin {
+  visibility: visible;
 }
 
 html body div#Container main p span.Arrow {
@@ -102,6 +129,10 @@ html body div#Container main p span.path {
 
 html body div#Container main p span.commandRight {
   color: green;
+}
+
+html body div#Container main p span.answerUser {
+  transition: 10s width;
 }
 
 html body div#Container main p a {
