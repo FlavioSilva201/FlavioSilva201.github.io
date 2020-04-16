@@ -15,7 +15,7 @@ function main() {
         const el = document.createElement("option");
         el.textContent = opt;
         el.value = opt;
-        if (valorIndiomaSlect[i] == "Portugues") {
+        if (valorIndiomaSlect[i] == "Ingles") {
             el.selected = "selected";
         }
         IndiomaSlect.appendChild(el);
@@ -24,22 +24,10 @@ function main() {
 }
 
 IndiomaSlect.onchange = function function1() {
-    switch (IndiomaSlect.value) {
-        case "Ingles":
-            indioma = ind.Ingles;
-            break;
-        case "Portugues":
-            indioma = ind.Portugues;
-            break;
-        case "Frances":
-            indioma = ind.Frances;
-            break;
-        case "Russo":
-            indioma = ind.Russo;
-            break;
-        default:
-            console.log("Deffaut");
-            break;
+    if (IndiomaSlect.value === "Ingles") {
+        indioma = ind.Ingles;
+    } else {
+        indioma = ind.Portugues;
     }
     atualizarIndioma();
 };

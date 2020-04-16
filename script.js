@@ -12,7 +12,7 @@ let counter = 0;
 main()
 
 function main() {
-    DataLogin.innerHTML = new Date();
+    DataLogin.innerHTML = new Date().getDate() + "/" + new Date().getMonth() + "/" + new Date().getFullYear() + " - ";
     linha[0].style.visibility = "visible";
     linha[1].style.visibility = "visible";
 }
@@ -85,7 +85,7 @@ function LinesShow() {
             break;
         default:
             clearInterval(timer);
-            // location.replace("./home/home.html");
+            // location.replace("./Pages/home/home.html");
             break;
     }
 }
