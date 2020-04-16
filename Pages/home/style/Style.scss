@@ -1,28 +1,34 @@
 html {
     body {
         nav {
+            position: fixed;
+            top: 0;
             height: 50px;
             width: 100%;
             display: flex;
             align-items: center;
-            position: fixed;
-            top: 0;
-            background-color: firebrick;
             ul {
                 width: 100%;
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
+                padding: 0 10px;
                 li {
-                    padding: 10px 20px;
+                    width: 100%;
+                    padding: 10px 0;
                     background-color: royalblue;
-                    border-left: 1px solid black;
+                    border-right: 2px solid black;
                     border-radius: 2px;
                     transition: .2s;
                     &:hover {
                         background-color: rgb(102, 87, 0);
+                        box-sizing: border-box;
+                        border: 1px solid black;
+                    }
+                    &:active {
+                        border: 2px solid black;
                     }
                     &:nth-child(1) {
-                        margin-left: 4px;
                         background-color: gold;
                         &:hover {
                             background-color: rgb(206, 175, 0);
@@ -52,7 +58,7 @@ html {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background-color: red;
+                // background-color: red;
                 img#ProfileImg {
                     margin: 10px 20px;
                     width: 100px;
@@ -63,7 +69,7 @@ html {
             main {
                 height: 100%;
                 width: 100%;
-                background-color: blue;
+                // background-color: blue;
                 #Home {
                     h2 {
                         width: 100%;

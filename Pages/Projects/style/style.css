@@ -9,29 +9,33 @@ html body nav {
   align-items: center;
   position: fixed;
   top: 0;
-  background-color: firebrick;
 }
 
 html body nav ul {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
 html body nav ul li {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 10px 0;
   background-color: royalblue;
-  border-left: 1px solid black;
+  border-right: 2px solid black;
   border-radius: 2px;
   transition: .2s;
 }
 
 html body nav ul li:hover {
   background-color: #665700;
+  box-sizing: border-box;
+  border: 1px solid black;
 }
 
-html body nav ul li:nth-child(1) {
-  margin-left: 4px;
+html body nav ul li:active {
+  border: 2px solid black;
 }
 
 html body nav ul li:nth-child(2) {
@@ -58,11 +62,16 @@ html body nav ul li a img {
   margin-right: 10px;
 }
 
-html body header {
+html body #container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+html body #container header {
   width: 100%;
 }
 
-html body main {
+html body #container main {
   width: 100%;
   display: flex;
   align-items: center;

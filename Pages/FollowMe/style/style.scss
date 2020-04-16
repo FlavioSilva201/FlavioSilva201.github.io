@@ -8,22 +8,26 @@ html {
             align-items: center;
             position: fixed;
             top: 0;
-            background-color: firebrick;
             ul {
                 width: 100%;
                 display: flex;
+                justify-content: space-between;
                 align-items: center;
+                padding: 0 10px;
                 li {
-                    padding: 10px 20px;
+                    width: 100%;
+                    padding: 10px 0;
                     background-color: royalblue;
-                    border-left: 1px solid black;
+                    border-right: 2px solid black;
                     border-radius: 2px;
                     transition: .2s;
                     &:hover {
                         background-color: rgb(102, 87, 0);
+                        box-sizing: border-box;
+                        border: 1px solid black;
                     }
-                    &:nth-child(1) {
-                        margin-left: 4px;
+                    &:active {
+                        border: 2px solid black;
                     }
                     &:nth-child(3) {
                         background-color: gold;
@@ -50,7 +54,6 @@ html {
         main {
             width: 100%;
             height: 100%;
-            background-color: green;
             display: flex;
             align-items: center;
             justify-content: center;

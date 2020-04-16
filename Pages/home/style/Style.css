@@ -1,33 +1,40 @@
 html body nav {
+  position: fixed;
+  top: 0;
   height: 50px;
   width: 100%;
   display: flex;
   align-items: center;
-  position: fixed;
-  top: 0;
-  background-color: firebrick;
 }
 
 html body nav ul {
   width: 100%;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
 html body nav ul li {
-  padding: 10px 20px;
+  width: 100%;
+  padding: 10px 0;
   background-color: royalblue;
-  border-left: 1px solid black;
+  border-right: 2px solid black;
   border-radius: 2px;
   transition: .2s;
 }
 
 html body nav ul li:hover {
   background-color: #665700;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+html body nav ul li:active {
+  border: 2px solid black;
 }
 
 html body nav ul li:nth-child(1) {
-  margin-left: 4px;
   background-color: gold;
 }
 
@@ -61,7 +68,6 @@ html body #container header {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
 }
 
 html body #container header img#ProfileImg {
@@ -74,7 +80,6 @@ html body #container header img#ProfileImg {
 html body #container main {
   height: 100%;
   width: 100%;
-  background-color: blue;
 }
 
 html body #container main #Home h2 {
