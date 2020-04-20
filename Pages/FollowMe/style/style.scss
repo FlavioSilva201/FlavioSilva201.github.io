@@ -57,12 +57,16 @@ html {
             display: flex;
             align-items: center;
             justify-content: center;
-            #FollowMe {
-                position: relative;
-                background-color: gainsboro;
-                border: 2px solid black;
-                border-radius: 4px;
-                padding: 10px;
+            #Container {
+                #FollowMe,
+                #Fonts {
+                    position: relative;
+                    background-color: gainsboro;
+                    border: 2px solid black;
+                    border-radius: 4px;
+                    padding: 10px;
+                    margin-bottom: 10px;
+                }
                 button {
                     position: absolute;
                     top: 4px;
@@ -95,9 +99,9 @@ html {
                         align-items: center;
                         justify-content: center;
                         border-bottom: 1px solid gray;
-                        &:nth-last-child(1) {
-                            grid-column: 1 / span 2;
-                        }
+                        // &:nth-last-child(1) {
+                        //     grid-column: 1 / span 2;
+                        // }
                         a {
                             width: 100%;
                             display: flex;
@@ -105,6 +109,8 @@ html {
                             justify-content: center;
                             margin: 10px 0px;
                             img {
+                                width: 24px;
+                                height: 24px;
                                 margin-right: 10px;
                             }
                         }

@@ -70,15 +70,17 @@ html body main {
   justify-content: center;
 }
 
-html body main #FollowMe {
+html body main #Container #FollowMe,
+html body main #Container #Fonts {
   position: relative;
   background-color: gainsboro;
   border: 2px solid black;
   border-radius: 4px;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
-html body main #FollowMe button {
+html body main #Container button {
   position: absolute;
   top: 4px;
   right: 4px;
@@ -91,18 +93,18 @@ html body main #FollowMe button {
   border-radius: 50px;
 }
 
-html body main #FollowMe button:hover {
+html body main #Container button:hover {
   background-color: salmon;
 }
 
-html body main #FollowMe h2 {
+html body main #Container h2 {
   width: 100%;
   text-align: center;
   border-bottom: 2px solid black;
   margin-bottom: 10px;
 }
 
-html body main #FollowMe ul {
+html body main #Container ul {
   height: 100%;
   width: 100%;
   display: grid;
@@ -110,18 +112,14 @@ html body main #FollowMe ul {
   grid-gap: 24px;
 }
 
-html body main #FollowMe ul li {
+html body main #Container ul li {
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gray;
 }
 
-html body main #FollowMe ul li:nth-last-child(1) {
-  grid-column: 1 / span 2;
-}
-
-html body main #FollowMe ul li a {
+html body main #Container ul li a {
   width: 100%;
   display: flex;
   align-items: center;
@@ -129,6 +127,8 @@ html body main #FollowMe ul li a {
   margin: 10px 0px;
 }
 
-html body main #FollowMe ul li a img {
+html body main #Container ul li a img {
+  width: 24px;
+  height: 24px;
   margin-right: 10px;
 }
