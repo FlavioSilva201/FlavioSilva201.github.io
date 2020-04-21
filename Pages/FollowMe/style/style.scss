@@ -29,12 +29,6 @@ html {
                     &:active {
                         border: 2px solid black;
                     }
-                    &:nth-child(3) {
-                        background-color: gold;
-                        &:hover {
-                            background-color: rgb(206, 175, 0);
-                        }
-                    }
                     a {
                         width: 100%;
                         display: flex;
@@ -46,6 +40,12 @@ html {
                         }
                         img {
                             margin-right: 10px;
+                        }
+                    }
+                    &#NavSelected {
+                        background-color: gold;
+                        &:hover {
+                            background-color: rgb(206, 175, 0);
                         }
                     }
                 }
@@ -65,21 +65,8 @@ html {
                     border: 2px solid black;
                     border-radius: 4px;
                     padding: 10px;
-                    margin-bottom: 10px;
-                }
-                button {
-                    position: absolute;
-                    top: 4px;
-                    right: 4px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background: none;
-                    padding: 4px;
-                    border: 2px solid black;
-                    border-radius: 50px;
-                    &:hover {
-                        background-color: salmon;
+                    &:nth-child(1) {
+                        margin-bottom: 10px;
                     }
                 }
                 h2 {
@@ -92,13 +79,16 @@ html {
                     height: 100%;
                     width: 100%;
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: auto auto;
                     grid-gap: 24px;
                     li {
+                        width: 100%;
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        border-bottom: 1px solid gray;
+                        padding: 0 4px;
+                        border-bottom: 2px solid gray;
+                        border-radius: 2px;
                         // &:nth-last-child(1) {
                         //     grid-column: 1 / span 2;
                         // }

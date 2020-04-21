@@ -38,14 +38,6 @@ html body nav ul li:active {
   border: 2px solid black;
 }
 
-html body nav ul li:nth-child(3) {
-  background-color: gold;
-}
-
-html body nav ul li:nth-child(3):hover {
-  background-color: #ceaf00;
-}
-
 html body nav ul li a {
   width: 100%;
   display: flex;
@@ -60,6 +52,14 @@ html body nav ul li a span {
 
 html body nav ul li a img {
   margin-right: 10px;
+}
+
+html body nav ul li#NavSelected {
+  background-color: gold;
+}
+
+html body nav ul li#NavSelected:hover {
+  background-color: #ceaf00;
 }
 
 html body main {
@@ -77,24 +77,11 @@ html body main #Container #Fonts {
   border: 2px solid black;
   border-radius: 4px;
   padding: 10px;
+}
+
+html body main #Container #FollowMe:nth-child(1),
+html body main #Container #Fonts:nth-child(1) {
   margin-bottom: 10px;
-}
-
-html body main #Container button {
-  position: absolute;
-  top: 4px;
-  right: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-  padding: 4px;
-  border: 2px solid black;
-  border-radius: 50px;
-}
-
-html body main #Container button:hover {
-  background-color: salmon;
 }
 
 html body main #Container h2 {
@@ -108,15 +95,18 @@ html body main #Container ul {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   grid-gap: 24px;
 }
 
 html body main #Container ul li {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid gray;
+  padding: 0 4px;
+  border-bottom: 2px solid gray;
+  border-radius: 2px;
 }
 
 html body main #Container ul li a {

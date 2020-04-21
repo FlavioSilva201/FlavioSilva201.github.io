@@ -29,12 +29,6 @@ html {
                     &:active {
                         border: 2px solid black;
                     }
-                    &:nth-child(2) {
-                        background-color: gold;
-                        &:hover {
-                            background-color: rgb(206, 175, 0);
-                        }
-                    }
                     a {
                         width: 100%;
                         display: flex;
@@ -46,6 +40,12 @@ html {
                         }
                         img {
                             margin-right: 10px;
+                        }
+                    }
+                    &#NavSelected {
+                        background-color: gold;
+                        &:hover {
+                            background-color: rgb(206, 175, 0);
                         }
                     }
                 }

@@ -34,14 +34,6 @@ html body nav ul li:active {
   border: 2px solid black;
 }
 
-html body nav ul li:nth-child(1) {
-  background-color: gold;
-}
-
-html body nav ul li:nth-child(1):hover {
-  background-color: #ceaf00;
-}
-
 html body nav ul li a {
   width: 100%;
   display: flex;
@@ -56,6 +48,14 @@ html body nav ul li a span {
 
 html body nav ul li a img {
   margin-right: 10px;
+}
+
+html body nav ul li#NavSelected {
+  background-color: gold;
+}
+
+html body nav ul li#NavSelected:hover {
+  background-color: #ceaf00;
 }
 
 html body #container {
