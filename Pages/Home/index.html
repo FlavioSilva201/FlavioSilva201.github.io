@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../../reset.css">
+    <link rel="stylesheet" href="../style/Nav/style.min.css">
     <link rel="stylesheet" href="./style/Style.min.css">
     <link rel="shortcut icon" href="../../Assets/icons/head/at-sign.svg" type="image/x-icon">
     <title>Flávio Silva</title>
@@ -15,10 +16,13 @@
     <nav>
         <ul>
             <li id="NavSelected">
-                <a href="#" title="Home"><img src="../../Assets/icons/Nav/home.svg" alt="Home"><span>Home</span></a>
+                <a href="../Home/index.html" title="Home"><img src="../../Assets/icons/Nav/home.svg" alt="Home"><span>Home</span></a>
             </li>
             <li>
                 <a href="../Projects/index.html" title="Projetos"><img src="../../Assets/icons/Nav/bookmark.svg" alt="Projetos"><span>Projetos</span></a>
+            </li>
+            <li>
+                <a href="../Skills/index.html" title="Skills"><img src="../../Assets/icons/Nav/cpu.svg" alt="Projetos"><span>Skills</span></a>
             </li>
             <li>
                 <a href="../FollowMe/index.html" title="Follow me"><img src="../../Assets/icons/link-2.svg" alt="Follow me"><span>Follow me</span></a>
@@ -37,16 +41,16 @@
 
         <main>
             <!-- Home -->
-            <div id="Home">
+            <section id="Home">
                 <h3>Mindera School</h3>
                 <ul>
                     <li>HTML & CSS</li>
                     <li>JavaScript</li>
                 </ul>
-            </div>
+            </section>
 
             <!-- Projects -->
-            <div id="Projects">
+            <section id="Projects">
                 <h2>Projects</h2>
                 <ul>
                     <li class="ProjectsList">
@@ -60,7 +64,26 @@
                         <a href="https://github.com/201flaviosilva/EvolucaoHistorica">Evolução Histórica</a>
                     </li>
                 </ul>
-            </div>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>
+                        <div><span>HTML 5</span><span class="skills"></span></div>
+                    </li>
+
+                    <li>
+                        <div><span>CSS 3</span><span class="skills"></span></div>
+                    </li>
+
+                    <li>
+                        <div><span>JavaScript</span><span class="skills"></span></div>
+                    </li>
+                </ul>
+                <a href="../Skills/index.html">Ver Mais</a>
+            </section>
         </main>
     </div>
     <script src="../script.js" type="module"></script>

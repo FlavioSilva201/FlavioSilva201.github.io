@@ -1,0 +1,78 @@
+html body {
+  height: 100%;
+}
+
+html body #container {
+  width: 100%;
+  margin-top: 50px;
+}
+
+html body #container header {
+  width: 100%;
+}
+
+html body #container main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+html body #container main ul {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 4px;
+}
+
+html body #container main ul li {
+  width: 100%;
+  background-color: pink;
+}
+
+html body #container main ul li h2 {
+  text-align: center;
+}
+
+html body #container main ul li p {
+  text-align: center;
+}
+
+html body #container main ul li:nth-child(1) {
+  background-color: red;
+}
+
+html body #container main ul li:nth-child(2) {
+  background-color: blue;
+}
+
+html body #container main ul li:nth-child(3) {
+  background-color: yellow;
+}
+
+html body #container main ul li:nth-child(4) {
+  background-color: royalblue;
+}
+
+html body #container main ul li:nth-child(5) {
+  background-color: purple;
+}
+
+html body #container main ul li:nth-child(6) {
+  background-color: orange;
+}
+
+html body #container main ul li:nth-child(7) {
+  background-color: royalblue;
+}
+
+html body #container main ul li:nth-child(8) {
+  background-color: black;
+}
+
+html body #container main ul li:nth-child(8) * {
+  color: white;
+}
+
+html body #container main ul li:nth-child(9) {
+  background-color: gray;
+}

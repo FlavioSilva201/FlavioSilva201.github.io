@@ -107,7 +107,7 @@ function LinesShow() {
             break;
         default:
             // clearInterval(timer);
-            // location.replace("./Pages/home/home.html");
+            // location.replace("./Pages/Home/index.html");
             break;
     }
 }

@@ -1,0 +1,82 @@
+html {
+    body {
+        height: 100%;
+        #container {
+            width: 100%;
+            margin-top: 50px;
+            header {
+                width: 100%;
+            }
+            main {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                ul {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: repeat(3, auto);
+                    grid-gap: 4px;
+                    li {
+                        width: 100%;
+                        background-color: pink;
+                        h2 {
+                            text-align: center;
+                        }
+                        p {
+                            text-align: center;
+                        }
+                        &:nth-child(1) {
+                            background-color: red;
+                        }
+                        &:nth-child(2) {
+                            background-color: blue;
+                        }
+                        &:nth-child(3) {
+                            background-color: yellow;
+                        }
+                        &:nth-child(4) {
+                            background-color: royalblue;
+                        }
+                        &:nth-child(5) {
+                            background-color: purple;
+                        }
+                        &:nth-child(6) {
+                            background-color: orange;
+                        }
+                        &:nth-child(7) {
+                            background-color: royalblue;
+                        }
+                        &:nth-child(8) {
+                            background-color: black;
+                            * {
+                                color: white;
+                            }
+                        }
+                        &:nth-child(9) {
+                            background-color: gray;
+                        }
+                    }
+                    //     div {
+                    //         background-color: royalblue;
+                    //     }
+                    //     &:nth-child(1) div {
+                    //         width: 75%;
+                    //     }
+                    //     &:nth-child(2) div {
+                    //         width: 50%;
+                    //     }
+                    //     &:nth-child(3) div {
+                    //         width: 33%;
+                    //     }
+                    //     &:nth-child(4) div {
+                    //         width: 25%;
+                    //     }
+                    //     &:nth-child(5) div {
+                    //         width: 10%;
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,59 @@
+html body nav {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+html body nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+html body nav ul li {
+  width: 100%;
+  padding: 10px 0;
+  background-color: royalblue;
+  border-right: 2px solid black;
+  border-radius: 2px;
+  transition: .4s;
+}
+
+html body nav ul li:hover {
+  background-color: gold;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+html body nav ul li:active {
+  border: 2px solid black;
+}
+
+html body nav ul li a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+html body nav ul li a span {
+  color: white;
+}
+
+html body nav ul li a img {
+  margin-right: 10px;
+}
+
+html body nav ul li#NavSelected {
+  background-color: orange;
+}
+
+html body nav ul li#NavSelected:hover {
+  background-color: goldenrod;
+}

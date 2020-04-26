@@ -1,56 +1,6 @@
 html {
     body {
         height: 100%;
-        nav {
-            height: 50px;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            ul {
-                width: 100%;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 0 10px;
-                li {
-                    width: 100%;
-                    padding: 10px 0;
-                    background-color: royalblue;
-                    border-right: 2px solid black;
-                    border-radius: 2px;
-                    transition: .2s;
-                    &:hover {
-                        background-color: rgb(102, 87, 0);
-                        box-sizing: border-box;
-                        border: 1px solid black;
-                    }
-                    &:active {
-                        border: 2px solid black;
-                    }
-                    a {
-                        width: 100%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin: 0 10px;
-                        span {
-                            color: white;
-                        }
-                        img {
-                            margin-right: 10px;
-                        }
-                    }
-                    &#NavSelected {
-                        background-color: gold;
-                        &:hover {
-                            background-color: rgb(206, 175, 0);
-                        }
-                    }
-                }
-            }
-        }
         main {
             width: 100%;
             height: 100%;
@@ -89,6 +39,22 @@ html {
                         padding: 0 4px;
                         border-bottom: 2px solid gray;
                         border-radius: 2px;
+                        transition: .3s;
+                        &:hover {
+                            background-color: royalblue;
+                            &:nth-child(1) {
+                                transform: scale(1.5);
+                            }
+                            &:nth-child(2) {
+                                transform: rotate(-25deg);
+                            }
+                            &:nth-child(3) {
+                                transform: matrix(100);
+                            }
+                            &:nth-child(4) {
+                                transform: rotate(-25deg);
+                            }
+                        }
                         // &:nth-last-child(1) {
                         //     grid-column: 1 / span 2;
                         // }

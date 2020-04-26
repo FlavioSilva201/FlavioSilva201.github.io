@@ -1,0 +1,54 @@
+html {
+    body {
+        nav {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            ul {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 10px;
+                li {
+                    width: 100%;
+                    padding: 10px 0;
+                    background-color: royalblue;
+                    border-right: 2px solid black;
+                    border-radius: 2px;
+                    transition: .4s;
+                    &:hover {
+                        background-color: gold;
+                        box-sizing: border-box;
+                        border: 1px solid black;
+                    }
+                    &:active {
+                        border: 2px solid black;
+                    }
+                    a {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 10px;
+                        span {
+                            color: white;
+                        }
+                        img {
+                            margin-right: 10px;
+                        }
+                    }
+                    &#NavSelected {
+                        background-color: orange;
+                        &:hover {
+                            background-color: goldenrod;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
