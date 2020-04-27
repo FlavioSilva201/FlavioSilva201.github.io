@@ -8,8 +8,7 @@ html {
             align-items: center;
             justify-content: center;
             #Container {
-                #FollowMe,
-                #Fonts {
+                #FollowMe {
                     position: relative;
                     background-color: gainsboro;
                     border: 2px solid black;
@@ -75,6 +74,10 @@ html {
                             &:nth-child(9) {
                                 background-color: black;
                                 a span {
+                                    transition: .3s;
+                                    letter-spacing: 5px;
+                                    direction: rtl;
+                                    unicode-bidi: bidi-override;
                                     color: white;
                                     font-weight: 900;
                                 }

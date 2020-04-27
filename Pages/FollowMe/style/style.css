@@ -10,8 +10,7 @@ html body main {
   justify-content: center;
 }
 
-html body main #Container #FollowMe,
-html body main #Container #Fonts {
+html body main #Container #FollowMe {
   position: relative;
   background-color: gainsboro;
   border: 2px solid black;
@@ -19,8 +18,7 @@ html body main #Container #Fonts {
   padding: 10px;
 }
 
-html body main #Container #FollowMe:nth-child(1),
-html body main #Container #Fonts:nth-child(1) {
+html body main #Container #FollowMe:nth-child(1) {
   margin-bottom: 10px;
 }
 
@@ -94,6 +92,10 @@ html body main #Container ul li:hover:nth-child(9) {
 }
 
 html body main #Container ul li:hover:nth-child(9) a span {
+  transition: .3s;
+  letter-spacing: 5px;
+  direction: rtl;
+  unicode-bidi: bidi-override;
   color: white;
   font-weight: 900;
 }
