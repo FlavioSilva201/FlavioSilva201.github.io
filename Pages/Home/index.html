@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../../Assets/icons/at-sign.svg" type="image/x-icon">
     <link rel="stylesheet" href="../../reset.css">
     <link rel="stylesheet" href="../style/Nav/style.min.css">
     <link rel="stylesheet" href="./style/Style.min.css">
-    <link rel="shortcut icon" href="../../Assets/icons/head/at-sign.svg" type="image/x-icon">
     <title>Flávio Silva</title>
 </head>
 
@@ -42,11 +42,50 @@
         <main>
             <!-- Home -->
             <section id="Home">
-                <h3>Mindera School</h3>
-                <ul>
-                    <li>HTML & CSS</li>
-                    <li>JavaScript</li>
-                </ul>
+                <form>
+                    <section>
+                        <h3>Nome</h3>
+                        <input type="text" name="firstNome" placeholder="First Name" title="First Name" value="Flávio" id="firstNome">
+                        <input type="text" name="lastNome" placeholder="Last Name" title="Last Name" value="Silva" id="lastNome">
+                    </section>
+
+                    <section>
+                        <h3>Detalhes</h3>
+                        <input type="email" name="" placeholder="flavioandre.2001.9.7@gmail.com" title="Email" value="flavioandre.2001.9.7@gmail.com" id="">
+                        <input type="date" name="" value="2001-08-10" title="Birthday" id="">
+                        <textarea name="Descrição" placeholder="I'm a front-end developer!" title="Descrição" cols="30" rows="10">I'm a front-end developer!</textarea>
+                    </section>
+
+                    <section>
+                        <h3>History</h3>
+                        <div>2016 <input type="range" name="" title="History" id=""> 2020</div>
+                        <article>
+                            <h4>2016</h4>
+                            <ul>
+                                <li>Inicio em Curso Proficional Informática de Gestão</li>
+                            </ul>
+                        </article>
+                    </section>
+
+                    <fieldset>
+                        <legend>Sexuality</legend>
+                        <label for="male"><input type="radio" name="sexuality" id="male" checked> Male</label>
+                        <label for="female"><input type="radio" name="sexuality" id="female"> Female</label>
+                        <label for="other"><input type="radio" name="sexuality" id="other"> Other</label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Skills</legend>
+                        <label for="html"><input type="checkbox" name="skills" id="html"> HTML</label>
+                        <label for="css"><input type="checkbox" name="skills" id="css"> CSS</label>
+                        <label for="javascript"><input type="checkbox" name="skills" id="javascript"> JavaScript</label>
+                        <label for="php"><input type="checkbox" name="skills" id="php"> PHP</label>
+                        <label for="csharp"><input type="checkbox" name="skills" id="csharp"> C#</label>
+                        <label for="python"><input type="checkbox" name="skills" id="python"> Python</label>
+                        <label for="visualbasic"><input type="checkbox" name="skills" id="visualbasic"> VisualBasic</label>
+                        <label for="mysql"><input type="checkbox" name="skills" id="mysql"> MySQL</label>
+                    </fieldset>
+                </form>
             </section>
 
             <!-- Projects -->
