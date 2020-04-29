@@ -43,16 +43,28 @@
             <!-- Home -->
             <section id="Home">
                 <form>
-                    <section>
-                        <h3>Nome</h3>
-                        <input type="text" name="firstNome" placeholder="First Name" title="First Name" value="Flávio" id="firstNome">
-                        <input type="text" name="lastNome" placeholder="Last Name" title="Last Name" value="Silva" id="lastNome">
+                    <section id="FormName">
+                        <h3>Name</h3>
+                        <div>
+                            <input type="text" name="firstNome" placeholder="First Name" title="First Name" value="Flávio" id="firstNome">
+                            <input type="text" name="lastNome" placeholder="Last Name" title="Last Name" value="Silva" id="lastNome">
+                        </div>
                     </section>
 
                     <section>
                         <h3>Detalhes</h3>
                         <input type="email" name="" placeholder="flavioandre.2001.9.7@gmail.com" title="Email" value="flavioandre.2001.9.7@gmail.com" id="">
-                        <input type="date" name="" value="2001-08-10" title="Birthday" id="">
+                        <div>
+                            <input type="date" name="" value="2001-08-10" title="Birthday" id="">
+                            <div>
+                                <input list="Sexuality" name="Sexuality" placeholder="Sexuality" value="Male" title="Sexuality">
+                                <datalist id="Sexuality">
+                                    <option value="Male">
+                                    <option value="Female">
+                                    <option value="Other">
+                                </datalist>
+                            </div>
+                        </div>
                         <textarea name="Descrição" placeholder="I'm a front-end developer!" title="Descrição" cols="30" rows="10">I'm a front-end developer!</textarea>
                     </section>
 
@@ -67,11 +79,12 @@
                         </article>
                     </section>
 
+
                     <fieldset>
-                        <legend>Sexuality</legend>
-                        <label for="male"><input type="radio" name="sexuality" id="male" checked> Male</label>
-                        <label for="female"><input type="radio" name="sexuality" id="female"> Female</label>
-                        <label for="other"><input type="radio" name="sexuality" id="other"> Other</label>
+                        <legend>Area</legend>
+                        <label for="FrontEnd"><input type="radio" name="Area" id="FrontEnd" checked> FrontEnd</label>
+                        <label for="BackEnd"><input type="radio" name="Area" id="BackEnd"> BackEnd</label>
+                        <label for="FullStack"><input type="radio" name="Area" id="FullStack"> FullStack</label>
                     </fieldset>
 
                     <fieldset>
@@ -85,6 +98,10 @@
                         <label for="visualbasic"><input type="checkbox" name="skills" id="visualbasic"> VisualBasic</label>
                         <label for="mysql"><input type="checkbox" name="skills" id="mysql"> MySQL</label>
                     </fieldset>
+                    <section>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </section>
                 </form>
             </section>
 

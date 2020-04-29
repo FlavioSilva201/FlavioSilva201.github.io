@@ -60,7 +60,7 @@ html body main #Container ul li:hover:nth-child(2) {
 
 html body main #Container ul li:hover:nth-child(3) {
   background-color: red;
-  transform: scale(0.9);
+  transform: scale(0.85);
 }
 
 html body main #Container ul li:hover:nth-child(4) {
