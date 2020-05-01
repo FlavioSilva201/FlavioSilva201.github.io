@@ -5,10 +5,19 @@
 html body {
   background-color: black;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body div#Container {
@@ -19,9 +28,15 @@ html body div#Container {
 html body div#Container header {
   height: 30px;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   background-color: #2E3537;
@@ -30,9 +45,15 @@ html body div#Container header {
 html body div#Container header div {
   height: 100%;
   width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 8px;
 }
 
@@ -40,9 +61,15 @@ html body div#Container header div span {
   height: 15px;
   width: 15px;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body div#Container header div span img {
@@ -86,6 +113,8 @@ html body div#Container main {
 
 html body div#Container main p {
   margin: 0 4px 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -115,9 +144,11 @@ html body div#Container main p span.commandRight {
 }
 
 html body div#Container main p span.answerUser {
+  -webkit-transition: 10s width;
   transition: 10s width;
 }
 
 html body div#Container main p a {
   text-decoration: underline;
 }
+/*# sourceMappingURL=style.css.map */

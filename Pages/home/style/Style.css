@@ -7,9 +7,15 @@ html body #container {
 html body #container header {
   background-color: firebrick;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body #container header img#ProfileImg {
@@ -26,9 +32,15 @@ html body #container main {
 
 html body #container main section#Home {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body #container main section#Home form {
@@ -37,8 +49,13 @@ html body #container main section#Home form {
 }
 
 html body #container main section#Home form section {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 html body #container main section#Home form section input {
@@ -58,8 +75,12 @@ html body #container main section#Home form section#FormName h3 {
 }
 
 html body #container main section#Home form section#FormName div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 html body #container main section#Home form section#FormName div input {
@@ -77,3 +98,4 @@ html body #container main section#skills {
 html body #container main section#skills ul li {
   margin: 10px 0;
 }
+/*# sourceMappingURL=Style.css.map */

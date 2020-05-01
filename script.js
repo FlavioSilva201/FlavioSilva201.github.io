@@ -106,8 +106,8 @@ function LinesShow() {
             RedirectingTime.innerHTML = "0";
             break;
         default:
-            // clearInterval(timer);
-            // location.replace("./Pages/Home/index.html");
+            clearInterval(timer);
+            location.replace("./Pages/Home/index.html");
             break;
     }
 }

@@ -5,9 +5,15 @@ html body {
 html body main {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 html body main #Container #FollowMe {
@@ -32,40 +38,53 @@ html body main #Container h2 {
 html body main #Container ul {
   height: 100%;
   width: 100%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto auto;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
   grid-gap: 24px;
 }
 
 html body main #Container ul li {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0 4px;
   border-bottom: 2px solid gray;
   border-radius: 2px;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 
 html body main #Container ul li:hover:nth-child(1) {
   background-color: tomato;
-  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 html body main #Container ul li:hover:nth-child(2) {
   background-color: yellow;
-  transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
 }
 
 html body main #Container ul li:hover:nth-child(3) {
   background-color: red;
-  transform: scale(0.85);
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
 }
 
 html body main #Container ul li:hover:nth-child(4) {
   background-color: royalblue;
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 html body main #Container ul li:hover:nth-child(5) {
@@ -74,12 +93,14 @@ html body main #Container ul li:hover:nth-child(5) {
 }
 
 html body main #Container ul li:hover:nth-child(6) {
+  background: -webkit-gradient(linear, left top, right bottom, from(yellow), color-stop(orange), to(royalblue));
   background: linear-gradient(to bottom right, yellow, orange, royalblue);
 }
 
 html body main #Container ul li:hover:nth-child(7) {
   background-color: green;
-  box-shadow: 10px 10px 2px black;
+  -webkit-box-shadow: 10px 10px 2px black;
+          box-shadow: 10px 10px 2px black;
 }
 
 html body main #Container ul li:hover:nth-child(8) {
@@ -92,6 +113,7 @@ html body main #Container ul li:hover:nth-child(9) {
 }
 
 html body main #Container ul li:hover:nth-child(9) a span {
+  -webkit-transition: .3s;
   transition: .3s;
   letter-spacing: 5px;
   direction: rtl;
@@ -102,15 +124,22 @@ html body main #Container ul li:hover:nth-child(9) a span {
 
 html body main #Container ul li:hover:nth-child(10) {
   background-color: purple;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border-radius: 20px;
 }
 
 html body main #Container ul li a {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 10px 0px;
 }
 
@@ -119,3 +148,4 @@ html body main #Container ul li a img {
   height: 24px;
   margin-right: 10px;
 }
+/*# sourceMappingURL=style.css.map */

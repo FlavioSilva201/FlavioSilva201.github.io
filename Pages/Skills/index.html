@@ -28,68 +28,110 @@
             </li>
         </ul>
     </nav>
+
     <div id="container">
         <header>
             <h1>Skills</h1>
         </header>
+
         <main>
-            <ul>
-                <li>
-                    <h2>HTML 5</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
+            <article id="CardHTML">
+                <h2>Just HTML</h2>
+                <div class="Card">
+                    <img src="../../../Assets/img/Flavio.jpeg" alt="Flávio Silva" style="width:200px; height: 200px;">
+                    <div class="Description">
+                        <h3>Flávio Silva</h3>
+                        <p>I'm a front-end developer;</p>
+                        <ul>
+                            <li>
+                                <a href="https://github.com/201flaviosilva"><img src="../../../Assets/icons/github.svg" alt="github"></li>
+                            <li>
+                                <a href="https://br.pinterest.com/MeiaGaspea"><img src="../../../Assets/icons/pinterest.svg" alt="Pinterest" style="width: 24px; height: 24px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
 
-                <li>
-                    <h2>CSS 3</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                    <ul>
-                        <li>Bootstrap</li>
-                        <li>SASS</li>
-                    </ul>
-                </li>
+            <article id="CardCSS">
+                <div class="Card">
+                    <div class="Front">
+                        <img src="../../../Assets/img/Flavio.jpeg" alt="Flávio Silva">
+                    </div>
+                    <div class="Back">
+                        <h3>Flávio Silva</h3>
+                        <p id="pCSS">I'm a front-end developer;</p>
+                        <ul id="CSS">
+                            <li>
+                                <a href="https://github.com/201flaviosilva" title="GitHub"><img src="../../../Assets/icons/github.svg" alt="github"></a>
+                            </li>
 
-                <li>
-                    <h2>JavaScript</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                    <ul>
-                        <li>React JS</li>
-                        <li>Eelectron</li>
-                        <li>Fazer</li>
-                    </ul>
-                </li>
+                            <li>
+                                <a href="https://gitlab.com/201flaviosilva" title="GitLab"><img src="../../../Assets/icons/gitlab.svg" alt="gitlab"> </a>
+                            </li>
 
-                <li>
-                    <h2>Python</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
+                            <li>
+                                <a href="https://br.pinterest.com/MeiaGaspea" title="Pinterest"><img src="../../../Assets/icons/pinterest.svg" alt="Pinterest" class="PinterestImg"></a>
+                            </li>
 
-                <li>
-                    <h2>C#</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/fl%C3%A1vio-silva-2b069b146/" title="Linkedin"><img src="../../../Assets/icons/linkedin.svg" alt="Linkedin"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <h2>HTML & CSS</h2>
+            </article>
 
-                <li>
-                    <h2>MySQL</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
+            <article id="CardJS">
+                <h2>HTML + CSS + JavaScript</h2>
+                <div class="Card">
+                    <div class="Front">
+                        <img src="../../../Assets/img/Flavio.jpeg" alt="Flávio Silva">
+                    </div>
+                    <div class="Back">
+                        <h3>Flávio Silva</h3>
 
-                <li>
-                    <h2>PHP</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
+                        <ul id="tabTitles">
+                            <div class="NavBar"></div>
+                            <li class="SelectedTab" id="tabTitlesDescription">Description</li>
+                            <li id="tabTitlesSN">Social Networks</li>
+                        </ul>
 
-                <li>
-                    <h2>Pixel Art</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
+                        <ul id="tabConteudo">
+                            <li id="tabConteudoDescription">
+                                <p>I'm a front-end developer;</p>
+                            </li>
 
-                <li>
-                    <h2>Gimp</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum impedit animi autem incidunt nemo quo necessitatibus veniam ullam sequi voluptatibus? Id placeat modi nam quisquam quos voluptates atque corrupti facere.</p>
-                </li>
-            </ul>
+                            <li id="tabConteudoSN">
+                                <ul>
+                                    <button id="SNLeft"><img src="../../Assets/icons/arrow-left.svg" alt="Left"></button>
+                                    <li class="SocialSelected">
+                                        <a href="https://github.com/201flaviosilva" title="GitHub"><img src="../../../Assets/icons/github.svg" alt="github"><span>GitHub</span></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://gitlab.com/201flaviosilva" title="GitLab"><img src="../../../Assets/icons/gitlab.svg" alt="gitlab"><span>GitHub</span></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://br.pinterest.com/MeiaGaspea" title="Pinterest"><img src="../../../Assets/icons/pinterest.svg" alt="Pinterest" class="PinterestImg"><span>GitHub</span></a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/fl%C3%A1vio-silva-2b069b146/" title="Linkedin"><img src="../../../Assets/icons/linkedin.svg" alt="Linkedin"><span>GitHub</span></a>
+                                    </li>
+                                    <button id="SNRight"><img src="../../Assets/icons/arrow-right.svg" alt="Right"></button>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
         </main>
+
     </div>
+    <script src="./script.js"></script>
 </body>
 
 </html>
