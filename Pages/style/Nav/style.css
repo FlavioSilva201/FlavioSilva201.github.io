@@ -1,27 +1,18 @@
 html body nav {
   height: 50px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   position: fixed;
   top: 0;
+  z-index: 10;
 }
 
 html body nav ul {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   padding: 0 10px;
 }
 
@@ -31,14 +22,12 @@ html body nav ul li {
   background-color: royalblue;
   border-right: 2px solid black;
   border-radius: 2px;
-  -webkit-transition: .4s;
   transition: .4s;
 }
 
 html body nav ul li:hover {
   background-color: gold;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid black;
 }
 
@@ -48,15 +37,9 @@ html body nav ul li:active {
 
 html body nav ul li a {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0 10px;
 }
 
@@ -75,4 +58,3 @@ html body nav ul li#NavSelected {
 html body nav ul li#NavSelected:hover {
   background-color: goldenrod;
 }
-/*# sourceMappingURL=style.css.map */

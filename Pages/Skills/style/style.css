@@ -5,6 +5,8 @@ html body #container {
 
 html body #container header {
   width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 html body #container main {
@@ -156,10 +158,6 @@ html body #container main article:nth-child(3) {
   background: linear-gradient(to bottom right, red, royalblue, yellow);
 }
 
-html body #container main article:nth-child(3) div.Card div.Back {
-  justify-content: initial;
-}
-
 html body #container main article:nth-child(3) div.Card div.Back h3 {
   background: linear-gradient(to right, red, royalblue, yellow);
 }
@@ -170,15 +168,6 @@ html body #container main article:nth-child(3) div.Card div.Back ul#tabTitles {
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-}
-
-html body #container main article:nth-child(3) div.Card div.Back ul#tabTitles div.NavBar {
-  height: 4px;
-  width: 50%;
-  position: absolute;
-  border-radius: 20px;
-  bottom: 0;
-  background-color: blue;
 }
 
 html body #container main article:nth-child(3) div.Card div.Back ul#tabTitles li {
@@ -194,6 +183,7 @@ html body #container main article:nth-child(3) div.Card div.Back ul#tabTitles li
 
 html body #container main article:nth-child(3) div.Card div.Back ul#tabTitles li.SelectedTab {
   background-color: red;
+  border-bottom: 2px solid black;
 }
 
 html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo {
@@ -206,11 +196,10 @@ html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo 
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: yellow;
 }
 
 html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo li:nth-child(1) {
-  display: none;
+  justify-content: center;
 }
 
 html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo li:nth-child(1) p {
@@ -219,6 +208,7 @@ html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo 
 }
 
 html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo li:nth-child(2) {
+  display: none;
   width: 100%;
 }
 
@@ -266,7 +256,6 @@ html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo 
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid snow;
   transition: 1s;
 }
 
@@ -284,4 +273,15 @@ html body #container main article:nth-child(3) div.Card div.Back ul#tabConteudo 
   margin-left: 10px;
   font-size: 20px;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 1000px) {
+  html body #container main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  html body #container main article {
+    margin-top: 16px;
+  }
 }

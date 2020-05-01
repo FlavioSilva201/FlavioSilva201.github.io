@@ -5,6 +5,8 @@ html {
             margin-top: 50px;
             header {
                 width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
             }
             main {
                 width: 100%;
@@ -135,7 +137,7 @@ html {
                         background: linear-gradient(to bottom right, red, royalblue, yellow);
                         div.Card {
                             div.Back {
-                                justify-content: initial;
+                                // justify-content: initial;
                                 h3 {
                                     background: linear-gradient(to right, red, royalblue, yellow);
                                 }
@@ -145,14 +147,6 @@ html {
                                     display: flex;
                                     justify-content: space-between;
                                     box-sizing: border-box;
-                                    div.NavBar {
-                                        height: 4px;
-                                        width: 50%;
-                                        position: absolute;
-                                        border-radius: 20px;
-                                        bottom: 0;
-                                        background-color: blue;
-                                    }
                                     li {
                                         width: 100%;
                                         height: 30px;
@@ -164,6 +158,7 @@ html {
                                         background-color: fuchsia;
                                         &.SelectedTab {
                                             background-color: red;
+                                            border-bottom: 2px solid black;
                                         }
                                     }
                                 }
@@ -175,16 +170,15 @@ html {
                                         display: flex;
                                         align-items: center;
                                         justify-content: space-between;
-                                        background-color: yellow;
                                         &:nth-child(1) {
-                                            display: none; // Para não aparece o paragrafo
+                                            justify-content: center;
                                             p {
                                                 width: 100%;
                                                 text-align: center;
                                             }
                                         }
                                         &:nth-child(2) {
-                                            // display: none;
+                                            display: none;
                                             width: 100%;
                                             ul {
                                                 width: 100%;
@@ -221,7 +215,6 @@ html {
                                                             display: flex;
                                                             align-items: center;
                                                             justify-content: center;
-                                                            border: 2px solid snow;
                                                             transition: 1s;
                                                             &:hover {
                                                                 box-shadow: 2px 2px 4px gray;
@@ -245,6 +238,23 @@ html {
                                 }
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        body {
+            #container {
+                main {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    article {
+                        margin-top: 16px;
                     }
                 }
             }
