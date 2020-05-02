@@ -2,8 +2,8 @@ html {
     body {
         #container {
             background-color: fuchsia;
-            width: 100%;
             margin-top: 50px;
+            width: 100%;
             header {
                 background-color: firebrick;
                 width: 100%;
@@ -18,7 +18,6 @@ html {
                 }
             }
             main {
-                height: 100%;
                 width: 100%;
                 section {
                     &#Home {
@@ -68,88 +67,36 @@ html {
                     }
                 }
             }
-            // footer {
-            //     #BtnFollow {
-            //         position: fixed;
-            //         bottom: 10px;
-            //         right: 10px;
-            //         width: 50px;
-            //         height: 50px;
-            //         display: flex;
-            //         align-items: center;
-            //         justify-content: center;
-            //         border: 2px solid black;
-            //         border-radius: 50%;
-            //         &:hover {
-            //             background-color: gainsboro;
-            //         }
-            //     }
-            //     #Modal {
-            //         display: none;
-            //         width: 100%;
-            //         height: 100%;
-            //         position: fixed;
-            //         top: 0;
-            //         background-color: green;
-            //         // display: flex;
-            //         align-items: center;
-            //         justify-content: center;
-            //         #FollowMe {
-            //             position: relative;
-            //             background-color: gainsboro;
-            //             border: 2px solid black;
-            //             border-radius: 4px;
-            //             padding: 10px;
-            //             button {
-            //                 position: absolute;
-            //                 top: 4px;
-            //                 right: 4px;
-            //                 display: flex;
-            //                 align-items: center;
-            //                 justify-content: center;
-            //                 background: none;
-            //                 padding: 4px;
-            //                 border: 2px solid black;
-            //                 border-radius: 50px;
-            //                 &:hover {
-            //                     background-color: salmon;
-            //                 }
-            //             }
-            //             h2 {
-            //                 width: 100%;
-            //                 text-align: center;
-            //                 border-bottom: 2px solid black;
-            //                 margin-bottom: 10px;
-            //             }
-            //             ul {
-            //                 height: 100%;
-            //                 width: 100%;
-            //                 display: grid;
-            //                 grid-template-columns: 1fr 1fr;
-            //                 grid-gap: 24px;
-            //                 li {
-            //                     display: flex;
-            //                     align-items: center;
-            //                     justify-content: center;
-            //                     border-bottom: 1px solid gray;
-            //                     &:nth-last-child(1) {
-            //                         grid-column: 1 / span 2;
-            //                     }
-            //                     a {
-            //                         width: 100%;
-            //                         display: flex;
-            //                         align-items: center;
-            //                         justify-content: center;
-            //                         margin: 10px 0px;
-            //                         img {
-            //                             margin-right: 10px;
-            //                         }
-            //                     }
-            //                 }
-            //             }
-            //         }
-            //     }
-            // }
+            aside {
+                position: fixed;
+                bottom: 10px;
+                right: 10px;
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: gold;
+                    padding: 6px;
+                    border-radius: 50%;
+                    border: 1px solid black;
+                }
+                dialog {
+                    position: fixed;
+                    bottom: 100px;
+                    right: 100px;
+                    select {
+                        float: right;
+                        margin: 4px;
+                        width: 150px;
+                        height: 30px;
+                        border: 2px solid whitesmoke;
+                        border-radius: 10px;
+                        font-size: 18px;
+                        background-color: royalblue;
+                        cursor: pointer;
+                    }
+                }
+            }
         }
     }
 }

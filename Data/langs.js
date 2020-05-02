@@ -1,5 +1,5 @@
 export const ind = {
-    Ingles: {
+    English: {
         Home: {
             title: "Exenple"
         }
