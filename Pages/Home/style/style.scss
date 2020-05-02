@@ -81,9 +81,9 @@ html {
                     border: 1px solid black;
                 }
                 dialog {
+                    margin: auto;
                     position: fixed;
-                    bottom: 100px;
-                    right: 100px;
+                    bottom: 50%;
                     select {
                         float: right;
                         margin: 4px;

@@ -94,9 +94,9 @@ html body #container aside button {
 }
 
 html body #container aside dialog {
+  margin: auto;
   position: fixed;
-  bottom: 100px;
-  right: 100px;
+  bottom: 50%;
 }
 
 html body #container aside dialog select {
