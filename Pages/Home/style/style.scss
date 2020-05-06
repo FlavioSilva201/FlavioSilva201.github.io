@@ -1,10 +1,14 @@
 html {
     body {
         #container {
-            background-color: fuchsia;
-            margin-top: 50px;
+            flex-grow: 1;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+            background-color: fuchsia;
             header {
+                flex-grow: 1;
                 background-color: firebrick;
                 width: 100%;
                 display: flex;
@@ -16,9 +20,15 @@ html {
                     height: 100px;
                     border-radius: 8px;
                 }
+                p {
+                    font-size: 15.5px;
+                }
             }
             main {
+                flex-grow: 10;
                 width: 100%;
+                margin-top: 20px;
+                background-color: darkblue;
                 section {
                     &#Home {
                         width: 100%;
@@ -26,23 +36,37 @@ html {
                         align-items: center;
                         justify-content: center;
                         form {
-                            background-color: green;
                             width: 50%;
+                            padding: 10px;
+                            border: 2px solid royalblue;
+                            border-radius: 4px;
+                            background-color: green;
                             section {
                                 display: flex;
                                 flex-direction: column;
-                                input {
+                                h2 {
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                }
+                                input,
+                                textarea {
+                                    height: 36px;
+                                    box-sizing: border-box;
                                     margin: 10px 4px;
                                     padding: 4px 6px;
                                     border: 2px solid black;
                                     border-radius: 8px;
                                     font-size: 16px;
                                 }
+                                textarea {
+                                    min-height: 50px;
+                                    height: 150px;
+                                    max-height: 200px;
+                                    resize: vertical;
+                                    overflow: auto;
+                                }
                                 &#FormName {
                                     background-color: salmon;
-                                    h3 {
-                                        font-weight: 700;
-                                    }
                                     div {
                                         display: flex;
                                         align-items: center;
@@ -51,17 +75,13 @@ html {
                                         }
                                     }
                                 }
-                            }
-                        }
-                    }
-                    &#Projects {
-                        background-color: red;
-                    }
-                    &#skills {
-                        background-color: blue;
-                        ul {
-                            li {
-                                margin: 10px 0;
+                                &#FormDetails {
+                                    background-color: red;
+                                    div {
+                                        display: grid;
+                                        grid-template-columns: 67% 33%;
+                                    }
+                                }
                             }
                         }
                     }
@@ -71,29 +91,51 @@ html {
                 position: fixed;
                 bottom: 10px;
                 right: 10px;
+                * {
+                    cursor: pointer;
+                }
                 button {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background: gold;
+                    background: white;
                     padding: 6px;
                     border-radius: 50%;
                     border: 1px solid black;
                 }
                 dialog {
                     margin: auto;
+                    padding: 8px;
+                    align-items: center;
+                    justify-content: center;
                     position: fixed;
                     bottom: 50%;
+                    border-radius: 4px;
+                    border: 2px solid black;
                     select {
-                        float: right;
-                        margin: 4px;
-                        width: 150px;
+                        width: 130px;
                         height: 30px;
-                        border: 2px solid whitesmoke;
+                        border: 2px solid gray;
                         border-radius: 10px;
                         font-size: 18px;
                         background-color: royalblue;
-                        cursor: pointer;
+                    }
+                    button {
+                        margin-left: 4px;
+                        width: 30px;
+                        height: 30px;
+                        padding: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 20px;
+                        background: white;
+                        &:hover {
+                            background: whitesmoke;
+                            &:active {
+                                background: lightgray;
+                            }
+                        }
                     }
                 }
             }

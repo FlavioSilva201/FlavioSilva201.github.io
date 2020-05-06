@@ -44,33 +44,57 @@ html {
                             &:nth-child(1) {
                                 background-color: tomato;
                                 transform: scale(1.5);
+                                a {
+                                    cursor: zoom-out;
+                                }
                             }
                             &:nth-child(2) {
                                 background-color: yellow;
                                 transform: rotate(-25deg);
+                                a {
+                                    cursor: alias;
+                                }
                             }
                             &:nth-child(3) {
                                 background-color: red;
-                                transform: scale(.85)
+                                transform: scale(.85);
+                                a {
+                                    cursor: zoom-in;
+                                }
                             }
                             &:nth-child(4) {
                                 background-color: royalblue;
                                 transform: rotate(180deg);
+                                a {
+                                    cursor: wait;
+                                }
                             }
                             &:nth-child(5) {
                                 background-color: gray;
                                 opacity: .5;
+                                a {
+                                    cursor: no-drop;
+                                }
                             }
                             &:nth-child(6) {
                                 background: linear-gradient(to bottom right, yellow, orange, royalblue);
+                                a {
+                                    cursor: copy;
+                                }
                             }
                             &:nth-child(7) {
                                 background-color: green;
                                 box-shadow: 10px 10px 2px black;
+                                a {
+                                    cursor: context-menu;
+                                }
                             }
                             &:nth-child(8) {
                                 background-color: white;
                                 text-shadow: 4px 4px 4px royalblue;
+                                a {
+                                    cursor: none;
+                                }
                             }
                             &:nth-child(9) {
                                 background-color: black;
@@ -81,12 +105,16 @@ html {
                                     unicode-bidi: bidi-override;
                                     color: white;
                                     font-weight: 900;
+                                    cursor: crosshair;
                                 }
                             }
                             &:nth-child(10) {
                                 background-color: purple;
                                 box-sizing: border-box;
                                 border-radius: 20px;
+                                a {
+                                    cursor: help;
+                                }
                             }
                         }
                         // &:nth-last-child(1) {

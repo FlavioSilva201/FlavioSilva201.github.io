@@ -1,8 +1,13 @@
 html {
+    display: flex;
     body {
+        flex-grow: 1;
+        display: flex;
         nav {
-            height: 50px;
+            flex-grow: 1;
+            // height: 50px;
             width: 100%;
+            margin-top: 4px;
             display: flex;
             align-items: center;
             position: fixed;
@@ -34,7 +39,7 @@ html {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        margin: 0 10px;
+                        margin: 0 6px;
                         span {
                             color: white;
                         }

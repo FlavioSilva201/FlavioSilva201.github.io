@@ -1,14 +1,13 @@
-html body {
-  height: 100%;
-}
-
 html body #container {
+  flex-grow: 10;
   width: 100%;
   margin-top: 50px;
+  background-color: teal;
 }
 
 html body #container header {
   width: 100%;
+  background-color: saddlebrown;
 }
 
 html body #container main {
@@ -16,4 +15,5 @@ html body #container main {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: yellow;
 }

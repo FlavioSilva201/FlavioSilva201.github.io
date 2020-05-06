@@ -22,9 +22,6 @@
                 <a href="../Projects/index.html" title="Projetos"><img src="../../Assets/icons/bookmark.svg" alt="Projetos"><span>Projetos</span></a>
             </li>
             <li>
-                <a href="../Skills/index.html" title="Skills"><img src="../../Assets/icons/cpu.svg" alt="Projetos"><span>Skills</span></a>
-            </li>
-            <li>
                 <a href="../FollowMe/index.html" title="Follow me"><img src="../../Assets/icons/link-2.svg" alt="Follow me"><span>Follow me</span></a>
             </li>
         </ul>
@@ -35,7 +32,7 @@
             <img src="../../Assets/img/Flavio.jpeg" alt="ProfileImg" id="ProfileImg">
             <div>
                 <h1>Flávio Silva</h1>
-                <h2>I'm a front-end developer</h2>
+                <p>I'm a front-end developer</p>
             </div>
         </header>
 
@@ -44,43 +41,23 @@
             <section id="Home">
                 <form>
                     <section id="FormName">
-                        <h3>Name</h3>
+                        <h2>Name</h2>
                         <div>
                             <input type="text" name="firstNome" placeholder="First Name" title="First Name" value="Flávio" id="firstNome">
                             <input type="text" name="lastNome" placeholder="Last Name" title="Last Name" value="Silva" id="lastNome">
                         </div>
                     </section>
 
-                    <section>
-                        <h3>Detalhes</h3>
-                        <input type="email" name="" placeholder="flavioandre.2001.9.7@gmail.com" title="Email" value="flavioandre.2001.9.7@gmail.com" id="cenas1">
+                    <section id="FormDetails">
+                        <h2>Details</h2>
                         <div>
-                            <input type="date" name="" value="2001-08-10" title="Birthday" id="cenas2">
-                            <div>
-                                <input list="Sexuality" name="Sexuality" placeholder="Sexuality" value="Male" title="Sexuality">
-                                <datalist id="Sexuality">
-                                    <option value="Male">
-                                    <option value="Female">
-                                    <option value="Other">
-                                </datalist>
-                            </div>
+                            <input type="email" name="" placeholder="flavioandre.2001.9.7@gmail.com" title="Email" value="flavioandre.2001.9.7@gmail.com" id="InpEmail">
+                            <input type="date" name="" value="2001-08-10" min='1900-01-01' max='2066-08-10' title="Birthday" id="InpBirthday">
                         </div>
-                        <textarea name="Descrição" placeholder="I'm a front-end developer!" title="Descrição" cols="30" rows="10">I'm a front-end developer!</textarea>
+                        <textarea name="Description" placeholder="Description" title="Description">I'm a front-end developer!</textarea>
                     </section>
 
-                    <section>
-                        <h3>History</h3>
-                        <div>2016 <input type="range" name="" title="History" id="cenas3"> 2020</div>
-                        <article>
-                            <h4>2016</h4>
-                            <ul>
-                                <li>Inicio em Curso Proficional Informática de Gestão</li>
-                            </ul>
-                        </article>
-                    </section>
-
-
-                    <fieldset>
+                    <fieldset id="FormArea">
                         <legend>Area</legend>
                         <label for="FrontEnd"><input type="radio" name="Area" id="FrontEnd" checked> FrontEnd</label>
                         <label for="BackEnd"><input type="radio" name="Area" id="BackEnd"> BackEnd</label>
@@ -95,46 +72,38 @@
                         <label for="php"><input type="checkbox" name="skills" id="php" checked> PHP</label>
                         <label for="mysql"><input type="checkbox" name="skills" id="mysql" checked> MySQL</label>
                     </fieldset>
+
+                    <section>
+                        <h3>History</h3>
+                        <div>2016 <input type="range" name="" title="History" id="RangeHistory"> 2020</div>
+                        <article>
+                            <h4>2016</h4>
+                            <ul>
+                                <li>Inicio em Curso Proficional Informática de Gestão</li>
+                            </ul>
+                        </article>
+                    </section>
+
                     <section>
                         <button type="submit">Submit</button>
                         <button type="reset">Reset</button>
                     </section>
                 </form>
             </section>
-
-            <!-- Projects -->
-            <section id="Projects">
-                <h2>Projects</h2>
-                <ul>
-                    <li>
-                        <h4>Sites Inuteis</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iusto eveniet commodi tempore, nulla distinctio asperiores itaque nobis, soluta officiis veniam autem quas similique. In temporibus aliquam dicta iusto quibusdam.</p>
-                        <a href="https://github.com/201flaviosilva/SitesPorreiros">Sites Inuteis</a>
-                    </li>
-                    <li>
-                        <h4>Evolução Histórica</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iusto eveniet commodi tempore, nulla distinctio asperiores itaque nobis, soluta officiis veniam autem quas similique. In temporibus aliquam dicta iusto quibusdam.</p>
-                        <a href="https://github.com/201flaviosilva/EvolucaoHistorica">Evolução Histórica</a>
-                    </li>
-                    <li>
-                        <h4>CarteiraOnline</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iusto eveniet commodi tempore, nulla distinctio asperiores itaque nobis, soluta officiis veniam autem quas similique. In temporibus aliquam dicta iusto quibusdam.</p>
-                        <a href="#">CarteiraOnline</a>
-                    </li>
-                </ul>
-            </section>
         </main>
 
         <aside>
-            <button><img src="../../Assets/icons/settings.svg" alt="Help"></button>
-            <dialog open>
+            <button id="BTN_settings"><img src="../../Assets/icons/settings.svg" alt="Help"></button>
+            <dialog id="Modal">
                 <select id="IndiomaSlect">
                 </select>
+                <button id="BTN_Close" title="Close">&#10008;</button>
             </dialog>
         </aside>
     </div>
-    <!-- <script src="../script.js"></script> -->
-    <script src="../../Data/ShowLang.js" type="module"></script>
+
+    <script src="./script.js"></script>
+    <script src="../../Data/ShowLang.js" type="module" defer></script>
 </body>
 
 </html>

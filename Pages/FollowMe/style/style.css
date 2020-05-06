@@ -54,9 +54,17 @@ html body main #Container ul li:hover:nth-child(1) {
   transform: scale(1.5);
 }
 
+html body main #Container ul li:hover:nth-child(1) a {
+  cursor: zoom-out;
+}
+
 html body main #Container ul li:hover:nth-child(2) {
   background-color: yellow;
   transform: rotate(-25deg);
+}
+
+html body main #Container ul li:hover:nth-child(2) a {
+  cursor: alias;
 }
 
 html body main #Container ul li:hover:nth-child(3) {
@@ -64,9 +72,17 @@ html body main #Container ul li:hover:nth-child(3) {
   transform: scale(0.85);
 }
 
+html body main #Container ul li:hover:nth-child(3) a {
+  cursor: zoom-in;
+}
+
 html body main #Container ul li:hover:nth-child(4) {
   background-color: royalblue;
   transform: rotate(180deg);
+}
+
+html body main #Container ul li:hover:nth-child(4) a {
+  cursor: wait;
 }
 
 html body main #Container ul li:hover:nth-child(5) {
@@ -74,8 +90,16 @@ html body main #Container ul li:hover:nth-child(5) {
   opacity: .5;
 }
 
+html body main #Container ul li:hover:nth-child(5) a {
+  cursor: no-drop;
+}
+
 html body main #Container ul li:hover:nth-child(6) {
   background: linear-gradient(to bottom right, yellow, orange, royalblue);
+}
+
+html body main #Container ul li:hover:nth-child(6) a {
+  cursor: copy;
 }
 
 html body main #Container ul li:hover:nth-child(7) {
@@ -83,9 +107,17 @@ html body main #Container ul li:hover:nth-child(7) {
   box-shadow: 10px 10px 2px black;
 }
 
+html body main #Container ul li:hover:nth-child(7) a {
+  cursor: context-menu;
+}
+
 html body main #Container ul li:hover:nth-child(8) {
   background-color: white;
   text-shadow: 4px 4px 4px royalblue;
+}
+
+html body main #Container ul li:hover:nth-child(8) a {
+  cursor: none;
 }
 
 html body main #Container ul li:hover:nth-child(9) {
@@ -99,12 +131,17 @@ html body main #Container ul li:hover:nth-child(9) a span {
   unicode-bidi: bidi-override;
   color: white;
   font-weight: 900;
+  cursor: crosshair;
 }
 
 html body main #Container ul li:hover:nth-child(10) {
   background-color: purple;
   box-sizing: border-box;
   border-radius: 20px;
+}
+
+html body main #Container ul li:hover:nth-child(10) a {
+  cursor: help;
 }
 
 html body main #Container ul li a {

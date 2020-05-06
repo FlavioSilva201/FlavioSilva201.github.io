@@ -1,13 +1,22 @@
 import { ind } from "./langs.js";
 
 const IndiomaSlect = document.getElementById("IndiomaSlect");
+const modalDialog = document.getElementById("Modal");
 
 let indiomaDef = ind.Ingles;
 
 main();
 
-function main() {
+document.getElementById("BTN_settings").addEventListener("click", () => {
+    modalDialog.showModal();
+    modalDialog.style.display = "flex";
+});
+document.getElementById("BTN_Close").addEventListener("click", () => {
+    modalDialog.close();
+    modalDialog.style.display = "none";
+});
 
+function main() {
     // Imprimir opções no select
     const valorIndiomaSlect = Object.keys(ind);
     for (let i = 0; i < valorIndiomaSlect.length; i++) {
