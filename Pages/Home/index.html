@@ -57,23 +57,25 @@
                         <textarea name="Description" placeholder="Description" title="Description">I'm a front-end developer!</textarea>
                     </section>
 
-                    <fieldset id="FormArea">
-                        <legend>Area</legend>
-                        <label for="FrontEnd"><input type="radio" name="Area" id="FrontEnd" checked> FrontEnd</label>
-                        <label for="BackEnd"><input type="radio" name="Area" id="BackEnd"> BackEnd</label>
-                        <label for="FullStack"><input type="radio" name="Area" id="FullStack"> FullStack</label>
-                    </fieldset>
+                    <section id="MultiOptions">
+                        <fieldset id="FormArea">
+                            <legend>Area</legend>
+                            <label for="FrontEnd"><input type="radio" name="Area" id="FrontEnd" checked> FrontEnd</label>
+                            <label for="BackEnd"><input type="radio" name="Area" id="BackEnd"> BackEnd</label>
+                            <label for="FullStack"><input type="radio" name="Area" id="FullStack"> FullStack</label>
+                        </fieldset>
 
-                    <fieldset>
-                        <legend>Skills</legend>
-                        <label for="html"><input type="checkbox" name="skills" id="html" checked> HTML</label>
-                        <label for="css"><input type="checkbox" name="skills" id="css" checked> CSS</label>
-                        <label for="javascript"><input type="checkbox" name="skills" id="javascript" checked> JavaScript</label>
-                        <label for="php"><input type="checkbox" name="skills" id="php" checked> PHP</label>
-                        <label for="mysql"><input type="checkbox" name="skills" id="mysql" checked> MySQL</label>
-                    </fieldset>
+                        <fieldset>
+                            <legend>Skills</legend>
+                            <label for="html"><input type="checkbox" name="skills" id="html" checked> HTML</label>
+                            <label for="css"><input type="checkbox" name="skills" id="css" checked> CSS</label>
+                            <label for="javascript"><input type="checkbox" name="skills" id="javascript" checked> JavaScript</label>
+                            <label for="php"><input type="checkbox" name="skills" id="php" checked> PHP</label>
+                            <label for="mysql"><input type="checkbox" name="skills" id="mysql" checked> MySQL</label>
+                        </fieldset>
+                    </section>
 
-                    <section>
+                    <section id="History">
                         <h3>History</h3>
                         <div>2016 <input type="range" name="" title="History" id="RangeHistory"> 2020</div>
                         <article>
@@ -84,7 +86,7 @@
                         </article>
                     </section>
 
-                    <section>
+                    <section id="BtnsActions">
                         <button type="submit">Submit</button>
                         <button type="reset">Reset</button>
                     </section>

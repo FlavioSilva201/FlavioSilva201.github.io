@@ -1,3 +1,7 @@
+html {
+  background-color: deeppink;
+}
+
 html body #container {
   flex-grow: 1;
   width: 100%;
@@ -72,8 +76,8 @@ html body #container main section#Home form section textarea {
 
 html body #container main section#Home form section textarea {
   min-height: 50px;
-  height: 150px;
-  max-height: 200px;
+  height: 100px;
+  max-height: 150px;
   resize: vertical;
   overflow: auto;
 }
@@ -98,6 +102,49 @@ html body #container main section#Home form section#FormDetails {
 html body #container main section#Home form section#FormDetails div {
   display: grid;
   grid-template-columns: 67% 33%;
+}
+
+html body #container main section#Home form section#MultiOptions {
+  background-color: hotpink;
+  flex-direction: row;
+}
+
+html body #container main section#Home form section#MultiOptions fieldset {
+  width: 100%;
+  padding: 10px;
+}
+
+html body #container main section#Home form section#MultiOptions fieldset label {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+html body #container main section#Home form section#MultiOptions fieldset:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+html body #container main section#Home form section#MultiOptions fieldset:nth-child(2) {
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: royalblue;
+}
+
+html body #container main section#Home form section#MultiOptions fieldset:nth-child(2) label {
+  background-color: greenyellow;
+}
+
+html body #container main section#Home form section#History {
+  width: 100%;
+}
+
+html body #container main section#Home form section#History div {
+  width: 100%;
+}
+
+html body #container main section#Home form section#History div input {
+  width: 100%;
 }
 
 html body #container aside {

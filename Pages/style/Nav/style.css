@@ -13,17 +13,19 @@ html body nav {
   margin-top: 4px;
   display: flex;
   align-items: center;
+  justify-content: center;
   position: fixed;
   top: 0;
   z-index: 10;
 }
 
 html body nav ul {
-  width: 100%;
+  width: 95%;
+  box-sizing: border-box;
+  padding: 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10px;
 }
 
 html body nav ul li {
@@ -47,10 +49,10 @@ html body nav ul li:active {
 
 html body nav ul li a {
   width: 100%;
+  margin: 0 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 6px;
 }
 
 html body nav ul li a span {

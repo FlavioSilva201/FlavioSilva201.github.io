@@ -45,7 +45,7 @@ html {
                                 background-color: tomato;
                                 transform: scale(1.5);
                                 a {
-                                    cursor: zoom-out;
+                                    cursor: zoom-in;
                                 }
                             }
                             &:nth-child(2) {
@@ -59,7 +59,7 @@ html {
                                 background-color: red;
                                 transform: scale(.85);
                                 a {
-                                    cursor: zoom-in;
+                                    cursor: zoom-out;
                                 }
                             }
                             &:nth-child(4) {

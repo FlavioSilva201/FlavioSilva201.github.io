@@ -55,7 +55,7 @@ html body main #Container ul li:hover:nth-child(1) {
 }
 
 html body main #Container ul li:hover:nth-child(1) a {
-  cursor: zoom-out;
+  cursor: zoom-in;
 }
 
 html body main #Container ul li:hover:nth-child(2) {
@@ -73,7 +73,7 @@ html body main #Container ul li:hover:nth-child(3) {
 }
 
 html body main #Container ul li:hover:nth-child(3) a {
-  cursor: zoom-in;
+  cursor: zoom-out;
 }
 
 html body main #Container ul li:hover:nth-child(4) {
