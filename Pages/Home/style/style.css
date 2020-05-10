@@ -127,7 +127,7 @@ html body #container main section#Home form section#MultiOptions fieldset:nth-ch
 
 html body #container main section#Home form section#MultiOptions fieldset:nth-child(2) {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
   background-color: royalblue;
 }
 
@@ -141,10 +141,25 @@ html body #container main section#Home form section#History {
 
 html body #container main section#Home form section#History div {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+html body #container main section#Home form section#History div span {
+  padding: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  border: 2px solid royalblue;
 }
 
 html body #container main section#Home form section#History div input {
-  width: 100%;
+  cursor: pointer;
+  width: 500px;
+}
+
+html body #container main section#Home form section#History article ul li {
+  list-style: circle;
 }
 
 html body #container aside {

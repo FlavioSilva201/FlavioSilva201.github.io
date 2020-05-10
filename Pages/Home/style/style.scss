@@ -103,7 +103,7 @@ html {
                                         }
                                         &:nth-child(2) {
                                             display: grid;
-                                            grid-template-columns: auto auto;
+                                            grid-template-columns: auto auto auto auto;
                                             background-color: royalblue;
                                             label {
                                                 background-color: greenyellow;
@@ -115,8 +115,25 @@ html {
                                     width: 100%;
                                     div {
                                         width: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: space-between;
+                                        span {
+                                            padding: 4px;
+                                            font-size: 16px;
+                                            font-weight: 700;
+                                            border: 2px solid royalblue;
+                                        }
                                         input {
-                                            width: 100%;
+                                            cursor: pointer;
+                                            width: 500px;
+                                        }
+                                    }
+                                    article {
+                                        ul {
+                                            li {
+                                                list-style: circle;
+                                            }
                                         }
                                     }
                                 }
