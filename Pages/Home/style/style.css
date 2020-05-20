@@ -137,10 +137,13 @@ html body #container main section#Home form section#MultiOptions fieldset:nth-ch
 
 html body #container main section#Home form section#History {
   width: 100%;
+  background-color: yellow;
 }
 
 html body #container main section#Home form section#History div {
   width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -158,8 +161,45 @@ html body #container main section#Home form section#History div input {
   width: 500px;
 }
 
+html body #container main section#Home form section#History article h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+html body #container main section#Home form section#History article ul {
+  padding: 4px 20px;
+}
+
 html body #container main section#Home form section#History article ul li {
   list-style: circle;
+}
+
+html body #container main section#Home form section#BtnsActions {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+}
+
+html body #container main section#Home form section#BtnsActions button {
+  padding: 6px 0;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px black;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+html body #container main section#Home form section#BtnsActions button:hover {
+  transform: scale(1.05);
+  box-shadow: 6px 6px 6px black;
+}
+
+html body #container main section#Home form section#BtnsActions button:active {
+  transform: scale(1);
+  box-shadow: 4px 4px 4px black;
 }
 
 html body #container aside {
