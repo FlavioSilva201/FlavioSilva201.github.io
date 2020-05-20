@@ -56,6 +56,8 @@ html body #container main section#Home form {
 html body #container main section#Home form section {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px dashed gray;
+  border-radius: 2px;
 }
 
 html body #container main section#Home form section h2 {
@@ -105,34 +107,26 @@ html body #container main section#Home form section#FormDetails div {
 }
 
 html body #container main section#Home form section#MultiOptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
   background-color: hotpink;
-  flex-direction: row;
 }
 
-html body #container main section#Home form section#MultiOptions fieldset {
-  width: 100%;
-  padding: 10px;
+html body #container main section#Home form section#MultiOptions h2 {
+  grid-area: 1 / 1 / 2 / 3;
 }
 
 html body #container main section#Home form section#MultiOptions fieldset label {
   display: flex;
   align-items: center;
   font-size: 18px;
+  cursor: pointer;
 }
 
-html body #container main section#Home form section#MultiOptions fieldset:nth-child(1) {
-  display: flex;
-  flex-direction: column;
-}
-
-html body #container main section#Home form section#MultiOptions fieldset:nth-child(2) {
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  background-color: royalblue;
-}
-
-html body #container main section#Home form section#MultiOptions fieldset:nth-child(2) label {
-  background-color: greenyellow;
+html body #container main section#Home form section#MultiOptions fieldset label abbr {
+  text-decoration: none;
 }
 
 html body #container main section#Home form section#History {
@@ -161,7 +155,7 @@ html body #container main section#Home form section#History div input {
   width: 500px;
 }
 
-html body #container main section#Home form section#History article h4 {
+html body #container main section#Home form section#History article h3 {
   width: 100%;
   text-align: center;
   font-size: 30px;
@@ -205,7 +199,7 @@ html body #container main section#Home form section#BtnsActions button:active {
 html body #container aside {
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 50px;
 }
 
 html body #container aside * {

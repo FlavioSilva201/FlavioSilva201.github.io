@@ -61,41 +61,61 @@
                             <input type="date" name="" value="2001-08-10" min='1900-01-01' max='2066-08-10'
                                 title="Birthday" id="InpBirthday">
                         </div>
-                        <textarea name="Description" placeholder="Description"
-                            title="Description">I'm a front-end developer!</textarea>
+                        <textarea name="Description" placeholder="Description" title="Description">I Love Programming!
+                        </textarea>
                     </section>
 
                     <section id="MultiOptions">
+                        <h2>Details</h2>
                         <fieldset id="FormArea">
                             <legend>Area</legend>
-                            <label for="FrontEnd"><input type="radio" name="Area" id="FrontEnd" checked>
-                                FrontEnd</label>
-                            <label for="BackEnd"><input type="radio" name="Area" id="BackEnd"> BackEnd</label>
-                            <label for="FullStack"><input type="radio" name="Area" id="FullStack"> FullStack</label>
+                            <label for="FrontEnd">
+                                <input type="radio" name="Area" id="FrontEnd" checked> FrontEnd
+                            </label>
+                            <label for="BackEnd">
+                                <input type="radio" name="Area" id="BackEnd"> BackEnd
+                            </label>
+                            <label for="FullStack">
+                                <input type="radio" name="Area" id="FullStack"> FullStack
+                            </label>
                         </fieldset>
 
                         <fieldset>
                             <legend>Skills</legend>
-                            <label for="html"><input type="checkbox" name="skills" id="html" checked> HTML</label>
-                            <label for="css"><input type="checkbox" name="skills" id="css" checked> CSS</label>
-                            <label for="javascript"><input type="checkbox" name="skills" id="javascript" checked>
-                                JavaScript</label>
-                            <label for="php"><input type="checkbox" name="skills" id="php" checked> PHP</label>
-                            <label for="mysql"><input type="checkbox" name="skills" id="mysql" checked> MySQL</label>
+                            <label for="html">
+                                <input type="checkbox" name="skills" id="html" checked>
+                                <abbr title="Hyper Text Markup Language"> HTML</abbr>
+                            </label>
+                            <label for="css">
+                                <input type="checkbox" name="skills" id="css" checked>
+                                <abbr title="CSS / SASS / Bootstrap / LESS"> CSS</abbr>
+                            </label>
+                            <label for="javascript">
+                                <input type="checkbox" name="skills" id="javascript" checked>
+                                <abbr title="JS / ReactJS"> JavaScript</abbr>
+                            </label>
+                            <label for="php">
+                                <input type="checkbox" name="skills" id="php" checked>
+                                <abbr title="PHP Hypertext Preprocessor"> PHP</abbr>
+                            </label>
+                            <label for="mysql">
+                                <input type="checkbox" name="skills" id="mysql" checked>
+                                <abbr title="MySQL / MariaDB / PHPMyAdmin"> MySQL</abbr>
+                            </label>
                         </fieldset>
                     </section>
 
                     <section id="History">
-                        <h3>History</h3>
-                        <div><span>2016</span> <input type="range" min="2016" max="2020" step="1" value="2020"
-                                name="RangeHistory" title="History" id="RangeHistory"> <span>2020</span></div>
+                        <h2 title="My history of learning how to programing">History</h2>
+                        <div>
+                            <span>2016</span>
+                            <input type="range" min="2016" max="2020" step="1" value="2016" name="RangeHistory"
+                                title="History" id="RangeHistory">
+                            <span>2020</span>
+                        </div>
                         <article>
-                            <h4>2020</h4>
-                            <ul>
-                                <li>Start in Curso Proficional Informática de Gestão;</li>
-                                <li>Frits contac in programing;</li>
-                                <li>Learn Pascal;</li>
-                                <li>Learn Lazarus Pascal;</li>
+                            <h3 id="ListHistoryTitle">2016</h3>
+                            <ul id="UlListHistory">
                             </ul>
                         </article>
                     </section>
@@ -118,8 +138,8 @@
         </aside>
     </div>
 
-    <script src="./script.js"></script>
     <script src="../../Data/ShowLang.js" type="module" defer></script>
+    <script src="./script.js" type="module" defer></script>
 </body>
 
 </html>
