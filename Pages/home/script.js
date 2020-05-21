@@ -34,50 +34,41 @@ function changeList() {
   switch (Number(RangeHistory.value)) {
     case 2016:
       yearHistory = indHistorySel._2016;
-      for (let i = 0; i < yearHistory.length; i++) {
-        const li = document.createElement("li");
-        li.innerHTML = yearHistory[i];
-        UlListHistory.appendChild(li);
-      }
+      showListHistory(yearHistory);
       break;
 
     case 2017:
       yearHistory = indHistorySel._2017;
-      for (let i = 0; i < yearHistory.length; i++) {
-        const li = document.createElement("li");
-        li.innerHTML = yearHistory[i];
-        UlListHistory.appendChild(li);
-      }
+      showListHistory(yearHistory);
       break;
 
     case 2018:
       yearHistory = indHistorySel._2018;
-      for (let i = 0; i < yearHistory.length; i++) {
-        const li = document.createElement("li");
-        li.innerHTML = yearHistory[i];
-        UlListHistory.appendChild(li);
-      }
+      showListHistory(yearHistory);
       break;
 
     case 2019:
       yearHistory = indHistorySel._2019;
-      for (let i = 0; i < yearHistory.length; i++) {
-        const li = document.createElement("li");
-        li.innerHTML = yearHistory[i];
-        UlListHistory.appendChild(li);
-      }
+      showListHistory(yearHistory);
       break;
 
     case 2020:
       yearHistory = indHistorySel._2020;
-      for (let i = 0; i < yearHistory.length; i++) {
-        const li = document.createElement("li");
-        li.innerHTML = yearHistory[i];
-        UlListHistory.appendChild(li);
-      }
+      showListHistory(yearHistory);
       break;
 
     default:
+      const li = document.createElement("li");
+      li.innerHTML = "Sorry something went wrong!";
+      UlListHistory.appendChild(li);
       break;
+  }
+}
+
+function showListHistory(yearHistory) {
+  for (let i = 0; i < yearHistory.length; i++) {
+    const li = document.createElement("li");
+    li.innerHTML = yearHistory[i];
+    UlListHistory.appendChild(li);
   }
 }
