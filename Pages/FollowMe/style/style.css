@@ -46,7 +46,7 @@ html body main #Container ul li {
   padding: 0 4px;
   border-bottom: 2px solid gray;
   border-radius: 2px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 html body main #Container ul li:hover:nth-child(1) {
@@ -87,7 +87,7 @@ html body main #Container ul li:hover:nth-child(4) a {
 
 html body main #Container ul li:hover:nth-child(5) {
   background-color: gray;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 html body main #Container ul li:hover:nth-child(5) a {
@@ -125,7 +125,7 @@ html body main #Container ul li:hover:nth-child(9) {
 }
 
 html body main #Container ul li:hover:nth-child(9) a span {
-  transition: .3s;
+  transition: 0.3s;
   letter-spacing: 5px;
   direction: rtl;
   unicode-bidi: bidi-override;

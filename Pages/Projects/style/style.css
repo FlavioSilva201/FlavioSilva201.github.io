@@ -1,7 +1,11 @@
+html body {
+  background-color: orange;
+}
+
 html body #container {
   flex-grow: 10;
   width: 100%;
-  margin-top: 50px;
+  padding: 50px 0;
   background-color: teal;
 }
 
@@ -16,4 +20,87 @@ html body #container main {
   align-items: center;
   justify-content: center;
   background-color: yellow;
+}
+
+html body #container main article {
+  max-width: 500px;
+}
+
+html body #container main article h2 {
+  font-size: 30px;
+}
+
+html body #container main article img {
+  width: 500px;
+}
+
+html body #container main article details summary {
+  cursor: pointer;
+}
+
+html body #container main article details p {
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0 0 10px black;
+}
+
+html body #container main article details div a {
+  color: lightseagreen;
+  font-weight: bolder;
+  text-shadow: 0 0 10px lightblue;
+}
+
+html body #container main aside {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  transition: 0.5s;
+}
+
+html body #container main aside ul {
+  width: 100%;
+}
+
+html body #container main aside ul li {
+  width: 100%;
+  margin: 10px 0;
+  position: relative;
+}
+
+html body #container main aside ul li button {
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  border-radius: 4px;
+  box-shadow: 2px 2px white;
+  background-color: red;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+html body #container main aside ul li button::before {
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: black;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+
+html body #container main aside ul li button:hover {
+  color: white;
+}
+
+html body #container main aside ul li button:hover::before {
+  width: 100%;
+  opacity: 0.5;
+}
+
+@media only screen and (max-width: 950px) {
+  html body #container main aside ul li button {
+    font-size: 12px;
+  }
 }

@@ -1,21 +1,110 @@
 html {
-    body {
-        #container {
-            flex-grow: 10;
-            width: 100%;
-            margin-top: 50px;
-            background-color: teal;
-            header {
-                width: 100%;
-                background-color: saddlebrown;
+  body {
+    background-color: orange;
+    #container {
+      flex-grow: 10;
+      width: 100%;
+      padding: 50px 0;
+      background-color: teal;
+      header {
+        width: 100%;
+        background-color: saddlebrown;
+      }
+      main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: yellow;
+        article {
+          max-width: 500px;
+          h2 {
+            font-size: 30px;
+          }
+          img {
+            width: 500px;
+          }
+          details {
+            summary {
+              cursor: pointer;
             }
-            main {
-                width: 100%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: yellow;
+            p {
+              font-size: 18px;
+              font-weight: bold;
+              text-shadow: 0 0 10px black;
             }
+            div {
+              a {
+                color: lightseagreen;
+                font-weight: bolder;
+                text-shadow: 0 0 10px lightblue;
+              }
+            }
+          }
         }
+        aside {
+          position: absolute;
+          right: 25px;
+          bottom: 0;
+          transition: 0.5s;
+          ul {
+            width: 100%;
+            li {
+              width: 100%;
+              margin: 10px 0;
+              position: relative;
+              button {
+                width: 100%;
+                padding: 10px;
+                text-align: right;
+                border-radius: 4px;
+                box-shadow: 2px 2px white;
+                background-color: red;
+                transition: 0.5s;
+                cursor: pointer;
+                &::before {
+                  width: 0;
+                  height: 100%;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  content: "";
+                  background-color: black;
+                  transition: 0.5s;
+                  border-radius: 4px;
+                }
+                &:hover {
+                  color: white;
+                  &::before {
+                    width: 100%;
+                    opacity: 0.5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  html {
+    body {
+      #container {
+        main {
+          aside {
+            ul {
+              li {
+                button {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

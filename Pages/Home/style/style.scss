@@ -1,14 +1,14 @@
 html {
   body {
+    background: linear-gradient(to right bottom, royalblue, orange);
     #container {
       flex-grow: 1;
       width: 100%;
       display: flex;
       flex-direction: column;
-      margin-top: 50px;
+      padding: 50px 0;
       header {
         flex-grow: 1;
-        background-color: firebrick;
         width: 100%;
         display: flex;
         align-items: center;
@@ -23,7 +23,6 @@ html {
           font-size: 15.5px;
         }
       }
-
       div.banner {
         width: 100%;
         display: flex;
@@ -37,7 +36,6 @@ html {
           display: none;
           align-items: center;
           justify-content: space-between;
-          background-color: red;
           border-radius: 10px;
           color: white;
           button {
@@ -73,7 +71,6 @@ html {
         flex-grow: 10;
         width: 100%;
         margin-top: 20px;
-        background-color: darkblue;
         section {
           &#Home {
             width: 100%;
@@ -85,7 +82,7 @@ html {
               padding: 10px;
               border: 2px solid royalblue;
               border-radius: 4px;
-              background-color: green;
+              background: orange;
               section {
                 display: flex;
                 flex-direction: column;
@@ -105,6 +102,9 @@ html {
                   border-radius: 8px;
                   font-size: 16px;
                 }
+                input[type="range"] {
+                  padding: 4px 0;
+                }
                 textarea {
                   min-height: 50px;
                   height: 100px;
@@ -113,7 +113,6 @@ html {
                   overflow: auto;
                 }
                 &#FormName {
-                  background-color: salmon;
                   div {
                     display: flex;
                     align-items: center;
@@ -123,7 +122,6 @@ html {
                   }
                 }
                 &#FormDetails {
-                  background-color: red;
                   div {
                     display: grid;
                     grid-template-columns: 67% 33%;
@@ -134,7 +132,6 @@ html {
                   grid-template-columns: repeat(2, 1fr);
                   grid-column-gap: 10px;
                   grid-row-gap: 10px;
-                  background-color: hotpink;
                   h2 {
                     grid-area: 1 / 1 / 2 / 3;
                   }
@@ -155,7 +152,6 @@ html {
                 }
                 &#History {
                   width: 100%;
-                  background-color: yellow;
                   div {
                     width: 100%;
                     box-sizing: border-box;
@@ -227,7 +223,7 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
-          background: white;
+          background: none;
           padding: 6px;
           border-radius: 50%;
           border: 1px solid black;
