@@ -1,4 +1,13 @@
-.vscode/
+# ------------- SASS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# ------------- System
 .DS_Store
+.vscode/
+
+# ------------ Others
 Simple radial menu.webloc
 Assets/img/SignificadoDasCores/
