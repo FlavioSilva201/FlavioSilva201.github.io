@@ -1,0 +1,47 @@
+html {
+  body {
+    background-color: orange;
+    #container {
+      flex-grow: 10;
+      width: 100%;
+      padding: 50px 0;
+      background-color: teal;
+      header {
+        width: 100%;
+        background-color: saddlebrown;
+      }
+      main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: yellow;
+        ul {
+          li {
+            div {
+              &.Content {
+                display: flex;
+                cursor: default;
+              }
+              &.DropDown {
+                display: none;
+                transition: 1s;
+                a {
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+            }
+            &:hover {
+              div.DropDown {
+                display: flex;
+                flex-direction: column;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
