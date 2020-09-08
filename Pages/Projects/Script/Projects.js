@@ -6,9 +6,9 @@ export default {
       alt: "Sites Porreiros",
     },
     decription: {
-      ing: `Sites Porreiros is a site where I publish simple scripts, games, apps, websites, funny mini projects. \n
+      ing: `Sites Porreiros is a site where I publish simple scripts, games, apps, websites, funny mini projects. <br/>
       The real purpose is simply to entertain when there is nothing to do.`,
-      pt: `Sites Porreiros é um site onde publico scripts simples, jogos, aplicativos, sites, mini projetos engraçados. \n
+      pt: `Sites Porreiros é um site onde publico scripts simples, jogos, aplicativos, sites, mini projetos engraçados. <br/>
       O verdadeiro objetivo é simplesmente entreter quando não há nada a fazer.`,
     },
     webSite: "https://sitesporreiros.netlify.app/",
@@ -21,8 +21,8 @@ export default {
       alt: "Vanilla JavaScript",
     },
     decription: {
-      ing: `VanillaJavaScript`,
-      pt: `VanillaJavaScript`,
+      ing: `A tutorial site for introducing JavaScript, with some ninjas "Hacks" you can do with Javascript.`,
+      pt: `Um site de tutorial para introdução de JavaScript, com alguns "Hacks" ninjas que são possiveis fazer em Javascript.`,
     },
     webSite: "https://vanillajavascript.netlify.app/",
     repository: "https://github.com/201flaviosilva/VanillaJavaScript",
@@ -30,12 +30,14 @@ export default {
   CarteiraOnline: {
     name: "Carteira Online",
     img: {
-      src: "#",
+      src: "https://i.ibb.co/z5dmhjJ/Carteira-Online.png",
       alt: "Carteira Online",
     },
     decription: {
-      ing: `CarteiraOnline`,
-      pt: `CarteiraOnline`,
+      ing: `The idea of the project is simply to have better organization and control of personal finances, to create an account and to point out the money saved. <br/>
+      The purpose of this site was to develop a project using PHP programming language.`,
+      pt: `A ideia do projeto é simplesmente para ter uma melhor organização e controlo das finanças pessoas, criar uma conta e ir apontado o dinheiro poupado. <br/>
+      O objetivo deste site foi desenvolver um projeto onde se utiliza linguagem de programação PHP.`,
     },
     webSite: "http://carteiraonline.epizy.com/",
     repository: "https://github.com/201flaviosilva/CarteiraOnline",
@@ -47,8 +49,8 @@ export default {
       alt: "CSS Free Style",
     },
     decription: {
-      ing: `CSSFreeStyle`,
-      pt: `CSSFreeStyle`,
+      ing: `CSSFreeStyle is a set of pre-made CSS animations that anyone with the file can apply to your website.`,
+      pt: `CSSFreeStyle é um conjunto de animações pré-feitas em CSS que qualquer pessoa com o ficheiro pode aplicar no seu site.`,
     },
     webSite: "#",
     repository: "https://github.com/201flaviosilva/CSSFreeStyle",

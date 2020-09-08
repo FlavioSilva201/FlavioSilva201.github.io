@@ -14,12 +14,13 @@ let timer = setInterval(LinesShow, 500);
 main();
 
 function main() {
+  const date = new Date();
   DataLogin.innerHTML =
-    new Date().getDate() +
+    date.getDate() +
     "/" +
-    new Date().getMonth() +
+    (date.getMonth() + 1) +
     "/" +
-    new Date().getFullYear() +
+    date.getFullYear() +
     " - ";
   linha[0].style.visibility = "visible";
   linha[1].style.visibility = "visible";
@@ -28,7 +29,6 @@ function main() {
 
 function LinesShow() {
   counter++;
-  console.log(counter);
   switch (counter) {
     case 1:
       commandRight[0].style.visibility = "visible";

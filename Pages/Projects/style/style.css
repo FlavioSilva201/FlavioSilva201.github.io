@@ -1,17 +1,19 @@
 html body {
-  background-color: orange;
+  background: linear-gradient(to right bottom, orange, royalblue);
 }
 
 html body #container {
   flex-grow: 10;
   width: 100%;
   padding: 50px 0;
-  background-color: teal;
 }
 
 html body #container header {
   width: 100%;
-  background-color: saddlebrown;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 0 10px royalblue;
 }
 
 html body #container main {
@@ -19,7 +21,6 @@ html body #container main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
 }
 
 html body #container main article {
@@ -27,6 +28,7 @@ html body #container main article {
 }
 
 html body #container main article h2 {
+  text-align: center;
   font-size: 30px;
 }
 
@@ -34,20 +36,21 @@ html body #container main article img {
   width: 500px;
 }
 
-html body #container main article details summary {
-  cursor: pointer;
-}
-
-html body #container main article details p {
+html body #container main article div.Description p {
   font-size: 18px;
   font-weight: bold;
   text-shadow: 0 0 10px black;
 }
 
-html body #container main article details div a {
-  color: lightseagreen;
+html body #container main article div.Description div {
+  display: flex;
+  justify-content: space-between;
+}
+
+html body #container main article div.Description div a {
+  color: orange;
   font-weight: bolder;
-  text-shadow: 0 0 10px lightblue;
+  text-shadow: 0 0 10px lightsalmon;
 }
 
 html body #container main aside {
@@ -73,7 +76,7 @@ html body #container main aside ul li button {
   text-align: right;
   border-radius: 4px;
   box-shadow: 2px 2px white;
-  background-color: red;
+  background-color: orange;
   transition: 0.5s;
   cursor: pointer;
 }
@@ -100,7 +103,11 @@ html body #container main aside ul li button:hover::before {
 }
 
 @media only screen and (max-width: 950px) {
+  html body #container main aside {
+    right: 2px;
+  }
   html body #container main aside ul li button {
+    padding: 10px 4px;
     font-size: 12px;
   }
 }
