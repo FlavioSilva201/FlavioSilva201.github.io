@@ -2,42 +2,55 @@ html {
   body {
     background: linear-gradient(to right bottom, royalblue, orange);
     background-color: orange;
+
     #container {
       flex-grow: 10;
       width: 100%;
       padding: 50px 0;
       background-color: teal;
+
       header {
         width: 100%;
         background-color: saddlebrown;
       }
+
       main {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: yellow;
+
         ul {
+          width: 75%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+
           li {
             div {
-              &.Content {
+              &.GameHeader {
                 display: flex;
                 cursor: default;
               }
-              &.DropDown {
-                display: none;
+
+              &.GameMain {
                 transition: 1s;
-                a {
-                  &:hover {
-                    text-decoration: underline;
-                  }
-                }
               }
-            }
-            &:hover {
-              div.DropDown {
-                display: flex;
-                flex-direction: column;
+
+              img {
+                width: 30px;
+                height: 30px;
+                border: 1px solid black;
+              }
+
+              a {
+                color: green;
+                font-weight: 900;
+                font-size: 20px;
+                &:hover {
+                  text-decoration: underline;
+                }
               }
             }
           }

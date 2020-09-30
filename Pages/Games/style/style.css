@@ -23,21 +23,34 @@ html body #container main {
   background-color: yellow;
 }
 
-html body #container main ul li div.Content {
+html body #container main ul {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+html body #container main ul li div.GameHeader {
   display: flex;
   cursor: default;
 }
 
-html body #container main ul li div.DropDown {
-  display: none;
+html body #container main ul li div.GameMain {
   transition: 1s;
 }
 
-html body #container main ul li div.DropDown a:hover {
-  text-decoration: underline;
+html body #container main ul li div img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
 }
 
-html body #container main ul li:hover div.DropDown {
-  display: flex;
-  flex-direction: column;
+html body #container main ul li div a {
+  color: green;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+html body #container main ul li div a:hover {
+  text-decoration: underline;
 }
