@@ -113,7 +113,7 @@ function LinesShow() {
       break;
     default:
       clearInterval(timer);
-      location.replace("./Pages/Home/index.html");
+      window.location = "./Pages/Home/index.html";
       break;
   }
 }
