@@ -7,8 +7,3 @@
 # ------------- System
 .DS_Store
 .vscode/
-
-# ------------ Others
-Simple radial menu.webloc
-Assets/img/SignificadoDasCores/
-Pages/Games/js.js

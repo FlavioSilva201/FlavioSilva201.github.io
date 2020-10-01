@@ -1,15 +1,15 @@
 {
   "name": "201flaviosilva.github.io",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Portfolio",
-  "main": "script.js",
+  "main": "./Pages/Index/script.js",
   "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/201flaviosilva/201flaviosilva.github.io.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "201flaviosilva",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/201flaviosilva/201flaviosilva.github.io/issues"
