@@ -298,3 +298,12 @@ html body #container aside dialog button:hover {
 html body #container aside dialog button:hover:active {
   background: lightgray;
 }
+
+@media only screen and (max-width: 1000px) {
+  html body #container main section#Home form {
+    width: 90%;
+  }
+  html body #container aside {
+    bottom: 50px;
+  }
+}

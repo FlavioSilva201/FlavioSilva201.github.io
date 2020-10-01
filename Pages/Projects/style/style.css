@@ -37,9 +37,9 @@ html body #container main article img {
 }
 
 html body #container main article div.Description p {
-  font-size: 18px;
-  font-weight: bold;
-  text-shadow: 0 0 10px black;
+  font-size: 20px;
+  font-weight: 900;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
 }
 
 html body #container main article div.Description div {
