@@ -64,6 +64,12 @@ html {
 
               &.GameMain {
                 transition: 1s;
+
+                div {
+                  width: 100%;
+                  display: flex;
+                  justify-content: space-around;
+                }
               }
 
 
@@ -82,7 +88,7 @@ html {
     }
 
     canvas {
-      z-index: 100;
+      z-index: -1;
       position: fixed;
       top: 0;
       left: 0;
