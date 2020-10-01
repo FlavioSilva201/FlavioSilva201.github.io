@@ -38,6 +38,7 @@ export const history = {
       "Start learn LESS/SASS;",
       "Start learn Bootstrap;",
       "Start learn PHP basics and connection with DB;",
+      "Enter on Mindera like a worker;",
     ],
   },
   pt: {
@@ -76,6 +77,7 @@ export const history = {
       "Comecei a aprender LESS / SASS;",
       "Comecei a aprender Bootstrap;",
       "Comecei a aprender o básico do PHP e conexão com Base de Dados;",
+      "Entrei na Mindera como um trabalhador;",
     ],
   },
 };
