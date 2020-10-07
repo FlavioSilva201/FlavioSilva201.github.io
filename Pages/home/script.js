@@ -1,6 +1,3 @@
-// variavel.trim() -> para remover os espaços em branco
-import { history } from "./ListaData.js";
-
 const RangeHistory = document.getElementById("RangeHistory");
 const ListHistoryTitle = document.getElementById("ListHistoryTitle");
 const UlListHistory = document.getElementById("UlListHistory");
@@ -12,7 +9,7 @@ function main() {
     .getElementById("InpBirthday")
     .setAttribute("max", `${String(new Date().toISOString().slice(0, 10))}`); // Change limite for today
   RangeHistory.max = RangeHistory.value = ListHistoryTitle.innerHTML = Maxdate.innerHTML = new Date().getFullYear();
-  changeList();
+  getInd();
 }
 
 RangeHistory.addEventListener("change", () => {
@@ -20,42 +17,54 @@ RangeHistory.addEventListener("change", () => {
   while (UlListHistory.firstChild) {
     UlListHistory.removeChild(UlListHistory.firstChild);
   }
-  changeList();
+  getInd();
 });
 
-function changeList() {
-  let yearHistory;
+function getInd() {
   let indHistorySel;
+  if (localStorage.getItem("LocalLang") === "English") indHistorySel = "EN";
+  else indHistorySel = "PT";
+  getData(indHistorySel);
+}
 
-  if (localStorage.getItem("LocalLang") === "English") {
-    indHistorySel = history.en;
-  } else {
-    indHistorySel = history.pt;
-  }
+async function getData(indHistorySel) {
+  await fetch(`../../Languages/Data/Home/${indHistorySel}.json`)
+    .then(response => response.json())
+    .then(data => indHistorySel = data);
+  changeDom(indHistorySel);
+}
 
+function changeDom(indHistorySel) {
+  document.getElementById("MyDescription").innerHTML = indHistorySel.Description;
+  document.getElementById("NameLanguage").innerHTML = indHistorySel.Name;
+  document.getElementById("DatailsLanguage").innerHTML = indHistorySel.Details;
+  document.getElementById("FavoriteAreaLanguage").innerHTML = indHistorySel.Skills[0];
+  document.getElementById("SkillsDiscoveredLanguage").innerHTML = indHistorySel.Skills[1];
+
+  let yearHistory;
   switch (Number(RangeHistory.value)) {
     case 2016:
-      yearHistory = indHistorySel._2016;
+      yearHistory = indHistorySel.history._2016;
       showListHistory(yearHistory);
       break;
 
     case 2017:
-      yearHistory = indHistorySel._2017;
+      yearHistory = indHistorySel.history._2017;
       showListHistory(yearHistory);
       break;
 
     case 2018:
-      yearHistory = indHistorySel._2018;
+      yearHistory = indHistorySel.history._2018;
       showListHistory(yearHistory);
       break;
 
     case 2019:
-      yearHistory = indHistorySel._2019;
+      yearHistory = indHistorySel.history._2019;
       showListHistory(yearHistory);
       break;
 
     case 2020:
-      yearHistory = indHistorySel._2020;
+      yearHistory = indHistorySel.history._2020;
       showListHistory(yearHistory);
       break;
 
@@ -76,7 +85,6 @@ function showListHistory(yearHistory) {
 }
 
 const bannerConteiner = document.getElementById("bannerConteiner");
-
 document.getElementById("BtnSubmit").addEventListener("click", (event) => {
   event.preventDefault();
   if (!(document.getElementById("firstNome").value === "Flávio")) {

@@ -6,7 +6,9 @@ const ProjectDescription = document.getElementById("ProjectDescription");
 const ProjectWebSite = document.getElementById("ProjectWebSite");
 const ProjectSourceCode = document.getElementById("ProjectSourceCode");
 
-document.getElementById("SitesPorreirosBTN").addEventListener("click", () => {
+changeSistesPorreiros();
+document.getElementById("SitesPorreirosBTN").addEventListener("click", changeSistesPorreiros);
+function changeSistesPorreiros() {
 	ProjectName.innerHTML = Projects.SitesPorreiros.name;
 	ProjectImg.src = Projects.SitesPorreiros.img.src;
 	ProjectImg.alt = Projects.SitesPorreiros.img.alt;
@@ -14,7 +16,7 @@ document.getElementById("SitesPorreirosBTN").addEventListener("click", () => {
 	else ProjectDescription.innerHTML = Projects.SitesPorreiros.decription.pt;
 	ProjectWebSite.src = Projects.SitesPorreiros.webSite;
 	ProjectSourceCode.src = Projects.SitesPorreiros.repository;
-});
+}
 
 document.getElementById("VanillaJavaScriptBTN").addEventListener("click", () => {
 	ProjectName.innerHTML = Projects.VanillaJavaScript.name;

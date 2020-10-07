@@ -36,7 +36,7 @@
     <main>
         <div id="Container">
             <div id="FollowMe">
-                <h2>Follow Me</h2>
+                <h2 id="TitleFollowMe">Follow Me</h2>
                 <ul>
                     <li>
                         <a href="https://www.instagram.com/flaviolsilva/"><img src="../../Assets/icons/instagram.svg"
@@ -84,7 +84,8 @@
                     </li>
                     <li>
                         <a href="https://github.com/201flaviosilva/201flaviosilva.github.io"><img
-                                src="../../Assets/icons/code.svg" alt="Source Code"> <span>Source Code</span></a>
+                                src="../../Assets/icons/code.svg" alt="Source Code"> <span>Source
+                                Code</span></a>
                     </li>
 
                     <li>
@@ -95,6 +96,11 @@
             </div>
         </div>
     </main>
+
+    <script>
+        if (localStorage.getItem("LocalLang") === "English") document.getElementById("TitleFollowMe").innerHTML = "Follow Me";
+        else document.getElementById("TitleFollowMe").innerHTML = "Segue-me!";
+    </script>
 </body>
 
 </html>
