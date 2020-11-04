@@ -17,6 +17,7 @@ function changeDom(indHistorySel) {
 	document.getElementById("Magito").innerHTML = indHistorySel.Magito;
 	document.getElementById("TicTacToe").innerHTML = indHistorySel.TicTacToe;
 	document.getElementById("SitesPorreiros").innerHTML = indHistorySel.SitesPorreiros;
-	document.getElementById("InvasoresDoEspaco").innerHTML = indHistorySel.InvasoresDoEspaco;
+	document.getElementById("JoguinhosWeb").innerHTML = indHistorySel.JoguinhosWeb;
 	document.getElementById("PlanetaGames").innerHTML = indHistorySel.PlanetaGames;
+	document.getElementById("InvasoresDoEspaco").innerHTML = indHistorySel.InvasoresDoEspaco;
 }
