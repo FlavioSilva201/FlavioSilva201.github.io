@@ -1,13 +1,51 @@
 html body {
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 
 html body div#Paper {
   margin: 10px 0;
-  padding: 4em;
+  padding: 30px 20px;
   width: 790px;
   height: 1122px;
+  display: grid;
+  grid-template-columns: auto repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
+  gap: 10px 5px;
+  grid-template-areas: "Header Header Header Header" "Aside Main Main Main" "footer footer footer footer";
   border: 1px solid black;
+  background-color: white;
   box-shadow: 0 0 20px black, 0 0 50px #8a4d0f inset;
+}
+
+html body div#Paper header {
+  grid-area: Header;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html body div#Paper aside {
+  grid-area: Aside;
+}
+
+html body div#Paper aside ul li {
+  border-bottom: 1px solid gray;
+}
+
+html body div#Paper main {
+  grid-area: Main;
+}
+
+html body div#Paper footer {
+  grid-area: footer;
+}
+
+html body div#Paper footer,
+html body div#Paper footer ul,
+html body div#Paper footer li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
