@@ -21,7 +21,7 @@ class Ball {
 		this.x = x;
 		this.y = canvasHeight + this.size;
 		this.startX = x;
-		this.speedX = randomNumber(-1, 1);
+		this.speedX = randomNumber(-3, 3);
 		this.color = "rgb(" + randomColor() + "," + randomColor() + "," + randomColor() + ")";
 	}
 }
@@ -30,11 +30,6 @@ setInterval(() => balls.push(new Ball()), 250);
 setInterval(() => {
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	balls.forEach((b, index) => {
-		b.y--;
-		if (b.y + b.size < 0) balls.splice(index, 1);
-		b.x += b.speedX;
-		if ((b.startX - 50 > b.x) || (b.startX + 50 < b.x)) b.speedX *= -1;
-		collisionDetection(b, index);
 		ctx.beginPath();
 		ctx.fillStyle = b.color;
 		ctx.arc(b.x, b.y, b.size, 0, Math.PI * 2, true);
@@ -44,7 +39,16 @@ setInterval(() => {
 		// ctx.font = "10px monospace";
 		// ctx.fillText(b.size, b.x, b.y);
 	});
-}, 10);
+}, 1);
+setInterval(() => {
+	balls.forEach((b, index) => {
+		b.y--;
+		if (b.y + b.size < 0) balls.splice(index, 1);
+		b.x += b.speedX;
+		if ((b.startX - 50 > b.x) || (b.startX + 50 < b.x) || (b.x - b.size < 0) || (b.x + b.size > canvasWidth)) b.speedX *= -1;
+		collisionDetection(b, index);
+	})
+}, 50);
 
 function collisionDetection(b, index) {
 	if (x > b.x - b.size && x < b.x + b.size &&
@@ -57,9 +61,9 @@ function collisionDetection(b, index) {
 
 function updateScore(b) {
 	if (b.size < 10) score++;
-	else if (b.size < 15) score += 2;
-	else if (b.size < 20) score += 3;
-	else if (b.size < 25) score += 4;
-	else if (b.size === 25) score += 5;
+	else if (b.size < 15) score += 2 * Math.abs(b.speedX);
+	else if (b.size < 20) score += 3 * Math.abs(b.speedX);
+	else if (b.size < 25) score += 4 * Math.abs(b.speedX);
+	else if (b.size === 25) score += 5 * Math.abs(b.speedX);
 	document.getElementById("score").innerHTML = score;
 }
