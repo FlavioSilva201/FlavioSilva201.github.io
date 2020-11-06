@@ -11,10 +11,8 @@ const balls = [];
 let score = 0;
 let x = 0;
 let y = 0;
-document.addEventListener("mousemove", (event) => {
-	x = event.clientX;
-	y = event.clientY;
-});
+document.addEventListener("mousemove", (event) => { x = event.clientX; y = event.clientY; });
+document.addEventListener("click", (event) => { x = event.clientX; y = event.clientY; });
 
 class Ball {
 	constructor() {
@@ -41,6 +39,10 @@ setInterval(() => {
 		ctx.fillStyle = b.color;
 		ctx.arc(b.x, b.y, b.size, 0, Math.PI * 2, true);
 		ctx.fill();
+
+		// ctx.fillStyle = "white";
+		// ctx.font = "10px monospace";
+		// ctx.fillText(b.size, b.x, b.y);
 	});
 }, 10);
 
@@ -49,11 +51,15 @@ function collisionDetection(b, index) {
 		y > b.y - b.size && y < b.y + b.size) {
 		balls.splice(index, 1);
 		balls.push(new Ball());
-		updateScore();
+		updateScore(b);
 	}
 }
 
-function updateScore() {
-	score++;
+function updateScore(b) {
+	if (b.size < 10) score++;
+	else if (b.size < 15) score += 2;
+	else if (b.size < 20) score += 3;
+	else if (b.size < 25) score += 4;
+	else if (b.size === 25) score += 5;
 	document.getElementById("score").innerHTML = score;
 }
