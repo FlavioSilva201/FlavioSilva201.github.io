@@ -16,8 +16,8 @@ document.addEventListener("click", (event) => { x = event.clientX; y = event.cli
 
 class Ball {
 	constructor() {
-		const x = randomNumber(0, canvasWidth);
 		this.size = randomNumber(5, 25);
+		const x = randomNumber(this.size, canvasWidth - this.size);
 		this.x = x;
 		this.y = canvasHeight + this.size;
 		this.startX = x;
