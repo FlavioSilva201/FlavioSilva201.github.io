@@ -4,10 +4,11 @@ html {
     justify-content: center;
     background-color: black;
     div#Paper {
+      position: relative;
       margin: 10px 0;
       padding: 30px 20px;
-      width: 790px;
-      height: 1122px;
+      width: 790px; // widht of a paper (A4)
+      height: 1122px; // height of a paper (A4)
       display: grid;
       grid-template-columns: auto repeat(3, 1fr);
       grid-template-rows: auto 1fr auto;
@@ -30,14 +31,59 @@ html {
         grid-area: Aside;
         // background-color: green;
         ul {
+          border-bottom: 2px solid black;
+          margin-bottom: 10px;
           li {
+            margin-bottom: 4px;
             border-bottom: 1px solid gray;
+            ul {
+              border-bottom: none;
+            }
           }
         }
       }
       main {
         grid-area: Main;
         // background-color: blue;
+        img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 100px;
+          height: 100px;
+        }
+        h2 {
+          width: 90%;
+          padding: 4px 6px;
+          border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+          border-radius: 0 0 0 10px;
+        }
+        ul.AboutMeList {
+          width: 100%;
+          li {
+            width: 100%;
+            margin: 4px 0;
+            display: flex;
+            justify-content: space-between;
+            span {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              &:nth-child(1) {
+                font-weight: bold;
+                &:after {
+                  content: ":";
+                }
+              }
+              &:nth-child(2) {
+                border: 1px solid black;
+                padding: 4px;
+                font-family: "Oleo Script", Helvetica, sans-serif;
+                text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+              }
+            }
+          }
+        }
       }
       footer {
         grid-area: footer;
@@ -47,6 +93,13 @@ html {
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+        li {
+          &:first-child {
+            &:after {
+              content: " | ";
+            }
+          }
         }
       }
     }
