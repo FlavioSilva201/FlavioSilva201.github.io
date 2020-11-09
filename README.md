@@ -29,23 +29,13 @@ On this website I make a presentation of my professional life
 
 # Follow me
 
-| Social    | Link                                                             |
-| --------- | ---------------------------------------------------------------- |
-| GitHub    | [Link](https://github.com/201flaviosilva)                        |
-| GitLab    | [Link](https://gitlab.com/201flaviosilva)                        |
-| Instagram | [Link](https://www.instagram.com/flaviolsilva/)                  |
-| Pinterest | [Link](https://br.pinterest.com/MeiaGaspea)                      |
-| Behance   | [Link](https://www.behance.net/meiagaspe)                        |
-| Linkedin  | [Link](https://www.linkedin.com/in/fl%C3%A1vio-silva-2b069b146/) |
+| Social    | Link                                                                                                    |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| GitHub    | [Link](https://github.com/201flaviosilva)                                                               |
+| GitLab    | [Link](https://gitlab.com/201flaviosilva)                                                               |
+| Instagram | [Link](https://www.instagram.com/flaviolsilva/)                                                         |
+| Pinterest | [Link](https://br.pinterest.com/MeiaGaspea)                                                             |
+| Behance   | [Link](https://www.behance.net/meiagaspe)                                                               |
+| Linkedin  | [Link](https://www.linkedin.com/in/fl%C3%A1vio-silva-2b069b146/)                                        |
+| PDF       | [Link](https://github.com/201flaviosilva/201flaviosilva.github.io/blob/V.1-FE-Site/PDF/FlavioSilva.pdf) |
 
-<!--
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
-| Instagram | Link                                                             |
- -->
