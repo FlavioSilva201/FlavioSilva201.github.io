@@ -29,6 +29,9 @@ html body div#Paper header {
 
 html body div#Paper aside {
   grid-area: Aside;
+  height: 90%;
+  border-right: 1px solid black;
+  padding-right: 2px;
 }
 
 html body div#Paper aside ul {
@@ -39,6 +42,10 @@ html body div#Paper aside ul {
 html body div#Paper aside ul li {
   margin-bottom: 4px;
   border-bottom: 1px solid gray;
+}
+
+html body div#Paper aside ul li span {
+  font-size: 12px;
 }
 
 html body div#Paper aside ul li ul {
@@ -68,6 +75,25 @@ html body div#Paper main ul.AboutMeList {
   width: 100%;
 }
 
+html body div#Paper main ul.AboutMeList div {
+  position: relative;
+  width: 100%;
+  margin: 15px 0 10px 0;
+  padding: 4px;
+  border: 1px dashed black;
+  border-radius: 10px;
+}
+
+html body div#Paper main ul.AboutMeList div h3 {
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  padding: 0 4px;
+  border: 1px dashed gray;
+  background-color: black;
+  color: white;
+}
+
 html body div#Paper main ul.AboutMeList li {
   width: 100%;
   margin: 4px 0;
@@ -90,10 +116,49 @@ html body div#Paper main ul.AboutMeList li span:nth-child(1):after {
 }
 
 html body div#Paper main ul.AboutMeList li span:nth-child(2) {
-  border: 1px solid black;
-  padding: 4px;
+  padding: 4px 0 4px 10px;
   font-family: "Oleo Script", Helvetica, sans-serif;
   text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+  border: 1px solid black;
+  border-radius: 0 4px 0 4px;
+}
+
+html body div#Paper main div.CareerContainer {
+  height: 550px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+html body div#Paper main div.CareerContainer div {
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+html body div#Paper main div.CareerContainer div h3 {
+  margin-bottom: 4px;
+  background: black;
+  color: white;
+  text-align: center;
+  border-bottom: 2px dashed gray;
+}
+
+html body div#Paper main div.CareerContainer div p {
+  margin: 2px 0 2px 4px;
+}
+
+html body div#Paper main div.CareerContainer div p time {
+  float: right;
+  padding: 2px;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  background: whitesmoke;
 }
 
 html body div#Paper footer {
