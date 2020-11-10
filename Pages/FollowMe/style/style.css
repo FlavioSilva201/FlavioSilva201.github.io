@@ -34,7 +34,7 @@ html body main #Container ul {
   height: 100%;
   width: 100%;
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 24px;
 }
 
@@ -47,6 +47,27 @@ html body main #Container ul li {
   border-bottom: 2px solid gray;
   border-radius: 2px;
   transition: 0.3s;
+}
+
+html body main #Container ul li a {
+  width: 100%;
+  height: 100%;
+}
+
+html body main #Container ul li:nth-child(11) {
+  position: relative;
+}
+
+html body main #Container ul li:nth-child(11)::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: black;
+  transition: 0.5s;
 }
 
 html body main #Container ul li:hover:nth-child(1) {
@@ -136,12 +157,20 @@ html body main #Container ul li:hover:nth-child(9) a span {
 
 html body main #Container ul li:hover:nth-child(10) {
   background-color: purple;
-  box-sizing: border-box;
   border-radius: 20px;
 }
 
 html body main #Container ul li:hover:nth-child(10) a {
   cursor: help;
+}
+
+html body main #Container ul li:hover:nth-child(11)::before {
+  width: 100%;
+  opacity: 0.5;
+}
+
+html body main #Container ul li:hover:nth-child(11) a {
+  cursor: s-resize;
 }
 
 html body main #Container ul li a {
@@ -156,4 +185,10 @@ html body main #Container ul li a img {
   width: 24px;
   height: 24px;
   margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  html body main #Container ul {
+    grid-template-columns: auto auto;
+  }
 }
