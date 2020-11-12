@@ -5,7 +5,7 @@ html {
     background-color: black;
     div#Paper {
       position: relative;
-      margin: 10px 0;
+      margin: 10px 0; // Remove to create a PDF
       padding: 30px 20px;
       width: 790px; // widht of a paper (A4)
       height: 1122px; // height of a paper (A4)
@@ -22,7 +22,6 @@ html {
       box-shadow: 0 0 20px black, 0 0 50px #8a4d0f inset;
       header {
         grid-area: Header;
-        // background-color: red;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -32,7 +31,6 @@ html {
         height: 90%;
         border-right: 1px solid black;
         padding-right: 2px;
-        // background-color: green;
         ul {
           border-bottom: 2px solid black;
           margin-bottom: 10px;
@@ -50,7 +48,6 @@ html {
       }
       main {
         grid-area: Main;
-        // background-color: blue;
         img {
           position: absolute;
           top: 10px;
@@ -119,6 +116,7 @@ html {
           grid-template-rows: repeat(2, 1fr);
           gap: 10px;
           div {
+            position: relative;
             border: 1px solid black;
             border-radius: 4px;
             h3 {
@@ -128,16 +126,20 @@ html {
               text-align: center;
               border-bottom: 2px dashed gray;
             }
+            time {
+              $borderStyle: 1px dashed gray;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              padding: 2px;
+              border-radius: 5px 0 5px 0;
+              border-top: $borderStyle;
+              border-left: $borderStyle;
+              background: black;
+              color: white;
+            }
             p {
               margin: 2px 0 2px 4px;
-              time {
-                float: right;
-                padding: 2px;
-                border-radius: 5px;
-                border-bottom: 1px solid black;
-                border-left: 1px solid black;
-                background: whitesmoke;
-              }
             }
           }
         }

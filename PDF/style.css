@@ -136,6 +136,7 @@ html body div#Paper main div.CareerContainer {
 }
 
 html body div#Paper main div.CareerContainer div {
+  position: relative;
   border: 1px solid black;
   border-radius: 4px;
 }
@@ -148,17 +149,20 @@ html body div#Paper main div.CareerContainer div h3 {
   border-bottom: 2px dashed gray;
 }
 
-html body div#Paper main div.CareerContainer div p {
-  margin: 2px 0 2px 4px;
+html body div#Paper main div.CareerContainer div time {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 2px;
+  border-radius: 5px 0 5px 0;
+  border-top: 1px dashed gray;
+  border-left: 1px dashed gray;
+  background: black;
+  color: white;
 }
 
-html body div#Paper main div.CareerContainer div p time {
-  float: right;
-  padding: 2px;
-  border-radius: 5px;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;
-  background: whitesmoke;
+html body div#Paper main div.CareerContainer div p {
+  margin: 2px 0 2px 4px;
 }
 
 html body div#Paper footer {
