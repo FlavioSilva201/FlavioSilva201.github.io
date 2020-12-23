@@ -22,9 +22,10 @@ On this website I make a presentation of my professional life
 
 ## Project
 
-- [Link for Site](https://201flaviosilva.github.io/)
-- [V1](https://201flaviosilvav1.netlify.app)
-- [RoadMap](https://github.com/users/201flaviosilva/projects/3)
+- [Link for Site](https://201flaviosilva.github.io/);
+- [V1](https://201flaviosilvav1.netlify.app);
+- [RoadMap](https://github.com/users/201flaviosilva/projects/3);
+- [Projects](./Projects.md);
 
 # Follow me
 
