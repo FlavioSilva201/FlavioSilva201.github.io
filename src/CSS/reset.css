@@ -32,7 +32,9 @@ textarea {
 
 button,
 a,
-label {
+label,
+select,
+option {
   cursor: pointer;
 }
 
