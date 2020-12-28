@@ -2,7 +2,7 @@
 
 - Development:
   - [Rupestre](https://rupestre.netlify.app/);
-  - [CSSFreeStyle](https://cssfreestyle.netlify.app/);
+  - [CSSFreeStyle](https://201flaviosilva.github.io/CSSFreeStyle/);
   - [Sites Porreiros](https://sitesporreiros.netlify.app/);
   - [React School](https://react-school-beryl.vercel.app/);
 - Games:
@@ -19,9 +19,10 @@
   - [Invasores Do Espaço](https://sites.google.com/view/invasores-do-espao-vb);
 
 # Mangito
-- [Mangito](https://maguito.netlify.app/);
-- [Fire Cosmos](https://firecosmos.netlify.app/);
-- [Tic Tac Toe](https://tictactoemaguito.netlify.app/);
-- [Tamagotchi](https://tamagotchimaguito.netlify.app/);
-- [Salganhada (POC)](https://salganhada.netlify.app/);
-- [Elevador (POC)](https://elevador.netlify.app/);
+- [Mangito](https://mangito.github.io/Manguito/);
+- [Fire Cosmos](https://mangito.github.io/firecosmos/);
+- [Tic Tac Toe](https://mangito.github.io/tictactoe/);
+- [Tamagotchi](https://mangito.github.io/Tamagotchi/);
+- [Inesperado](https://mangito.github.io/Inesperado/);
+- [Salganhada (POC)](https://mangito.github.io/salganhada_poc/);
+- [Elevador (POC)](https://mangito.github.io/Elevador/);
