@@ -8,7 +8,12 @@
 .DS_Store
 .vscode/
 
+# ------------- node
+node_modules
+dist
+
 # ------------ Others
 Simple radial menu.webloc
 Assets/img/SignificadoDasCores/
 Pages/Games/js.js
+package-lock.json
