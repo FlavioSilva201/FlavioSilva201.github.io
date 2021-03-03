@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./src/CSS/reset.css">
-    <link rel="stylesheet" href="./src/Pages/Index/Style.min.css">
-    <title>Flávio Silva</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="" rel="icon" type="image/x-icon" id="favicon" />
+
+	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
+	<title>Phaser 3 Template</title>
+
+	<style>
+		#loader {
+			width: 60px;
+			height: 60px;
+			position: fixed;
+			bottom: 10px;
+			right: 10px;
+			border: 10px solid #383838;
+			border-top: 10px solid #d00;
+			border-radius: 50%;
+			z-index: 10;
+			color: #000;
+			animation: spin 2s linear infinite;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+
 </head>
 
 <body>
-    <header>
-        <h1>201flaviosilva.github.io</h1>
-    </header>
-    <main>
-        <span id="score">0</span>
-        <ul>
-            <li><a href="./src/Pages/Start/Index.html" id="link">Start</a></li>
-            <li><button>Options</button></li>
-            <li><a href="https://201flaviosilvav1.netlify.app/">Old Site</a></li>
-        </ul>
-    </main>
+	<div id="loader">.</div>
+	<div class="Demo">Beta</div>
+	<div id="GameContainer"></div>
 
-    <canvas id="canvas"></canvas>
-    <script src="./Pages/Index/script.js" type="module"></script>
+	<script>
+		window.onload = () => {
+			const loader = document.getElementById("loader");
+			loader.remove();
+			loader.style.top = -1000;
+			loader.style.left = -1000;
+			loader.style.zIndex = -1000;
+		};
+	</script>
 </body>
 
 </html>
