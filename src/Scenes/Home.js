@@ -1,6 +1,6 @@
-import GlobalConfigs from "../Config/Configs"
-import Player from "../Objects/Player";
-import Grass from "../Objects/Grass";
+import GlobalConfigs from "../Config/Configs";
+
+import { TextStyle } from "../Theme";
 
 export default class Home extends Phaser.Scene {
 	constructor() {
@@ -8,28 +8,43 @@ export default class Home extends Phaser.Scene {
 	}
 
 	create() {
-		this.createWorld();
-		this.createPlayer();
-		this.createCollision();
-	}
-
-	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
-		this.grassGroup = this.physics.add.staticGroup({ classType: Grass });
-		this.grassGroup.get(middleWidth, height);
+
+		const margin = 20;
+
+		// Start
+		const configStart = {
+			x: margin,
+			y: middleHeight - margin,
+			text: "Start",
+			action: () => this.scene.start("Start"),
+		};
+		this.createText(configStart);
+
+		// Old
+		const configOldSite = {
+			x: margin,
+			y: middleHeight + margin,
+			text: "Old Site",
+			action: () => this.openOldSite(),
+		};
+		this.createText(configOldSite);
 	}
 
-	createPlayer() {
-		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
-		this.playersGroup = this.physics.add.group({
-			classType: Player,
-			collideWorldBounds: true,
-			runChildUpdate: true
-		});
-		this.playersGroup.get(middleWidth, middleHeight);
+	openOldSite() {
+		const url = "https://201flaviosilvav1.netlify.app/";
+		const s = window.open(url, '_blank');
+
+		if (s && s.focus) s.focus();
+		else if (!s) window.location.href = url;
 	}
 
-	createCollision() {
-		this.physics.add.collider(this.grassGroup, this.playersGroup);
+	createText(configs) {
+		const { x, y, text, action } = configs;
+		const label = this.add.text(x, y, text, TextStyle.home.menu.normal).setOrigin(0, 0.5);
+		label.setInteractive({ useHandCursor: true });
+		label.on('pointerover', () => label.setStyle(TextStyle.home.menu.over));
+		label.on('pointerout', () => label.setStyle(TextStyle.home.menu.normal));
+		label.on('pointerup', action);
 	}
 }

@@ -28,4 +28,20 @@ body {
 canvas {
   border: 1px solid #023b02;
   box-shadow: 0 0 20px #023b02;
+  animation: shadowAnimation infinite 10s;
+}
+
+@keyframes shadowAnimation {
+  0% {
+    border: 1px solid #023b02;
+    box-shadow: 0 0 20px #023b02;
+  }
+  50% {
+    border: 1px solid #058005;
+    box-shadow: 0 0 40px #058005;
+  }
+  100% {
+    border: 1px solid #023b02;
+    box-shadow: 0 0 20px #023b02;
+  }
 }

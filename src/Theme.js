@@ -12,12 +12,18 @@ export const Banner = {
 	],
 };
 
+export const BaseColors = {
+	white: "#ffffff",
+	black: "#000000",
+	green: "#00dd00",
+};
+
 export const TextStyle = {
 	base: {
 		fontFamily: PressStart2P,
 		fontSize: 20,
-		fill: "#fff",
-		stroke: "#000",
+		fill: BaseColors.white,
+		stroke: BaseColors.black,
 		strokeThickness: 1,
 		boundsAlignH: "center",
 		boundsAlignV: "middle",
@@ -25,16 +31,44 @@ export const TextStyle = {
 		shadow: {
 			offsetX: 2,
 			offsetY: 2,
-			color: "#023b02",
+			color: BaseColors.green,
 			blur: 2,
 			fill: true
 		},
 	},
+	home: {
+		menu: {
+			normal: {
+				fontFamily: PressStart2P,
+				fontSize: 20,
+				fill: BaseColors.green,
+				stroke: BaseColors.white,
+				strokeThickness: 1,
+				shadow: {
+					fill: false,
+				},
+			},
+			over: {
+				fontFamily: PressStart2P,
+				fontSize: 20,
+				fill: BaseColors.white,
+				stroke: BaseColors.black,
+				strokeThickness: 1,
+				shadow: {
+					offsetX: 0,
+					offsetY: 0,
+					color: BaseColors.green,
+					blur: 20,
+					fill: true
+				},
+			}
+		}
+	},
 	progressBar: {
 		fontFamily: PressStart2P,
 		fontSize: 30,
-		fill: "#fff",
-		stroke: "#000",
+		fill: BaseColors.white,
+		stroke: BaseColors.black,
 		strokeThickness: 2,
 	}
 };

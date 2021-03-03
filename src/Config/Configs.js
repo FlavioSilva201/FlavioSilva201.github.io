@@ -1,7 +1,7 @@
 const GlobalConfigs = {
 	screen: {
-		width: 1000,
-		height: 800,
+		width: 800,
+		height: 450, // 16:9 // https://calculateaspectratio.com
 		middleWidth: 0,
 		middleHeight: 0,
 	},
