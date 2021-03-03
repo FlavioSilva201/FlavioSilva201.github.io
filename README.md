@@ -18,7 +18,9 @@ On this website I make a presentation of my professional life
  - Some of the main projects;
  - My social networks;
 
----
+- [Link for Site](https://201flaviosilva.github.io/)
+- [V2](https://201flaviosilvav2.netlify.app)
+- [RoadMap](https://github.com/users/201flaviosilva/projects/3)
 
 ## Project
 
