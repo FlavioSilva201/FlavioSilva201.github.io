@@ -1,12 +1,10 @@
 import Phaser from "Phaser";
 
 import "./CSS/Reset.css";
-
-import GlobalConfigs from "./Config/Configs";
-
 import favicon from "./Assets/Favicon/favicon.png";
 
 // Configs/Infos
+import GlobalConfigs from "./Config/Configs";
 import packageJson from "../package.json";
 import { Banner } from "./Theme";
 
@@ -15,12 +13,12 @@ import Preload from "./Scenes/Preload";
 import Home from "./Scenes/Home";
 
 const config = {
-	title: "Phaser 3 Template",
+	title: packageJson.name,
 	url: packageJson.homepage,
 	version: packageJson.version,
 	banner: {
-		text: Banner.Text,
-		background: Banner.Background,
+		text: Banner.text,
+		background: Banner.background,
 		hidePhaser: false
 	},
 	// Game
@@ -41,7 +39,7 @@ const config = {
 		default: "arcade",
 		arcade: {
 			debug: GlobalConfigs.debug,
-			gravity: { x: 0, y: 0 }
+			gravity: { x: 0, y: 100 }
 		}
 	},
 	scene: [

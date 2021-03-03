@@ -10,6 +10,11 @@
   color: black;
 }
 
+html,
+body {
+  overflow: hidden;
+}
+
 body {
   width: 100vw;
   min-height: 100vh;
@@ -20,23 +25,7 @@ body {
   background: black;
 }
 
-div.Demo,
-p {
-  z-index: 1;
-  margin: 1px;
-  padding: 2px 4px;
-  position: fixed;
-  top: 0;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 2px;
-}
-
-div.Demo {
-  left: 0;
-}
-
 canvas {
-  border: 1px solid green;
-  box-shadow: 0 0 20px green;
+  border: 1px solid #023b02;
+  box-shadow: 0 0 20px #023b02;
 }

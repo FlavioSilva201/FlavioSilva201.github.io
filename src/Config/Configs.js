@@ -1,7 +1,7 @@
 const GlobalConfigs = {
 	screen: {
 		width: 1000,
-		height: 600,
+		height: 800,
 		middleWidth: 0,
 		middleHeight: 0,
 	},

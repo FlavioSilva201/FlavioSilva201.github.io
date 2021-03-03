@@ -1,8 +1,9 @@
+// Fonts
 const PressStart2P = "'Press Start 2P'";
 
 export const Banner = {
-	Text: "#ffffff",
-	Background: [
+	text: "#ffffff",
+	background: [
 		"#ffffff",
 		"#0000ff",
 		"#00ff00",
@@ -11,20 +12,27 @@ export const Banner = {
 	],
 };
 
-export const ProgressBarStyle = {
-	width: 350,
-	height: 50,
-	padding: {
-		x: 10,
-		y: 5
-	},
-	border: 4,
-};
-
 export const TextStyle = {
+	base: {
+		fontFamily: PressStart2P,
+		fontSize: 20,
+		fill: "#fff",
+		stroke: "#000",
+		strokeThickness: 1,
+		boundsAlignH: "center",
+		boundsAlignV: "middle",
+		align: "center",
+		shadow: {
+			offsetX: 2,
+			offsetY: 2,
+			color: "#023b02",
+			blur: 2,
+			fill: true
+		},
+	},
 	progressBar: {
 		fontFamily: PressStart2P,
-		fontSize: 10,
+		fontSize: 30,
 		fill: "#fff",
 		stroke: "#000",
 		strokeThickness: 2,
