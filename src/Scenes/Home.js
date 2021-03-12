@@ -10,11 +10,11 @@ export default class Home extends Phaser.Scene {
 	create() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		const margin = 20;
+		const margin = 40;
 
 		// Start
 		const configStart = {
-			x: margin,
+			x: middleWidth,
 			y: middleHeight - margin,
 			text: "Start",
 			action: () => this.scene.start("Start"),
@@ -23,7 +23,7 @@ export default class Home extends Phaser.Scene {
 
 		// Old
 		const configOldSite = {
-			x: margin,
+			x: middleWidth,
 			y: middleHeight + margin,
 			text: "Old Site",
 			action: () => this.openOldSite(),
@@ -41,7 +41,7 @@ export default class Home extends Phaser.Scene {
 
 	createText(configs) {
 		const { x, y, text, action } = configs;
-		const label = this.add.text(x, y, text, TextStyle.home.menu.normal).setOrigin(0, 0.5);
+		const label = this.add.text(x, y, text, TextStyle.home.menu.normal).setOrigin(0.5);
 		label.setInteractive({ useHandCursor: true });
 		label.on('pointerover', () => label.setStyle(TextStyle.home.menu.over));
 		label.on('pointerout', () => label.setStyle(TextStyle.home.menu.normal));

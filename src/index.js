@@ -33,9 +33,12 @@ const config = {
 		autoCenter: Phaser.Scale.CENTER_BOTH
 	},
 	transparent: false,
-	antialias: true,
-	pixelArt: false,
 	roundPixels: true,
+	render: {
+		antialias: true,
+		antialiasGL: true,
+		pixelArt: false,
+	},
 	physics: {
 		default: "arcade",
 		arcade: {

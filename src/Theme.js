@@ -21,7 +21,7 @@ export const BaseColors = {
 export const TextStyle = {
 	base: {
 		fontFamily: PressStart2P,
-		fontSize: 20,
+		fontSize: 40,
 		fill: BaseColors.white,
 		stroke: BaseColors.black,
 		strokeThickness: 1,
@@ -36,24 +36,31 @@ export const TextStyle = {
 			fill: true
 		},
 	},
+	progressBar: {
+		fontFamily: PressStart2P,
+		fontSize: 60,
+		fill: BaseColors.white,
+		stroke: BaseColors.black,
+		strokeThickness: 2,
+	},
 	home: {
 		menu: {
 			normal: {
 				fontFamily: PressStart2P,
-				fontSize: 20,
+				fontSize: 40,
 				fill: BaseColors.green,
 				stroke: BaseColors.white,
-				strokeThickness: 1,
+				strokeThickness: 2,
 				shadow: {
 					fill: false,
 				},
 			},
 			over: {
 				fontFamily: PressStart2P,
-				fontSize: 20,
+				fontSize: 60,
 				fill: BaseColors.white,
 				stroke: BaseColors.black,
-				strokeThickness: 1,
+				strokeThickness: 2,
 				shadow: {
 					offsetX: 0,
 					offsetY: 0,
@@ -64,11 +71,4 @@ export const TextStyle = {
 			}
 		}
 	},
-	progressBar: {
-		fontFamily: PressStart2P,
-		fontSize: 30,
-		fill: BaseColors.white,
-		stroke: BaseColors.black,
-		strokeThickness: 2,
-	}
 };
