@@ -26,10 +26,17 @@ export default class Start extends Phaser.Scene {
 			collideWorldBounds: true,
 			runChildUpdate: true
 		});
-		this.playersGroup.get(middleWidth, middleHeight);
+		this.player = this.playersGroup.get(middleWidth, middleHeight);
 	}
 
 	createCollision() {
-		this.physics.add.collider(this.grassGroup, this.playersGroup);
+		this.physics.add.collider(this.grassGroup, this.player);
+	}
+
+	update() {
+		if (this.player.x < this.player.width * 0.75) {
+			this.scene.start("Options");
+			this.scene.stop();
+		}
 	}
 }

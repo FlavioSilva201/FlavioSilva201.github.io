@@ -12,6 +12,7 @@ import { Banner } from "./Theme";
 import Preload from "./Scenes/Preload";
 import Home from "./Scenes/Home";
 import Start from "./Scenes/Start";
+import Options from "./Scenes/Options";
 
 const config = {
 	title: packageJson.name,
@@ -27,7 +28,7 @@ const config = {
 	type: Phaser.AUTO,
 	width: GlobalConfigs.screen.width,
 	height: GlobalConfigs.screen.height,
-	backgroundColor: "#000",
+	backgroundColor: "#757575",
 	scale: {
 		mode: Phaser.Scale.FIT,
 		autoCenter: Phaser.Scale.CENTER_BOTH
@@ -50,6 +51,7 @@ const config = {
 		Preload,
 		Home,
 		Start,
+		Options,
 	]
 }
 
