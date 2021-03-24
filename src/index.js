@@ -13,6 +13,7 @@ import Preload from "./Scenes/Preload";
 import Home from "./Scenes/Home";
 import Start from "./Scenes/Start";
 import Options from "./Scenes/Options";
+import Credits from "./Scenes/Credits";
 
 const config = {
 	title: packageJson.name,
@@ -52,6 +53,7 @@ const config = {
 		Home,
 		Start,
 		Options,
+		Credits,
 	]
 }
 

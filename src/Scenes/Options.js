@@ -10,6 +10,10 @@ export default class Options extends Phaser.Scene {
 		super({ key: "Options" });
 	}
 
+	init(data) {
+		this.lastScene = data.sceneName;
+	}
+
 	create() {
 		this.createWorld();
 		this.createUI();
@@ -22,7 +26,7 @@ export default class Options extends Phaser.Scene {
 
 		this.grassGroup = this.physics.add.staticGroup({ classType: Grass });
 		const scaleWidth = width / 32;
-		this.grassGroup.get(middleWidth, height * 0.66).setScale(scaleWidth, 1).refreshBody();
+		this.grassGroup.get(middleWidth, height - 16).setScale(scaleWidth, 1).refreshBody();
 	}
 
 	createUI() {
@@ -32,34 +36,35 @@ export default class Options extends Phaser.Scene {
 			runChildUpdate: true,
 		});
 
-		const y = height * 0.45;
+		const yLevel1 = height - 175;
+		const yLevel2 = height - 225;
 
 		{ // Language Button
 			const x = width * 0.25;
-			this.languageButton = this.optionsGroup.get(x, y);
+			this.languageButton = this.optionsGroup.get(x, yLevel1);
 			this.languageButton.generate({
 				x: x,
-				y: y,
+				y: yLevel1,
 				image: "Flags",
 			});
 		}
 
 		{ // FullScreen Button
 			const x = middleWidth;
-			this.fullScreenButton = this.optionsGroup.get(x, height * 0.4);
+			this.fullScreenButton = this.optionsGroup.get(x, yLevel2);
 			this.fullScreenButton.generate({
 				x: x,
-				y: height * 0.4,
+				y: yLevel2,
 				image: "FullScreen",
 			});
 		}
 
 		{ // Sound Button
 			const x = width * 0.75;
-			this.soundButton = this.optionsGroup.get(x, y);
+			this.soundButton = this.optionsGroup.get(x, yLevel1);
 			this.soundButton.generate({
 				x: x,
-				y: y,
+				y: yLevel1,
 				image: "Sound",
 			});
 		}
@@ -72,7 +77,11 @@ export default class Options extends Phaser.Scene {
 			collideWorldBounds: true,
 			runChildUpdate: true
 		});
-		this.player = this.playersGroup.get(width - 50, middleHeight);
+		this.player = this.playersGroup.get(middleWidth, middleHeight);
+
+		if (this.lastScene === "Start") this.player.setX(width - 50);
+		else if (this.lastScene === "Credits") this.player.setX(50);
+		else this.player.setX(middleWidth);
 	}
 
 	createCollision() {
@@ -83,6 +92,9 @@ export default class Options extends Phaser.Scene {
 	update() {
 		if (this.player.x > GlobalConfigs.screen.width - this.player.width * 0.75) {
 			this.scene.start("Start");
+			this.scene.stop();
+		} else if (this.player.x < 0 + this.player.width * 0.75) {
+			this.scene.start("Credits");
 			this.scene.stop();
 		}
 	}
