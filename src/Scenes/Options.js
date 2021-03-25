@@ -78,6 +78,7 @@ export default class Options extends Phaser.Scene {
 			runChildUpdate: true
 		});
 		this.player = this.playersGroup.get(middleWidth, middleHeight);
+		this.player.generate();
 
 		if (this.lastScene === "Start") this.player.setX(width - 50);
 		else if (this.lastScene === "Credits") this.player.setX(50);

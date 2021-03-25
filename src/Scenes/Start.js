@@ -27,6 +27,7 @@ export default class Start extends Phaser.Scene {
 			runChildUpdate: true
 		});
 		this.player = this.playersGroup.get(middleWidth, middleHeight);
+		this.player.generate();
 	}
 
 	createCollision() {

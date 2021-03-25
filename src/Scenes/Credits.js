@@ -29,6 +29,7 @@ export default class Credits extends Phaser.Scene {
 			runChildUpdate: true
 		});
 		this.player = this.playersGroup.get(width - 50, middleHeight);
+		this.player.generate();
 
 		this.physics.add.collider(this.grassGroup, this.player);
 	}

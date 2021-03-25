@@ -2,7 +2,12 @@ import ProgressBar from "../Components/ProgressBar";
 
 // -------- Imgs --------
 // ---- Sprites ----
-import Player from "../Assets/Img/Sprites/Player.png";
+// -- Player --
+import PlayerIdle from "../Assets/Img/Sprites/Player/Idle/Idle.png";
+import PlayerJump from "../Assets/Img/Sprites/Player/Jump/Jump.png";
+import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
+
+
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
 import Grass from "../Assets/Img/Sprites/Grass.png";
 
@@ -29,15 +34,20 @@ export default class Preload extends Phaser.Scene {
 
 		this.load.on('complete', () => {
 			progressBar.complete();
-			this.scene.start("Home");
-			// this.scene.start("Start");
+			// this.scene.start("Home");
+			this.scene.start("Start");
 			// this.scene.start("Options");
 		});
 	}
 
 	importSprites() {
+		// Player
+		this.load.spritesheet("PlayerIdle", PlayerIdle, { frameWidth: 38, frameHeight: 44 });
+		this.load.spritesheet("PlayerJump", PlayerJump, { frameWidth: 38, frameHeight: 44 });
+		this.load.spritesheet("PlayerWalk", PlayerWalk, { frameWidth: 38, frameHeight: 46 });
+
+
 		this.load.image("Sprite", Sprite);
-		this.load.image("Player", Player);
 		this.load.image("Grass", Grass);
 	}
 
