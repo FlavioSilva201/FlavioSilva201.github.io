@@ -1,7 +1,7 @@
 import GlobalConfigs from "../Config/Configs";
 
 import Player from "../Objects/Player";
-import Grass from "../Objects/Grass";
+import Tiles from "../Objects/Tiles";
 
 export default class Credits extends Phaser.Scene {
 	constructor() {
@@ -16,9 +16,9 @@ export default class Credits extends Phaser.Scene {
 	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		this.grassGroup = this.physics.add.staticGroup({ classType: Grass });
+		this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles });
 		const scaleWidth = width / 32;
-		this.grassGroup.get(middleWidth, height * 0.66).setScale(scaleWidth, 1).refreshBody();
+		this.tilesGroup.get(middleWidth, height * 0.66).setScale(scaleWidth, 1).refreshBody();
 	}
 
 	createPlayer() {
@@ -31,7 +31,7 @@ export default class Credits extends Phaser.Scene {
 		this.player = this.playersGroup.get(width - 50, middleHeight);
 		this.player.generate();
 
-		this.physics.add.collider(this.grassGroup, this.player);
+		this.physics.add.collider(this.tilesGroup, this.player);
 	}
 
 	update() {

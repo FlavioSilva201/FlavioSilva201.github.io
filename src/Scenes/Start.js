@@ -1,6 +1,6 @@
 import GlobalConfigs from "../Config/Configs"
 import Player from "../Objects/Player";
-import Grass from "../Objects/Grass";
+import Tiles from "../Objects/Tiles";
 
 export default class Start extends Phaser.Scene {
 	constructor() {
@@ -15,8 +15,13 @@ export default class Start extends Phaser.Scene {
 
 	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
-		this.grassGroup = this.physics.add.staticGroup({ classType: Grass });
-		this.grassGroup.get(middleWidth, height);
+		const background = this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1);
+
+		this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles, });
+		const grassNumber = width / 128;
+		for (let i = 0; i < grassNumber; i++) {
+			const g = this.tilesGroup.get(128 * i + 64, height, 1);
+		}
 	}
 
 	createPlayer() {
@@ -31,7 +36,7 @@ export default class Start extends Phaser.Scene {
 	}
 
 	createCollision() {
-		this.physics.add.collider(this.grassGroup, this.player);
+		this.physics.add.collider(this.tilesGroup, this.player);
 	}
 
 	update() {

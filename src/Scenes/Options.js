@@ -1,7 +1,7 @@
 import GlobalConfigs from "../Config/Configs";
 
 import Player from "../Objects/Player";
-import Grass from "../Objects/Grass";
+import Tiles from "../Objects/Tiles";
 
 import OptionsButton from "../Components/OptionsButton";
 
@@ -24,9 +24,9 @@ export default class Options extends Phaser.Scene {
 	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		this.grassGroup = this.physics.add.staticGroup({ classType: Grass });
+		this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles });
 		const scaleWidth = width / 32;
-		this.grassGroup.get(middleWidth, height - 16).setScale(scaleWidth, 1).refreshBody();
+		this.tilesGroup.get(middleWidth, height - 16).setScale(scaleWidth, 1).refreshBody();
 	}
 
 	createUI() {
@@ -86,7 +86,7 @@ export default class Options extends Phaser.Scene {
 	}
 
 	createCollision() {
-		this.physics.add.collider(this.grassGroup, this.player);
+		this.physics.add.collider(this.tilesGroup, this.player);
 		this.physics.add.collider(this.optionsGroup, this.player);
 	}
 
