@@ -6,16 +6,20 @@ import ProgressBar from "../Components/ProgressBar";
 import PlayerIdle from "../Assets/Img/Sprites/Player/Idle/Idle.png";
 import PlayerJump from "../Assets/Img/Sprites/Player/Jump/Jump.png";
 import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
-import Sprite from "../Assets/Img/Sprites/Sprite.png";
 
-// -- Others --
+// ---- Others ----
+// -- Sprite --
+import Sprite from "../Assets/Img/Sprites/Sprite.png";
+// -- Sign Direction --
+import SignDirection from "../Assets/Img/Tileset/PlatformerBundle/Object/SignDirection.png";
 
 // ---- Tileset (Map) ----
 // -- Background --
-import BGForest from "../Assets/Img/Tileset/Platformer Bundle/BG/BG.png";
+import BGForest from "../Assets/Img/Tileset/PlatformerBundle/BG/BG.png";
 
-// -- Tiles --
-import Tiles from "../Assets/Img/Tileset/Platformer Bundle/Tiles/SpriteSheet/TilesHorizontal.png";
+
+// -- Tiles (SpriteSheet) --
+import Tiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/TilesHorizontal.png";
 
 // ---- UI ----
 // -- Options --
@@ -32,6 +36,7 @@ export default class Preload extends Phaser.Scene {
 		const progressBar = new ProgressBar(this);
 
 		this.importSprites();
+		this.importObjects();
 		this.importTileset();
 		this.importUI();
 		this.importSounds();
@@ -48,12 +53,17 @@ export default class Preload extends Phaser.Scene {
 	}
 
 	importSprites() {
-		// Player
+		// -- Player --
 		this.load.spritesheet("PlayerIdle", PlayerIdle, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerJump", PlayerJump, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerWalk", PlayerWalk, { frameWidth: 38, frameHeight: 46 });
 
+		// -- Others --
 		this.load.image("Sprite", Sprite);
+	}
+
+	importObjects() {
+		this.load.image("SignDirection", SignDirection);
 	}
 
 	importTileset() {

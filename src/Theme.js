@@ -71,4 +71,27 @@ export const TextStyle = {
 			}
 		}
 	},
+	start: {
+		title: {
+			fontFamily: PressStart2P,
+			fontSize: 80,
+			fill: "#E2F7FE",
+			stroke: "#B5F1DB",
+			strokeThickness: 2,
+			shadow: {
+				offsetX: 0,
+				offsetY: 0,
+				color: BaseColors.black,
+				blur: 20,
+				fill: true,
+			},
+		},
+		signals: {
+			fontFamily: PressStart2P,
+			fontSize: 10,
+			fill: BaseColors.black,
+			stroke: BaseColors.white,
+			strokeThickness: 2,
+		},
+	}
 };
