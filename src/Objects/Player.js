@@ -38,7 +38,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 	generate() {
 		this.createAnimations();
-		this.scene.anims.play("PlayerIdle", this);
+		this.scene.anims.play("PlayerJump", this);
 	}
 
 	update() {

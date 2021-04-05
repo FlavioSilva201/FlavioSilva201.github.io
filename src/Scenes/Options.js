@@ -1,9 +1,11 @@
 import GlobalConfigs from "../Config/Configs";
 
+import AnimateTitle from "../Components/AnimatedTitle";
+import OptionsButton from "../Components/OptionsButton";
+
 import Player from "../Objects/Player";
 import Tiles from "../Objects/Tiles";
-
-import OptionsButton from "../Components/OptionsButton";
+import DirectionSign from "../Objects/DirectionSign";
 
 export default class Options extends Phaser.Scene {
 	constructor() {
@@ -24,9 +26,31 @@ export default class Options extends Phaser.Scene {
 	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles });
-		const scaleWidth = width / 32;
-		this.tilesGroup.get(middleWidth, height - 16).setScale(scaleWidth, 1).refreshBody();
+		// -- Background
+		const background = this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1);
+
+		{	// -- Floor
+			this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles, });
+			const grassNumber = width / 128;
+			for (let i = 0; i < grassNumber; i++) {
+				const g = this.tilesGroup.get(128 * i + 64, height, 1);
+			}
+		}
+
+		{	// -- Objects
+			const x = 50;
+			const y = height - 90;
+
+			const signDirectionStart = new DirectionSign(this, width - x, y, "Start");
+			signDirectionStart.changeDepth(1);
+			const signDirectionCredits = new DirectionSign(this, x, y, "Credits").setFlipX(true);
+			signDirectionCredits.changeDepth(1);
+			signDirectionCredits.label.x += 10;
+
+			const tree1 = this.add.image(middleWidth, height - 86, "Tree1");
+			const tree2 = this.add.image(width * 0.25, height - 86, "Tree1");
+			const tree3 = this.add.image(width * 0.75, height - 86, "Tree1");
+		}
 	}
 
 	createUI() {
@@ -67,6 +91,10 @@ export default class Options extends Phaser.Scene {
 				y: yLevel1,
 				image: "Sound",
 			});
+		}
+
+		{ // Title
+			const title = new AnimateTitle(this, middleWidth, 100, "Options");
 		}
 	}
 

@@ -1,9 +1,10 @@
 import GlobalConfigs from "../Config/Configs";
 
-import { TextStyle } from "../Theme";
+import AnimateTitle from "../Components/AnimatedTitle";
 
 import Player from "../Objects/Player";
 import Tiles from "../Objects/Tiles";
+import DirectionSign from "../Objects/DirectionSign";
 
 export default class Start extends Phaser.Scene {
 	constructor() {
@@ -34,26 +35,19 @@ export default class Start extends Phaser.Scene {
 			const x = 50;
 			const y = height - 90;
 
-			const xText = 52;
-			const yText = height - 100;
+			const signDirectionStart = new DirectionSign(this, width - x, y, "Game");
+			signDirectionStart.changeDepth(1);
+			const signDirectionOptions = new DirectionSign(this, x, y, "Options").setFlipX(true);
+			signDirectionOptions.changeDepth(1);
+			signDirectionOptions.label.x += 10;
 
-			const signDirectionStart = this.add.image(width - x, y, "SignDirection").setScale(1.25);
-			const textStart = this.add.text(width - xText, yText, "Start", TextStyle.start.signals).setOrigin(0.5);
-
-			const signDirectionOptions = this.add.image(x, y, "SignDirection").setFlipX(true).setScale(1.25);
-			const textOptions = this.add.text(xText, yText, "Options", TextStyle.start.signals).setOrigin(0.5);
+			const tree1 = this.add.image(middleWidth, height - 86, "Tree1");
+			const tree2 = this.add.image(middleWidth / 2, height - 200, "Tree2").setDepth(1);
+			const tree3 = this.add.image(width * 0.75, height - 200, "Tree2").setDepth(1);
 		}
 
 		{ // UI
-			const title = this.add.text(middleWidth, 100, " 201flaviosilva ", TextStyle.start.title).setOrigin(0.5);
-			this.tweens.add({
-				targets: title,
-				ease: "Bounce",
-				duration: 1500,
-				y: { from: middleHeight, to: 100 },
-				scale: { from: 4, to: 0.9 },
-				alpha: { from: 0.5, to: 1 },
-			});
+			const title = new AnimateTitle(this, middleWidth, 100, "201flaviosilva");
 		}
 	}
 

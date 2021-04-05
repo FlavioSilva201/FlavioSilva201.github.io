@@ -21,7 +21,7 @@ export const BaseColors = {
 export const TextStyle = {
 	base: {
 		fontFamily: PressStart2P,
-		fontSize: 40,
+		fontSize: 20,
 		fill: BaseColors.white,
 		stroke: BaseColors.black,
 		strokeThickness: 1,
@@ -35,13 +35,6 @@ export const TextStyle = {
 			blur: 2,
 			fill: true
 		},
-	},
-	progressBar: {
-		fontFamily: PressStart2P,
-		fontSize: 60,
-		fill: BaseColors.white,
-		stroke: BaseColors.black,
-		strokeThickness: 2,
 	},
 	home: {
 		menu: {
@@ -71,8 +64,18 @@ export const TextStyle = {
 			}
 		}
 	},
-	start: {
-		title: {
+	start: {},
+	objects: {
+		signals: {
+			fontFamily: PressStart2P,
+			fontSize: 16,
+			fill: "#633E25",
+			stroke: BaseColors.black,
+			strokeThickness: 1,
+		},
+	},
+	components: {
+		animateTitle: {
 			fontFamily: PressStart2P,
 			fontSize: 80,
 			fill: "#E2F7FE",
@@ -86,11 +89,11 @@ export const TextStyle = {
 				fill: true,
 			},
 		},
-		signals: {
+		progressBar: {
 			fontFamily: PressStart2P,
-			fontSize: 10,
-			fill: BaseColors.black,
-			stroke: BaseColors.white,
+			fontSize: 60,
+			fill: BaseColors.white,
+			stroke: BaseColors.black,
 			strokeThickness: 2,
 		},
 	}

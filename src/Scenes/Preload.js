@@ -10,8 +10,12 @@ import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 // ---- Others ----
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
+
 // -- Sign Direction --
 import SignDirection from "../Assets/Img/Tileset/PlatformerBundle/Object/SignDirection.png";
+import Tree1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree1.png";
+import Tree2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree2.png";
+import Tree3 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree3.png";
 
 // ---- Tileset (Map) ----
 // -- Background --
@@ -46,9 +50,10 @@ export default class Preload extends Phaser.Scene {
 
 		this.load.on('complete', () => {
 			progressBar.complete();
-			// this.scene.start("Home");
-			this.scene.start("Start");
+			this.scene.start("Home");
+			// this.scene.start("Start");
 			// this.scene.start("Options");
+			// this.scene.start("Credits");
 		});
 	}
 
@@ -64,6 +69,9 @@ export default class Preload extends Phaser.Scene {
 
 	importObjects() {
 		this.load.image("SignDirection", SignDirection);
+		this.load.image("Tree1", Tree1);
+		this.load.image("Tree2", Tree2);
+		this.load.image("Tree3", Tree3);
 	}
 
 	importTileset() {

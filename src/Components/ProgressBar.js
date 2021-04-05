@@ -11,7 +11,7 @@ export default class ProgressBar extends Phaser.GameObjects.Graphics {
 
 	drawProgress() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
-		this.percentText = this.scene.add.text(middleWidth, middleHeight, "0%", TextStyle.progressBar).setOrigin(0.5);
+		this.percentText = this.scene.add.text(middleWidth, middleHeight, "0%", TextStyle.components.progressBar).setOrigin(0.5);
 	}
 
 	updateBar(percentage) {
