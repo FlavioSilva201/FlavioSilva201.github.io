@@ -14,6 +14,8 @@ import Home from "./Scenes/Home";
 import Start from "./Scenes/Start";
 import Options from "./Scenes/Options";
 import Credits from "./Scenes/Credits";
+import Loading from "./Scenes/Loading";
+import Birth from "./Scenes/GamePlay/Birth";
 
 const config = {
 	title: packageJson.name,
@@ -54,6 +56,9 @@ const config = {
 		Start,
 		Options,
 		Credits,
+		Loading,
+		// Game Play
+		Birth,
 	]
 }
 

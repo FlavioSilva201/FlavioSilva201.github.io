@@ -3,7 +3,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
 		super(scene, x, y, "PlayerIdle");
 
-		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers);
+		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers.platform);
 
 		scene.add.existing(this);
 
@@ -60,7 +60,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		}
 
 		// Move Y
-		if (keys.up.isDown && this.body.onFloor()) {
+		if (keys.jump.isDown && this.body.onFloor()) {
 			this.setVelocityY(-velocity);
 			if (this.anims.currentAnim.key !== "PlayerJump") this.scene.anims.play("PlayerJump", this);
 		} else if (keys.down.isDown) this.setVelocityY(velocity);

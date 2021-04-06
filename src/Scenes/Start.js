@@ -11,6 +11,10 @@ export default class Start extends Phaser.Scene {
 		super({ key: "Start" });
 	}
 
+	init(data) {
+		this.lastScene = data.sceneName;
+	}
+
 	create() {
 		this.createWorld();
 		this.createPlayer();
@@ -58,7 +62,9 @@ export default class Start extends Phaser.Scene {
 			collideWorldBounds: true,
 			runChildUpdate: true
 		});
-		this.player = this.playersGroup.get(middleWidth, middleHeight);
+
+		const x = this.lastScene === "Options" ? 50 : middleWidth;
+		this.player = this.playersGroup.get(x, middleHeight);
 		this.player.generate();
 	}
 
@@ -69,6 +75,9 @@ export default class Start extends Phaser.Scene {
 	update() {
 		if (this.player.x < this.player.width * 0.75) {
 			this.scene.start("Options", { sceneName: "Start" });
+			this.scene.stop();
+		} else if (this.player.x > GlobalConfigs.screen.width - this.player.width * 0.75) {
+			this.scene.start("Loading", { nextGame: "Birth" });
 			this.scene.stop();
 		}
 	}

@@ -120,7 +120,7 @@ export default class Options extends Phaser.Scene {
 
 	update() {
 		if (this.player.x > GlobalConfigs.screen.width - this.player.width * 0.75) {
-			this.scene.start("Start");
+			this.scene.start("Start", { sceneName: "Options" });
 			this.scene.stop();
 		} else if (this.player.x < 0 + this.player.width * 0.75) {
 			this.scene.start("Credits");
