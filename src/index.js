@@ -9,13 +9,7 @@ import packageJson from "../package.json";
 import { Banner } from "./Theme";
 
 // Scenes
-import Preload from "./Scenes/Preload";
-import Home from "./Scenes/Home";
-import Start from "./Scenes/Start";
-import Options from "./Scenes/Options";
-import Credits from "./Scenes/Credits";
-import Loading from "./Scenes/Loading";
-import Birth from "./Scenes/GamePlay/Birth";
+import Scenes from "./Config/Scenes";
 
 const config = {
 	title: packageJson.name,
@@ -50,16 +44,7 @@ const config = {
 			gravity: { x: 0, y: 200 }
 		}
 	},
-	scene: [
-		Preload,
-		Home,
-		Start,
-		Options,
-		Credits,
-		Loading,
-		// Game Play
-		Birth,
-	]
+	scene: Scenes
 }
 
 const game = new Phaser.Game(config);

@@ -77,7 +77,7 @@ export default class Start extends Phaser.Scene {
 			this.scene.start("Options", { sceneName: "Start" });
 			this.scene.stop();
 		} else if (this.player.x > GlobalConfigs.screen.width - this.player.width * 0.75) {
-			this.scene.start("Loading", { nextGame: "Birth" });
+			this.scene.start("Loading", { nextGame: "Pascal" });
 			this.scene.stop();
 		}
 	}

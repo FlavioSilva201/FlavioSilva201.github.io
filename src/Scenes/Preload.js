@@ -12,6 +12,7 @@ import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
 
 // -- Sign Direction --
+import Crate from "../Assets/Img/Tileset/PlatformerBundle/Object/Crate.png";
 import SignDirection from "../Assets/Img/Tileset/PlatformerBundle/Object/SignDirection.png";
 import Tree1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree1.png";
 import Tree2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree2.png";
@@ -23,7 +24,9 @@ import BGForest from "../Assets/Img/Tileset/PlatformerBundle/BG/BG.png";
 
 
 // -- Tiles (SpriteSheet) --
-import Tiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/TilesHorizontal.png";
+import Tiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/Tiles.png";
+import SkyTiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/SkyTiles.png";
+import CalcadaPortuguesaTexture from "../Assets/Img/Tileset/CalcadaPortuguesaTexture/CalcadaPortuguesaTexture.png";
 
 // ---- UI ----
 // -- Options --
@@ -55,7 +58,7 @@ export default class Preload extends Phaser.Scene {
 			// this.scene.start("Options");
 			// this.scene.start("Credits");
 			// this.scene.start("Loading");
-			// this.scene.start("Birth");
+			// this.scene.start("Pascal");
 		});
 	}
 
@@ -70,6 +73,7 @@ export default class Preload extends Phaser.Scene {
 	}
 
 	importObjects() {
+		this.load.image("Crate", Crate);
 		this.load.image("SignDirection", SignDirection);
 		this.load.image("Tree1", Tree1);
 		this.load.image("Tree2", Tree2);
@@ -80,6 +84,9 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("BackgroundForest", BGForest);
 
 		this.load.spritesheet("Tiles", Tiles, { frameWidth: 128, frameHeight: 128 });
+		this.load.spritesheet("SkyTiles", SkyTiles, { frameWidth: 128, frameHeight: 93 });
+
+		this.load.spritesheet("CalcadaPortuguesa", CalcadaPortuguesaTexture, { frameWidth: 128, frameHeight: 128 });
 	}
 
 	importUI() {

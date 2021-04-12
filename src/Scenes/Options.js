@@ -93,6 +93,16 @@ export default class Options extends Phaser.Scene {
 			});
 		}
 
+		// { // Difficulty
+		// 	const x = middleWidth;
+		// 	this.soundButton = this.optionsGroup.get(x, yLevel1);
+		// 	this.soundButton.generate({
+		// 		x: x,
+		// 		y: yLevel1,
+		// 		image: "Difficulty",
+		// 	});
+		// }
+
 		{ // Title
 			const title = new AnimateTitle(this, middleWidth, 100, "Options");
 		}

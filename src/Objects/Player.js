@@ -7,7 +7,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 		scene.add.existing(this);
 
-		this.isJumping = false;
+		this.playerStatus = {
+			velocity: 200,
+			jumpForce: 300,
+		};
 	}
 
 	createAnimations() {
@@ -43,15 +46,14 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 	update() {
 		const keys = this.keys;
-		const velocity = 200;
 
 		// Move X
 		if (keys.left.isDown) {
-			this.setVelocityX(-velocity);
+			this.setVelocityX(-this.playerStatus.velocity);
 			this.setFlipX(true);
 			if (this.body.onFloor() && this.anims.currentAnim.key !== "PlayerWalk") this.scene.anims.play("PlayerWalk", this);
 		} else if (keys.right.isDown) {
-			this.setVelocityX(velocity);
+			this.setVelocityX(this.playerStatus.velocity);
 			this.setFlipX(false);
 			if (this.body.onFloor() && this.anims.currentAnim.key !== "PlayerWalk") this.scene.anims.play("PlayerWalk", this);
 		} else {
@@ -61,8 +63,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 		// Move Y
 		if (keys.jump.isDown && this.body.onFloor()) {
-			this.setVelocityY(-velocity);
+			this.setVelocityY(-this.playerStatus.jumpForce);
 			if (this.anims.currentAnim.key !== "PlayerJump") this.scene.anims.play("PlayerJump", this);
-		} else if (keys.down.isDown) this.setVelocityY(velocity);
+		} else if (keys.down.isDown) this.setVelocityY(this.playerStatus.jumpForce);
 	}
 }

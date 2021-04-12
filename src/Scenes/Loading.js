@@ -11,7 +11,7 @@ export default class Loading extends Phaser.Scene {
 
 	init(data) {
 		const nextGame = data.nextGame || "Loading";
-		const gender = nextGame === "Birth" ? "platform" : "shotUp";
+		const gender = nextGame === "Pascal" ? "platform" : "shotUp";
 
 		this.nextGame = {
 			name: nextGame,

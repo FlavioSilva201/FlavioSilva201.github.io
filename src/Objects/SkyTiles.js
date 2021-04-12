@@ -1,10 +1,8 @@
 import GlobalConfigs from '../Config/Configs';
 
-export default class Tiles extends Phaser.Physics.Arcade.Sprite {
+export default class SkyTiles extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y, frame = 1) {
-		frame = frame || 1;
-
-		super(scene, x, y, "Tiles", frame);
+		super(scene, x, y, "SkyTiles", frame);
 	}
 
 	changeScale(scale) {
