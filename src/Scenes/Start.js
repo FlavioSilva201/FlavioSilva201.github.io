@@ -46,8 +46,8 @@ export default class Start extends Phaser.Scene {
 			signDirectionOptions.label.x += 10;
 
 			const tree1 = this.add.image(middleWidth, height - 86, "Tree1");
-			const tree2 = this.add.image(middleWidth / 2, height - 200, "Tree2").setDepth(1);
-			const tree3 = this.add.image(width * 0.75, height - 200, "Tree2").setDepth(1);
+			const tree2 = this.add.image(middleWidth / 2, height - 200, "Tree2").setDepth(20);
+			const tree3 = this.add.image(width * 0.75, height - 200, "Tree2").setDepth(20);
 		}
 
 		{ // UI

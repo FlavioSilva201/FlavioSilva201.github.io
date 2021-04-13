@@ -13,6 +13,7 @@ const GlobalConfigs = {
 			right: "RIGHT",
 			jump: "UP",
 			down: "DOWN",
+			shoot: "SPACE",
 		},
 		shotUp: {
 

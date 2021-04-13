@@ -5,11 +5,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers.platform);
 
-		scene.add.existing(this);
-
 		this.playerStatus = {
 			velocity: 200,
 			jumpForce: 300,
+			shootType: null,
 		};
 	}
 
@@ -42,6 +41,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	generate() {
 		this.createAnimations();
 		this.scene.anims.play("PlayerJump", this);
+		this.setZ(10);
 	}
 
 	update() {
@@ -66,5 +66,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 			this.setVelocityY(-this.playerStatus.jumpForce);
 			if (this.anims.currentAnim.key !== "PlayerJump") this.scene.anims.play("PlayerJump", this);
 		} else if (keys.down.isDown) this.setVelocityY(this.playerStatus.jumpForce);
+
+		if (keys.shoot.isDown) {
+			console.log(this.playerStatus.shootType);
+		}
 	}
 }

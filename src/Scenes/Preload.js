@@ -7,6 +7,9 @@ import PlayerIdle from "../Assets/Img/Sprites/Player/Idle/Idle.png";
 import PlayerJump from "../Assets/Img/Sprites/Player/Jump/Jump.png";
 import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 
+// -- Power Up --
+import PascalZim from "../Assets/Img/Sprites/Power/PascalZim/PascalZim.png";
+
 // ---- Others ----
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
@@ -67,6 +70,10 @@ export default class Preload extends Phaser.Scene {
 		this.load.spritesheet("PlayerIdle", PlayerIdle, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerJump", PlayerJump, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerWalk", PlayerWalk, { frameWidth: 38, frameHeight: 46 });
+
+		// -- Pawers --
+		this.load.image("PascalZim", PascalZim);
+
 
 		// -- Others --
 		this.load.image("Sprite", Sprite);

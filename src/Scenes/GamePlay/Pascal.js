@@ -5,6 +5,9 @@ import AnimateTitle from "../../Components/AnimatedTitle";
 import Player from "../../Objects/Player";
 import Tiles from "../../Objects/Tiles";
 import SkyTiles from "../../Objects/SkyTiles";
+import CratePower from "../../Objects/CratePower";
+
+import PascalPower from "../../Objects/Power/PascalPower";
 
 export default class Pascal extends Phaser.Scene {
 	constructor() {
@@ -19,6 +22,7 @@ export default class Pascal extends Phaser.Scene {
 
 	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
+		this.pascalPowerGroup = this.physics.add.group({ classType: PascalPower, });
 
 		// -- Background
 		const background = this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1);
@@ -28,20 +32,34 @@ export default class Pascal extends Phaser.Scene {
 			this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles, });
 			const grassNumber = width * 2 / 128;
 			for (let i = 0; i < grassNumber; i++) {
-				const g = this.tilesGroup.get(128 * i + 64, height, 1);
+				this.tilesGroup.get(128 * i + 64, height, 1);
 			}
-		}
 
-		{ // Sky Tales
-			this.skyTilesGroup = this.physics.add.staticGroup({ classType: SkyTiles, });
-			const y = middleHeight + 100;
-			const skyGrass1 = this.skyTilesGroup.get(width, y, 0).changeScale(0.5);
-			const crate = this.add.sprite(width + 60, y, "Crate").setScale(0.7);
-			const skyGrass2 = this.skyTilesGroup.get(width + 120, y, 2).changeScale(0.5);
+			this.createSkyTales();
 		}
 
 		{ // UI
-			const title = new AnimateTitle(this, middleWidth, 100, "Pascal");
+			new AnimateTitle(this, middleWidth, 100, "Pascal");
+		}
+	}
+
+	createSkyTales() {
+		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
+
+		{ // First Group
+			this.skyTilesGroup = this.physics.add.staticGroup({ classType: SkyTiles, });
+			this.cratePowerGroup = this.physics.add.staticGroup({ classType: CratePower, runChildUpdate: true });
+
+			const y = middleHeight + 100;
+
+			const skyGrass1 = this.skyTilesGroup.get(width + 50, y, 0);
+			skyGrass1.changeScale(0.5);
+
+			const crate = this.cratePowerGroup.get(skyGrass1.x + 58, y);
+			crate.generate();
+			// crate.setScale(0.7);
+
+			this.skyTilesGroup.get(crate.x + 58, y, 2).changeScale(0.5);
 		}
 	}
 
@@ -64,12 +82,22 @@ export default class Pascal extends Phaser.Scene {
 		this.cameras.main.setBounds(0, 0, width * 2, height, this.player);
 		this.cameras.main.startFollow(this.player, false, 0.1, 0.1);
 
-		// this.player.setX(width);
+		// ---
+		// this.player.setX(width + 50);
+		// this.player.setY(height - 100);
 	}
 
 	createCollision() {
 		this.physics.add.collider(this.tilesGroup, this.player);
 		this.physics.add.collider(this.skyTilesGroup, this.player);
+		this.physics.add.collider(this.cratePowerGroup, this.player);
+		this.physics.add.collider(this.pascalPowerGroup, this.player, (player, pascal) => {
+			this.player.playerStatus.shootType = "Pascal";
+			pascal.destroy();
+		});
+
+		this.physics.add.collider(this.tilesGroup, this.pascalPowerGroup);
+		this.physics.add.collider(this.skyTilesGroup, this.pascalPowerGroup);
 	}
 
 	update() { }
