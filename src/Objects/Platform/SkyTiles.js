@@ -1,4 +1,4 @@
-import GlobalConfigs from '../Config/Configs';
+import GlobalConfigs from '../../Config/Configs';
 
 export default class SkyTiles extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y, frame = 1) {

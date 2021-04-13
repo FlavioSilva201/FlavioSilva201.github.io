@@ -1,4 +1,7 @@
-import GlobalConfigs from '../Config/Configs';
+import GlobalConfigs from '../../Config/Configs';
+
+import Shoot from "./Shoot";
+
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
 		super(scene, x, y, "PlayerIdle");
@@ -10,6 +13,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 			jumpForce: 300,
 			shootType: null,
 		};
+
+		this.shoots = this.scene.physics.add.group({ classType: Shoot, });
 	}
 
 	createAnimations() {
@@ -69,6 +74,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 		if (keys.shoot.isDown) {
 			console.log(this.playerStatus.shootType);
+			const shoot = this.shoots.get(this.x, this.y);
+			shoot.setVelocityX(300);
 		}
 	}
 }

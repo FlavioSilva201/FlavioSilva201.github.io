@@ -2,12 +2,12 @@ import GlobalConfigs from "../../Config/Configs";
 
 import AnimateTitle from "../../Components/AnimatedTitle";
 
-import Player from "../../Objects/Player";
-import Tiles from "../../Objects/Tiles";
-import SkyTiles from "../../Objects/SkyTiles";
-import CratePower from "../../Objects/CratePower";
+import Player from "../../Objects/Platform/Player";
+import Tiles from "../../Objects/Platform/Tiles";
+import SkyTiles from "../../Objects/Platform/SkyTiles";
+import CratePower from "../../Objects/Platform/CratePower";
 
-import PascalPower from "../../Objects/Power/PascalPower";
+import Power from "../../Objects/Platform/Power";
 
 export default class Pascal extends Phaser.Scene {
 	constructor() {
@@ -22,7 +22,7 @@ export default class Pascal extends Phaser.Scene {
 
 	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
-		this.pascalPowerGroup = this.physics.add.group({ classType: PascalPower, });
+		this.pascalPowerGroup = this.physics.add.group({ classType: Power, });
 
 		// -- Background
 		const background = this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1);
@@ -83,8 +83,8 @@ export default class Pascal extends Phaser.Scene {
 		this.cameras.main.startFollow(this.player, false, 0.1, 0.1);
 
 		// ---
-		// this.player.setX(width + 50);
-		// this.player.setY(height - 100);
+		this.player.setX(width + 100);
+		this.player.setY(height - 100);
 	}
 
 	createCollision() {

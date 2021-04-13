@@ -2,8 +2,8 @@ import GlobalConfigs from "../Config/Configs";
 
 import AnimateTitle from "../Components/AnimatedTitle";
 
-import Player from "../Objects/Player";
-import Tiles from "../Objects/Tiles";
+import Player from "../Objects/Platform/Player";
+import Tiles from "../Objects/Platform/Tiles";
 import DirectionSign from "../Objects/DirectionSign";
 
 export default class Start extends Phaser.Scene {
