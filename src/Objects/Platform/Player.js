@@ -12,9 +12,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 			velocity: 200,
 			jumpForce: 300,
 			shootType: null,
+			lastShot: 0,
 		};
 
-		this.shoots = this.scene.physics.add.group({ classType: Shoot, });
+		this.shoots = this.scene.physics.add.group({
+			classType: Shoot,
+			runChildUpdate: true
+		});
 	}
 
 	createAnimations() {
@@ -49,16 +53,19 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		this.setZ(10);
 	}
 
-	update() {
+	update(time) {
 		const keys = this.keys;
+		const { velocity, jumpForce, shootType, lastShot } = this.playerStatus;
+
+		if (!lastShot) this.playerStatus.lastShot = time;
 
 		// Move X
 		if (keys.left.isDown) {
-			this.setVelocityX(-this.playerStatus.velocity);
+			this.setVelocityX(-velocity);
 			this.setFlipX(true);
 			if (this.body.onFloor() && this.anims.currentAnim.key !== "PlayerWalk") this.scene.anims.play("PlayerWalk", this);
 		} else if (keys.right.isDown) {
-			this.setVelocityX(this.playerStatus.velocity);
+			this.setVelocityX(velocity);
 			this.setFlipX(false);
 			if (this.body.onFloor() && this.anims.currentAnim.key !== "PlayerWalk") this.scene.anims.play("PlayerWalk", this);
 		} else {
@@ -68,14 +75,15 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 		// Move Y
 		if (keys.jump.isDown && this.body.onFloor()) {
-			this.setVelocityY(-this.playerStatus.jumpForce);
+			this.setVelocityY(-jumpForce);
 			if (this.anims.currentAnim.key !== "PlayerJump") this.scene.anims.play("PlayerJump", this);
-		} else if (keys.down.isDown) this.setVelocityY(this.playerStatus.jumpForce);
+		} else if (keys.down.isDown) this.setVelocityY(jumpForce);
 
-		if (keys.shoot.isDown) {
-			console.log(this.playerStatus.shootType);
-			const shoot = this.shoots.get(this.x, this.y);
-			shoot.setVelocityX(300);
+		if (keys.shoot.isDown && shootType && lastShot < time) {
+			this.playerStatus.lastShot = time + 250;
+
+			const shoot = this.shoots.get(this.x + this.width / 2, this.y, shootType);
+			if (shoot) shoot.generate(this.flipX);
 		}
 	}
 }

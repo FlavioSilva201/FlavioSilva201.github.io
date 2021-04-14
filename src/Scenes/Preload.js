@@ -10,13 +10,28 @@ import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 // -- Power Up --
 import PascalZim from "../Assets/Img/Sprites/Power/PascalZim/PascalZim.png";
 
+// -- Enemy --
+import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
+
 // ---- Others ----
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
 
 // -- Sign Direction --
+import Bush1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush1.png";
+import Bush2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush2.png";
+import Bush3 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush3.png";
+import Bush4 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush4.png";
+
 import Crate from "../Assets/Img/Tileset/PlatformerBundle/Object/Crate.png";
+
+import Mushroom1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Mushroom1.png";
+import Mushroom2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Mushroom2.png";
+
 import SignDirection from "../Assets/Img/Tileset/PlatformerBundle/Object/SignDirection.png";
+
+import Stone from "../Assets/Img/Tileset/PlatformerBundle/Object/Stone.png";
+
 import Tree1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree1.png";
 import Tree2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree2.png";
 import Tree3 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree3.png";
@@ -56,12 +71,12 @@ export default class Preload extends Phaser.Scene {
 
 		this.load.on('complete', () => {
 			progressBar.complete();
-			// this.scene.start("Home");
+			this.scene.start("Home");
 			// this.scene.start("Start");
 			// this.scene.start("Options");
 			// this.scene.start("Credits");
 			// this.scene.start("Loading");
-			this.scene.start("Pascal");
+			// this.scene.start("Pascal");
 		});
 	}
 
@@ -74,14 +89,29 @@ export default class Preload extends Phaser.Scene {
 		// -- Pawers --
 		this.load.image("PascalZim", PascalZim);
 
+		// -- Enemy --
+		this.load.image("Duke", Duke);
+
 
 		// -- Others --
 		this.load.image("Sprite", Sprite);
 	}
 
 	importObjects() {
+		this.load.image("Bush1", Bush1);
+		this.load.image("Bush2", Bush2);
+		this.load.image("Bush3", Bush3);
+		this.load.image("Bush4", Bush4);
+
 		this.load.image("Crate", Crate);
+
+		this.load.image("Mushroom1", Mushroom1);
+		this.load.image("Mushroom2", Mushroom2);
+
 		this.load.image("SignDirection", SignDirection);
+
+		this.load.image("Stone", Stone);
+
 		this.load.image("Tree1", Tree1);
 		this.load.image("Tree2", Tree2);
 		this.load.image("Tree3", Tree3);
