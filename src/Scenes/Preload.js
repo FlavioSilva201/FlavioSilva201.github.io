@@ -9,6 +9,7 @@ import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 
 // -- Power Up --
 import PascalZim from "../Assets/Img/Sprites/Power/PascalZim/PascalZim.png";
+import Lazarus from "../Assets/Img/Sprites/Power/Lazarus/Lazarus.png";
 
 // -- Enemy --
 import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
@@ -17,11 +18,15 @@ import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
 
-// -- Sign Direction --
+// ---- Objects ----
 import Bush1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush1.png";
 import Bush2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush2.png";
 import Bush3 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush3.png";
 import Bush4 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush4.png";
+
+import Cactus from "../Assets/Img/Tileset/PlatformerBundle/Object/Cactus.png";
+
+import Castle from "../Assets/Img/Tileset/Castle/Castle.png";
 
 import Crate from "../Assets/Img/Tileset/PlatformerBundle/Object/Crate.png";
 
@@ -45,6 +50,7 @@ import BGForest from "../Assets/Img/Tileset/PlatformerBundle/BG/BG.png";
 import Tiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/Tiles.png";
 import SkyTiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/SkyTiles.png";
 import CalcadaPortuguesaTexture from "../Assets/Img/Tileset/CalcadaPortuguesaTexture/CalcadaPortuguesaTexture.png";
+
 
 // ---- UI ----
 // -- Options --
@@ -88,6 +94,7 @@ export default class Preload extends Phaser.Scene {
 
 		// -- Pawers --
 		this.load.image("PascalZim", PascalZim);
+		this.load.image("Lazarus", Lazarus);
 
 		// -- Enemy --
 		this.load.image("Duke", Duke);
@@ -102,6 +109,9 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("Bush2", Bush2);
 		this.load.image("Bush3", Bush3);
 		this.load.image("Bush4", Bush4);
+
+		this.load.image("Cactus", Cactus);
+		this.load.image("Castle", Castle);
 
 		this.load.image("Crate", Crate);
 

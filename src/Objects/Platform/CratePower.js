@@ -1,7 +1,9 @@
 export default class CratePower extends Phaser.Physics.Arcade.Sprite {
-	constructor(scene, x, y) {
+	constructor(scene, x, y, powerType) {
 		super(scene, x, y, "Crate");
 		this.setScale(0.7);
+
+		this.powerType = powerType;
 
 		this.isAlive = true;
 	}
@@ -36,7 +38,7 @@ export default class CratePower extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	generatePower() {
-		const pascalPower = this.scene.pascalPowerGroup.get(this.x, this.y);
+		const pascalPower = this.scene.powerShootGroup.get(this.x, this.y, this.powerType);
 		if (!pascalPower) return;
 
 		this.scene.tweens.add({

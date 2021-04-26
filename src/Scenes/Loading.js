@@ -22,12 +22,14 @@ export default class Loading extends Phaser.Scene {
 	create() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
+		if (this.nextGame.gender === "platform") this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1).setAlpha(0.5);
+
 		// -- Title
 		const title = new AnimateTitle(this, middleWidth, middleHeight, this.nextGame.name);
 
 		// -- Player
-		this.add.text(100, 500, "Player");
-		this.add.image(100, 600, "PlayerIdle", 1);
+		this.add.text(100, 400, "Player").setOrigin(0.5);
+		this.add.image(100, 450, "PlayerIdle", 1);
 
 		// -- Controls
 		const platformCont = GlobalConfigs.controllers.platform;
@@ -43,5 +45,7 @@ export default class Loading extends Phaser.Scene {
 		spaceKey.on("down", () => {
 			this.scene.start(this.nextGame.name);
 		}, this);
+
+		this.add.text(middleWidth, height - 25, "Press Space to Start").setOrigin(0.5);
 	}
 }

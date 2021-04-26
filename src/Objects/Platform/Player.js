@@ -54,6 +54,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	update(time) {
+		if (!this.keys) return;
 		const keys = this.keys;
 		const { velocity, jumpForce, shootType, lastShot } = this.playerStatus;
 

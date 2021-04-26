@@ -1,7 +1,11 @@
 export default class Power extends Phaser.Physics.Arcade.Sprite {
-	constructor(scene, x, y) {
-		super(scene, x, y, "PascalZim");
+	constructor(scene, x, y, powerType) {
+		super(scene, x, y, powerType);
 		scene.add.existing(this);
+
+		this.powerType = powerType;
+
+		this.degreeNum = 0;
 
 		this.liveTime = 0;
 	}
@@ -13,6 +17,11 @@ export default class Power extends Phaser.Physics.Arcade.Sprite {
 
 	update(time) {
 		if (!this.liveTime) this.liveTime = time;
+
+		if (this.powerType == "Lazarus") {
+			this.degreeNum++;
+			this.setAngle(this.degreeNum);
+		}
 
 		if (time > this.liveTime + 10000) this.destroy();
 	}
