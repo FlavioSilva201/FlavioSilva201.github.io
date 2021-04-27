@@ -61,11 +61,11 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		if (!lastShot) this.playerStatus.lastShot = time;
 
 		// Move X
-		if (keys.left.isDown) {
+		if (keys.left1.isDown || keys.left2.isDown) {
 			this.setVelocityX(-velocity);
 			this.setFlipX(true);
 			if (this.body.onFloor() && this.anims.currentAnim.key !== "PlayerWalk") this.scene.anims.play("PlayerWalk", this);
-		} else if (keys.right.isDown) {
+		} else if (keys.right1.isDown || keys.right2.isDown) {
 			this.setVelocityX(velocity);
 			this.setFlipX(false);
 			if (this.body.onFloor() && this.anims.currentAnim.key !== "PlayerWalk") this.scene.anims.play("PlayerWalk", this);
@@ -75,10 +75,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		}
 
 		// Move Y
-		if (keys.jump.isDown && this.body.onFloor()) {
+		if ((keys.jump1.isDown || keys.jump2.isDown) && this.body.onFloor()) {
 			this.setVelocityY(-jumpForce);
 			if (this.anims.currentAnim.key !== "PlayerJump") this.scene.anims.play("PlayerJump", this);
-		} else if (keys.down.isDown) this.setVelocityY(jumpForce);
+		} else if (keys.down1.isDown || keys.down2.isDown) this.setVelocityY(jumpForce);
 
 		if (keys.shoot.isDown && shootType && lastShot < time) {
 			this.playerStatus.lastShot = time + 250;

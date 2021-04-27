@@ -16,6 +16,7 @@ export const BaseColors = {
 	white: "#ffffff",
 	black: "#000000",
 	green: "#00dd00",
+	platformBackground: "#E2F7FE"
 };
 
 export const TextStyle = {
@@ -64,6 +65,20 @@ export const TextStyle = {
 			}
 		}
 	},
+	loading: {
+		spaceStart: {
+			fontFamily: PressStart2P,
+			fontSize: 20,
+			fill: BaseColors.black,
+			stroke: BaseColors.white,
+			strokeThickness: 1,
+		},
+		keys: {
+			fontFamily: PressStart2P,
+			fontSize: 14,
+			fill: BaseColors.platformBackground,
+		}
+	},
 	start: {},
 	objects: {
 		signals: {
@@ -78,7 +93,7 @@ export const TextStyle = {
 		animateTitle: {
 			fontFamily: PressStart2P,
 			fontSize: 80,
-			fill: "#E2F7FE",
+			fill: BaseColors.platformBackground,
 			stroke: "#B5F1DB",
 			strokeThickness: 2,
 			shadow: {

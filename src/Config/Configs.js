@@ -9,10 +9,14 @@ const GlobalConfigs = {
 	language: "en",
 	controllers: {
 		platform: {
-			left: "LEFT",
-			right: "RIGHT",
-			jump: "UP",
-			down: "DOWN",
+			left1: "LEFT",
+			left2: "A",
+			right1: "RIGHT",
+			right2: "D",
+			jump1: "UP",
+			jump2: "W",
+			down1: "DOWN",
+			down2: "S",
 			shoot: "SPACE",
 		},
 		shotUp: {
