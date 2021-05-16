@@ -6,6 +6,7 @@ import ProgressBar from "../Components/ProgressBar";
 import PlayerIdle from "../Assets/Img/Sprites/Player/Idle/Idle.png";
 import PlayerJump from "../Assets/Img/Sprites/Player/Jump/Jump.png";
 import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
+import PlayerShip from "../Assets/Img/Sprites/Player/ShootUp/PlayerShip.png";
 
 // -- Power Up --
 import PascalZim from "../Assets/Img/Sprites/Power/PascalZim/PascalZim.png";
@@ -82,12 +83,13 @@ export default class Preload extends Phaser.Scene {
 
 		this.load.on('complete', () => {
 			progressBar.complete();
-			this.scene.start("Home");
+			// this.scene.start("Home");
 			// this.scene.start("Start");
 			// this.scene.start("Options");
 			// this.scene.start("Credits");
 			// this.scene.start("Loading");
 			// this.scene.start("Pascal");
+			this.scene.start("VisualBasic");
 		});
 	}
 
@@ -96,6 +98,7 @@ export default class Preload extends Phaser.Scene {
 		this.load.spritesheet("PlayerIdle", PlayerIdle, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerJump", PlayerJump, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerWalk", PlayerWalk, { frameWidth: 38, frameHeight: 46 });
+		this.load.image("PlayerShip", PlayerShip);
 
 		// -- Pawers --
 		this.load.image("PascalZim", PascalZim);

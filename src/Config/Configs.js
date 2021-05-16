@@ -19,8 +19,8 @@ const GlobalConfigs = {
 			down2: "S",
 			shoot: "SPACE",
 		},
-		shotUp: {
-
+		shootUp: {
+			shoot: "SPACE",
 		}
 	},
 };
