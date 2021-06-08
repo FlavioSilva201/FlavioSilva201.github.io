@@ -1,10 +1,12 @@
 import GlobalConfigs from "../../Config/Configs";
-
 import Shoot from "./Shoot";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
 		super(scene, x, y, "PlayerShip");
+
+		this.timeNextFire = 0;
+		this.marginShoots = 100;
 
 		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers.shootUp);
 
@@ -20,16 +22,19 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	generate() {
-		this.body.setAllowGravity(false);
+		this.setDepth(10);
 	}
 
 	update(time) {
 		if (!this.keys) return;
 		const keys = this.keys;
 
-		if (keys.shoot.isDown) {
-			const shoot = this.shoots.get(this.x, this.y, "Lazarus");
-			if (shoot) shoot.generate(this.x, this.y);
+		if (keys.shoot.isDown && time > this.timeNextFire) {
+			const shoot = this.shoots.get(this.x, this.y, "VisualBasic");
+			if (shoot) {
+				this.timeNextFire = time + this.marginShoots;
+				shoot.generate(this.x, this.y);
+			}
 		}
 	}
 }

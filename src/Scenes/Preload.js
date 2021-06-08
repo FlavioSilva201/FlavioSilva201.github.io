@@ -11,6 +11,7 @@ import PlayerShip from "../Assets/Img/Sprites/Player/ShootUp/PlayerShip.png";
 // -- Power Up --
 import PascalZim from "../Assets/Img/Sprites/Power/PascalZim/PascalZim.png";
 import Lazarus from "../Assets/Img/Sprites/Power/Lazarus/Lazarus.png";
+import VisualBasic from "../Assets/Img/Sprites/Shoots/VisualBasic.png";
 
 // -- Enemy --
 import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
@@ -103,6 +104,7 @@ export default class Preload extends Phaser.Scene {
 		// -- Pawers --
 		this.load.image("PascalZim", PascalZim);
 		this.load.image("Lazarus", Lazarus);
+		this.load.image("VisualBasic", VisualBasic);
 
 		// -- Enemy --
 		this.load.image("Duke", Duke);

@@ -1,6 +1,5 @@
 # # # # # # # # # # # # # 
-Beep/
-Ignore/
+.ignore/
 package-lock.json
 
 

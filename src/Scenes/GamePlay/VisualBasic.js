@@ -5,12 +5,21 @@ import Player from "../../Objects/ShootUp/Player";
 
 export default class VisualBasic extends Phaser.Scene {
 	constructor() {
-		super({ key: "VisualBasic" });
+		const config = {
+			key: "VisualBasic",
+			physics: {
+				default: "arcade",
+				arcade: {
+					gravity: { x: 0, y: 0, },
+					debug: GlobalConfigs.debug,
+				},
+			},
+		};
+		super(config);
 		console.log("VisualBasic");
 	}
 
-	init() {
-	}
+	init() { }
 
 	create() {
 		this.createWorld();
@@ -36,9 +45,7 @@ export default class VisualBasic extends Phaser.Scene {
 		this.player.generate();
 	}
 
-	createCollision() {
-	}
+	createCollision() { }
 
-	update() {
-	}
+	update() { }
 }
