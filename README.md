@@ -5,9 +5,9 @@
 
 ### Português
 
-Neste site eu faço uma apresetação da minha vida proficional
+Neste website eu faço uma aprestação da minha vida profissional
 
- - Minha experiencia proficional e uma biografia
+ - A minha experiência profissional e uma biografia
  - Alguns dos principais projetos
  - As minhas redes sociais
 
