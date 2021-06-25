@@ -11,6 +11,7 @@ _ignore
 # ------------- System
 .DS_Store
 .vscode/
+node_modules
 
 # ------------- node
 node_modules
