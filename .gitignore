@@ -1,3 +1,7 @@
+# Manual
+_ignore
+.netlify
+
 # ------------- SASS
 .sass-cache/
 *.css.map
@@ -7,6 +11,7 @@
 # ------------- System
 .DS_Store
 .vscode/
+node_modules
 
 # ------------ Others
 Simple radial menu.webloc
