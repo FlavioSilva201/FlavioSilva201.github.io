@@ -11,8 +11,8 @@ On this website I make a presentation of my professional life
 ## Project
 
 - [Link for LTS version (more stable version)](https://201flaviosilva.github.io/);
-- [V1](https://201flaviosilvav1.netlify.app);
-- [V2](https://201flaviosilvav2.netlify.app/);
+  - [V1](https://201flaviosilva.bitbucket.io/);
+  - [V2](https://201flaviosilvav2.netlify.app/);
 - [Bugs](https://github.com/201flaviosilva/201flaviosilva.github.io/issues);
 - [RoadMap](https://github.com/201flaviosilva/201flaviosilva.github.io/projects/3);
 
