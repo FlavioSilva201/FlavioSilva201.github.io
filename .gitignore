@@ -1,3 +1,7 @@
+# Manual
+_ignore
+.netlify
+
 # ------------- SASS
 .sass-cache/
 *.css.map
