@@ -1,57 +1,53 @@
 import ProgressBar from "../Components/ProgressBar";
 
 // -------- Imgs --------
-// ---- Sprites ----
 // -- Player --
 import PlayerIdle from "../Assets/Img/Sprites/Player/Idle/Idle.png";
 import PlayerJump from "../Assets/Img/Sprites/Player/Jump/Jump.png";
 import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 import PlayerShip from "../Assets/Img/Sprites/Player/ShootUp/PlayerShip.png";
 
-// -- Power Up --
-import PascalZim from "../Assets/Img/Sprites/Power/PascalZim/PascalZim.png";
-import Lazarus from "../Assets/Img/Sprites/Power/Lazarus/Lazarus.png";
-import VisualBasic from "../Assets/Img/Sprites/Shoots/VisualBasic.png";
+// -- Languages --
+import PascalZim from "../Assets/Img/Sprites/Languages/PascalZim/PascalZim.png";
+import Lazarus from "../Assets/Img/Sprites/Languages/Lazarus/Lazarus.png";
+import VisualBasic from "../Assets/Img/Sprites/Languages/VisualBasic/VisualBasic.png";
 
 // -- Enemy --
 import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
 
-// ---- Others ----
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
 
 // ---- Objects ----
-import Bush1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush1.png";
-import Bush2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush2.png";
-import Bush3 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush3.png";
-import Bush4 from "../Assets/Img/Tileset/PlatformerBundle/Object/Bush4.png";
+import Bush1 from "../Assets/Img/Sprites/PlatformerBundle/Object/Bush1.png";
+import Bush2 from "../Assets/Img/Sprites/PlatformerBundle/Object/Bush2.png";
+import Bush3 from "../Assets/Img/Sprites/PlatformerBundle/Object/Bush3.png";
+import Bush4 from "../Assets/Img/Sprites/PlatformerBundle/Object/Bush4.png";
 
-import Cactus from "../Assets/Img/Tileset/PlatformerBundle/Object/Cactus.png";
+import Cactus from "../Assets/Img/Sprites/PlatformerBundle/Object/Cactus.png";
 
-import Castle from "../Assets/Img/Tileset/Castle/Castle.png";
+import Castle from "../Assets/Img/Sprites/Castle/Castle.png";
 
-import Crate from "../Assets/Img/Tileset/PlatformerBundle/Object/Crate.png";
+import Crate from "../Assets/Img/Sprites/PlatformerBundle/Object/Crate.png";
 
-import Mushroom1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Mushroom1.png";
-import Mushroom2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Mushroom2.png";
+import Mushroom1 from "../Assets/Img/Sprites/PlatformerBundle/Object/Mushroom1.png";
+import Mushroom2 from "../Assets/Img/Sprites/PlatformerBundle/Object/Mushroom2.png";
 
-import SignDirection from "../Assets/Img/Tileset/PlatformerBundle/Object/SignDirection.png";
+import SignDirection from "../Assets/Img/Sprites/PlatformerBundle/Object/SignDirection.png";
 
-import Stone from "../Assets/Img/Tileset/PlatformerBundle/Object/Stone.png";
+import Stone from "../Assets/Img/Sprites/PlatformerBundle/Object/Stone.png";
 
-import Tree1 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree1.png";
-import Tree2 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree2.png";
-import Tree3 from "../Assets/Img/Tileset/PlatformerBundle/Object/Tree3.png";
+import Tree1 from "../Assets/Img/Sprites/PlatformerBundle/Object/Tree1.png";
+import Tree2 from "../Assets/Img/Sprites/PlatformerBundle/Object/Tree2.png";
+import Tree3 from "../Assets/Img/Sprites/PlatformerBundle/Object/Tree3.png";
 
-// ---- Tileset (Map) ----
 // -- Background --
-import BGForest from "../Assets/Img/Tileset/PlatformerBundle/BG/BG.png";
-
+import BGForest from "../Assets/Img/Sprites/PlatformerBundle/BG/BG.png";
 
 // -- Tiles (SpriteSheet) --
-import Tiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/Tiles.png";
-import SkyTiles from "../Assets/Img/Tileset/PlatformerBundle/Tiles/SpriteSheet/SkyTiles.png";
-import CalcadaPortuguesaTexture from "../Assets/Img/Tileset/CalcadaPortuguesaTexture/CalcadaPortuguesaTexture.png";
+import Tiles from "../Assets/Img/Sprites/PlatformerBundle/Tiles/SpriteSheet/Tiles.png";
+import SkyTiles from "../Assets/Img/Sprites/PlatformerBundle/Tiles/SpriteSheet/SkyTiles.png";
+import CalcadaPortuguesaTexture from "../Assets/Img/Sprites/CalcadaPortuguesaTexture/CalcadaPortuguesaTexture.png";
 
 
 // ---- UI ----
@@ -74,47 +70,32 @@ export default class Preload extends Phaser.Scene {
 		const progressBar = new ProgressBar(this);
 
 		this.importSprites();
-		this.importObjects();
-		this.importTileset();
 		this.importUI();
 		this.importSounds();
 
 		this.load.on("progress", (p) => progressBar.updateBar(p));
 		this.load.on("fileprogress", (f) => progressBar.fileLoad(f));
-
-		this.load.on("complete", () => {
-			progressBar.complete();
-			// this.scene.start("Home");
-			// this.scene.start("Start");
-			// this.scene.start("Options");
-			// this.scene.start("Credits");
-			// this.scene.start("Loading");
-			// this.scene.start("Pascal");
-			this.scene.start("VisualBasic");
-		});
+		this.load.on("complete", () => { progressBar.complete(); });
 	}
 
 	importSprites() {
-		// -- Player --
+		// - Player
 		this.load.spritesheet("PlayerIdle", PlayerIdle, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerJump", PlayerJump, { frameWidth: 38, frameHeight: 44 });
 		this.load.spritesheet("PlayerWalk", PlayerWalk, { frameWidth: 38, frameHeight: 46 });
 		this.load.image("PlayerShip", PlayerShip);
 
-		// -- Pawers --
+		// - Languages
 		this.load.image("PascalZim", PascalZim);
 		this.load.image("Lazarus", Lazarus);
 		this.load.image("VisualBasic", VisualBasic);
 
-		// -- Enemy --
+		// - Enemy
 		this.load.image("Duke", Duke);
 
-
-		// -- Others --
 		this.load.image("Sprite", Sprite);
-	}
 
-	importObjects() {
+		// Objects
 		this.load.image("Bush1", Bush1);
 		this.load.image("Bush2", Bush2);
 		this.load.image("Bush3", Bush3);
@@ -135,9 +116,8 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("Tree1", Tree1);
 		this.load.image("Tree2", Tree2);
 		this.load.image("Tree3", Tree3);
-	}
 
-	importTileset() {
+		// Tiles
 		this.load.image("BackgroundForest", BGForest);
 
 		this.load.spritesheet("Tiles", Tiles, { frameWidth: 128, frameHeight: 128 });
@@ -156,4 +136,14 @@ export default class Preload extends Phaser.Scene {
 	}
 
 	importSounds() { }
+
+	create() {
+		this.scene.start("Home");
+		// this.scene.start("Start");
+		// this.scene.start("Options");
+		// this.scene.start("Credits");
+		// this.scene.start("Loading");
+		// this.scene.start("Pascal");
+		// this.scene.start("VisualBasic");
+	}
 }
