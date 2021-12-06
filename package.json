@@ -13,9 +13,9 @@
   "scripts": {
     "clear": "rm -rf build && rm -rf out && rm -rf dist",
     "start": "webpack-dev-server --config webpack/base.js --open",
-    "build": "webpack --config webpack/prod.js ",
+    "build": "npm run clear && webpack --config webpack/prod.js ",
     "netlify-dev": "npm run build && netlify deploy --dir=dist",
-    "netlify": "npm run build && netlify deploy --dir=dist --prod",
+    "netlify": "npm run build && netlify deploy --dir=dist --prod && npm run clear",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
