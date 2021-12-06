@@ -1,3 +1,6 @@
+const urlSearchParams = new URLSearchParams(window.location.search);
+const params = Object.fromEntries(urlSearchParams.entries());
+
 const GlobalConfigs = {
 	screen: {
 		width: 1280,
@@ -5,7 +8,7 @@ const GlobalConfigs = {
 		middleWidth: 0,
 		middleHeight: 0,
 	},
-	debug: false,
+	debug: params.debug == "false" || params.debug == undefined ? false : true,
 	language: "en",
 	controllers: {
 		platform: {

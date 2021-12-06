@@ -1,7 +1,6 @@
 console.clear();
 import Phaser from "phaser";
 
-// import "./CSS/Reset.css";
 import favicon from "./Assets/Favicon/favicon.png";
 
 // Configs/Infos
