@@ -51,10 +51,10 @@ import CalcadaPortuguesaTexture from "../Assets/Img/Sprites/CalcadaPortuguesaTex
 
 
 // ---- UI ----
-// -- Options --
-import Flags from "../Assets/Img/UI/Options/Flags/Flags.png";
-import FullScreen from "../Assets/Img/UI/Options/FullScreen/FullScreen.png";
-import Sound from "../Assets/Img/UI/Options/Sound/Sound.png";
+import Flags from "../Assets/Img/UI/Flags/Flags.png";
+import FullScreen from "../Assets/Img/UI/FullScreen/FullScreen.png";
+import Sound from "../Assets/Img/UI/Sound/Sound.png";
+import Settings from "../Assets/Img/UI/Settings/Settings.png";
 
 // ArrowKey
 import ArrowKey from "../Assets/Img/UI/ArrowKey/ArrowKey.png";
@@ -130,6 +130,7 @@ export default class Preload extends Phaser.Scene {
 		this.load.spritesheet("Flags", Flags, { frameWidth: 32, frameHeight: 32 });
 		this.load.spritesheet("FullScreen", FullScreen, { frameWidth: 32, frameHeight: 32 });
 		this.load.spritesheet("Sound", Sound, { frameWidth: 32, frameHeight: 32 });
+		this.load.spritesheet("Settings", Settings, { frameWidth: 32, frameHeight: 32 });
 
 		this.load.spritesheet("ArrowKey", ArrowKey, { frameWidth: 64, frameHeight: 64 });
 		this.load.spritesheet("SpaceKey", SpaceKey, { frameWidth: 128, frameHeight: 32 });
