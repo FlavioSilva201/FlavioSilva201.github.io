@@ -33,5 +33,19 @@ export default class Start extends Phaser.Scene {
 		});
 
 		this.player = playersGroup.get(middleWidth, middleHeight);
+
+		{ // Settings
+			const settings = this.physics.add.image(10, 10, "Settings", 1).setOrigin(0);
+			this.physics.add.collider(this.player, settings, () => {
+				this.scene.start("Options");
+			});
+		}
+
+		{ // Pascal
+			const pascal = this.physics.add.image(middleWidth - 350, middleHeight - 100, "PascalZim").setScale(2);
+			this.physics.add.collider(this.player, pascal, () => {
+				this.scene.start("Loading", { nextGame: "Pascal" });
+			});
+		}
 	}
 }

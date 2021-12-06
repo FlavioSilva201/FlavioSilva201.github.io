@@ -12,10 +12,6 @@ export default class Options extends Phaser.Scene {
 		super({ key: "Options" });
 	}
 
-	init(data) {
-		this.lastScene = data.sceneName;
-	}
-
 	create() {
 		this.createWorld();
 		this.createUI();
@@ -43,9 +39,6 @@ export default class Options extends Phaser.Scene {
 
 			const signDirectionStart = new DirectionSign(this, width - x, y, "Start");
 			signDirectionStart.changeDepth(1);
-			const signDirectionCredits = new DirectionSign(this, x, y, "Credits").setFlipX(true);
-			signDirectionCredits.changeDepth(1);
-			signDirectionCredits.label.x += 10;
 
 			const tree1 = this.add.image(middleWidth, height - 86, "Tree1");
 			const tree2 = this.add.image(width * 0.25, height - 86, "Tree1");
@@ -117,10 +110,6 @@ export default class Options extends Phaser.Scene {
 		});
 		this.player = this.playersGroup.get(middleWidth, middleHeight);
 		this.player.generate();
-
-		if (this.lastScene === "Start") this.player.setX(width - 50);
-		else if (this.lastScene === "Credits") this.player.setX(50);
-		else this.player.setX(middleWidth);
 	}
 
 	createCollision() {
@@ -131,9 +120,6 @@ export default class Options extends Phaser.Scene {
 	update() {
 		if (this.player.x > GlobalConfigs.screen.width - this.player.width * 0.75) {
 			this.scene.start("Start", { sceneName: "Options" });
-			this.scene.stop();
-		} else if (this.player.x < 0 + this.player.width * 0.75) {
-			this.scene.start("Credits");
 			this.scene.stop();
 		}
 	}
