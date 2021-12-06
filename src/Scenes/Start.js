@@ -1,84 +1,50 @@
-import GlobalConfigs from "../Config/Configs";
+import GlobalConfigs from "../Configs";
 
-import AnimateTitle from "../Components/AnimatedTitle";
-
-import Player from "../Objects/Platform/Player";
-import Tiles from "../Objects/Platform/Tiles";
-import DirectionSign from "../Objects/DirectionSign";
+import { TextStyle } from "../Theme";
 
 export default class Start extends Phaser.Scene {
 	constructor() {
 		super({ key: "Start" });
 	}
 
-	init(data) {
-		this.lastScene = data.sceneName;
-	}
-
 	create() {
-		this.createWorld();
-		this.createPlayer();
-		this.createCollision();
-	}
-
-	createWorld() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		// -- Background
-		const background = this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1);
+		const margin = 40;
 
-		{	// -- Floor
-			this.tilesGroup = this.physics.add.staticGroup({ classType: Tiles, });
-			const grassNumber = width / 128;
-			for (let i = 0; i < grassNumber; i++) {
-				const g = this.tilesGroup.get(128 * i + 64, height, 1);
-			}
-		}
+		// Start
+		const configStart = {
+			x: middleWidth,
+			y: middleHeight - margin,
+			text: "Start",
+			action: () => this.scene.start("Start"),
+		};
+		this.createText(configStart);
 
-		{	// -- Objects
-			const x = 50;
-			const y = height - 90;
-
-			const signDirectionStart = new DirectionSign(this, width - x, y, "Game");
-			signDirectionStart.changeDepth(1);
-			const signDirectionOptions = new DirectionSign(this, x, y, "Options").setFlipX(true);
-			signDirectionOptions.changeDepth(1);
-			signDirectionOptions.label.x += 10;
-
-			const tree1 = this.add.image(middleWidth, height - 86, "Tree1");
-			const tree2 = this.add.image(middleWidth / 2, height - 200, "Tree2").setDepth(20);
-			const tree3 = this.add.image(width * 0.75, height - 200, "Tree2").setDepth(20);
-		}
-
-		{ // UI
-			const title = new AnimateTitle(this, middleWidth, 100, "201flaviosilva");
-		}
+		// Old Site
+		const configOldSite = {
+			x: middleWidth,
+			y: middleHeight + margin,
+			text: "Old Site",
+			action: () => this.openOldSite(),
+		};
+		this.createText(configOldSite);
 	}
 
-	createPlayer() {
-		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
-		this.playersGroup = this.physics.add.group({
-			classType: Player,
-			collideWorldBounds: true,
-			runChildUpdate: true
-		});
+	openOldSite() {
+		const url = "https://201flaviosilva.bitbucket.io/src/201flaviosilva/V1/index.html";
+		const s = window.open(url, "_blank");
 
-		const x = this.lastScene === "Options" ? 50 : middleWidth;
-		this.player = this.playersGroup.get(x, middleHeight);
-		this.player.generate();
+		if (s && s.focus) s.focus();
+		else if (!s) window.location.href = url;
 	}
 
-	createCollision() {
-		this.physics.add.collider(this.tilesGroup, this.player);
-	}
-
-	update() {
-		if (this.player.x < this.player.width * 0.75) {
-			this.scene.start("Options", { sceneName: "Start" });
-			this.scene.stop();
-		} else if (this.player.x > GlobalConfigs.screen.width - this.player.width * 0.75) {
-			this.scene.start("Loading", { nextGame: "Pascal" });
-			this.scene.stop();
-		}
+	createText(configs) {
+		const { x, y, text, action } = configs;
+		const label = this.add.text(x, y, text, TextStyle.home.menu.normal).setOrigin(0.5);
+		label.setInteractive({ useHandCursor: true });
+		label.on("pointerover", () => label.setStyle(TextStyle.home.menu.over));
+		label.on("pointerout", () => label.setStyle(TextStyle.home.menu.normal));
+		label.on("pointerup", action);
 	}
 }

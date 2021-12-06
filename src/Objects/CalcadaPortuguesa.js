@@ -1,4 +1,4 @@
-import GlobalConfigs from '../Config/Configs';
+import GlobalConfigs from '../Configs';
 
 export default class CalcadaPortuguesa extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y, frame = 1) {

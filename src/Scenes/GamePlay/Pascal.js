@@ -1,4 +1,4 @@
-import GlobalConfigs from "../../Config/Configs";
+import GlobalConfigs from "../../Configs";
 import { degreesToRadians } from "../../Utils/Maths";
 
 import AnimateTitle from "../../Components/AnimatedTitle";

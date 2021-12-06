@@ -4,12 +4,18 @@ import Phaser from "phaser";
 import favicon from "./Assets/Favicon/favicon.png";
 
 // Configs/Infos
-import GlobalConfigs from "./Config/Configs";
+import GlobalConfigs from "./Configs";
 import packageJson from "../package.json";
 import { Banner } from "./Theme";
 
 // Scenes
-import Scenes from "./Config/Scenes";
+import Preload from "./Scenes/Preload";
+import Home from "./Scenes/Home";
+import Start from "./Scenes/Start";
+import Options from "./Scenes/Options";
+import Loading from "./Scenes/Loading";
+import Pascal from "./Scenes/GamePlay/Pascal";
+import VisualBasic from "./Scenes/GamePlay/VisualBasic";
 
 const config = {
 	title: packageJson.name,
@@ -44,7 +50,16 @@ const config = {
 			gravity: { x: 0, y: 200 }
 		}
 	},
-	scene: Scenes,
+	scene: [
+		Preload,
+		Home,
+		Start,
+		Options,
+		Loading,
+		// Game Play
+		Pascal,
+		VisualBasic,
+	],
 }
 
 const game = new Phaser.Game(config);

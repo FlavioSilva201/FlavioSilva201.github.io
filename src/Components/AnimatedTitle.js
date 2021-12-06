@@ -1,4 +1,4 @@
-import GlobalConfigs from "../Config/Configs";
+import GlobalConfigs from "../Configs";
 
 import { TextStyle } from "../Theme";
 

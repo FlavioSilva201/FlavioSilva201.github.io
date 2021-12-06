@@ -1,4 +1,4 @@
-import GlobalConfigs from "../../Config/Configs";
+import GlobalConfigs from "../../Configs";
 import Shoot from "./Shoot";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {

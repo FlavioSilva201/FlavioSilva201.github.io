@@ -1,4 +1,4 @@
-import GlobalConfigs from "../Config/Configs";
+import GlobalConfigs from "../Configs";
 
 import EN from "../Lang/EN";
 import PT from "../Lang/PT";

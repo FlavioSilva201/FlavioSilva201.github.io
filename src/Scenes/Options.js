@@ -1,4 +1,4 @@
-import GlobalConfigs from "../Config/Configs";
+import GlobalConfigs from "../Configs";
 
 import AnimateTitle from "../Components/AnimatedTitle";
 import OptionsButton from "../Components/OptionsButton";
