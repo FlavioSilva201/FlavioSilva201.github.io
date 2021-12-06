@@ -56,9 +56,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	update(time) {
 		if (!this.keys) return;
 		const keys = this.keys;
-		const { velocity, jumpForce, shootType, lastShot } = this.playerStatus;
+		const { velocity, jumpForce, shootType, lastShot: lastShoot } = this.playerStatus;
 
-		if (!lastShot) this.playerStatus.lastShot = time;
+		if (!lastShoot) this.playerStatus.lastShot = time;
 
 		// Move X
 		if (keys.left1.isDown || keys.left2.isDown) {
@@ -80,7 +80,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 			if (this.anims.currentAnim.key !== "PlayerJump") this.scene.anims.play("PlayerJump", this);
 		} else if (keys.down1.isDown || keys.down2.isDown) this.setVelocityY(jumpForce);
 
-		if (keys.shoot.isDown && shootType && lastShot < time) {
+		if (keys.shoot.isDown && shootType && lastShoot < time) {
 			this.playerStatus.lastShot = time + 250;
 
 			const shoot = this.shoots.get(this.x + this.width / 2, this.y, shootType);

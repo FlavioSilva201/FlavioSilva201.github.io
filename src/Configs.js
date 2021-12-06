@@ -11,6 +11,14 @@ const GlobalConfigs = {
 	debug: params.debug == "false" || params.debug == undefined ? false : true,
 	language: "en",
 	controllers: {
+		home: {
+			left1: "LEFT",
+			left2: "A",
+			right1: "RIGHT",
+			right2: "D",
+			acceleration1: "UP",
+			acceleration2: "W",
+		},
 		platform: {
 			left1: "LEFT",
 			left2: "A",
@@ -24,7 +32,7 @@ const GlobalConfigs = {
 		},
 		shootUp: {
 			shoot: "SPACE",
-		}
+		},
 	},
 };
 

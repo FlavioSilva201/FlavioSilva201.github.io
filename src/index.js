@@ -10,7 +10,7 @@ import { Banner } from "./Theme";
 
 // Scenes
 import Preload from "./Scenes/Preload";
-import Home from "./Scenes/Home";
+import Index from "./Scenes/Index";
 import Start from "./Scenes/Start";
 import Options from "./Scenes/Options";
 import Loading from "./Scenes/Loading";
@@ -52,11 +52,11 @@ const config = {
 	},
 	scene: [
 		Preload,
-		Home,
+		Index,
 		Start,
 		Options,
-		Loading,
 		// Game Play
+		Loading,
 		Pascal,
 		VisualBasic,
 	],

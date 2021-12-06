@@ -16,15 +16,11 @@ export default class VisualBasic extends Phaser.Scene {
 			},
 		};
 		super(config);
-		console.log("VisualBasic");
 	}
-
-	init() { }
 
 	create() {
 		this.createWorld();
 		this.createPlayer();
-		this.createCollision();
 	}
 
 	createWorld() {
@@ -44,8 +40,4 @@ export default class VisualBasic extends Phaser.Scene {
 		this.player = this.playersGroup.get(middleWidth, middleHeight);
 		this.player.generate();
 	}
-
-	createCollision() { }
-
-	update() { }
 }

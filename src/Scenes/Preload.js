@@ -138,10 +138,9 @@ export default class Preload extends Phaser.Scene {
 	importSounds() { }
 
 	create() {
-		this.scene.start("Home");
+		this.scene.start("Index");
 		// this.scene.start("Start");
 		// this.scene.start("Options");
-		// this.scene.start("Credits");
 		// this.scene.start("Loading");
 		// this.scene.start("Pascal");
 		// this.scene.start("VisualBasic");
