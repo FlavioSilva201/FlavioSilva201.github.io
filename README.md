@@ -43,3 +43,21 @@ Neste site eu faço uma apresetação da minha vida:
 [Podes ver mais sobre mim aqui](https://github.com/201flaviosilva/201flaviosilva);
 
 </details>
+
+<!-- ------ -->
+<details>
+  <summary>For Devs</summary>
+
+## Available Commands
+
+| Command               | Description                                                                                                     |
+| --------------------- | --------------------------------------------------------------------------------------------------------------- |
+| `npm run clear`       | Delete the "build" and "out" and "dist" folder                                                                  |
+| `npm install`         | Install project dependencies                                                                                    |
+| `npm start`           | Build project and open web server running project                                                               |
+| `npm run build`       | Builds code bundle ready for production                                                                         |
+| `npm run deploy`      | Builds code bundle ready for production and deploy in [github pages](https://pages.github.com/)                 |
+| `npm run netlify`     | Builds code bundle ready for production and deploy in [Netlify](https://www.netlify.com/)                       |
+| `npm run netlify-dev` | Builds code bundle ready for production and deploy in [Netlify](https://www.netlify.com/) but a preview version |
+
+</details>
