@@ -17,7 +17,7 @@ export default class Index extends Phaser.Scene {
 			x: middleWidth,
 			y: middleHeight - margin,
 			text: "Start",
-			action: () => this.scene.start("Loading", { nextGame: "Start" }),
+			action: () => this.scene.start("Start"),
 		};
 		this.createText(configStart);
 

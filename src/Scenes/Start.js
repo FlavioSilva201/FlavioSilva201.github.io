@@ -1,6 +1,7 @@
 import GlobalConfigs from "../Configs";
 
 import AnimateTitle from "../Components/AnimatedTitle";
+import Tutorial from "../Components/Tutorial";
 
 import Player from "../Objects/Home/Player";
 
@@ -36,16 +37,17 @@ export default class Start extends Phaser.Scene {
 
 		{ // Settings
 			const settings = this.physics.add.image(10, 10, "Settings", 1).setOrigin(0);
-			this.physics.add.collider(this.player, settings, () => {
-				this.scene.start("Options");
-			});
+			this.physics.add.collider(this.player, settings, () => { this.scene.start("Options"); });
 		}
 
 		{ // Pascal
 			const pascal = this.physics.add.image(middleWidth - 350, middleHeight - 100, "PascalZim").setScale(2);
-			this.physics.add.collider(this.player, pascal, () => {
-				this.scene.start("Loading", { nextGame: "Pascal" });
-			});
+			this.physics.add.collider(this.player, pascal, () => { this.scene.start("Pascal"); });
+		}
+
+		{ // Tutorial
+			const tutorial = new Tutorial(this, middleWidth - 75, height - 120, "Start");
+			tutorial.setScale(0.5);
 		}
 	}
 }

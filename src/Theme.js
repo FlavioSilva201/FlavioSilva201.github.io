@@ -66,16 +66,9 @@ export const TextStyle = {
 		}
 	},
 	loading: {
-		spaceStart: {
-			fontFamily: PressStart2P,
-			fontSize: 20,
-			fill: BaseColors.black,
-			stroke: BaseColors.white,
-			strokeThickness: 1,
-		},
 		keys: {
 			fontFamily: PressStart2P,
-			fontSize: 14,
+			fontSize: 20,
 			fill: BaseColors.platformBackground,
 		}
 	},
