@@ -4,7 +4,7 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
 		super(scene, x, y, "Sprite");
 
-		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers.home);
+		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers.start);
 
 		this.accelerationSpeed = 300;
 		this.rotationSpeed = 100;
@@ -24,6 +24,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		// Move
 		if (keys.acceleration1.isDown || keys.acceleration2.isDown) {
 			this.scene.physics.velocityFromRotation(this.rotation, this.accelerationSpeed, this.body.velocity);
+		} else if (keys.back1.isDown || keys.back2.isDown) {
+			this.scene.physics.velocityFromRotation(this.rotation, -this.accelerationSpeed, this.body.velocity);
 		} else this.setVelocity(0);
 	}
 }

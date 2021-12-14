@@ -52,14 +52,15 @@ export default class Loading extends Phaser.GameObjects.Container {
 
 		const x = dimensions.width / 2;
 		const y = dimensions.height / 2;
-		const margin = 75;
+		const margin = 40;
 
 		const labelRotation = this.scene.add.text(x, y - 90, "Move/Rotate", TextStyle.loading.keys).setOrigin(0.5);
 		this.add(labelRotation);
 
-		this.addKeyExample(x, y - margin / 2, "ArrowKey", "UP"); // Up
-		this.addKeyExample(x + margin, y + margin / 2, "ArrowKey", "RIGHT", 90); // Right
-		this.addKeyExample(x - margin, y + margin / 2, "ArrowKey", "LEFT", -90); // Left		
+		this.addKeyExample(x, y - margin, "ArrowKey", "UP"); // Up
+		this.addKeyExample(x, y + margin, "ArrowKey", "DOWN").setFlipY(true); // Down		
+		this.addKeyExample(x + margin * 2, y + margin, "ArrowKey", "RIGHT", 90); // Right
+		this.addKeyExample(x - margin * 2, y + margin, "ArrowKey", "LEFT", -90); // Left		
 	}
 
 	platformUI() {

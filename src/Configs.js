@@ -11,13 +11,15 @@ const GlobalConfigs = {
 	debug: params.debug == "false" || params.debug == undefined ? false : true,
 	language: "en",
 	controllers: {
-		home: {
+		start: {
 			left1: "LEFT",
 			left2: "A",
 			right1: "RIGHT",
 			right2: "D",
 			acceleration1: "UP",
 			acceleration2: "W",
+			back1: "DOWN",
+			back2: "S",
 		},
 		platform: {
 			left1: "LEFT",

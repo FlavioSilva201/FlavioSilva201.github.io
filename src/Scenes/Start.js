@@ -23,6 +23,7 @@ export default class Start extends Phaser.Scene {
 
 	create() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
+		this.input.keyboard.removeAllListeners();
 
 		// Title
 		const title = new AnimateTitle(this, middleWidth, 100, "201flaviosilva");
@@ -32,7 +33,6 @@ export default class Start extends Phaser.Scene {
 			runChildUpdate: true,
 			collideWorldBounds: true,
 		});
-
 		this.player = playersGroup.get(middleWidth, middleHeight);
 
 		{ // Settings
@@ -40,9 +40,14 @@ export default class Start extends Phaser.Scene {
 			this.physics.add.collider(this.player, settings, () => { this.scene.start("Options"); });
 		}
 
-		{ // Pascal
+		{ // Pascal/Lazarus
 			const pascal = this.physics.add.image(middleWidth - 350, middleHeight - 100, "PascalZim").setScale(2);
 			this.physics.add.collider(this.player, pascal, () => { this.scene.start("Pascal"); });
+		}
+
+		{ // Visual Basic
+			const vb = this.physics.add.image(middleWidth - 350, middleHeight, "VisualBasic").setScale(4, 2);
+			this.physics.add.collider(this.player, vb, () => { this.scene.start("VisualBasic"); });
 		}
 
 		{ // Tutorial
