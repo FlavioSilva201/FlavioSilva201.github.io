@@ -18,7 +18,7 @@ On this website I make a presentation of my life
 - [Bugs](https://github.com/201flaviosilva/201flaviosilva.github.io/issues);
 
 ## More
-[You can see more about me here](https://github.com/201flaviosilva/201flaviosilva);
+[You can check more about me here](https://github.com/201flaviosilva/201flaviosilva);
 
 </details>
 
