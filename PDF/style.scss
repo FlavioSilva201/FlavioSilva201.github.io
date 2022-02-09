@@ -20,34 +20,50 @@ html {
       border: 1px solid black;
       background-color: white;
       box-shadow: 0 0 20px black, 0 0 50px #8a4d0f inset;
+
       header {
         grid-area: Header;
         display: flex;
         align-items: center;
         justify-content: center;
       }
+
       aside {
         grid-area: Aside;
         height: 90%;
         border-right: 1px solid black;
         padding-right: 2px;
-        ul {
-          border-bottom: 2px solid black;
-          margin-bottom: 10px;
-          li {
-            margin-bottom: 4px;
-            border-bottom: 1px solid gray;
-            span {
-              font-size: 12px;
-            }
-            ul {
+
+        section {
+          ul {
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            margin-left: 12px;
+
+            &.sublist {
               border-bottom: none;
+            }
+
+            li {
+              margin-bottom: 4px;
+              border-bottom: 1px solid gray;
+
+              &:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+              }
+
+              span {
+                font-size: 12px;
+              }
             }
           }
         }
       }
+
       main {
         grid-area: Main;
+
         img {
           position: absolute;
           top: 10px;
@@ -55,14 +71,17 @@ html {
           width: 100px;
           height: 100px;
         }
+
         h2 {
           width: 90%;
           padding: 4px 6px;
           border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
           border-radius: 0 0 0 10px;
         }
+
         ul.AboutMeList {
           width: 100%;
+
           div {
             position: relative;
             width: 100%;
@@ -70,6 +89,7 @@ html {
             padding: 4px;
             border: 1px dashed black;
             border-radius: 10px;
+
             h3 {
               position: absolute;
               top: -12px;
@@ -80,27 +100,36 @@ html {
               color: white;
             }
           }
+
           li {
             width: 100%;
             margin: 4px 0;
             display: flex;
             justify-content: space-between;
+
             span {
               width: 100%;
               display: flex;
               align-items: center;
+
               &:nth-child(1) {
                 font-weight: bold;
+
                 &:after {
                   content: ":";
                 }
               }
               &:nth-child(2) {
                 padding: 4px 0 4px 10px;
-                font-family: "Oleo Script", Helvetica, sans-serif;
-                text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
                 border: 1px solid black;
                 border-radius: 0 4px 0 4px;
+
+                font-family: "Oleo Script", Helvetica, sans-serif;
+                text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+                a {
+                  font-family: "Oleo Script", Helvetica, sans-serif;
+                  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+                }
               }
             }
           }
@@ -115,16 +144,22 @@ html {
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(2, 1fr);
           gap: 10px;
+
           div {
             position: relative;
             border: 1px solid black;
             border-radius: 4px;
+
             h3 {
               margin-bottom: 4px;
               background: black;
-              color: white;
-              text-align: center;
               border-bottom: 2px dashed gray;
+              a {
+                width: 100%;
+                color: white;
+                padding-left: 4px;
+                text-align: center;
+              }
             }
             time {
               $borderStyle: 1px dashed gray;
@@ -146,6 +181,7 @@ html {
       }
       footer {
         grid-area: footer;
+
         &,
         ul,
         li {
