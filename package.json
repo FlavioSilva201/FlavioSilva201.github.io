@@ -17,7 +17,8 @@
     "netlify-dev": "npm run build && netlify deploy --dir=dist",
     "netlify": "npm run build && netlify deploy --dir=dist --prod && npm run clear",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "bump": "np --any-branch --no-tests --no-publish --no-yarn"
   },
   "dependencies": {
     "phaser": "^3.*"
