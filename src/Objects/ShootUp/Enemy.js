@@ -1,6 +1,6 @@
 import GlobalConfigs from "../../Configs";
 import Shoot from "./Shoot";
-import { randomNumber } from "../../Utils/Maths";
+import { randomNumber } from "201flaviosilva-utils";
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {

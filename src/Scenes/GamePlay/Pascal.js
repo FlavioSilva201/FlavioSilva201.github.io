@@ -1,5 +1,4 @@
 import GlobalConfigs from "../../Configs";
-import { degreesToRadians } from "../../Utils/Maths";
 
 import AnimateTitle from "../../Components/AnimatedTitle";
 
@@ -111,7 +110,7 @@ export default class Pascal extends Phaser.Scene {
 			this.add.image(330, height - 80, "Bush1").setDepth(11);
 
 			this.add.image(700, height - 80, "Stone").setScale(0.75);
-			this.add.image(740, height - 70, "Mushroom1").setScale(0.5).setRotation(degreesToRadians(30));
+			this.add.image(740, height - 70, "Mushroom1").setScale(0.5).setRotation(Phaser.Math.DegToRad(30));
 
 
 			this.add.image(1380 + 100, height - 80, "Tree1");

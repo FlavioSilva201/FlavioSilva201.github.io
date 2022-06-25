@@ -13,14 +13,11 @@
   "scripts": {
     "clear": "rm -rf build && rm -rf out && rm -rf dist",
     "start": "webpack-dev-server --config webpack/base.js --open",
-    "build": "npm run clear && webpack --config webpack/prod.js ",
-    "netlify-dev": "npm run build && netlify deploy --dir=dist",
-    "netlify": "npm run build && netlify deploy --dir=dist --prod && npm run clear",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "build": "npm run clear && webpack --config webpack/prod.js && cp -R ./PDF/ ./dist/PDF/",
     "bump": "np --any-branch --no-tests --no-publish --no-yarn"
   },
   "dependencies": {
+    "201flaviosilva-utils": "^1.2.*",
     "phaser": "^3.*"
   },
   "devDependencies": {
@@ -30,7 +27,6 @@
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "file-loader": "^4.3.0",
-    "gh-pages": "^3.1.0",
     "html-webpack-plugin": "^3.2.0",
     "raw-loader": "^3.1.0",
     "style-loader": "^2.0.0",

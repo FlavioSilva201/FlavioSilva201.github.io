@@ -1,5 +1,4 @@
 import GlobalConfigs from "../../Configs";
-import { randomNumber } from "../../Utils/Maths";
 
 import Player from "../../Objects/ShootUp/Player";
 
