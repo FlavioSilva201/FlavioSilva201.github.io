@@ -4,6 +4,7 @@
   "description": "My Site",
   "homepage": "https://201flaviosilva.github.io/",
   "private": false,
+  "license": "MIT",
   "author": {
     "name": "Flávio Silva",
     "email": "flavioandre.2001.9.7@gmail.com",
@@ -12,33 +13,20 @@
   "main": "src/index.js",
   "scripts": {
     "clear": "rm -rf build && rm -rf out && rm -rf dist",
-    "start": "webpack-dev-server --config webpack/base.js --open",
-    "build": "npm run clear && webpack --config webpack/prod.js && cp -R ./PDF/ ./dist/PDF/",
+    "start": "vite --config vite.config.js",
+    "build": "npm run clear && vite build && cp -R ./PDF/ ./dist/PDF/",
+    "preview": "vite preview",
     "bump": "np --any-branch --no-tests --no-publish --no-yarn"
   },
   "dependencies": {
-    "201flaviosilva-utils": "^1.2.*",
-    "phaser": "^3.*"
+    "201flaviosilva-utils": "^1.2.4",
+    "phaser": "^3.55.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
-    "babel-loader": "^8.0.6",
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^5.0.1",
-    "file-loader": "^4.3.0",
-    "html-webpack-plugin": "^3.2.0",
-    "raw-loader": "^3.1.0",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^4.2.2",
-    "url-loader": "^4.1.1",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.11.0",
-    "webpack-merge": "^4.2.2"
+    "np": "^7.6.2",
+    "vite": "^2.9.9"
   },
   "keywords": [],
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/201flaviosilva/201flaviosilva.github.io"

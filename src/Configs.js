@@ -1,6 +1,8 @@
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 
+import { getUrlParameter } from "201flaviosilva-utils";
+
 const GlobalConfigs = {
 	screen: {
 		width: 1280,
@@ -8,7 +10,7 @@ const GlobalConfigs = {
 		middleWidth: 0,
 		middleHeight: 0,
 	},
-	debug: params.debug == "false" || params.debug == undefined ? false : true,
+	debug: getUrlParameter("debug") == "false" || params.debug == undefined ? false : true,
 	language: "en",
 	controllers: {
 		start: {

@@ -2,108 +2,55 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="" rel="icon" type="image/x-icon" id="favicon" />
-
-	<link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
-	<title>201flaviosilva</title>
-
-	<!-- Loader -->
-	<style>
-		#loader {
-			width: 60px;
-			height: 60px;
-			position: fixed;
-			bottom: 10px;
-			right: 10px;
-			border: 10px solid #383838;
-			border-top: 10px solid #d00;
-			border-radius: 50%;
-			z-index: 10;
-			color: #000;
-			animation: spin 2s linear infinite;
-		}
-
-		@keyframes spin {
-			0% {
-				transform: rotate(0deg);
-			}
-
-			100% {
-				transform: rotate(360deg);
-			}
-		}
-	</style>
-
-	<!-- Reset -->
-	<style>
-		@font-face {
-			font-family: "Press Start 2P";
-		}
-
-		* {
-			margin: 0;
-			padding: 0;
-			box-sizing: border-box;
-			font-family: "Press Start 2P", "Courier New", Courier, monospace;
-			color: black;
-		}
-
-		html,
-		body {
-			overflow: hidden;
-		}
-
-		body {
-			width: 100vw;
-			min-height: 100vh;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			background: black;
-		}
-
-		canvas {
-			border: 1px solid #023b02;
-			box-shadow: 0 0 20px #023b02;
-			animation: shadowAnimation infinite 10s;
-		}
-
-		@keyframes shadowAnimation {
-			0% {
-				border: 1px solid #023b02;
-				box-shadow: 0 0 20px #023b02;
-			}
-
-			50% {
-				border: 1px solid #058005;
-				box-shadow: 0 0 40px #058005;
-			}
-
-			100% {
-				border: 1px solid #023b02;
-				box-shadow: 0 0 20px #023b02;
-			}
-		}
-	</style>
-
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>201flaviosilva</title>
+  <link href='https://fonts.googleapis.com/css?family=Press Start 2P' rel='stylesheet'>
 </head>
 
 <body>
-	<div id="loader">.</div>
-	<div id="GameContainer"></div>
+  <!-- Loader -->
+  <style>
+    #loader {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      border: 10px solid #383838;
+      border-top: 10px solid #d00;
+      border-radius: 50%;
+      z-index: 10;
+      color: #000;
+      animation: spin 2s linear infinite;
+    }
 
-	<script>
-		window.onload = () => {
-			const loader = document.getElementById("loader");
-			loader.remove();
-			loader.style.top = -1000;
-			loader.style.left = -1000;
-			loader.style.zIndex = -1000;
-		};
-	</script>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <div id="loader">.</div>
+  <div id="GameContainer"></div>
+
+  <script>
+    window.onload = () => {
+      const loader = document.getElementById("loader");
+      loader.remove();
+      loader.style.top = -1000;
+      loader.style.left = -1000;
+      loader.style.zIndex = -1000;
+    };
+  </script>
+
+  <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>
