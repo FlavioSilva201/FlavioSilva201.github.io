@@ -14,7 +14,8 @@
   "scripts": {
     "clear": "rm -rf build && rm -rf out && rm -rf dist",
     "start": "vite --config vite.config.js",
-    "build": "npm run clear && vite build && cp -R ./PDF/ ./dist/PDF/",
+    "copy:pdf": "cp -R ./PDF/ ./dist/PDF/",
+    "build": "npm run clear && vite build && npm run copy:pdf",
     "preview": "vite preview",
     "bump": "np --any-branch --no-tests --no-publish --no-yarn"
   },

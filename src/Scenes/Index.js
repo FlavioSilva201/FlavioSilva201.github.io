@@ -10,7 +10,7 @@ export default class Index extends Phaser.Scene {
 	create() {
 		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		const margin = 40;
+		const margin = 75;
 
 		// Start
 		const configStart = {
@@ -24,15 +24,32 @@ export default class Index extends Phaser.Scene {
 		// Old Site
 		const configOldSite = {
 			x: middleWidth,
-			y: middleHeight + margin,
+			y: middleHeight,
 			text: "Old Site",
 			action: () => this.openOldSite(),
 		};
 		this.createText(configOldSite);
+
+		// Old Site
+		const configPDF = {
+			x: middleWidth,
+			y: middleHeight + margin,
+			text: "PDF",
+			action: () => this.openPDF(),
+		};
+		this.createText(configPDF);
 	}
 
 	openOldSite() {
 		const url = "https://201flaviosilva.bitbucket.io/src/201flaviosilva/V1/index.html";
+		const s = window.open(url, "_blank");
+
+		if (s && s.focus) s.focus();
+		else if (!s) window.location.href = url;
+	}
+
+	openPDF() {
+		const url = "./PDF/indexEN.html";
 		const s = window.open(url, "_blank");
 
 		if (s && s.focus) s.focus();
