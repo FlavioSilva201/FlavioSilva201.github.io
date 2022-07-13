@@ -1,19 +1,35 @@
 import GlobalConfigs from "../../Configs";
 
-export default class Shoot extends Phaser.Physics.Arcade.Sprite {
+export class Shoot extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y, sprite) {
 		super(scene, x, y, sprite);
-		this.speed = -400;
-	}
+		scene.physics.add.existing(this);
 
-	generate(x, y) {
+		this.speed = 400;
+
 		this.setPosition(x, y);
-		this.setVelocityY(this.speed);
-		this.setAngle(90);
 		this.setDepth(1);
 	}
 
-	update() {
-		if (this.y < 0) this.destroy();
+	preUpdate() {
+		if (this.scene.scale.width < this.x) this.destroy();
+	}
+}
+
+export default class ShootGroup extends Phaser.Physics.Arcade.Group {
+	constructor(world, scene) {
+		const config = {
+			classType: Shoot,
+			runChildUpdate: true,
+		};
+		super(world, scene, config);
+	}
+
+	getNewShoot(x = 0, y = 0) {
+		const s = this.get(x, y, "VisualBasic");
+		if (s) {
+			s.setVelocityX(400);
+			return s;
+		}
 	}
 }

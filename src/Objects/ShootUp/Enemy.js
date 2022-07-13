@@ -1,34 +1,54 @@
-import GlobalConfigs from "../../Configs";
-import Shoot from "./Shoot";
-import { randomNumber } from "201flaviosilva-utils";
+import EnemyShootGroup from "./EnemyShoot";
 
-export default class Player extends Phaser.Physics.Arcade.Sprite {
+export class Enemy extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
 		super(scene, x, y, "Duke");
 
-		this.shootDelay = randomNumber(100, 3000);
+		this.shootDelay = Phaser.Math.Between(1000, 10000);
 
 		this.setDepth(1);
-		this.setVelocityY(randomNumber(100, 300));
+		this.setAngle(-90);
+		this.setScale(0.75);
 
-		this.shoots = this.scene.physics.add.group({
-			classType: Shoot,
-			runChildUpdate: true,
-		});
+		this.shoots = new EnemyShootGroup(this.scene.physics.world, this.scene);
 
-		this.scene.time.addEvent({
+		this.shootTimer = scene.time.addEvent({
 			delay: this.shootDelay,
-			callback: this.fire,
+			// callback: this.fire,
 			callbackScope: this,
 			loop: true,
 		});
 	}
 
 	fire() {
-		console.log("fire");
+		const shoot = this.shoots.getNewShoot(this.x, this.y);
+		if (shoot) shoot.setVelocityX(-400);
 	}
 
 	kill() {
+		this.shootTimer.remove();
+		this.destroy();
+	}
 
+	preUpdate() {
+		if (0 > this.x) this.kill();
+	}
+}
+
+export default class EnemyGroup extends Phaser.Physics.Arcade.Group {
+	constructor(world, scene) {
+		const config = {
+			classType: Enemy,
+			runChildUpdate: true,
+		};
+		super(world, scene, config);
+	}
+
+	getNewEnemy(x = 0, y = 0) {
+		const e = this.get(x, y);
+		if (e) {
+			e.setVelocityX(-Phaser.Math.Between(50, 250));
+			return e;
+		}
 	}
 }

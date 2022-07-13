@@ -51,6 +51,7 @@ import CalcadaPortuguesaTexture from "../Assets/Img/Sprites/CalcadaPortuguesaTex
 
 
 // ---- UI ----
+import StarsBackground from "../Assets/Img/UI/Background/StarsBackground.png";
 import Flags from "../Assets/Img/UI/Flags/Flags.png";
 import FullScreen from "../Assets/Img/UI/FullScreen/FullScreen.png";
 import Sound from "../Assets/Img/UI/Sound/Sound.png";
@@ -127,6 +128,8 @@ export default class Preload extends Phaser.Scene {
 	}
 
 	importUI() {
+		this.load.image("StarsBackground", StarsBackground);
+
 		this.load.spritesheet("Flags", Flags, { frameWidth: 32, frameHeight: 32 });
 		this.load.spritesheet("FullScreen", FullScreen, { frameWidth: 32, frameHeight: 32 });
 		this.load.spritesheet("Sound", Sound, { frameWidth: 32, frameHeight: 32 });
@@ -139,10 +142,10 @@ export default class Preload extends Phaser.Scene {
 	importSounds() { }
 
 	create() {
-		this.scene.start("Index");
+		// this.scene.start("Index");
 		// this.scene.start("Start");
 		// this.scene.start("Options");
 		// this.scene.start("Pascal");
-		// this.scene.start("VisualBasic");
+		this.scene.start("VisualBasic");
 	}
 }
