@@ -5,10 +5,10 @@ import StarsBackground from "../../Components/StarsBackground";
 import Player from "../../Objects/ShootUp/Player";
 import EnemyGroup from "../../Objects/ShootUp/Enemy";
 
-export default class VisualBasic extends Phaser.Scene {
+export default class Web extends Phaser.Scene {
 	constructor() {
 		const config = {
-			key: "VisualBasic",
+			key: "Web",
 			physics: {
 				default: "arcade",
 				arcade: {
@@ -38,7 +38,10 @@ export default class VisualBasic extends Phaser.Scene {
 
 		// Collisions
 		this.physics.add.overlap(this.player, this.enemies, (player, enemy) => enemy.kill(), null, this);
-		this.physics.add.overlap(this.player.shootGroup, this.enemies, (playerShoot, enemy) => enemy.kill(), null, this);
+		this.physics.add.overlap(this.player.shootGroup, this.enemies, (playerShoot, enemy) => {
+			playerShoot.kill();
+			enemy.kill();
+		}, null, this);
 	}
 
 
@@ -57,7 +60,7 @@ export default class VisualBasic extends Phaser.Scene {
 
 	createEnemies() {
 		const x = this.scale.width + 50;
-		const y = Phaser.Math.Between(0, this.scale.height);
+		const y = Phaser.Math.Between(50, this.scale.height - 50);
 
 		const enemy = this.enemies.getNewEnemy(x, y);
 	}

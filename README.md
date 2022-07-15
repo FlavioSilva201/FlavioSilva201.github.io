@@ -28,8 +28,8 @@ On this website I make a presentation of my life
 
 ## Descrição
 
-Neste site eu faço uma apresetação da minha vida:
- - Experiencia profissional e uma biografia;
+Neste site eu faço uma apresentação da minha vida:
+ - Experiência profissional e uma biografia;
  - Alguns dos principais projetos;
  - As minhas redes sociais;
 

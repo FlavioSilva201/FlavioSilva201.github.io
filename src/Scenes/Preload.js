@@ -8,8 +8,11 @@ import PlayerWalk from "../Assets/Img/Sprites/Player/Walk/Walk.png";
 import PlayerShip from "../Assets/Img/Sprites/Player/ShootUp/PlayerShip.png";
 
 // -- Languages --
-import PascalZim from "../Assets/Img/Sprites/Languages/PascalZim/PascalZim.png";
+import CSS3 from "../Assets/Img/Sprites/Languages/CSS3/CSS3.png";
+import HTML5 from "../Assets/Img/Sprites/Languages/HTML5/HTML5.png";
+import JS from "../Assets/Img/Sprites/Languages/JS/JS.png";
 import Lazarus from "../Assets/Img/Sprites/Languages/Lazarus/Lazarus.png";
+import PascalZim from "../Assets/Img/Sprites/Languages/PascalZim/PascalZim.png";
 import VisualBasic from "../Assets/Img/Sprites/Languages/VisualBasic/VisualBasic.png";
 
 // -- Enemy --
@@ -87,8 +90,11 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("PlayerShip", PlayerShip);
 
 		// - Languages
-		this.load.image("PascalZim", PascalZim);
+		this.load.image("CSS3", CSS3);
+		this.load.image("HTML5", HTML5);
+		this.load.image("JS", JS);
 		this.load.image("Lazarus", Lazarus);
+		this.load.image("PascalZim", PascalZim);
 		this.load.image("VisualBasic", VisualBasic);
 
 		// - Enemy
@@ -146,6 +152,6 @@ export default class Preload extends Phaser.Scene {
 		// this.scene.start("Start");
 		// this.scene.start("Options");
 		// this.scene.start("Pascal");
-		this.scene.start("VisualBasic");
+		this.scene.start("Web");
 	}
 }

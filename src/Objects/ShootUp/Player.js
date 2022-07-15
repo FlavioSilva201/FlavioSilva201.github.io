@@ -1,5 +1,10 @@
+import { arrayChoice } from "201flaviosilva-utils";
+
 import GlobalConfigs from "../../Configs";
+
 import ShootGroup from "./Shoot";
+
+const SPRITES = ["HTML5", "CSS3", "JS"];
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
@@ -28,18 +33,23 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 
 
 		// Shoot particles
-		this.shootParticles = scene.add.particles("VisualBasic")
-			.createEmitter({
-				x, y,
-				follow: this,
-				quantity: 100,
-				frequency: -1,
-				scale: { start: 0.75, end: 0 },
-				alpha: { start: 0.75, end: 0 },
-				speed: { min: 50, max: 150 },
-				rotate: { start: 0, end: 360 },
-				lifespan: { min: 250, max: 750 },
-			});
+		const defaultConfig = {
+			x, y,
+			follow: this,
+			quantity: 100,
+			frequency: -1,
+			scale: { start: 0.75, end: 0 },
+			alpha: { start: 0.75, end: 0 },
+			speed: { min: 50, max: 150 },
+			rotate: { start: 0, end: 360 },
+			lifespan: { min: 250, max: 750 },
+		};
+
+		this.htmlShootParticles = scene.add.particles("HTML5").createEmitter(defaultConfig);
+		this.cssShootParticles = scene.add.particles("CSS3").createEmitter(defaultConfig);
+		this.jsShootParticles = scene.add.particles("JS").createEmitter(defaultConfig);
+
+
 
 		this.keys = scene.input.keyboard.addKeys(GlobalConfigs.controllers.shootUp);
 		scene.input.on("pointermove", ({ x, y }) => this.setPosition(x, y));
@@ -55,10 +65,13 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	fire() {
-		const shoot = this.shootGroup.getNewShoot(this.x, this.y);
+		const sprite = arrayChoice(SPRITES);
+		const shoot = this.shootGroup.getNewShoot(this.x, this.y, sprite);
 		if (shoot) {
 			this.timeNextFire = this.time + this.marginShoots;
-			this.shootParticles.explode();
+			if (sprite === "HTML5") this.htmlShootParticles.explode();
+			else if (sprite === "CSS3") this.cssShootParticles.explode();
+			else if (sprite === "JS") this.jsShootParticles.explode();
 		}
 	}
 }
