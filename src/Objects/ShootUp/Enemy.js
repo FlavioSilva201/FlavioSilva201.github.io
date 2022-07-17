@@ -1,3 +1,4 @@
+import { randomInt } from "201flaviosilva-utils";
 import EnemyShootGroup from "./EnemyShoot";
 
 export class Enemy extends Phaser.Physics.Arcade.Sprite {
@@ -18,6 +19,19 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 			callbackScope: this,
 			loop: true,
 		});
+
+		this.particles = scene.add.particles("Duke");
+		this.particlesEmitter = this.particles.createEmitter({
+			follow: this,
+			quantity: 1,
+			frequency: 100,
+			speedX: { min: 500, max: 250 },
+			speedY: { min: 250, max: -250 },
+			scale: { start: 0.5, end: 0 },
+			alpha: { start: 0.5, end: 0 },
+			rotate: { start: -90, end: randomInt(-360, 360) },
+			lifespan: { min: 100, max: 500 },
+		});
 	}
 
 	fire() {
@@ -27,6 +41,8 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 
 	kill() {
 		this.shootTimer.remove();
+		this.particlesEmitter.stop();
+		this.particles.destroy();
 		this.destroy();
 	}
 

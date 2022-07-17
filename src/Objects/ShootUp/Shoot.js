@@ -30,8 +30,8 @@ export class Shoot extends Phaser.Physics.Arcade.Sprite {
 		});
 
 		// Kill
-		this.killParticles = scene.add.particles(sprite);
-		this.killParticlesEmitter = this.killParticles.createEmitter({
+		this.explosionParticles = scene.add.particles(sprite);
+		this.explosionParticlesEmitter = this.explosionParticles.createEmitter({
 			x, y,
 			follow: this,
 			quantity: 100,
@@ -42,12 +42,14 @@ export class Shoot extends Phaser.Physics.Arcade.Sprite {
 			rotate: { start: 0, end: 360 },
 			lifespan: { min: 250, max: 750 },
 		});
+		this.explosionParticlesEmitter.explode();
 
 		this.killTimer = scene.time.addEvent({
 			delay: 500,
 			callback: () => {
-				this.killParticlesEmitter.stop();
-				this.killParticles.destroy();
+				this.explosionParticlesEmitter.stop();
+				this.explosionParticles.destroy();
+				this.killTimer.remove();
 				this.destroy();
 			},
 			callbackScope: this,
@@ -69,7 +71,7 @@ export class Shoot extends Phaser.Physics.Arcade.Sprite {
 		this.disableBody();
 		this.setVisible(false);
 
-		this.killParticlesEmitter.explode();
+		this.explosionParticlesEmitter.explode();
 		this.killTimer.paused = false;
 	}
 }

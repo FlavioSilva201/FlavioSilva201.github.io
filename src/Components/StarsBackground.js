@@ -13,6 +13,18 @@ export default class StarsBackground extends Phaser.GameObjects.TileSprite {
 
 		this.setAlpha(0.75);
 		this.setDepth(-1);
+
+		// TODO: Update to a sprite sheet with all box sprite
+		const particles = scene.add.particles("Sprite");
+		particles.createEmitter({
+			x: scene.scale.width,
+			y: { min: 0, max: scene.scale.height },
+			lifespan: 2500,
+			speedX: { min: -600, max: -100 },
+			scale: { min: 0.1, max: 0.05 },
+			quantity: 1,
+			blendMode: "ADD",
+		});
 	}
 
 	preUpdate() {
