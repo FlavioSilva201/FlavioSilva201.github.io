@@ -11,7 +11,7 @@ export class EnemyShoot extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	preUpdate() {
-		if (0 > this.x) this.destroy();
+		if (-this.width > this.x) this.destroy();
 	}
 }
 

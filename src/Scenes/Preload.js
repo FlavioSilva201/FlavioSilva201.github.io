@@ -20,6 +20,7 @@ import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
 
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
+import SquaresParticles from "../Assets/Img/Sprites/Particles/Quadrados.png";
 
 // ---- Objects ----
 import Bush1 from "../Assets/Img/Sprites/PlatformerBundle/Object/Bush1.png";
@@ -101,6 +102,7 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("Duke", Duke);
 
 		this.load.image("Sprite", Sprite);
+		this.load.spritesheet("SquaresParticles", SquaresParticles, { frameWidth: 32, frameHeight: 32 });
 
 		// Objects
 		this.load.image("Bush1", Bush1);

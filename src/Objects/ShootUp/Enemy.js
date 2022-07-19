@@ -1,5 +1,5 @@
-import { randomInt } from "201flaviosilva-utils";
 import EnemyShootGroup from "./EnemyShoot";
+import { generateEnemyParticles } from "./Particles";
 
 export class Enemy extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
@@ -15,23 +15,15 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 
 		this.shootTimer = scene.time.addEvent({
 			delay: this.shootDelay,
-			// callback: this.fire,
+			callback: this.fire,
 			callbackScope: this,
 			loop: true,
 		});
 
-		this.particles = scene.add.particles("Duke");
-		this.particlesEmitter = this.particles.createEmitter({
-			follow: this,
-			quantity: 1,
-			frequency: 100,
-			speedX: { min: 500, max: 250 },
-			speedY: { min: 250, max: -250 },
-			scale: { start: 0.5, end: 0 },
-			alpha: { start: 0.5, end: 0 },
-			rotate: { start: -90, end: randomInt(-360, 360) },
-			lifespan: { min: 100, max: 500 },
-		});
+		const { particles, particlesEmitter, deadParticlesEmitter, } = generateEnemyParticles(scene, this);
+		this.particles = particles;
+		this.particlesEmitter = particlesEmitter;
+		this.deadParticlesEmitter = deadParticlesEmitter;
 	}
 
 	fire() {
@@ -40,14 +32,36 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	kill() {
+		this.setTint(0xff0000);
+		this.setVisible(false);
+		this.disableBody();
+
+		this.shootTimer.paused = true;
 		this.shootTimer.remove();
+
+		this.shoots.destroy();
+
 		this.particlesEmitter.stop();
-		this.particles.destroy();
-		this.destroy();
+		this.deadParticlesEmitter.explode();
+
+		const killTimer = this.scene.time.addEvent({
+			delay: 500,
+			callback: () => {
+				// End Destroy Enemy
+				this.deadParticlesEmitter.stop();
+				this.particles.destroy();
+
+				killTimer.remove();
+				this.destroy();
+			},
+			callbackScope: this,
+			loop: false,
+			repeat: 0,
+		});
 	}
 
 	preUpdate() {
-		if (0 > this.x) this.kill();
+		if (-this.width > this.x) this.kill();
 	}
 }
 

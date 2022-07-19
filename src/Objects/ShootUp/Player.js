@@ -1,6 +1,7 @@
 import { arrayChoice } from "201flaviosilva-utils";
 
 import GlobalConfigs from "../../Configs";
+import { generatePlayerParticles } from "./Particles";
 
 import ShootGroup from "./Shoot";
 
@@ -19,19 +20,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		this.shootGroup = new ShootGroup(scene.physics.world, scene);
 
 		// Move particles
-		this.moveParticles = scene.add.particles("PlayerShip")
-			.createEmitter({
-				x, y,
-				follow: this,
-				quantity: 1,
-				// moveToY: { min: this.y - 100, max: this.y + 100 },
-				speedX: { min: -500, max: -250 },
-				speedY: { min: -250, max: 250 },
-				scale: { start: 0.5, end: 0 },
-				alpha: { start: 0.5, end: 0 },
-				rotate: { start: 0, end: 360 },
-				lifespan: { min: 100, max: 500 },
-			});
+		const { explosionEmitter, moveEmitter1, moveEmitter2A, moveEmitter2B, } = generatePlayerParticles(scene, this, x, y);
+		this.moveEmitter1 = moveEmitter1;
+		this.moveEmitter2A = moveEmitter2A;
+		this.moveEmitter2B = moveEmitter2B;
 
 		// Keys
 		this.keys = scene.input.keyboard.addKeys(GlobalConfigs.controllers.shootUp);
@@ -45,6 +37,9 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		const keys = this.keys;
 
 		if (keys.shoot.isDown && time > this.timeNextFire) this.fire();
+
+		this.moveEmitter2A.setPosition(this.x, this.y);
+		this.moveEmitter2B.setPosition(this.x, this.y);
 	}
 
 	fire() {

@@ -24,19 +24,6 @@ export default class Web extends Phaser.Scene {
 		// World
 		const background = new StarsBackground(this);
 
-		this.cursors = this.input.keyboard.createCursorKeys();
-		const particles = this.add.particles("Sprite");
-		const emitter = particles.createEmitter({
-			x: 0, y: 0,
-			moveToX: 0,
-			// moveToY: { min: this.scale.height / 2 - 100, max: this.scale.height / 2 + 100 },
-			moveToY: this.scale.height / 2,
-			scale: 0.5,
-			alpha: { start: 0.25, end: 0 },
-			quantity: 4,
-		});
-		this.input.on("pointermove", ({ x, y }) => { emitter.setPosition(x, y); });
-
 		this.createPlayer();
 
 		// Enemies

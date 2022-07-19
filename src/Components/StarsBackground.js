@@ -1,3 +1,5 @@
+import { range } from "201flaviosilva-utils";
+
 import GlobalConfigs from "../Configs";
 
 export default class StarsBackground extends Phaser.GameObjects.TileSprite {
@@ -14,16 +16,16 @@ export default class StarsBackground extends Phaser.GameObjects.TileSprite {
 		this.setAlpha(0.75);
 		this.setDepth(-1);
 
-		// TODO: Update to a sprite sheet with all box sprite
-		const particles = scene.add.particles("Sprite");
+		const particles = scene.add.particles("SquaresParticles");
 		particles.createEmitter({
+			frame: range(0, 9),
 			x: scene.scale.width,
 			y: { min: 0, max: scene.scale.height },
-			lifespan: 2500,
+			lifespan: 10000,
 			speedX: { min: -600, max: -100 },
-			scale: { min: 0.1, max: 0.05 },
+			scale: { min: 0.2, max: 0.05 },
+			alpha: { start: 1, end: 0.5 },
 			quantity: 1,
-			blendMode: "ADD",
 		});
 	}
 
