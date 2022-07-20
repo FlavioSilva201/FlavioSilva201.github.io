@@ -4,6 +4,7 @@ import StarsBackground from "../../Components/StarsBackground";
 
 import Player from "../../Objects/ShootUp/Player";
 import EnemyGroup from "../../Objects/ShootUp/Enemy";
+import EnemyShootGroup from "../../Objects/ShootUp/EnemyShoot";
 
 export default class Web extends Phaser.Scene {
 	constructor() {
@@ -27,7 +28,8 @@ export default class Web extends Phaser.Scene {
 		this.createPlayer();
 
 		// Enemies
-		this.enemies = new EnemyGroup(this.physics.world, this);
+		this.enemiesGroup = new EnemyGroup(this.physics.world, this);
+		this.enemiesShootsGroup = new EnemyShootGroup(this.physics.world, this);
 
 		this.enemiesTimer = this.time.addEvent({
 			delay: 500,
@@ -37,11 +39,22 @@ export default class Web extends Phaser.Scene {
 		});
 
 		// Collisions
-		this.physics.add.overlap(this.player, this.enemies, (player, enemy) => enemy.kill(), null, this);
-		this.physics.add.overlap(this.player.shootGroup, this.enemies, (playerShoot, enemy) => {
+		this.physics.add.overlap(this.player, this.enemiesGroup, (player, enemy) => { // Player vs Enemy
+			player.hitted();
+			enemy.kill();
+		});
+		this.physics.add.overlap(this.player, this.enemiesShootsGroup, (player, enemyShoot) => { // Player vs EnemyShoot
+			player.hitted();
+			enemyShoot.kill();
+		});
+		this.physics.add.overlap(this.player.shootGroup, this.enemiesGroup, (playerShoot, enemy) => { // PlayerShoot vs Enemy
 			playerShoot.kill();
 			enemy.kill();
-		}, null, this);
+		});
+		this.physics.add.overlap(this.player.shootGroup, this.enemiesShootsGroup, (playerShoot, enemyShoot) => { // PlayerShoot vs EnemyShoot
+			playerShoot.particlesExplode();
+			enemyShoot.kill();
+		});
 	}
 
 
@@ -62,6 +75,6 @@ export default class Web extends Phaser.Scene {
 		const x = this.scale.width + 50;
 		const y = Phaser.Math.Between(50, this.scale.height - 50);
 
-		const enemy = this.enemies.getNewEnemy(x, y);
+		const enemy = this.enemiesGroup.getNewEnemy(x, y);
 	}
 }

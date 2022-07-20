@@ -50,6 +50,11 @@ export default class Start extends Phaser.Scene {
 			this.physics.add.collider(this.player, vb, () => { this.scene.start("VisualBasic"); });
 		}
 
+		{ // Visual Basic
+			const web = this.physics.add.image(middleWidth - 350, middleHeight + 100, "Web").setScale(4, 2);
+			this.physics.add.collider(this.player, web, () => { this.scene.start("Web"); });
+		}
+
 		{ // Tutorial
 			const tutorial = new Tutorial(this, middleWidth - 75, height - 120, "Start");
 			tutorial.setScale(0.5);

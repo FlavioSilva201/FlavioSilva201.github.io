@@ -6,7 +6,7 @@ export function generatePlayerParticles(scene, player, x = 0, y = 0) {
 	const SQUARES_PARTICLES = scene.add.particles("SquaresParticles");
 
 	// Explosion
-	const explosionEmitter = SQUARES_PARTICLES.createEmitter({
+	const explosionEmitter1 = SQUARES_PARTICLES.createEmitter({
 		x: 0, y: 0,
 		frame: range(0, 9),
 		quantity: 1,
@@ -18,9 +18,20 @@ export function generatePlayerParticles(scene, player, x = 0, y = 0) {
 		lifespan: { min: 250, max: 500 },
 	});
 
+	const hittedEmitter = PLAYER_SHIP_PARTICLES.createEmitter({
+		follow: player,
+		quantity: 64,
+		frequency: -1,
+		scale: { start: 0.75, end: 0 },
+		alpha: { start: 0.75, end: 0 },
+		angle: { start: 0, end: 360, steps: 64 },
+		rotate: { start: randomInt(-360, 360), end: randomInt(-360, 360) },
+		speed: { min: 500, max: 750 },
+		lifespan: 500,
+	});
+
 	// Move Player Ship
 	const moveEmitter1 = PLAYER_SHIP_PARTICLES.createEmitter({
-		x, y,
 		follow: player,
 		quantity: 1,
 		speedX: { min: -500, max: -250 },
@@ -33,12 +44,12 @@ export function generatePlayerParticles(scene, player, x = 0, y = 0) {
 
 	// Move Sprite Sheet
 	const moveEmitterBaseConfig = {
-		x: 0, y: 0,
+		follow: player,
 		moveToX: 0,
 		alpha: { start: 0.5, end: 0.25 },
 		deathCallback: ({ x, y }) => {
-			explosionEmitter.setPosition(x, y);
-			explosionEmitter.explode();
+			explosionEmitter1.setPosition(x, y);
+			explosionEmitter1.explode();
 		},
 	}
 	const moveEmitter2A = SQUARES_PARTICLES.createEmitter({
@@ -57,7 +68,8 @@ export function generatePlayerParticles(scene, player, x = 0, y = 0) {
 	});
 
 	return {
-		explosionEmitter,
+		explosionEmitter1,
+		hittedEmitter,
 		moveEmitter1,
 		moveEmitter2A,
 		moveEmitter2B,

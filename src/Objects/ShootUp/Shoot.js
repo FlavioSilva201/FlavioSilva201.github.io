@@ -43,6 +43,10 @@ export class Shoot extends Phaser.Physics.Arcade.Sprite {
 		});
 	}
 
+	particlesExplode() {
+		this.explosionParticlesEmitter.explode();
+	}
+
 	preUpdate() {
 		if (this.scene.scale.width < this.x) this.kill();
 	}
@@ -55,7 +59,7 @@ export class Shoot extends Phaser.Physics.Arcade.Sprite {
 		this.moveParticles.destroy();
 		this.initialAnimation.stop();
 
-		this.explosionParticlesEmitter.explode();
+		this.particlesExplode();
 		this.killTimer.paused = false;
 	}
 }

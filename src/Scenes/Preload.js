@@ -1,3 +1,4 @@
+import GlobalConfigs from "../Configs";
 import ProgressBar from "../Components/ProgressBar";
 
 // -------- Imgs --------
@@ -150,10 +151,12 @@ export default class Preload extends Phaser.Scene {
 	importSounds() { }
 
 	create() {
-		// this.scene.start("Index");
-		// this.scene.start("Start");
-		// this.scene.start("Options");
-		// this.scene.start("Pascal");
-		this.scene.start("Web");
+		if (!GlobalConfigs.debug) this.scene.start("Index");
+		else {
+			// this.scene.start("Start");
+			// this.scene.start("Options");
+			// this.scene.start("Pascal");
+			this.scene.start("Web");
+		}
 	}
 }

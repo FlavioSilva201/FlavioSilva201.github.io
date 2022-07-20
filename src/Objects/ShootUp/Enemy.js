@@ -1,4 +1,3 @@
-import EnemyShootGroup from "./EnemyShoot";
 import { generateEnemyParticles } from "./Particles";
 
 export class Enemy extends Phaser.Physics.Arcade.Sprite {
@@ -10,8 +9,6 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 		this.setDepth(1);
 		this.setAngle(-90);
 		this.setScale(0.75);
-
-		this.shoots = new EnemyShootGroup(this.scene.physics.world, this.scene);
 
 		this.shootTimer = scene.time.addEvent({
 			delay: this.shootDelay,
@@ -27,7 +24,7 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	fire() {
-		const shoot = this.shoots.getNewShoot(this.x, this.y);
+		const shoot = this.scene.enemiesShootsGroup.getNewShoot(this.x, this.y);
 		if (shoot) shoot.setVelocityX(-400);
 	}
 
@@ -38,8 +35,6 @@ export class Enemy extends Phaser.Physics.Arcade.Sprite {
 
 		this.shootTimer.paused = true;
 		this.shootTimer.remove();
-
-		this.shoots.destroy();
 
 		this.particlesEmitter.stop();
 		this.deadParticlesEmitter.explode();
