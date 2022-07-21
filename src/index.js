@@ -15,7 +15,7 @@ import Index from "./Scenes/Index";
 import Start from "./Scenes/Start";
 import Options from "./Scenes/Options";
 import Pascal from "./Scenes/GamePlay/Pascal";
-import Web from "./Scenes/GamePlay/Web";
+import Web, { WebUI } from "./Scenes/GamePlay/Web";
 
 const config = {
 	title: packageJson.name,
@@ -56,7 +56,8 @@ const config = {
 		Start,
 		Options,
 		// Game Play
-		Pascal, Web,
+		Pascal,
+		Web, WebUI,
 	],
 }
 

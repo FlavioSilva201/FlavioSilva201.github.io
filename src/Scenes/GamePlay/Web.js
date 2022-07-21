@@ -3,6 +3,7 @@ import { range, randomInt } from "201flaviosilva-utils";
 import GlobalConfigs from "../../Configs";
 import DebugFPS from "../../Components/DebugFPS";
 import StarsBackground from "../../Components/StarsBackground";
+import Button from "../../Components/Button";
 
 import Player from "../../Objects/ShootUp/Player";
 import EnemyGroup from "../../Objects/ShootUp/Enemy";
@@ -37,7 +38,7 @@ export default class Web extends Phaser.Scene {
 		const background = new StarsBackground(this);
 
 		// UI
-		this.scene.add("WebUI", WebUI);
+		this.scene.launch("WebUI");
 
 		// -- Game Objects --
 		// Player
@@ -100,7 +101,7 @@ export default class Web extends Phaser.Scene {
 
 export class WebUI extends Phaser.Scene {
 	constructor() {
-		super({ key: "WebUI", active: true });
+		super({ key: "WebUI" });
 	}
 
 	init() {
@@ -112,6 +113,20 @@ export class WebUI extends Phaser.Scene {
 
 		this.scoreLabel = this.add.text(this.scale.width / 2, 50, this.score, TextStyle.web.scoreLabel)
 			.setOrigin(0.5);
+
+		this.exitButton = new Button(this, {
+			x: this.scale.width - 50,
+			y: 50,
+			up: 1,
+			down: 0,
+			over: 1,
+			text: "Exit",
+			upCallback: () => {
+				this.scene.stop("Web");
+				this.scene.start("Start");
+				this.scene.stop("WebUI");
+			}
+		}).setScale(0.25);
 
 		const SQUARES_PARTICLES = this.add.particles("SquaresParticles");
 		this.scoreParticles = SQUARES_PARTICLES.createEmitter({
@@ -137,7 +152,6 @@ export class WebUI extends Phaser.Scene {
 			this.scoreParticles.explode();
 			this.score += score;
 			this.scoreLabel.setText(this.score);
-			console.log(color);
 			this.scoreLabel.setColor(color);
 		});
 	}
