@@ -1,5 +1,5 @@
 // Fonts
-const PressStart2P = "'Press Start 2P'";
+export const PressStart2P = "'Press Start 2P'";
 
 export const Banner = {
 	text: "#ffffff",
@@ -64,6 +64,19 @@ export const TextStyle = {
 				},
 			}
 		}
+	},
+	web: {
+		scoreLabel: {
+			fontFamily: PressStart2P,
+			fontSize: "32px",
+			align: "center",
+			color: "#ffff00",
+		},
+		updateScoreLabel: {
+			fontFamily: PressStart2P,
+			fontSize: "16px",
+			align: "center",
+		},
 	},
 	loading: {
 		keys: {

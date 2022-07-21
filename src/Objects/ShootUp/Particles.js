@@ -56,14 +56,14 @@ export function generatePlayerParticles(scene, player, x = 0, y = 0) {
 		...moveEmitterBaseConfig,
 		frame: range(0, 9),
 		moveToY: { min: scene.scale.height / 2 - 150, max: scene.scale.height / 2 + 150 },
-		scale: { start: 0.5, end: 0.25 },
+		scale: { start: 0.4, end: 0.25 },
 		quantity: 4,
 	});
 	const moveEmitter2B = SQUARES_PARTICLES.createEmitter({
 		...moveEmitterBaseConfig,
 		frame: [3],
 		moveToY: scene.scale.height / 2,
-		scale: 0.5,
+		scale: 0.4,
 		quantity: 1,
 	});
 
