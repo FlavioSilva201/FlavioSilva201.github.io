@@ -5,7 +5,7 @@ import { generatePlayerParticles } from "./Particles";
 
 import ShootGroup from "./Shoot";
 
-const SPRITES = ["HTML5", "CSS3", "JS", "React"];
+const SPRITES = ["HTML5", "CSS3", "JS", "React", "SASS"];
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {

@@ -10,13 +10,11 @@ import EnemyGroup from "../../Objects/ShootUp/Enemy";
 import EnemyShootGroup from "../../Objects/ShootUp/EnemyShoot";
 import { TextStyle } from "../../Theme";
 
-
 const EVENTS_NAMES = {
 	updateScore: "updateScore",
 	scoreCollision: "scoreCollision",
 }
 const EventSystem = new Phaser.Events.EventEmitter();
-
 
 export default class Web extends Phaser.Scene {
 	constructor() {
