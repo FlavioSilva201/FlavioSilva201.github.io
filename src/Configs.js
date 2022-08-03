@@ -11,6 +11,7 @@ const GlobalConfigs = {
 	},
 	debug: debugParam == "false" || debugParam == undefined ? false : true,
 	language: "en",
+	snakeTileSize: 32,
 	controllers: {
 		start: {
 			left1: "LEFT",
@@ -35,6 +36,16 @@ const GlobalConfigs = {
 		},
 		shootUp: {
 			shoot: "SPACE",
+		},
+		snake: {
+			left1: "LEFT",
+			left2: "A",
+			right1: "RIGHT",
+			right2: "D",
+			up1: "UP",
+			up2: "W",
+			down1: "DOWN",
+			down2: "S",
 		},
 	},
 };

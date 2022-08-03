@@ -15,6 +15,7 @@ import Index from "./Scenes/Index";
 import Start from "./Scenes/Start";
 import Options from "./Scenes/Options";
 import Pascal from "./Scenes/GamePlay/Pascal";
+import SnakeAll, { SnakeAllUI } from "./Scenes/GamePlay/SnakeAll";
 import Web, { WebUI } from "./Scenes/GamePlay/Web";
 
 const config = {
@@ -57,6 +58,7 @@ const config = {
 		Options,
 		// Game Play
 		Pascal,
+		SnakeAll, SnakeAllUI,
 		Web, WebUI,
 	],
 }

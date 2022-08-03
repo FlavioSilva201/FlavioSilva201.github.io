@@ -29,6 +29,12 @@ export default class Button extends Phaser.GameObjects.Sprite {
 		this.on("pointerout", this._onOut, this);
 	}
 
+	changeVisibility(isVisible = true) {
+		this.setVisible(isVisible);
+		this.label && this.label.setVisible(isVisible);
+		return this;
+	}
+
 	_onDown() {
 		this.setFrame(this.config.down);
 		this.config.downCallback && this.config.downCallback();

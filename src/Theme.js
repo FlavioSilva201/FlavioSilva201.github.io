@@ -85,6 +85,14 @@ export const TextStyle = {
 			fill: BaseColors.platformBackground,
 		}
 	},
+	snake: {
+		scoreLabel: {
+			fontFamily: PressStart2P,
+			fontSize: "32px",
+			align: "center",
+			color: "#ffff00",
+		},
+	},
 	start: {},
 	objects: {
 		signals: {
