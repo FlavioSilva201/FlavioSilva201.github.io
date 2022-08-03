@@ -92,6 +92,11 @@ export const TextStyle = {
 			align: "center",
 			color: "#ffff00",
 		},
+		updateScoreLabel: {
+			fontFamily: PressStart2P,
+			fontSize: "16px",
+			align: "center",
+		},
 	},
 	start: {},
 	objects: {

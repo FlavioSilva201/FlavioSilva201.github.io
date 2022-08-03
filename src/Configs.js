@@ -46,6 +46,8 @@ const GlobalConfigs = {
 			up2: "W",
 			down1: "DOWN",
 			down2: "S",
+			boost1: "SHIFT",
+			boost2: "SPACE",
 		},
 	},
 };

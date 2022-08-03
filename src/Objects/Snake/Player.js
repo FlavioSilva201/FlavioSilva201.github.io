@@ -8,6 +8,7 @@ const DIRECTIONS = {
 	RIGHT: "right"
 }
 const TILE_SIZE = GlobalConfigs.snakeTileSize;
+const SNAKE_NORMAL_SPEED = 150;
 
 export default class Player {
 	constructor(scene, x, y) {
@@ -19,7 +20,7 @@ export default class Player {
 		this.tail = new Phaser.Geom.Point(x, y);
 
 		this.isAlive = true;
-		this.speed = 150;
+		this.speed = SNAKE_NORMAL_SPEED;
 		this.moveTime = 0;
 
 		this.heading = DIRECTIONS.RIGHT;
@@ -37,10 +38,18 @@ export default class Player {
 		const { isAlive, keys } = this;
 		if (!isAlive || !keys) return;
 
-		if (keys.left1.isDown || keys.left2.isDown) this.goLeft();
-		else if (keys.right1.isDown || keys.right2.isDown) this.goRight();
-		else if (keys.up1.isDown || keys.up2.isDown) this.goUp();
-		else if (keys.down1.isDown || keys.down2.isDown) this.goDown();
+		const { left1, left2, right1, right2, up1, up2, down1, down2, boost1, boost2 } = keys;
+
+		// Directions
+		if (left1.isDown || left2.isDown) this.goLeft();
+		else if (right1.isDown || right2.isDown) this.goRight();
+		else if (up1.isDown || up2.isDown) this.goUp();
+		else if (down1.isDown || down2.isDown) this.goDown();
+
+		// Boost
+		if (boost1.isDown || boost2.isDown) this.speed = SNAKE_NORMAL_SPEED / 2;
+		else this.speed = SNAKE_NORMAL_SPEED;
+
 
 		this.move(time);
 	}
@@ -78,7 +87,8 @@ export default class Player {
 		// Check if player collided with body
 		if (Phaser.Actions.GetFirst(this.body.getChildren(), { x: this.head.x, y: this.head.y }, 1)) {
 			this.isAlive = false;
-			EventSystem.emit(EVENTS_NAMES.playerDied);
+			EventSystem.emit(EVENTS_NAMES.gameOver);
+			return;
 		}
 
 		// Change individual body elements direction
@@ -87,7 +97,6 @@ export default class Player {
 		for (let i = 0; i < reversedBody.length - 1; i++) {
 			reversedBody[i].setDirection(reversedBody[i + 1].direction);
 		}
-
 	}
 
 	grow(spriteName) {

@@ -1,3 +1,5 @@
+import { range, randomInt } from "201flaviosilva-utils";
+
 import GlobalConfigs from "../../Configs";
 import DebugFPS from "../../Components/DebugFPS";
 import Button from "../../Components/Button";
@@ -5,7 +7,7 @@ import EventSystem, { EVENTS_NAMES } from "../../Objects/Snake/EventSystem";
 
 import { TextStyle } from "../../Theme";
 
-
+import UpdateScoreLabel from "../../Objects/Snake/UpdateScoreLabel";
 import Player from "../../Objects/Snake/Player";
 import Apple from "../../Objects/Snake/Apple";
 
@@ -16,7 +18,6 @@ export default class SnakeAll extends Phaser.Scene {
 		const config = {
 			key: "SnakeAll",
 			cameras: {
-				// backgroundColor: 0x00ff00,
 				x: 0,
 				y: 8,
 				width: 1280, // 40*32
@@ -66,13 +67,14 @@ export default class SnakeAll extends Phaser.Scene {
 			loop: true,
 		});
 
-		EventSystem.once(EVENTS_NAMES.playerDied, (value) => {
+		EventSystem.removeListener(EVENTS_NAMES.gameOver);
+		EventSystem.on(EVENTS_NAMES.gameOver, (value) => {
 			this.isAlive = false;
 			this.newAppleTimer.paused = true;
 		});
 
-		EventSystem.once(EVENTS_NAMES.restartGame, (value) => { this.scene.restart(); });
-		this.events.on("shutdown", () => EventSystem.removeAllListeners());
+		EventSystem.removeListener(EVENTS_NAMES.restartGame);
+		EventSystem.on(EVENTS_NAMES.restartGame, (value) => { this.scene.restart(); });
 	}
 
 	newApple() {
@@ -89,7 +91,7 @@ export default class SnakeAll extends Phaser.Scene {
 		this.apples.push(apple);
 	}
 
-	update(time, delta) {
+	update(time) {
 		if (!this.isAlive) return;
 
 		this.player.update(time);
@@ -98,7 +100,7 @@ export default class SnakeAll extends Phaser.Scene {
 			if (this.player.head.x === apple.x && this.player.head.y === apple.y && apple.isAlive) {
 				this.player.grow(apple.spriteName);
 				apple.kill();
-				EventSystem.emit(EVENTS_NAMES.increaseScore, 1);
+				EventSystem.emit(EVENTS_NAMES.increaseScore, 1, apple, apple.spriteName);
 			}
 		});
 	}
@@ -144,13 +146,37 @@ export class SnakeAllUI extends Phaser.Scene {
 			upCallback: () => { EventSystem.emit(EVENTS_NAMES.restartGame); },
 		}).changeVisibility(false);
 
-		EventSystem.once(EVENTS_NAMES.playerDied, (value) => this.restartButton.changeVisibility(true));
-		EventSystem.on(EVENTS_NAMES.increaseScore, this.updateScore.bind(this));
-		this.events.on("shutdown", () => EventSystem.removeAllListeners());
+		const SQUARES_PARTICLES = this.add.particles("SquaresParticles");
+		this.scoreParticles = SQUARES_PARTICLES.createEmitter({
+			frame: range(0, 9),
+			x: this.scoreLabel.x,
+			y: this.scoreLabel.y,
+			quantity: 64,
+			frequency: -1,
+			scale: { start: 0.75, end: 0 },
+			alpha: { start: 0.75, end: 0 },
+			angle: { start: 0, end: 360, steps: 64 },
+			rotate: { start: randomInt(-360, 360), end: randomInt(-360, 360) },
+			speed: { min: 500, max: 750 },
+			lifespan: 1000,
+		});
+
+		// Events
+		EventSystem.on(EVENTS_NAMES.gameOver, (value) => this.restartButton.changeVisibility(true));
+
+		EventSystem.removeListener(EVENTS_NAMES.increaseScore);
+		EventSystem.on(EVENTS_NAMES.increaseScore, this.createNewScoreLabel.bind(this));
+
+		EventSystem.removeListener(EVENTS_NAMES.updateScore);
+		EventSystem.on(EVENTS_NAMES.updateScore, score => {
+			this.scoreParticles.explode();
+			this.score += score;
+			this.scoreLabel.setText(this.score);
+		});
 	}
 
-	updateScore(value, position) {
-		this.score += value;
-		this.scoreLabel.setText(this.score);
+	createNewScoreLabel(score, { x, y }, spriteKey) {
+		const updateScoreLabel = new UpdateScoreLabel(this, x, y, score, spriteKey);
+		updateScoreLabel.animate(this.scoreLabel);
 	}
 }
