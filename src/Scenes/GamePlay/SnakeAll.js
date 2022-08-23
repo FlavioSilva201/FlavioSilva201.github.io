@@ -70,7 +70,9 @@ export default class SnakeAll extends Phaser.Scene {
 		EventSystem.removeListener(EVENTS_NAMES.gameOver);
 		EventSystem.on(EVENTS_NAMES.gameOver, (value) => {
 			this.isAlive = false;
+			this.player.isAlive = false;
 			this.newAppleTimer.paused = true;
+			this.tweens.pauseAll();
 		});
 
 		EventSystem.removeListener(EVENTS_NAMES.restartGame);
@@ -98,6 +100,11 @@ export default class SnakeAll extends Phaser.Scene {
 
 		this.apples.forEach(apple => {
 			if (this.player.head.x === apple.x && this.player.head.y === apple.y && apple.isAlive) {
+				if (apple.isWall) {
+					EventSystem.emit(EVENTS_NAMES.gameOver);
+					apple.setDepth(100000);
+					return;
+				}
 				this.player.grow(apple.spriteName);
 				apple.kill();
 				EventSystem.emit(EVENTS_NAMES.increaseScore, 1, apple, apple.spriteName);
