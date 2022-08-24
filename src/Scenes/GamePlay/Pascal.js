@@ -141,7 +141,7 @@ export default class Pascal extends Phaser.Scene {
 			const skyGrass1 = this.skyTilesGroup.get(1330, y, 0);
 			skyGrass1.changeScale(0.5);
 
-			const crate = this.cratePowerGroup.get(skyGrass1.x + 58, y, "PascalZim");
+			const crate = this.cratePowerGroup.get(skyGrass1.x + 58, y, "Pascal");
 			crate.generate();
 
 			this.skyTilesGroup.get(crate.x + 58, y, 2).changeScale(0.5);
@@ -266,14 +266,16 @@ export default class Pascal extends Phaser.Scene {
 			if (endGame) return;
 			endGame = true;
 			this.player.keys = null;
+			this.player.body.destroy();
 			this.tweens.add({
 				targets: [this.player],
 				ease: "Linear",
 				duration: 500,
 				delay: 100,
 				x: { from: this.player.x, to: this.castle.x },
+				y: { from: this.player.y, to: 640, },
 				scale: { from: this.player.scale, to: 0.75 },
-				alpha: { from: 1, to: 0.5 },
+				alpha: { from: 1, to: 0.75 },
 				completeDelay: 250,
 				onComplete: () => this.scene.start("Start"),
 			});
@@ -281,59 +283,55 @@ export default class Pascal extends Phaser.Scene {
 	}
 
 	update() {
-		this.createDukesIsland2(); // Dukes Island 2
-		this.createDukesIsland3(); // Dukes Island 3
+		if (this.player.x > 3000 && !this.isIsland2DukesCreated) this.createDukesIsland2(); // Dukes Island 2
+		if (this.player.x > 4500 && !this.isIsland3DukesCreated) this.createDukesIsland3(); // Dukes Island 3
 	}
 
 	createDukesIsland2() {
-		if (this.player.x > 3000 && !this.isIsland2DukesCreated) {
-			this.isIsland2DukesCreated = true;
+		this.isIsland2DukesCreated = true;
 
-			const duke1 = this.dukes.get(4000);
-			if (duke1) duke1.generate();
+		const duke1 = this.dukes.get(4000);
+		if (duke1) duke1.generate();
 
-			const duke2 = this.dukes.get(4100);
-			if (duke2) duke2.generate();
-		}
+		const duke2 = this.dukes.get(4100);
+		if (duke2) duke2.generate();
 	}
 
 	createDukesIsland3() {
-		if (this.player.x > 4500 && !this.isIsland3DukesCreated) {
-			this.isIsland3DukesCreated = true;
+		this.isIsland3DukesCreated = true;
 
-			// Group 1
-			const duke1_1 = this.dukes.get(5300);
-			if (duke1_1) duke1_1.generate();
+		// Group 1
+		const duke1_1 = this.dukes.get(5300);
+		if (duke1_1) duke1_1.generate();
 
-			// Group 2
-			const duke2_1 = this.dukes.get(5800);
-			if (duke2_1) duke2_1.generate();
+		// Group 2
+		const duke2_1 = this.dukes.get(5800);
+		if (duke2_1) duke2_1.generate();
 
-			const duke2_2 = this.dukes.get(6000);
-			if (duke2_2) duke2_2.generate();
+		const duke2_2 = this.dukes.get(6000);
+		if (duke2_2) duke2_2.generate();
 
-			// Group 3
-			const margin = 100;
-			const duke3_1 = this.dukes.get(SCENE_WIDTH - margin * 6);
-			if (duke3_1) duke3_1.generate();
+		// Group 3
+		const margin = 100;
+		const duke3_1 = this.dukes.get(SCENE_WIDTH - margin * 6);
+		if (duke3_1) duke3_1.generate();
 
-			const duke3_2 = this.dukes.get(SCENE_WIDTH - margin * 5);
-			if (duke3_2) duke3_2.generate();
+		const duke3_2 = this.dukes.get(SCENE_WIDTH - margin * 5);
+		if (duke3_2) duke3_2.generate();
 
-			const duke3_3 = this.dukes.get(SCENE_WIDTH - margin * 4);
-			if (duke3_3) duke3_3.generate();
+		const duke3_3 = this.dukes.get(SCENE_WIDTH - margin * 4);
+		if (duke3_3) duke3_3.generate();
 
-			const duke3_4 = this.dukes.get(SCENE_WIDTH - margin * 3);
-			if (duke3_4) duke3_4.generate();
+		const duke3_4 = this.dukes.get(SCENE_WIDTH - margin * 3);
+		if (duke3_4) duke3_4.generate();
 
-			const duke3_5 = this.dukes.get(SCENE_WIDTH - margin * 2);
-			if (duke3_5) duke3_5.generate();
+		const duke3_5 = this.dukes.get(SCENE_WIDTH - margin * 2);
+		if (duke3_5) duke3_5.generate();
 
-			const duke3_6 = this.dukes.get(SCENE_WIDTH - margin * 1);
-			if (duke3_6) duke3_6.generate();
+		const duke3_6 = this.dukes.get(SCENE_WIDTH - margin * 1);
+		if (duke3_6) duke3_6.generate();
 
-			const duke3_7 = this.dukes.get(SCENE_WIDTH);
-			if (duke3_7) duke3_7.generate();
-		}
+		const duke3_7 = this.dukes.get(SCENE_WIDTH);
+		if (duke3_7) duke3_7.generate();
 	}
 }
