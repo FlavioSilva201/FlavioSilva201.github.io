@@ -2,7 +2,7 @@ import GlobalConfigs from '../../Configs';
 
 export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
-		super(scene, x, y, "Sprite");
+		super(scene, x, y, "DukeLeft");
 
 		this.keys = this.scene.input.keyboard.addKeys(GlobalConfigs.controllers.start);
 

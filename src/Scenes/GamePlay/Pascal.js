@@ -1,6 +1,8 @@
 import GlobalConfigs from "../../Configs";
 
 import AnimateTitle from "../../Components/AnimatedTitle";
+import Button from "../../Components/Button";
+import DebugFPS from "../../Components/DebugFPS";
 
 import Duke from "../../Objects/Platform/Duke";
 import Player from "../../Objects/Platform/Player";
@@ -16,7 +18,17 @@ const SCENE_WIDTH = 7000;
 
 export default class Pascal extends Phaser.Scene {
 	constructor() {
-		super({ key: "Pascal" });
+		const config = {
+			key: "Pascal",
+			physics: {
+				default: "arcade",
+				arcade: {
+					debug: GlobalConfigs.debug,
+					gravity: { x: 0, y: 200, },
+				},
+			},
+		};
+		super(config);
 	}
 
 	init() {
@@ -30,17 +42,19 @@ export default class Pascal extends Phaser.Scene {
 		this.createPlayer();
 		this.createCollision();
 
+		GlobalConfigs.debug && this.createDebug();
 
-		// { // Debug
-		// 	const graphics = this.add.graphics().setDepth(0);
-		// 	graphics.lineStyle(1, 0xff0000, 1);
-		// 	for (let i = 0; i < SCENE_WIDTH / 500; i++) {
-		// 		const x = i * 500;
-		// 		graphics.lineBetween(x, 0, x, GlobalConfigs.screen.height);
-		// 		this.add.text(x, 0, x, { fill: "black" });
-		// 	}
-		// }
+		this.scene.launch("PascalUI");
+	}
 
+	createDebug() {
+		const graphics = this.add.graphics().setDepth(0);
+		graphics.lineStyle(1, 0xff0000, 1);
+		for (let i = 0; i < SCENE_WIDTH / 500; i++) {
+			const x = i * 500;
+			graphics.lineBetween(x, 0, x, GlobalConfigs.screen.height);
+			this.add.text(x, 0, x, { fill: "black" });
+		}
 	}
 
 	createWorld() {
@@ -52,7 +66,7 @@ export default class Pascal extends Phaser.Scene {
 			const background = this.add.image(middleWidth, middleHeight, "BackgroundForest").setScale(1.3, 1);
 			background.setScrollFactor(0);
 
-			// UI
+			// Title
 			new AnimateTitle(this, middleWidth, 100, "Pascal");
 		}
 
@@ -333,5 +347,29 @@ export default class Pascal extends Phaser.Scene {
 
 		const duke3_7 = this.dukes.get(SCENE_WIDTH);
 		if (duke3_7) duke3_7.generate();
+	}
+}
+
+export class PascalUI extends Phaser.Scene {
+	constructor() {
+		super({ key: "PascalUI" });
+	}
+
+	create() {
+		GlobalConfigs.debug && new DebugFPS(this);
+
+		this.exitButton = new Button(this, {
+			x: this.scale.width - 50,
+			y: 50,
+			up: 1,
+			down: 0,
+			over: 1,
+			text: "Exit",
+			upCallback: () => {
+				this.scene.stop("Pascal");
+				this.scene.start("Start");
+				this.scene.stop("PascalUI");
+			}
+		}).setScale(0.25);
 	}
 }

@@ -23,13 +23,6 @@ export default class SnakeAll extends Phaser.Scene {
 				width: 1280, // 40*32
 				height: 704, // 22*32
 			},
-			physics: {
-				default: "arcade",
-				arcade: {
-					gravity: { x: 0, y: 0, },
-					debug: GlobalConfigs.debug,
-				},
-			},
 		};
 		super(config);
 	}

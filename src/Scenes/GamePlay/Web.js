@@ -18,16 +18,7 @@ const EventSystem = new Phaser.Events.EventEmitter();
 
 export default class Web extends Phaser.Scene {
 	constructor() {
-		const config = {
-			key: "Web",
-			physics: {
-				default: "arcade",
-				arcade: {
-					gravity: { x: 0, y: 0, },
-					debug: GlobalConfigs.debug,
-				},
-			},
-		};
+		const config = { key: "Web", };
 		super(config);
 	}
 

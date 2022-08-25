@@ -9,7 +9,17 @@ import DirectionSign from "../Objects/DirectionSign";
 
 export default class Options extends Phaser.Scene {
 	constructor() {
-		super({ key: "Options" });
+		const config = {
+			key: "Options",
+			physics: {
+				default: "arcade",
+				arcade: {
+					gravity: { x: 0, y: 200, },
+					debug: GlobalConfigs.debug,
+				},
+			},
+		};
+		super(config);
 	}
 
 	create() {

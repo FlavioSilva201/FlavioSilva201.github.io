@@ -7,18 +7,7 @@ import Player from "../Objects/Home/Player";
 
 export default class Start extends Phaser.Scene {
 	constructor() {
-		const config = {
-			key: "Start",
-			active: false,
-			physics: {
-				default: "arcade",
-				arcade: {
-					gravity: { x: 0, y: 0, },
-					debug: GlobalConfigs.debug,
-				},
-			},
-		};
-		super(config);
+		super({ key: "Start", });
 	}
 
 	create() {
@@ -46,7 +35,7 @@ export default class Start extends Phaser.Scene {
 		}
 
 		{ // Web
-			const web = this.physics.add.image(middleWidth - 350, middleHeight + 100, "Web").setScale(4, 2);
+			const web = this.physics.add.image(middleWidth - 350, middleHeight + 100, "Web").setScale(4);
 			this.physics.add.collider(this.player, web, () => { this.scene.start("Web"); });
 		}
 

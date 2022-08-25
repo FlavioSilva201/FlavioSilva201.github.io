@@ -14,7 +14,7 @@ import Preload from "./Scenes/Preload";
 import Index from "./Scenes/Index";
 import Start from "./Scenes/Start";
 import Options from "./Scenes/Options";
-import Pascal from "./Scenes/GamePlay/Pascal";
+import Pascal, { PascalUI } from "./Scenes/GamePlay/Pascal";
 import SnakeAll, { SnakeAllUI } from "./Scenes/GamePlay/SnakeAll";
 import Web, { WebUI } from "./Scenes/GamePlay/Web";
 
@@ -48,7 +48,7 @@ const config = {
 		default: "arcade",
 		arcade: {
 			debug: GlobalConfigs.debug,
-			gravity: { x: 0, y: 200 }
+			gravity: { x: 0, y: 0 }
 		}
 	},
 	scene: [
@@ -57,7 +57,7 @@ const config = {
 		Start,
 		Options,
 		// Game Play
-		Pascal,
+		Pascal, PascalUI,
 		SnakeAll, SnakeAllUI,
 		Web, WebUI,
 	],

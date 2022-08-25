@@ -19,8 +19,11 @@ import Pascal from "../Assets/Img/Sprites/Languages/Pascal/Pascal.png";
 import SASS from "../Assets/Img/Sprites/Languages/SASS/SASS.png";
 import VisualBasic from "../Assets/Img/Sprites/Languages/VisualBasic/VisualBasic.png";
 
+import Web from "../Assets/Img/Sprites/Web/Web.png";
+
 // -- Enemy --
 import Duke from "../Assets/Img/Sprites/Enemy/Duke/Duke.png";
+import DukeLeft from "../Assets/Img/Sprites/Enemy/Duke/DukeLeft.png";
 
 // -- Sprite --
 import Sprite from "../Assets/Img/Sprites/Sprite.png";
@@ -55,8 +58,6 @@ import BGForest from "../Assets/Img/Sprites/PlatformerBundle/BG/BG.png";
 // -- Tiles (SpriteSheet) --
 import Tiles from "../Assets/Img/Sprites/PlatformerBundle/Tiles/SpriteSheet/Tiles.png";
 import SkyTiles from "../Assets/Img/Sprites/PlatformerBundle/Tiles/SpriteSheet/SkyTiles.png";
-import CalcadaPortuguesaTexture from "../Assets/Img/Sprites/CalcadaPortuguesaTexture/CalcadaPortuguesaTexture.png";
-
 
 // ---- UI ----
 import StarsBackground from "../Assets/Img/UI/Background/StarsBackground.png";
@@ -106,8 +107,11 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("SASS", SASS);
 		this.load.image("VisualBasic", VisualBasic);
 
+		this.load.image("Web", Web);
+
 		// - Enemy
 		this.load.image("Duke", Duke);
+		this.load.image("DukeLeft", DukeLeft);
 
 		this.load.image("Sprite", Sprite);
 		this.load.spritesheet("SquaresParticles", SquaresParticles, { frameWidth: 32, frameHeight: 32 });
@@ -139,8 +143,6 @@ export default class Preload extends Phaser.Scene {
 
 		this.load.spritesheet("Tiles", Tiles, { frameWidth: 128, frameHeight: 128 });
 		this.load.spritesheet("SkyTiles", SkyTiles, { frameWidth: 128, frameHeight: 93 });
-
-		this.load.spritesheet("CalcadaPortuguesa", CalcadaPortuguesaTexture, { frameWidth: 128, frameHeight: 128 });
 	}
 
 	importUI() {
