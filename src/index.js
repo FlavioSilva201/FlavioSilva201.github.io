@@ -17,6 +17,7 @@ import Options from "./Scenes/Options";
 import Pascal, { PascalUI } from "./Scenes/GamePlay/Pascal";
 import SnakeAll, { SnakeAllUI } from "./Scenes/GamePlay/SnakeAll";
 import Web, { WebUI } from "./Scenes/GamePlay/Web";
+import Gaming, { GamingUI } from "./Scenes/GamePlay/Gaming";
 
 const config = {
 	title: packageJson.name,
@@ -60,6 +61,7 @@ const config = {
 		Pascal, PascalUI,
 		SnakeAll, SnakeAllUI,
 		Web, WebUI,
+		Gaming, GamingUI,
 	],
 }
 

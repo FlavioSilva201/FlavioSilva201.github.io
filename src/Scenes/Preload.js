@@ -10,6 +10,7 @@ import PlayerShip from "../Assets/Img/Sprites/Player/ShootUp/PlayerShip.png";
 
 // -- Languages --
 import CSS3 from "../Assets/Img/Sprites/Languages/CSS3/CSS3.png";
+import Godot from "../Assets/Img/Sprites/Languages/Godot/Godot.png";
 import HTML5 from "../Assets/Img/Sprites/Languages/HTML5/HTML5.png";
 import JS from "../Assets/Img/Sprites/Languages/JS/JS.png";
 import React from "../Assets/Img/Sprites/Languages/React/React.png";
@@ -98,6 +99,7 @@ export default class Preload extends Phaser.Scene {
 
 		// - Languages
 		this.load.image("CSS3", CSS3);
+		this.load.image("Godot", Godot);
 		this.load.image("HTML5", HTML5);
 		this.load.image("JS", JS);
 		this.load.image("React", React);
@@ -163,11 +165,12 @@ export default class Preload extends Phaser.Scene {
 	create() {
 		if (!GlobalConfigs.debug) this.scene.start("Index");
 		else {
-			this.scene.start("Start");
+			// this.scene.start("Start");
 			// this.scene.start("Options");
 			// this.scene.start("Pascal");
 			// this.scene.start("Web");
 			// this.scene.start("SnakeAll");
+			this.scene.start("Gaming");
 		}
 	}
 }

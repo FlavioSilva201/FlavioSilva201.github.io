@@ -39,9 +39,14 @@ export default class Start extends Phaser.Scene {
 			this.physics.add.collider(this.player, web, () => { this.scene.start("Web"); });
 		}
 
-		{ // All
-			const snakeAll = this.physics.add.image(middleWidth + 350, middleHeight, "Snake").setScale(4, 2);
+		{ // Snake All
+			const snakeAll = this.physics.add.image(middleWidth + 350, middleHeight - 100, "Snake").setScale(4, 2);
 			this.physics.add.collider(this.player, snakeAll, () => { this.scene.start("SnakeAll"); });
+		}
+
+		{ // Snake All
+			const gaming = this.physics.add.image(middleWidth + 350, middleHeight + 100, "Gaming").setScale(4, 2);
+			this.physics.add.collider(this.player, gaming, () => { this.scene.start("Gaming"); });
 		}
 
 		{ // Tutorial
