@@ -12,6 +12,7 @@ const GlobalConfigs = {
 	debug: debugParam == "false" || debugParam == undefined ? false : true,
 	language: "en",
 	snakeTileSize: 32,
+	gamingSprites: ["Godot", "Sprite"],
 	controllers: {
 		start: {
 			left1: "LEFT",
@@ -34,7 +35,7 @@ const GlobalConfigs = {
 			down2: "S",
 			shoot: "SPACE",
 		},
-		shootUp: {
+		shootUp: { // Shoot Right
 			shoot: "SPACE",
 		},
 		snake: {
@@ -48,6 +49,15 @@ const GlobalConfigs = {
 			down2: "S",
 			boost1: "SHIFT",
 			boost2: "SPACE",
+		},
+		gaming: { // Space Invaders
+			left1: "LEFT",
+			left2: "A",
+			right1: "RIGHT",
+			right2: "D",
+			shoot1: "SPACE",
+			shoot2: "UP",
+			shoot3: "W",
 		},
 	},
 };

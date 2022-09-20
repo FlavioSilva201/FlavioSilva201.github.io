@@ -4,29 +4,34 @@ import GlobalConfigs from "../../Configs";
 import DebugFPS from "../../Components/DebugFPS";
 import Button from "../../Components/Button";
 import EventSystem, { EVENTS_NAMES } from "../../Objects/Snake/EventSystem";
+import UpdateScoreLabel from "../../Objects/Snake/UpdateScoreLabel";
 
 import { TextStyle } from "../../Theme";
 
-import UpdateScoreLabel from "../../Objects/Snake/UpdateScoreLabel";
-import Player from "../../Objects/Snake/Player";
-import Apple from "../../Objects/Snake/Apple";
-
-const APPLES_NAMES = ["HTML5", "CSS3", "SASS", "JS", "React", "Pascal", "Lazarus", "VisualBasic"];
+import Player from "../../Objects/Gaming/Player";
 
 export default class Gaming extends Phaser.Scene {
 	constructor() {
-		const config = { key: "Gaming", };
-		super(config);
+		super({ key: "Gaming", });
 	}
 
 	init() {
 	}
 
 	create() {
+		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
 		// UI
 		this.scene.launch("GamingUI");
 
 		// Game
+		// Player
+		this.playersGroup = this.physics.add.group({
+			classType: Player,
+			runChildUpdate: true,
+			collideWorldBounds: true,
+		});
+
+		this.player = this.playersGroup.get(middleWidth, height - 50);
 	}
 
 	update(time) {
