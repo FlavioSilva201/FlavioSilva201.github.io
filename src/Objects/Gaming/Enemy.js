@@ -4,7 +4,10 @@ import GlobalConfigs from "../../Configs";
 export class Enemy extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y, sprite) {
 		super(scene, x, y, sprite);
+		this.type = sprite;
 	}
+
+	kill() { this.destroy(); }
 }
 
 export default class EnemyGroup extends Phaser.Physics.Arcade.Group {
@@ -15,10 +18,14 @@ export default class EnemyGroup extends Phaser.Physics.Arcade.Group {
 		};
 		super(world, scene, config);
 
+		this.generateAllEnemies();
+	}
+
+	generateAllEnemies() {
 		for (let i = 0; i < 5; i++) { // Number of lines
-			for (let j = 0; j < 15; j++) { // Number os columns
+			for (let j = 0; j < 20; j++) { // Number os columns
 				const sprite = arrayChoice(GlobalConfigs.gamingSprites);
-				this.getNewEnemy(j * 50 + 100, i * 50 + 20, sprite);
+				this.getNewEnemy(j * 50 + 100 + i * 2, i * 50 + 20, sprite);
 			}
 		}
 
@@ -26,6 +33,7 @@ export default class EnemyGroup extends Phaser.Physics.Arcade.Group {
 	}
 
 	getNewEnemy(x = 0, y = 0, sprite = "Sprite") {
-		const e = this.get(x, y, sprite);
+		const newEnemy = this.get(x, y, sprite);
+		return newEnemy;
 	}
 }

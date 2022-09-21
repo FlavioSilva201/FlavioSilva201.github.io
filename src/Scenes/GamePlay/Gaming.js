@@ -3,13 +3,13 @@ import { range, randomInt } from "201flaviosilva-utils";
 import GlobalConfigs from "../../Configs";
 import DebugFPS from "../../Components/DebugFPS";
 import Button from "../../Components/Button";
-import EventSystem, { EVENTS_NAMES } from "../../Objects/Snake/EventSystem";
 import UpdateScoreLabel from "../../Objects/Snake/UpdateScoreLabel";
 
 import { TextStyle } from "../../Theme";
 
 import Player from "../../Objects/Gaming/Player";
 import EnemyGroup from "../../Objects/Gaming/Enemy";
+import EventSystem, { EVENTS_NAMES } from "../../Objects/Snake/EventSystem";
 
 export default class Gaming extends Phaser.Scene {
 	constructor() {
@@ -17,6 +17,7 @@ export default class Gaming extends Phaser.Scene {
 	}
 
 	init() {
+		EventSystem.removeListener(EVENTS_NAMES.restartGame);
 	}
 
 	create() {
@@ -45,13 +46,38 @@ export default class Gaming extends Phaser.Scene {
 		}
 
 		this.enemiesGroup = new EnemyGroup(this.physics.world, this);
+
+		// Collisions
+		// Enemies vs Zones
 		this.physics.add.overlap(this.enemiesGroup, triggers, (t, e) => {
 			this.enemiesGroup.setVelocityX(e.body.velocity.x * -1);
-			this.enemiesGroup.getChildren().forEach((e) => { e.setY(e.y + 5); });
+			this.enemiesGroup.getChildren().forEach(e => {
+				const marginOnCollision = Number(e.body.velocity.x > 0) ? 1 : -1;
+				e.setPosition(e.x + marginOnCollision, e.y + 10);
+			});
 		}, null, this);
-	}
 
-	update(time) {
+		// Enemies vs Player Shoot
+		this.physics.add.overlap(this.enemiesGroup, this.player.shootGroup, (enemy, shoot) => {
+			if (enemy.type === shoot.type) {
+				EventSystem.emit(EVENTS_NAMES.increaseScore, 1, { ...enemy }, enemy.type);
+				enemy.kill();
+				shoot.kill();
+				this.player.marginShoots += 10;
+
+				if (this.enemiesGroup.countActive() === 0) this.enemiesGroup.generateAllEnemies();
+			}
+		}, null, this);
+
+		// Player vs Enemies
+		this.physics.add.overlap(this.enemiesGroup, this.player, () => {
+			EventSystem.emit(EVENTS_NAMES.gameOver);
+			this.player.hitted();
+			this.physics.pause();
+			this.tweens.pauseAll();
+		});
+
+		EventSystem.on(EVENTS_NAMES.restartGame, () => { this.scene.restart(); });
 	}
 }
 
@@ -111,7 +137,8 @@ export class GamingUI extends Phaser.Scene {
 		});
 
 		// Events
-		EventSystem.on(EVENTS_NAMES.gameOver, (value) => this.restartButton.changeVisibility(true));
+		EventSystem.removeListener(EVENTS_NAMES.gameOver);
+		EventSystem.on(EVENTS_NAMES.gameOver, value => this.restartButton.changeVisibility(true));
 
 		EventSystem.removeListener(EVENTS_NAMES.increaseScore);
 		EventSystem.on(EVENTS_NAMES.increaseScore, this.createNewScoreLabel.bind(this));
