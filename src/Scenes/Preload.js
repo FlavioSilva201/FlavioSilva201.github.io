@@ -13,10 +13,11 @@ import CSS3 from "../Assets/Img/Sprites/Languages/CSS3/CSS3.png";
 import Godot from "../Assets/Img/Sprites/Languages/Godot/Godot.png";
 import HTML5 from "../Assets/Img/Sprites/Languages/HTML5/HTML5.png";
 import JS from "../Assets/Img/Sprites/Languages/JS/JS.png";
-import React from "../Assets/Img/Sprites/Languages/React/React.png";
 import Lazarus from "../Assets/Img/Sprites/Languages/Lazarus/Lazarus.png";
-import PascalZim from "../Assets/Img/Sprites/Languages/PascalZim/PascalZim.png";
 import Pascal from "../Assets/Img/Sprites/Languages/Pascal/Pascal.png";
+import PascalZim from "../Assets/Img/Sprites/Languages/PascalZim/PascalZim.png";
+import PhaserLogo from "../Assets/Img/Sprites/Languages/Phaser/Phaser.png";
+import React from "../Assets/Img/Sprites/Languages/React/React.png";
 import SASS from "../Assets/Img/Sprites/Languages/SASS/SASS.png";
 import VisualBasic from "../Assets/Img/Sprites/Languages/VisualBasic/VisualBasic.png";
 
@@ -102,10 +103,11 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("Godot", Godot);
 		this.load.image("HTML5", HTML5);
 		this.load.image("JS", JS);
-		this.load.image("React", React);
 		this.load.image("Lazarus", Lazarus);
-		this.load.image("PascalZim", PascalZim);
 		this.load.image("Pascal", Pascal);
+		this.load.image("PascalZim", PascalZim);
+		this.load.image("Phaser", PhaserLogo);
+		this.load.image("React", React);
 		this.load.image("SASS", SASS);
 		this.load.image("VisualBasic", VisualBasic);
 
