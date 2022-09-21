@@ -6,7 +6,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	constructor(scene, x, y) {
 		super(scene, x, y, "Duke");
 
-		this.time = 0;
 		this.timeNextFire = 0;
 		this.marginShoots = 100;
 		this.speed = 300;
@@ -21,7 +20,6 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	update(time) {
-		this.time = time;
 		if (!this.keys) return;
 		const { left1, left2, right1, right2, shoot1, shoot2, shoot3 } = this.keys;
 
@@ -31,10 +29,11 @@ export default class Player extends Phaser.Physics.Arcade.Sprite {
 		else this.setVelocityX(0);
 
 		const isShootPressed = shoot1.isDown || shoot2.isDown || shoot3.isDown;
-		if (isShootPressed && time > this.timeNextFire) this.fire();
+		if (isShootPressed && time > this.timeNextFire) this.fire(time);
 	}
 
-	fire() {
+	fire(time) {
+		this.timeNextFire = time + this.marginShoots;
 		console.log("Fire");
 	}
 }

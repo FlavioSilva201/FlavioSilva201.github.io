@@ -9,6 +9,7 @@ import UpdateScoreLabel from "../../Objects/Snake/UpdateScoreLabel";
 import { TextStyle } from "../../Theme";
 
 import Player from "../../Objects/Gaming/Player";
+import EnemyGroup from "../../Objects/Gaming/Enemy";
 
 export default class Gaming extends Phaser.Scene {
 	constructor() {
@@ -32,6 +33,22 @@ export default class Gaming extends Phaser.Scene {
 		});
 
 		this.player = this.playersGroup.get(middleWidth, height - 50);
+
+		// Triggers
+		const triggers = [this.add.zone(0, middleHeight), this.add.zone(width, middleHeight)];
+		for (let i = 0; i < triggers.length; i++) {
+			const t = triggers[i];
+			t.setSize(10, height);
+			this.physics.world.enable(t);
+			t.body.setAllowGravity(false);
+			t.body.moves = false;
+		}
+
+		this.enemiesGroup = new EnemyGroup(this.physics.world, this);
+		this.physics.add.overlap(this.enemiesGroup, triggers, (t, e) => {
+			this.enemiesGroup.setVelocityX(e.body.velocity.x * -1);
+			this.enemiesGroup.getChildren().forEach((e) => { e.setY(e.y + 5); });
+		}, null, this);
 	}
 
 	update(time) {
