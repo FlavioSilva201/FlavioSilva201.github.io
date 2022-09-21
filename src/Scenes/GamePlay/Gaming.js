@@ -3,13 +3,13 @@ import { range, randomInt } from "201flaviosilva-utils";
 import GlobalConfigs from "../../Configs";
 import DebugFPS from "../../Components/DebugFPS";
 import Button from "../../Components/Button";
-import UpdateScoreLabel from "../../Objects/Snake/UpdateScoreLabel";
+import UpdateScoreLabel from "../../Objects/Common/UpdateScoreLabel";
 
 import { TextStyle } from "../../Theme";
 
 import Player from "../../Objects/Gaming/Player";
 import EnemyGroup from "../../Objects/Gaming/Enemy";
-import EventSystem, { EVENTS_NAMES } from "../../Objects/Snake/EventSystem";
+import EventSystem, { EVENTS_NAMES } from "../../Objects/Common/EventSystem";
 
 export default class Gaming extends Phaser.Scene {
 	constructor() {

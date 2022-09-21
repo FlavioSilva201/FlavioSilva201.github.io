@@ -1,5 +1,5 @@
 import GlobalConfigs from "../../Configs";
-import EventSystem, { EVENTS_NAMES } from "./EventSystem";
+import EventSystem, { EVENTS_NAMES } from "../Common/EventSystem";
 
 const DIRECTIONS = {
 	UP: "up",
