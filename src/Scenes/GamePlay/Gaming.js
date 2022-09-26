@@ -1,6 +1,8 @@
 import { range, randomInt } from "201flaviosilva-utils";
 
 import GlobalConfigs from "../../Configs";
+import LangManager from "../../Lang/LangManager";
+
 import DebugFPS from "../../Components/DebugFPS";
 import Button from "../../Components/Button";
 import UpdateScoreLabel from "../../Objects/Common/UpdateScoreLabel";
@@ -102,7 +104,7 @@ export class GamingUI extends Phaser.Scene {
 			up: 1,
 			down: 0,
 			over: 1,
-			text: "Exit",
+			text: LangManager.getText("exit"),
 			upCallback: () => {
 				this.scene.stop("Gaming");
 				this.scene.start("Start");

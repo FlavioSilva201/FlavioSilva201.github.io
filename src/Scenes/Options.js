@@ -1,4 +1,5 @@
 import GlobalConfigs from "../Configs";
+import LangManager from "../Lang/LangManager";
 
 import AnimateTitle from "../Components/AnimatedTitle";
 import OptionsButton from "../Components/OptionsButton";
@@ -47,7 +48,7 @@ export default class Options extends Phaser.Scene {
 			const x = 50;
 			const y = height - 90;
 
-			const signDirectionStart = new DirectionSign(this, width - x, y, "Start");
+			const signDirectionStart = new DirectionSign(this, width - x, y, LangManager.getText("start"));
 			signDirectionStart.changeDepth(1);
 
 			const tree1 = this.add.image(middleWidth, height - 86, "Tree1");
@@ -72,7 +73,12 @@ export default class Options extends Phaser.Scene {
 			this.languageButton.generate({
 				x: x,
 				y: yLevel1,
+				startFrame: Number(LangManager.selectedLang === "pt"),
 				image: "Flags",
+				actionCallback: () => {
+					LangManager.toggle();
+					this.scene.restart();
+				}
 			});
 		}
 
@@ -83,6 +89,10 @@ export default class Options extends Phaser.Scene {
 				x: x,
 				y: yLevel2,
 				image: "FullScreen",
+				startFrame: Number(!this.scale.isFullscreen),
+				actionCallback: () => {
+					this.scale.isFullscreen ? this.scale.stopFullscreen() : this.scale.startFullscreen();
+				}
 			});
 		}
 
@@ -93,21 +103,16 @@ export default class Options extends Phaser.Scene {
 				x: x,
 				y: yLevel1,
 				image: "Sound",
+				startFrame: Number(this.sound.mute),
+				actionCallback: () => {
+					this.sound.stopAll();
+					this.sound.setMute(!this.sound.mute);
+				}
 			});
 		}
 
-		// { // Difficulty
-		// 	const x = middleWidth;
-		// 	this.soundButton = this.optionsGroup.get(x, yLevel1);
-		// 	this.soundButton.generate({
-		// 		x: x,
-		// 		y: yLevel1,
-		// 		image: "Difficulty",
-		// 	});
-		// }
-
 		{ // Title
-			const title = new AnimateTitle(this, middleWidth, 100, "Options");
+			const title = new AnimateTitle(this, middleWidth, 100, LangManager.getText("options"));
 		}
 	}
 

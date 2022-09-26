@@ -8,7 +8,7 @@ export default class Shoot extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	generate(direction) {
-		this.setBounce(0.5, 0.25);
+		this.setBounce(0.5);
 		if (direction) this.setVelocityX(-300);
 		else this.setVelocityX(300);
 	}

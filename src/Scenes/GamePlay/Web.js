@@ -1,6 +1,8 @@
 import { range, randomInt } from "201flaviosilva-utils";
 
 import GlobalConfigs from "../../Configs";
+import LangManager from "../../Lang/LangManager";
+
 import DebugFPS from "../../Components/DebugFPS";
 import StarsBackground from "../../Components/StarsBackground";
 import Button from "../../Components/Button";
@@ -109,7 +111,7 @@ export class WebUI extends Phaser.Scene {
 			up: 1,
 			down: 0,
 			over: 1,
-			text: "Exit",
+			text: LangManager.getText("exit"),
 			upCallback: () => {
 				this.scene.stop("Web");
 				this.scene.start("Start");

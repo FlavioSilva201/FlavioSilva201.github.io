@@ -1,4 +1,5 @@
 import GlobalConfigs from "../Configs";
+import LangManager from "../Lang/LangManager";
 import { TextStyle } from "../Theme";
 
 export default class Loading extends Phaser.GameObjects.Container {
@@ -54,7 +55,7 @@ export default class Loading extends Phaser.GameObjects.Container {
 		const y = dimensions.height / 2;
 		const margin = 40;
 
-		const labelRotation = this.scene.add.text(x, y - 90, "Move/Rotate", TextStyle.loading.keys).setOrigin(0.5);
+		const labelRotation = this.scene.add.text(x, y - 90, LangManager.getText("moveRotate"), TextStyle.loading.keys).setOrigin(0.5);
 		this.add(labelRotation);
 
 		this.addKeyExample(x, y - margin, "ArrowKey", "UP"); // Up

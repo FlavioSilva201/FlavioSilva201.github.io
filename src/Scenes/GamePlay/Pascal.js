@@ -1,4 +1,5 @@
 import GlobalConfigs from "../../Configs";
+import LangManager from "../../Lang/LangManager";
 
 import AnimateTitle from "../../Components/AnimatedTitle";
 import Button from "../../Components/Button";
@@ -364,7 +365,7 @@ export class PascalUI extends Phaser.Scene {
 			up: 1,
 			down: 0,
 			over: 1,
-			text: "Exit",
+			text: LangManager.getText("exit"),
 			upCallback: () => {
 				this.scene.stop("Pascal");
 				this.scene.start("Start");

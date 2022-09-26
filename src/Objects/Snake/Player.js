@@ -100,7 +100,6 @@ export default class Player {
 	}
 
 	grow(spriteName) {
-		console.log();
 		// this.body.create(this.tail.x, this.tail.y, spriteName); // Use Apple Language
 		this.body.create(this.tail.x, this.tail.y, "Duke", this.body.getLast(true).direction).setScale(0.5); // Duke
 	}

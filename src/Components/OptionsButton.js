@@ -4,9 +4,10 @@ export default class OptionsButton extends Phaser.Physics.Arcade.Sprite {
 	}
 
 	generate(configs) {
-		const { x, y, image, text, style, startFrame } = configs;
+		const { x, y, image, text, style, startFrame, actionCallback } = configs;
 
 		this.realX = x;
+		this.actionCallback = actionCallback;
 		this.setPosition(x, y);
 		this.setTexture(image);
 		this.setFrame(startFrame || 0);
@@ -16,7 +17,7 @@ export default class OptionsButton extends Phaser.Physics.Arcade.Sprite {
 		this.label = this.scene.add.text(x, y, text, style).setOrigin(0.5);
 
 		this.setInteractive({ useHandCursor: true });
-		this.on("pointerup", this.action, this);
+		this.on("pointerup", () => this.action(actionCallback), this);
 	}
 
 	changeFrame(isYoyo = false) {
@@ -31,15 +32,16 @@ export default class OptionsButton extends Phaser.Physics.Arcade.Sprite {
 		this.setX(visible ? this.realX : -this.width);
 	}
 
-	action() {
+	action(callback) {
 		console.log("Acting...");
+		callback();
 		this.changeFrame();
 		this.changeVisible();
 	}
 
 	update() {
 		if (this.body.touching.down) {
-			this.action();
+			this.action(this.actionCallback);
 			this.body.touching.down = false;
 		}
 	}
