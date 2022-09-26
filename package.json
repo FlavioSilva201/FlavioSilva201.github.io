@@ -16,7 +16,7 @@
     "start": "vite --config vite.config.js",
     "build": "npm run clear && vite build",
     "preview": "vite preview",
-    "bump": "npm run build && npm --any-branch --no-tests --no-publish --no-yarn"
+    "bump": "npm run build && np --any-branch --no-tests --no-publish --no-yarn"
   },
   "dependencies": {
     "201flaviosilva-utils": "^1.2.7",
