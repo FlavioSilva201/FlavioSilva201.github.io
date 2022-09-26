@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+$background-color: #8a4d0f;
+
+// ---- Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+ul li {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+a {
+  outline: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical;
+}
+
+button,
+a,
+label {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+// ------ Styles
+html {
+  body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+
+    div.paper {
+      position: relative;
+      margin: 10px 0; // Remove to create a PDF
+      padding: 30px 20px;
+      width: 790px; // widht of a paper (A4)
+      height: 1122px; // height of a paper (A4)
+      border: 1px solid black;
+      background-color: white;
+      box-shadow: 0 0 20px black, 0 0 50px #8a4d0f inset;
+    }
+
+    div.paper-front {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      box-shadow: 0.125rem 0.25rem 0.5rem 0.1875rem #000;
+
+      background: rgb(201, 170, 113);
+      background: radial-gradient(
+        circle,
+        rgba(204, 173, 113, 1) 0%,
+        rgba(201, 170, 113, 1) 20%,
+        rgba(187, 155, 99, 1) 40%,
+        rgb(201, 158, 85) 60%,
+        rgba(158, 112, 54, 1) 80%,
+        rgba(138, 77, 15, 1) 100%
+      );
+
+      * {
+        text-align: center;
+      }
+
+      div.paper-front-header {
+        h1 {
+          font-size: 100px;
+          font-family: "Rye", cursive;
+          color: #775f42;
+          text-decoration: underline;
+          text-shadow: -4px 4px #4a3b28;
+        }
+
+        h3 {
+          font-size: 40px;
+          font-family: "Ultra", serif;
+        }
+      }
+
+      div.paper-front-main {
+        padding: 10px 20px;
+        border: 4px solid rgba(0, 0, 0, 0.65);
+        border-radius: 4px;
+
+        * {
+          font-family: "Press Start 2P", cursive;
+        }
+
+        img {
+          border: 2px solid black;
+          border-radius: 4px;
+          margin-bottom: 4px;
+        }
+
+        p.name {
+          font-size: 30px;
+          text-decoration: underline;
+          text-decoration-color: #4a3b28;
+          margin-bottom: 6px;
+        }
+      }
+
+      div.paper-front-footer {
+        border-top: 2px solid rgba(0, 0, 0, 0.65);
+        border-bottom: 2px solid rgba(0, 0, 0, 0.65);
+
+        padding: 0 50px;
+
+        * {
+          font-family: "Orbitron", sans-serif;
+        }
+
+        p.reward {
+          font-size: 20px;
+        }
+
+        h2.price {
+          font-size: 40px;
+          text-transform: uppercase;
+          text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff;
+        }
+      }
+    }
+
+    div.paper-back {
+      display: grid;
+      grid-template-columns: auto repeat(3, 1fr);
+      grid-template-rows: auto 1fr auto;
+      gap: 10px 5px;
+      grid-template-areas:
+        "Header Header Header Header"
+        "Aside Main Main Main";
+
+      div.paper-back-header {
+        grid-area: Header;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      aside {
+        grid-area: Aside;
+        height: 90%;
+        border-right: 1px solid black;
+        padding-right: 2px;
+
+        section {
+          ul {
+            border-bottom: 2px solid black;
+            margin-bottom: 10px;
+            margin-left: 12px;
+
+            &.sublist {
+              border-bottom: none;
+            }
+
+            li {
+              margin-bottom: 4px;
+              border-bottom: 1px solid gray;
+
+              &:last-child {
+                margin-bottom: 0;
+                border-bottom: none;
+              }
+
+              span {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+      }
+
+      div.paper-back-main {
+        grid-area: Main;
+
+        img {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          width: 100px;
+          height: 100px;
+        }
+
+        h2 {
+          width: 90%;
+          padding: 4px 6px;
+          border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+          border-radius: 0 0 0 10px;
+        }
+
+        ul.AboutMeList {
+          width: 100%;
+
+          div {
+            position: relative;
+            width: 100%;
+            margin: 15px 0 10px 0;
+            padding: 4px;
+            border: 1px dashed black;
+            border-radius: 10px;
+
+            h3 {
+              position: absolute;
+              top: -12px;
+              left: 10px;
+              padding: 0 4px;
+              border: 1px dashed gray;
+              background-color: black;
+              color: white;
+            }
+          }
+
+          li {
+            width: 100%;
+            margin: 4px 0;
+            display: flex;
+            justify-content: space-between;
+
+            span {
+              width: 100%;
+              display: flex;
+              align-items: center;
+
+              &:nth-child(1) {
+                font-weight: bold;
+
+                &:after {
+                  content: ":";
+                }
+              }
+              &:nth-child(2) {
+                padding: 4px 0 4px 10px;
+                border: 1px solid black;
+                border-radius: 0 4px 0 4px;
+
+                font-family: "Oleo Script", Helvetica, sans-serif;
+                text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+                a {
+                  font-family: "Oleo Script", Helvetica, sans-serif;
+                  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.05);
+                }
+              }
+            }
+          }
+        }
+        div.CareerContainer {
+          height: 550px;
+          margin: 10px;
+          padding: 10px;
+          border: 1px solid black;
+          border-radius: 4px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          gap: 10px;
+
+          div {
+            position: relative;
+            border: 1px solid black;
+            border-radius: 4px;
+
+            h3 {
+              margin-bottom: 4px;
+              background: black;
+              border-bottom: 2px dashed gray;
+              a {
+                width: 100%;
+                color: white;
+                padding-left: 4px;
+                text-align: center;
+              }
+            }
+            time {
+              $borderStyle: 1px dashed gray;
+              position: absolute;
+              bottom: 0;
+              right: 0;
+              padding: 2px;
+              border-radius: 5px 0 5px 0;
+              border-top: $borderStyle;
+              border-left: $borderStyle;
+              background: black;
+              color: white;
+            }
+            p {
+              margin: 2px 0 2px 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
