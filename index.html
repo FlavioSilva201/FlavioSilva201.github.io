@@ -2,46 +2,56 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./CSS/reset.css">
-    <link rel="stylesheet" href="./Pages/Index/Style.min.css">
-    <link rel="shortcut icon" href="../Assets/icons/head/at-sign.svg" type="image/x-icon">
-    <title>Flávio Silva</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>201flaviosilva</title>
+  <link href="https://fonts.googleapis.com/css?family=Press Start 2P" rel="stylesheet">
 </head>
 
 <body>
-    <div id="Container">
-        <header>
-            <div>
-                <span id="red"><img src="./Assets/icons/x.svg" alt="X"></span>
-                <span id="yellow"><img src="./Assets/icons/minimize-2.svg" alt="m"></span>
-                <span id="green"><img src="./Assets/icons/maximize-2.svg" alt="M"></span>
-            </div>
-            <h1>201flaviosilva.github.io <span id="pathHeader">~</span></h1>
-            <p>⌥⌘1</p>
-        </header>
-        <main>
-            <p>Last login: <span id="DataLogin"> </span> on console</p>
+  <!-- Loader -->
+  <style>
+    #loader {
+      width: 60px;
+      height: 60px;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      border: 10px solid #383838;
+      border-top: 10px solid #d00;
+      border-radius: 50%;
+      z-index: 10;
+      color: #000;
+      animation: spin 2s linear infinite;
+    }
 
-            <p><span class="Arrow linha">→</span> <span class="path linha">~</span> <span class="commandRight">cd</span>
-                <span class="answerUser">index</span></p>
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
 
-            <p><span class="Arrow linha">→</span> <span class="path linha">index</span> <span
-                    class="commandRight">LogIn</span> <span class="answerUser">Home</span></p>
+      100% {
+        transform: rotate(360deg);
+      }
+    }
 
-            <p><span class="answer">User: </span> <span class="answerUser">201flaviosilva</span></p>
-            <p class="linha"><span class="answer">Password:</span></p>
+  </style>
 
-            <p><span class="answer">Geting link</span><span id="DotsGL">....</span></p>
-            <p><span class="answer">Geted: <a href="./Pages/Home/index.html">Home</a></span></p>
-            <p><span class="answer">Redirecting:</span> <span id="RedirectingTime">10</span></p>
+  <div id="loader">.</div>
+  <div id="GameContainer"></div>
 
-        </main>
-    </div>
+  <script>
+    window.onload = () => {
+      const loader = document.getElementById("loader");
+      loader.remove();
+      loader.style.top = -1000;
+      loader.style.left = -1000;
+      loader.style.zIndex = -1000;
+    };
+  </script>
 
-    <script src="./Pages/Index/script.js"></script>
+  <script type="module" src="./src/index.js"></script>
 </body>
 
 </html>
