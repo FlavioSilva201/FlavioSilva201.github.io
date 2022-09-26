@@ -1,0 +1,24 @@
+# Manual
+_ignore
+.netlify
+
+# ------------- SASS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
+# ------------- System
+.DS_Store
+.vscode/
+node_modules
+
+# ------------- node
+node_modules
+dist
+
+# ------------ Others
+Simple radial menu.webloc
+Assets/img/SignificadoDasCores/
+Pages/Games/js.js
+package-lock.json
