@@ -14,10 +14,9 @@
   "scripts": {
     "clear": "rm -rf build && rm -rf out && rm -rf dist",
     "start": "vite --config vite.config.js",
-    "copy:pdf": "cp -R ./PDF/ ./dist/PDF/",
-    "build": "npm run clear && vite build && npm run copy:pdf",
+    "build": "npm run clear && vite build",
     "preview": "vite preview",
-    "bump": "np --any-branch --no-tests --no-publish --no-yarn"
+    "bump": "npm run build && np --any-branch --no-tests --no-publish --no-yarn"
   },
   "dependencies": {
     "201flaviosilva-utils": "^1.2.7",
