@@ -5,12 +5,10 @@ name: Github Pages Deploy
 on:
   push:
     branches:
-      # - "master"
-      - "_"
+      - "master"
   pull_request:
     branches:
-      # - "master"
-      - "_"
+      - "master"
 
 jobs:
   build:
