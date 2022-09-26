@@ -4,9 +4,17 @@ name: Github Pages Deploy
 
 on:
   push:
-    branches: [master, V1-FE-Vanilla-Site, V2-Phaser-Game, PDF]
+    branches:
+      - master
+      - "V1-FE-Vanilla-Site"
+      - "V2-Phaser-Game"
+      - "PDF"
   pull_request:
-    branches: [master, V1-FE-Vanilla-Site, V2-Phaser-Game, PDF]
+    branches:
+      - master
+      - "V1-FE-Vanilla-Site"
+      - "V2-Phaser-Game"
+      - "PDF"
 
 jobs:
   build:
