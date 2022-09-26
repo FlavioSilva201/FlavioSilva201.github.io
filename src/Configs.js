@@ -12,6 +12,7 @@ const GlobalConfigs = {
 	debug: debugParam == "false" || debugParam == undefined ? false : true,
 	language: "en",
 	snakeTileSize: 32,
+	snakeSprites: ["CSS3", "Godot", "HTML5", "JS", "Lazarus", "Pascal", "Phaser", "React", "SASS", "VisualBasic",],
 	gamingSprites: ["Godot", "Phaser"],
 	controllers: {
 		start: {

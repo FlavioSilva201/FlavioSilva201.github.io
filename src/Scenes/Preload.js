@@ -20,7 +20,9 @@ import PhaserLogo from "../Assets/Img/Sprites/Languages/Phaser/Phaser.png";
 import React from "../Assets/Img/Sprites/Languages/React/React.png";
 import SASS from "../Assets/Img/Sprites/Languages/SASS/SASS.png";
 import VisualBasic from "../Assets/Img/Sprites/Languages/VisualBasic/VisualBasic.png";
+import LangsSheet from "../Assets/Img/Sprites/Languages/SpriteSheet/Langs.png";
 
+import Comando from "../Assets/Img/Sprites/Comando/Comando.png";
 import Web from "../Assets/Img/Sprites/Web/Web.png";
 
 // -- Enemy --
@@ -110,7 +112,9 @@ export default class Preload extends Phaser.Scene {
 		this.load.image("React", React);
 		this.load.image("SASS", SASS);
 		this.load.image("VisualBasic", VisualBasic);
+		this.load.image("LangsSheet", LangsSheet);
 
+		this.load.image("Comando", Comando);
 		this.load.image("Web", Web);
 
 		// - Enemy
@@ -167,12 +171,12 @@ export default class Preload extends Phaser.Scene {
 	create() {
 		if (!GlobalConfigs.debug) this.scene.start("Index");
 		else {
-			// this.scene.start("Start");
+			this.scene.start("Start");
 			// this.scene.start("Options");
 			// this.scene.start("Pascal");
 			// this.scene.start("Web");
 			// this.scene.start("SnakeAll");
-			this.scene.start("Gaming");
+			// this.scene.start("Gaming");
 		}
 	}
 }

@@ -7,6 +7,7 @@ export class Shoot extends Phaser.Physics.Arcade.Sprite {
 		super(scene, x, y, sprite);
 		scene.physics.add.existing(this);
 
+		if (sprite === "Phaser") this.setAngle(-90);
 		this.type = sprite;
 		this.speed = -400;
 		this.setDepth(1);

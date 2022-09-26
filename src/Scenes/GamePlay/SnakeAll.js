@@ -11,7 +11,7 @@ import UpdateScoreLabel from "../../Objects/Common/UpdateScoreLabel";
 import Player from "../../Objects/Snake/Player";
 import Apple from "../../Objects/Snake/Apple";
 
-const APPLES_NAMES = ["HTML5", "CSS3", "SASS", "JS", "React", "Pascal", "Lazarus", "VisualBasic"];
+const APPLES_NAMES = GlobalConfigs.snakeSprites;
 
 export default class SnakeAll extends Phaser.Scene {
 	constructor() {
