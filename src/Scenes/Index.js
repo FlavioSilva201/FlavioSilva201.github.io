@@ -41,7 +41,7 @@ export default class Index extends Phaser.Scene {
 	}
 
 	openOldSite() {
-		const url = "https://201flaviosilva.bitbucket.io/src/201flaviosilva/V1/index.html";
+		const url = "./V1/index.html";
 		const s = window.open(url, "_blank");
 
 		if (s && s.focus) s.focus();

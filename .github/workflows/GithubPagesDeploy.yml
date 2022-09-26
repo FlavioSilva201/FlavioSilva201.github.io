@@ -1,31 +1,47 @@
-# Tutorial: https://www.youtube.com/watch?v=5I37iVCDUTU
+# Tutorial: https://tigeroakes.com/posts/til-github-pages-two-branches-github-actions/
 
 name: Github Pages Deploy
 
 on:
   push:
-    branches:
-      - "master"
+    branches: [master, "V1-FE-Vanilla-Site", "V2-Phaser-Game"]
   pull_request:
-    branches:
-      - "master"
+    branches: [master, "V1-FE-Vanilla-Site", "V2-Phaser-Game"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [17.x]
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      # ------- V2-Phaser-Game --------
+      - name: Checkout the `V2-Phaser-Game` branch
+        uses: actions/checkout@v2
+        with:
+          ref: V2-Phaser-Game
+          clean: false
 
-      - name: Install and build
-        run: npm install && npm run build
+      - name: Install Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 17
 
-      - name: Deploy
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build # Output build files in `dist` folder
+        run: npm run build
+
+      # ------- V1-FE-Vanilla-Site --------
+      - name: Checkout the `V1-FE-Vanilla-Site` branch
+        uses: actions/checkout@v2
+        with:
+          ref: V1-FE-Vanilla-Site
+          # Put the checked out files inside the `dist/V1` folder
+          path: dist/V1
+          clean: false
+
+      # ------- gh-pages (deploy) --------
+      - name: Deploy in gh-pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
           branch: gh-pages
