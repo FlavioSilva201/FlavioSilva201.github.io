@@ -173,45 +173,6 @@ html body #container main section#Home form section#MultiOptions fieldset label 
   text-decoration: none;
 }
 
-html body #container main section#Home form section#History {
-  width: 100%;
-}
-
-html body #container main section#Home form section#History div {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0 8px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-html body #container main section#Home form section#History div span {
-  padding: 4px;
-  font-size: 16px;
-  font-weight: 700;
-  border: 2px solid royalblue;
-}
-
-html body #container main section#Home form section#History div input {
-  cursor: pointer;
-  width: 500px;
-}
-
-html body #container main section#Home form section#History article h3 {
-  width: 100%;
-  text-align: center;
-  font-size: 30px;
-}
-
-html body #container main section#Home form section#History article ul {
-  padding: 4px 20px;
-}
-
-html body #container main section#Home form section#History article ul li {
-  list-style: circle;
-}
-
 html body #container main section#Home form section#BtnsActions {
   margin-top: 10px;
   display: grid;

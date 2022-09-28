@@ -1,24 +1,7 @@
-const RangeHistory = document.getElementById("RangeHistory");
-const ListHistoryTitle = document.getElementById("ListHistoryTitle");
-const UlListHistory = document.getElementById("UlListHistory");
-const Maxdate = document.getElementById("Maxdate");
-
 main();
 function main() {
-  document
-    .getElementById("InpBirthday")
-    .setAttribute("max", `${String(new Date().toISOString().slice(0, 10))}`); // Change limite for today
-  RangeHistory.max = RangeHistory.value = ListHistoryTitle.innerHTML = Maxdate.innerHTML = new Date().getFullYear();
   getInd();
 }
-
-RangeHistory.addEventListener("change", () => {
-  ListHistoryTitle.innerHTML = RangeHistory.value;
-  while (UlListHistory.firstChild) {
-    UlListHistory.removeChild(UlListHistory.firstChild);
-  }
-  getInd();
-});
 
 function getInd() {
   let indHistorySel;
@@ -40,48 +23,6 @@ function changeDom(indHistorySel) {
   document.getElementById("DatailsLanguage").innerHTML = indHistorySel.Details;
   document.getElementById("FavoriteAreaLanguage").innerHTML = indHistorySel.Skills[0];
   document.getElementById("SkillsDiscoveredLanguage").innerHTML = indHistorySel.Skills[1];
-
-  let yearHistory;
-  switch (Number(RangeHistory.value)) {
-    case 2016:
-      yearHistory = indHistorySel.history._2016;
-      showListHistory(yearHistory);
-      break;
-
-    case 2017:
-      yearHistory = indHistorySel.history._2017;
-      showListHistory(yearHistory);
-      break;
-
-    case 2018:
-      yearHistory = indHistorySel.history._2018;
-      showListHistory(yearHistory);
-      break;
-
-    case 2019:
-      yearHistory = indHistorySel.history._2019;
-      showListHistory(yearHistory);
-      break;
-
-    case 2020:
-      yearHistory = indHistorySel.history._2020;
-      showListHistory(yearHistory);
-      break;
-
-    default:
-      const li = document.createElement("li");
-      li.innerHTML = "Sorry something went wrong!";
-      UlListHistory.appendChild(li);
-      break;
-  }
-}
-
-function showListHistory(yearHistory) {
-  for (let i = 0; i < yearHistory.length; i++) {
-    const li = document.createElement("li");
-    li.innerHTML = yearHistory[i];
-    UlListHistory.appendChild(li);
-  }
 }
 
 const bannerConteiner = document.getElementById("bannerConteiner");
@@ -123,8 +64,8 @@ document.getElementById("BtnSubmit").addEventListener("click", (event) => {
   }
 });
 
-function submitFail(erro) {
-  document.getElementById("BannerText").innerHTML = "Some thing wrong: " + erro;
+function submitFail(error) {
+  document.getElementById("BannerText").innerHTML = "Some thing wrong: " + error;
   bannerConteiner.style.backgroundColor = "red";
   bannerConteiner.style.display = "flex";
 }

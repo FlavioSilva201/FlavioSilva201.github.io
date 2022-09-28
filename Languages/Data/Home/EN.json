@@ -1,48 +1,6 @@
 {
-	"Description": "I'm a front-end developer;",
-	"Name": "Name",
-	"Details": "Details",
-	"Skills": ["Favorite Area", "Skills Discovered"],
-	"history": {
-		"_2016": [
-			"Start in Curso Proficional Informática de Gestão;",
-			"Frits contac with programing;",
-			"Start Algorithm / Pseudocode and Flowcharts;",
-			"Learn Pascal basics;"
-		],
-		"_2017": [
-			"Learn Lazarus Pascal basics;",
-			"Start learn Visual Basic 2010 basics;",
-			"Learn Scratch 2.0;",
-			"Learn HTML basics;",
-			"Learn ACCESS basics;"
-		],
-		"_2018": [
-			"Keep learn Visual Basic 2010;",
-			"Learn Visual Basic 2010 connection to Access DB;",
-			"Start learn MIT App Inventor 2 basics;",
-			"First professional internship, ULSM;",
-			"Learn Java basics;"
-		],
-		"_2019": [
-			"Finish Curso Proficional Informática de Gestão;",
-			"Second professional internship, PC Recover (fix computers);",
-			"Start Mindera School;",
-			"Remember Java basics and intermediate;",
-			"Start learn MySQL;",
-			"Remember HTML basics and advanced;",
-			"Start learn CSS;",
-			"Start learn Vanilla JavaScript;"
-		],
-		"_2020": [
-			"Keep learn HTML;",
-			"Keep learn CSS;",
-			"Keep learn Vanilla JavaScript;",
-			"Start learn ReactJS, React-Redux;",
-			"Start learn LESS/SASS;",
-			"Start learn Bootstrap;",
-			"Start learn PHP basics and connection with DB;",
-			"Enter on Mindera like a worker;"
-		]
-	}
+  "Description": "I'm a front-end developer;",
+  "Name": "Name",
+  "Details": "Details",
+  "Skills": ["Favorite Area", "Skills Discovered"]
 }

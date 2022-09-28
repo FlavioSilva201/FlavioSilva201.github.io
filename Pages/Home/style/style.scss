@@ -175,47 +175,6 @@ html {
                   }
                 }
 
-                &#History {
-                  width: 100%;
-
-                  div {
-                    width: 100%;
-                    box-sizing: border-box;
-                    padding: 0 8px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-
-                    span {
-                      padding: 4px;
-                      font-size: 16px;
-                      font-weight: 700;
-                      border: 2px solid royalblue;
-                    }
-
-                    input {
-                      cursor: pointer;
-                      width: 500px;
-                    }
-                  }
-
-                  article {
-                    h3 {
-                      width: 100%;
-                      text-align: center;
-                      font-size: 30px;
-                    }
-
-                    ul {
-                      padding: 4px 20px;
-
-                      li {
-                        list-style: circle;
-                      }
-                    }
-                  }
-                }
-
                 &#BtnsActions {
                   margin-top: 10px;
                   display: grid;

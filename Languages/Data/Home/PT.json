@@ -1,45 +1,6 @@
 {
-	"Description": "Eu sou um desenvolvedor front-end;",
-	"Name": "Nome",
-	"Details": "Detalhes",
-	"Skills": ["Área Favorita", "Skills descobertas"],
-	"history": {
-		"_2016": [
-			"Inicio no Curso Proficional Informática de Gestão;",
-			"Primeiro contacto com o mundo da programação;",
-			"Inicio a algoritmia / pseudocódigo e fluxogramas;",
-			"Aprendi Pascal básico;"
-		],
-		"_2017": [
-			"Aprendi o básico de Lazarus Pascal;",
-			"Comecei a aprender os conceitos básicos do Visual Basic 2010;",
-			"Aprendi Scratch 2.0;",
-			"Aprendi HTML básico;",
-			"Aprendi os básicos de ACCESS;"
-		],
-		"_2018": [
-			"Continuação deVisual Basic 2010;",
-			"Aprendi a conectar o Visual Basic 2010 com o ACCESS;",
-			"Inicio dos basicos de MIT App Inventor 2;",
-			"Primeiro estágio profissional, ULSM;",
-			"Aprendi o Java básico;"
-		],
-		"_2019": [
-			"Concluir Curso Profissional de Informática de Gestão;",
-			"Segundo estágio profissional, PC Recover (consertar computadores);",
-			"Entrei na Mindera School;",
-			"Relembrar do básico de Java e intermediário;",
-			"Comecei a aprender MySQL;",
-			"Relembrar dos conceitos básicos e HTML avançado;",
-			"Comece a aprender CSS/VanillaJS;"
-		],
-		"_2020": [
-			"Continuei a aprender HTML/CSS/VanillaJS;",
-			"Comecei a aprender ReactJS, React-Redux;",
-			"Comecei a aprender LESS / SASS;",
-			"Comecei a aprender Bootstrap;",
-			"Comecei a aprender o básico do PHP e conexão com Base de Dados;",
-			"Entrei na Mindera como um trabalhador;"
-		]
-	}
+  "Description": "Eu sou um desenvolvedor front-end;",
+  "Name": "Nome",
+  "Details": "Detalhes",
+  "Skills": ["Área Favorita", "Skills descobertas"]
 }
