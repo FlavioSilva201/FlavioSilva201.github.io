@@ -3,6 +3,7 @@ const pt = {
 	start: "Começar",
 	moveRotate: "Movimentação/Rotação",
 	exit: "Sair",
+	restart: "Recomeçar",
 };
 
 export default pt;

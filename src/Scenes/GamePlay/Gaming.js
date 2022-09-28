@@ -118,7 +118,7 @@ export class GamingUI extends Phaser.Scene {
 			up: 1,
 			down: 0,
 			over: 1,
-			text: "Restart",
+			text: LangManager.getText("restart"),
 			textStyle: TextStyle.base,
 			upCallback: () => { EventSystem.emit(EVENTS_NAMES.restartGame); },
 		}).changeVisibility(false);

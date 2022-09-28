@@ -1,4 +1,4 @@
-import { range, randomInt } from "201flaviosilva-utils";
+import { range } from "201flaviosilva-utils";
 
 // Player
 export function generatePlayerParticles(scene, player) {
