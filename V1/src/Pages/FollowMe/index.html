@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../Assets/icons/bookmark.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/201flaviosilva-utils@1.2.9/build/reset.min.css">
+    <link rel="stylesheet" href="../style/Nav/style.min.css">
+    <link rel="stylesheet" href="./style/style.min.css">
+    <title>Follow</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="../Home/index.html" title="Home"><img src="../../Assets/icons/home.svg"
+                        alt="Home"><span>Home</span></a>
+            </li>
+            <li>
+                <a href="../Projects/index.html" title="Projetos"><img src="../../Assets/icons/bookmark.svg"
+                        alt="Projetos"><span>Projects</span></a>
+            </li>
+            <li>
+                <a href="../Games/index.html" title="Games">
+                    <img src="../../Assets/icons/gamepad.svg" alt="Games">
+                    <span>Games</span></a>
+            </li>
+            <li id="NavSelected">
+                <a href="../FollowMe/index.html" title="Follow me"><img src="../../Assets/icons/link-2.svg"
+                        alt="Follow me"><span>Follow me</span></a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="Container">
+            <div id="FollowMe">
+                <h2 id="TitleFollowMe">Follow Me</h2>
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/flaviolsilva/">
+                            <img src="../../Assets/icons/instagram.svg" alt="Instagram">
+                            <span>Instagram</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://br.pinterest.com/MeiaGaspea">
+                            <img src="../../Assets/icons/pinterest.svg" alt="Pinterest">
+                            <span>Pinterest</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/201flaviosilva">
+                            <img src="../../Assets/icons/github.svg" alt="github">
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://gitlab.com/201flaviosilva">
+                            <img src="../../Assets/icons/gitlab.svg" alt="gitlab">
+                            <span>GitLab</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.behance.net/meiagaspe">
+                            <img src="../../Assets/icons/behance.svg" alt="Behance">
+                            <span>Behance</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.linkedin.com/in/fl%C3%A1vio-silva-2b069b146/">
+                            <img src="../../Assets/icons/linkedin.svg" alt="Linkedin">
+                            <span>Linkedin</span>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="https://stackoverflow.com/users/story/13356573"><img src="../../Assets/icons/icons8-stack-overflow.svg" alt="Stack Overflow"> <span>Stack Overflow</span></a>
+                    </li> -->
+
+                    <li>
+                        <a href="https://www.sololearn.com/Profile/7859587">
+                            <img src="../../Assets/icons/sololearn-2.svg" alt="SoloLearn">
+                            <span>SoloLearn</span>
+                        </a>
+                    </li>
+
+                    <!-- <li>
+                        <a href="https://repl.it/@201flaviosilva"><img src="../../Assets/icons/"
+                                alt="Repl"><span>Repl</span></a>
+                    </li> -->
+
+                    <li>
+                        <a href="mailto:flavioandre.2001.9.7@gmail.com">
+                            <img src="../../Assets/icons/at-sign.svg" alt="Email">
+                            <span>E-mail</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/201flaviosilva/201flaviosilva.github.io">
+                            <img src="../../Assets/icons/code.svg" alt="Source Code">
+                            <span>Source Code</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://resite.link/MeiaGaspea">
+                            <img src="../../Assets/icons/help-circle.svg" alt="More">
+                            <span>More</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://github.com/201flaviosilva/201flaviosilva.github.io/tree/PDF">
+                            <img src="../../Assets/icons/download.svg" alt="Download">
+                            <span>PDF</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        if (localStorage.getItem("LocalLang") === "English") document.getElementById("TitleFollowMe").innerHTML = "Follow Me";
+        else document.getElementById("TitleFollowMe").innerHTML = "Segue-me!";
+    </script>
+</body>
+
+</html>
