@@ -1,0 +1,65 @@
+# Tutorial: https://tigeroakes.com/posts/til-github-pages-two-branches-github-actions/
+
+name: Github Pages Deploy
+
+on:
+  push:
+    branches:
+      - master
+      - "V1-FE-Vanilla-Site"
+      - "V2-Phaser-Game"
+      - "PDF"
+  pull_request:
+    branches:
+      - master
+      - "V1-FE-Vanilla-Site"
+      - "V2-Phaser-Game"
+      - "PDF"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ------- V2-Phaser-Game --------
+      - name: Checkout the `V2-Phaser-Game` branch
+        uses: actions/checkout@v2
+        with:
+          ref: V2-Phaser-Game
+          clean: false
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2-beta
+        with:
+          node-version: 17
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build # Output build files in `dist` folder
+        run: npm run build
+
+      # ------- V1-FE-Vanilla-Site --------
+      - name: Checkout the `V1-FE-Vanilla-Site` branch
+        uses: actions/checkout@v2
+        with:
+          ref: V1-FE-Vanilla-Site
+          # Put the checked out files inside the `dist/V1` folder
+          path: dist/V1
+          clean: false
+
+      # ------- PDF --------
+      - name: Checkout the `PDF` branch
+        uses: actions/checkout@v2
+        with:
+          ref: PDF
+          # Put the checked out files inside the `dist/PDF` folder
+          path: dist/PDF
+          clean: false
+
+      # ------- gh-pages (deploy) --------
+      - name: Deploy in gh-pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: dist
