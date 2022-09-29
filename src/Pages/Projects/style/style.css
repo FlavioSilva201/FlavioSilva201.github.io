@@ -54,7 +54,7 @@ html body #container main article div.Description div a {
 }
 
 html body #container main aside {
-  position: absolute;
+  position: fixed;
   right: 25px;
   bottom: 0;
   transition: 0.5s;
@@ -109,5 +109,11 @@ html body #container main aside ul li button:hover::before {
   html body #container main aside ul li button {
     padding: 10px 4px;
     font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html body #container main article img {
+    width: 90%;
   }
 }

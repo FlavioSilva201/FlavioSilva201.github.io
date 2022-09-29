@@ -1,58 +1,44 @@
-export default {
-  SitesPorreiros: {
-    name: "Sites Porreiros",
-    img: {
-      src: "https://i.ibb.co/jJTYHg8/Sites-Porreiros.png",
-      alt: "Sites Porreiros",
+const PROJECTS = {
+  Impacto: {
+    name: "Impacto",
+    image: "#",
+    description: {
+      ing: `Impacto is a simple render engine for HTML5 canvas.`,
+      pt: `Impacto é uma biblioteca simples para renderização do HTML5 canvas.`,
     },
-    decription: {
-      ing: `Sites Porreiros is a site where I publish simple scripts, games, apps, websites, funny mini projects. <br/>
-      The real purpose is simply to entertain when there is nothing to do.`,
-      pt: `Sites Porreiros é um site onde publico scripts simples, jogos, aplicativos, sites, mini projetos engraçados. <br/>
-      O verdadeiro objetivo é simplesmente entreter quando não há nada a fazer.`,
-    },
-    webSite: "https://sitesporreiros.netlify.app/",
-    repository: "https://github.com/201flaviosilva/SitesPorreiros",
+    webSite: "https://201flaviosilva.github.io/Impacto",
+    repository: "https://github.com/201flaviosilva/Impacto",
   },
-  VanillaJavaScript: {
-    name: "Vanilla JavaScript",
-    img: {
-      src: "https://i.ibb.co/Tm3SLTP/Vanilla-JS.png",
-      alt: "Vanilla JavaScript",
+  Utilsjs: {
+    name: "201flaviosilva-utils",
+    image: "#",
+    description: {
+      ing: `Just simple utils for javascript :)`,
+      pt: `Uma simples biblioteca de utilidades para javascript :)`,
     },
-    decription: {
-      ing: `A tutorial site for introducing JavaScript, with some ninjas "Hacks" you can do with Javascript.`,
-      pt: `Um site de tutorial para introdução de JavaScript, com alguns "Hacks" ninjas que são possiveis fazer em Javascript.`,
-    },
-    webSite: "https://vanillajavascript.netlify.app/",
-    repository: "https://github.com/201flaviosilva/VanillaJavaScript",
+    webSite: "https://201flaviosilva.gitlab.io/utilsjs",
+    repository: "https://gitlab.com/201flaviosilva/utilsjs",
   },
-  CarteiraOnline: {
-    name: "Carteira Online",
-    img: {
-      src: "https://i.ibb.co/z5dmhjJ/Carteira-Online.png",
-      alt: "Carteira Online",
+  Rupestre: {
+    name: "Rupestre",
+    image: "#",
+    description: {
+      ing: `A drawing app for your creativity.`,
+      pt: `Uma app de desenho para a tua criatividade.`,
     },
-    decription: {
-      ing: `The idea of the project is simply to have better organization and control of personal finances, to create an account and to point out the money saved. <br/>
-      The purpose of this site was to develop a project using PHP programming language.`,
-      pt: `A ideia do projeto é simplesmente para ter uma melhor organização e controlo das finanças pessoas, criar uma conta e ir apontado o dinheiro poupado. <br/>
-      O objetivo deste site foi desenvolver um projeto onde se utiliza linguagem de programação PHP.`,
-    },
-    webSite: "http://carteiraonline.epizy.com/",
-    repository: "https://github.com/201flaviosilva/CarteiraOnline",
+    webSite: "https://201flaviosilva.github.io/Rupestre/",
+    repository: "https://github.com/201flaviosilva/Rupestre",
   },
-  CSSFreeStyle: {
-    name: "CSS Free Style",
-    img: {
-      src: "#",
-      alt: "CSS Free Style",
+  PlayCode: {
+    name: "Play Code",
+    image: "#",
+    description: {
+      ing: `A place to find exercises to practice programming.`,
+      pt: `Um local para encontrar exercícios de programação.`,
     },
-    decription: {
-      ing: `CSSFreeStyle is a set of pre-made CSS animations that anyone with the file can apply to your website.`,
-      pt: `CSSFreeStyle é um conjunto de animações pré-feitas em CSS que qualquer pessoa com o ficheiro pode aplicar no seu site.`,
-    },
-    webSite: "#",
-    repository: "https://github.com/201flaviosilva/CSSFreeStyle",
+    webSite: "https://github.com/201flaviosilva-labs/play-code#readme",
+    repository: "https://github.com/201flaviosilva-labs/play-code",
   },
 };
+
+export default PROJECTS;
