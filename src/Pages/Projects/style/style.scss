@@ -12,7 +12,11 @@ html {
         font-size: 30px;
         font-weight: bolder;
         text-align: center;
-        text-shadow: 0 0 10px royalblue;
+        text-shadow: 0 0 10px royalblue, 0 0 20px royalblue;
+
+        h1 {
+          color: orange;
+        }
       }
 
       main {
