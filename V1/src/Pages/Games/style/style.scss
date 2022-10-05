@@ -12,7 +12,7 @@ html {
         font-size: 30px;
         font-weight: bolder;
         text-align: center;
-        text-shadow: 0 0 10px orange;
+        text-shadow: 0 0 10px orange, 0 0 20px orange;
 
         h1 {
           color: royalblue;
@@ -37,18 +37,6 @@ html {
             border-radius: 5px;
             background-color: orange;
 
-            a {
-              color: royalblue;
-            }
-
-            &:nth-child(even) {
-              background-color: royalblue;
-
-              a {
-                color: orange;
-              }
-            }
-
             div {
               &.GameHeader {
                 display: flex;
@@ -60,25 +48,47 @@ html {
                   border: 1px solid black;
                   margin-right: 6px;
                 }
+
+                a {
+                  font-weight: 900;
+                  font-size: 20px;
+                  color: royalblue;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
               }
 
               &.GameMain {
                 transition: 1s;
 
-                div {
-                  width: 100%;
-                  display: flex;
-                  justify-content: space-around;
+                p {
+                  text-shadow: 0 0 1px royalblue, 0 0 2px royalblue,
+                    0 0 4px royalblue, 0 0 5px royalblue, 0 0 10px royalblue,
+                    0 0 20px royalblue, 0 0 40px royalblue;
+                  color: orange;
                 }
               }
+            }
 
+            &:nth-child(even) {
+              background-color: royalblue;
 
-              a {
-                font-weight: 900;
-                font-size: 20px;
+              div {
+                &.GameHeader {
+                  a {
+                    color: orange;
+                  }
+                }
 
-                &:hover {
-                  text-decoration: underline;
+                &.GameMain {
+                  p {
+                    text-shadow: 0 0 1px orange, 0 0 2px orange, 0 0 4px orange,
+                      0 0 5px orange, 0 0 10px orange, 0 0 20px orange,
+                      0 0 40px orange;
+                    color: royalblue;
+                  }
                 }
               }
             }

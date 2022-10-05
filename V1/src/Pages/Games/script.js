@@ -9,15 +9,13 @@ function main() {
 async function getData(indHistorySel) {
 	await fetch(`../../Languages/Data/Game/${indHistorySel}.json`)
 		.then(response => response.json())
-		.then(data => indHistorySel = data);
-	changeDom(indHistorySel);
+		.then(data => changeDom(data));
+
 }
 
-function changeDom(indHistorySel) {
-	document.getElementById("Magito").innerHTML = indHistorySel.Magito;
-	document.getElementById("TicTacToe").innerHTML = indHistorySel.TicTacToe;
-	document.getElementById("MinderShooter").innerHTML = indHistorySel.MinderShooter;
-	document.getElementById("JoguinhosWeb").innerHTML = indHistorySel.JoguinhosWeb;
-	document.getElementById("PlanetaGames").innerHTML = indHistorySel.PlanetaGames;
-	document.getElementById("InvasoresDoEspaco").innerHTML = indHistorySel.InvasoresDoEspaco;
+function changeDom(gamesDescription) {
+	document.getElementById("FireCosmos").innerHTML = gamesDescription.FireCosmos;
+	document.getElementById("SuperBoxJump").innerHTML = gamesDescription.SuperBoxJump;
+	document.getElementById("201flaviosilva").innerHTML = gamesDescription["201flaviosilva"];
+	document.getElementById("MinderShooter").innerHTML = gamesDescription.MinderShooter;
 }
