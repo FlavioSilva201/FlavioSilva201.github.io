@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "np": "^7.6.2",
-    "vite": "^2.9.9"
+    "vite": "^2.9.16"
   },
   "keywords": [],
   "repository": {
