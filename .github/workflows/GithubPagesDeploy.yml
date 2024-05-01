@@ -4,9 +4,17 @@ name: Github Pages Deploy
 
 on:
   push:
-    branches: [master, "V1-FE-Vanilla-Site", "V2-Phaser-Game"]
+    branches:
+      - master
+      - "V1-FE-Vanilla-Site"
+      - "V2-Phaser-Game"
+      - "PDF"
   pull_request:
-    branches: [master, "V1-FE-Vanilla-Site", "V2-Phaser-Game"]
+    branches:
+      - master
+      - "V1-FE-Vanilla-Site"
+      - "V2-Phaser-Game"
+      - "PDF"
 
 jobs:
   build:
@@ -38,6 +46,15 @@ jobs:
           ref: V1-FE-Vanilla-Site
           # Put the checked out files inside the `dist/V1` folder
           path: dist/V1
+          clean: false
+
+      # ------- PDF --------
+      - name: Checkout the `PDF` branch
+        uses: actions/checkout@v2
+        with:
+          ref: PDF
+          # Put the checked out files inside the `dist/PDF` folder
+          path: dist/PDF
           clean: false
 
       # ------- gh-pages (deploy) --------
