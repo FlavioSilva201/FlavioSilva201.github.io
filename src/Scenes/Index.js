@@ -1,8 +1,8 @@
 import { DOM } from "201flaviosilva-utils";
 
+import StarsBackground from "../Components/StarsBackground";
 import GlobalConfigs from "../Configs";
 import { TextStyle } from "../Theme";
-import StarsBackground from "../Components/StarsBackground";
 
 export default class Index extends Phaser.Scene {
 	constructor() {
@@ -32,9 +32,9 @@ export default class Index extends Phaser.Scene {
 	}
 
 	create() {
-		const { width, height, middleWidth, middleHeight } = GlobalConfigs.screen;
+		const { middleWidth, middleHeight } = GlobalConfigs.screen;
 
-		const margin = 75;
+		const margin = 36;
 
 		// Background
 		const background = new StarsBackground(this);
@@ -47,14 +47,6 @@ export default class Index extends Phaser.Scene {
 			action: () => this.scene.start("Start"),
 		});
 
-		// V1
-		this.createText({
-			x: middleWidth,
-			y: middleHeight,
-			text: "Vetus",
-			action: () => this.openV1(),
-		});
-
 		// PDF
 		this.createText({
 			x: middleWidth,
@@ -64,16 +56,8 @@ export default class Index extends Phaser.Scene {
 		});
 	}
 
-	openV1() {
-		const url = "/V1/index.html";
-		const s = window.open(url, "_blank");
-
-		if (s && s.focus) s.focus();
-		else if (!s) window.location.href = url;
-	}
-
 	openPDF() {
-		const url = "/PDF/indexEN.html";
+		const url = "https://github.com/201flaviosilva/201flaviosilva.github.io/blob/PDF/FlavioSilva.pdf";
 		const s = window.open(url, "_blank");
 
 		if (s && s.focus) s.focus();
