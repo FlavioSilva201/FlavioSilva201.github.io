@@ -1,0 +1,106 @@
+html body {
+  background: linear-gradient(to right bottom, royalblue, orange);
+}
+
+html body #container {
+  flex-grow: 10;
+  width: 100%;
+  padding: 50px 0;
+}
+
+html body #container header {
+  width: 100%;
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 0 10px orange, 0 0 20px orange;
+}
+
+html body #container header h1 {
+  color: royalblue;
+}
+
+html body #container main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html body #container main ul {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+html body #container main ul li {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: orange;
+}
+
+html body #container main ul li div.GameHeader {
+  display: flex;
+  cursor: default;
+}
+
+html body #container main ul li div.GameHeader img {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin-right: 6px;
+}
+
+html body #container main ul li div.GameHeader a {
+  font-weight: 900;
+  font-size: 20px;
+  color: royalblue;
+}
+
+html body #container main ul li div.GameHeader a:hover {
+  text-decoration: underline;
+}
+
+html body #container main ul li div.GameMain {
+  transition: 1s;
+}
+
+html body #container main ul li div.GameMain p {
+  text-shadow: 0 0 1px royalblue, 0 0 2px royalblue, 0 0 4px royalblue, 0 0 5px royalblue, 0 0 10px royalblue, 0 0 20px royalblue, 0 0 40px royalblue;
+  color: orange;
+}
+
+html body #container main ul li:nth-child(even) {
+  background-color: royalblue;
+}
+
+html body #container main ul li:nth-child(even) div.GameHeader a {
+  color: orange;
+}
+
+html body #container main ul li:nth-child(even) div.GameMain p {
+  text-shadow: 0 0 1px orange, 0 0 2px orange, 0 0 4px orange, 0 0 5px orange, 0 0 10px orange, 0 0 20px orange, 0 0 40px orange;
+  color: royalblue;
+}
+
+html body canvas {
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+@media only screen and (max-width: 1000px) {
+  html body #container main ul {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html body #container main ul {
+    grid-template-columns: 1fr;
+  }
+}

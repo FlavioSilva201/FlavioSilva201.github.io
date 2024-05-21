@@ -1,0 +1,136 @@
+html {
+  body {
+    background: linear-gradient(to right bottom, royalblue, orange);
+
+    #container {
+      flex-grow: 10;
+      width: 100%;
+      padding: 50px 0;
+
+      header {
+        width: 100%;
+        font-size: 30px;
+        font-weight: bolder;
+        text-align: center;
+        text-shadow: 0 0 10px orange, 0 0 20px orange;
+
+        h1 {
+          color: royalblue;
+        }
+      }
+
+      main {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+          width: 75%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+
+          li {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: orange;
+
+            div {
+              &.GameHeader {
+                display: flex;
+                cursor: default;
+
+                img {
+                  width: 30px;
+                  height: 30px;
+                  border: 1px solid black;
+                  margin-right: 6px;
+                }
+
+                a {
+                  font-weight: 900;
+                  font-size: 20px;
+                  color: royalblue;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              &.GameMain {
+                transition: 1s;
+
+                p {
+                  text-shadow: 0 0 1px royalblue, 0 0 2px royalblue,
+                    0 0 4px royalblue, 0 0 5px royalblue, 0 0 10px royalblue,
+                    0 0 20px royalblue, 0 0 40px royalblue;
+                  color: orange;
+                }
+              }
+            }
+
+            &:nth-child(even) {
+              background-color: royalblue;
+
+              div {
+                &.GameHeader {
+                  a {
+                    color: orange;
+                  }
+                }
+
+                &.GameMain {
+                  p {
+                    text-shadow: 0 0 1px orange, 0 0 2px orange, 0 0 4px orange,
+                      0 0 5px orange, 0 0 10px orange, 0 0 20px orange,
+                      0 0 40px orange;
+                    color: royalblue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    canvas {
+      z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: transparent;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    body {
+      #container {
+        main {
+          ul {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    body {
+      #container {
+        main {
+          ul {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+    }
+  }
+}
