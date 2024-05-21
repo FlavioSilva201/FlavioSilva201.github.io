@@ -1,8 +1,7 @@
-import GlobalConfigs from "../Configs";
 import LangManager from "../Lang/LangManager";
 import { TextStyle } from "../Theme";
 
-export default class Loading extends Phaser.GameObjects.Container {
+export default class Tutorial extends Phaser.GameObjects.Container {
 	constructor(scene, x, y, gameType) {
 		super(scene, x, y);
 		scene.add.existing(this);
@@ -18,7 +17,7 @@ export default class Loading extends Phaser.GameObjects.Container {
 		this.scene.tweens.add({
 			targets: [this],
 			alpha: { from: 1, to: 0 },
-			duration: 5000,
+			duration: 10000,
 			ease: "Circ.easeIn",
 			onComplete: () => { this.destroy(); },
 		});
