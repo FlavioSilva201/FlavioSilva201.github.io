@@ -7,28 +7,16 @@ import { TextStyle } from "../Theme";
 export default class Index extends Phaser.Scene {
 	constructor() {
 		super({ key: "Index" });
+		this.isMobile = false;
 	}
 
 	init() {
 		const { android, iOS, iPad, iPhone, windowsPhone } = this.sys.game.device.os;
-		if (android || iOS || iPad || iPhone || windowsPhone) {
-			DOM.notification({
-				text: "This game not available on mobile devices. Please click on Vetus button.",
-				animated: true,
-				animationTime: 10,
-				closeButton: true,
-				endPosition: 100,
-				style: {
-					border: "1px solid #058005",
-					boxShadow: "0 0 10px #058005, 0 0 50px #058005",
-					background: "#023b02",
-				},
-				textStyle: {
-					color: "#058005",
-					boxShadow: "0 0 10px #023b02, 0 0 50px #023b02",
-				},
-			});
-		}
+		this.isMobile = android || iOS || iPad || iPhone || windowsPhone;
+
+		if (this.isMobile)
+			this.pushNotification("This game is currently not available on mobile devices. Please click on PDF button.");
+
 	}
 
 	create() {
@@ -37,14 +25,18 @@ export default class Index extends Phaser.Scene {
 		const margin = 36;
 
 		// Background
-		const background = new StarsBackground(this);
+		const _background = new StarsBackground(this);
 
 		// Start
 		this.createText({
 			x: middleWidth,
 			y: middleHeight - margin,
 			text: "Start",
-			action: () => this.scene.start("Start"),
+			action: () => {
+				this.isMobile ?
+					this.pushNotification("Sorry, the current version of the game do not work on mobile :/") :
+					this.scene.start("Start");
+			},
 		});
 
 		// PDF
@@ -57,7 +49,7 @@ export default class Index extends Phaser.Scene {
 	}
 
 	openPDF() {
-		const url = "https://github.com/201flaviosilva/201flaviosilva.github.io/releases?q=PDF&expanded=true";
+		const url = "./PDF/index.html";
 		const s = window.open(url, "_blank");
 
 		if (s && s.focus) s.focus();
@@ -70,5 +62,24 @@ export default class Index extends Phaser.Scene {
 		label.on("pointerover", () => label.setStyle(TextStyle.home.menu.over));
 		label.on("pointerout", () => label.setStyle(TextStyle.home.menu.normal));
 		label.on("pointerup", action);
+	}
+
+	pushNotification(text) {
+		DOM.notification({
+			text,
+			animated: true,
+			animationTime: 5,
+			closeButton: true,
+			endPosition: 100,
+			style: {
+				border: "1px solid #00dd00",
+				boxShadow: "0 0 10px #058005, 0 0 50px #058005",
+				background: "#023b02",
+			},
+			textStyle: {
+				color: "#ff0000",
+				boxShadow: "0 0 10px #023b02, 0 0 50px #023b02",
+			},
+		});
 	}
 }

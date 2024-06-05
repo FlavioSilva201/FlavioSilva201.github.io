@@ -5,10 +5,12 @@ on:
     branches:
       - master
       - "V2-Phaser-Game"
+      - "PDF"
   pull_request:
     branches:
       - master
       - "V2-Phaser-Game"
+      - "PDF"
 
 jobs:
   build:
@@ -32,6 +34,15 @@ jobs:
 
       - name: Build # Output build files in `dist` folder
         run: npm run build
+
+      # ------- PDF --------
+      - name: Checkout the `PDF` branch
+        uses: actions/checkout@v2
+        with:
+          ref: PDF
+          # Put the checked out files inside the `dist/PDF` folder
+          path: dist/PDF
+          clean: false
 
       # ------- gh-pages (deploy) --------
       - name: Deploy in gh-pages
