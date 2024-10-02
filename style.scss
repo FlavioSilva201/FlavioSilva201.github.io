@@ -38,10 +38,13 @@ body {
     right: 0;
     font-family: "VT323", monospace;
     font-size: $space-l;
-    color: red;
+    color: $txt-heading-color;
+    border-radius: 4px;
+    background-color: rgba(47, 44, 64, 0.25);
   }
 
   div.container {
+    margin: 0 auto;
     padding: 0 $space-xs;
     display: flex;
     flex-direction: column;
@@ -133,6 +136,40 @@ body {
       }
       section.education {
         margin-bottom: 0;
+      }
+    }
+  }
+
+  // scale to fit on mobile
+  @media only screen and (max-width: 800px) {
+    background-color: $background-color;
+
+    a.language-switch {
+      margin: $space-xs $space-xxxs;
+      padding: $space-xxs $space-xs;
+      font-size: $space-m;
+      color: rgba(242, 128, 87, 0.5);
+      z-index: 1;
+    }
+
+    div.container {
+      width: 100vw;
+
+      main {
+        img.sticker {
+          right: $space-xl;
+          width: $space-xxl;
+          height: $space-xxl;
+        }
+
+        section {
+          margin-top: $space-s;
+        }
+
+        div.columns {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
       }
     }
   }

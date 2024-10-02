@@ -21,10 +21,13 @@ body a.language-switch {
   right: 0;
   font-family: "VT323", monospace;
   font-size: 24px;
-  color: red;
+  color: #f28157;
+  border-radius: 4px;
+  background-color: rgba(47, 44, 64, 0.25);
 }
 
 body div.container {
+  margin: 0 auto;
   padding: 0 8px;
   display: flex;
   flex-direction: column;
@@ -110,4 +113,32 @@ body div.container main section.education li ul li p.title {
 
 body div.container main section.education {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: #2f2c40;
+  }
+  body a.language-switch {
+    margin: 8px 2px;
+    padding: 4px 8px;
+    font-size: 16px;
+    color: rgba(242, 128, 87, 0.5);
+    z-index: 1;
+  }
+  body div.container {
+    width: 100vw;
+  }
+  body div.container main img.sticker {
+    right: 32px;
+    width: 64px;
+    height: 64px;
+  }
+  body div.container main section {
+    margin-top: 12px;
+  }
+  body div.container main div.columns {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
 }
