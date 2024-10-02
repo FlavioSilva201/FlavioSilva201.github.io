@@ -49,8 +49,8 @@ export default class Index extends Phaser.Scene {
 	}
 
 	openPDF() {
-		//const url = "./PDF/index.html";
-		const url = "https://github.com/201flaviosilva/201flaviosilva.github.io/releases?q=PDF&expanded=true";
+		const url = "./PDF/index.html";
+		// const url = "https://github.com/201flaviosilva/201flaviosilva.github.io/releases?q=PDF&expanded=true";
 		const s = window.open(url, "_blank");
 
 		if (s && s.focus) s.focus();
